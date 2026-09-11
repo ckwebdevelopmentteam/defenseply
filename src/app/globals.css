@@ -1,0 +1,73 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "../styles/foundations.css";
+@import "../styles/menu.css";
+@import "../styles/buttons.css";
+@import "../styles/header.css";
+@import "../styles/mobile-menu.css";
+@import "../styles/country-dialog.css";
+@import "../styles/home.css";
+@import "../styles/hero.css";
+@import "../styles/spaces.css";
+@import "../styles/tabs.css";
+@import "../styles/slider.css";
+@import "../styles/keen-slider.css";
+@import "../styles/new-collections.css";
+@import "../styles/section-header-v4.css";
+@import "../styles/colors.css";
+@import "../styles/feature-banner.css";
+@import "../styles/section-header.css";
+@import "../styles/gallery.css";
+@import "../styles/hybriq.css";
+@import "../styles/renovation.css";
+@import "../styles/brands.css";
+@import "../styles/city.css";
+@import "../styles/form-reset.css";
+@import "../styles/form-base.css";
+@import "../styles/form-helpers.css";
+@import "../styles/form-browser.css";
+@import "../styles/newsletter.css";
+@import "../styles/replica.css";
+@font-face {
+  font-family: Diagramm;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/assets/diagramm-extra-light.woff2") format("woff2");
+}
+@font-face {
+  font-family: Diagramm;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/diagramm-light.woff2") format("woff2");
+}
+@font-face {
+  font-family: Diagramm;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/diagramm-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Diagramm;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/diagramm-medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: Diagramm;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/diagramm-semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Diagramm;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/diagramm-bold.woff2") format("woff2");
+}

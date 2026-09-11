@@ -1,0 +1,22 @@
+[
+  {
+    "image": "/assets/dekton.jpg",
+    "description": "Dekton is Cosentino’s innovative ultracompact surface. Its great versatility makes it perfect for use in any application, from furniture to flooring.",
+    "href": "https://www.cosentino.com/usa/dekton/"
+  },
+  {
+    "image": "/assets/silestone.jpg",
+    "description": "Thanks to its patented Hybriq+ technology, Silestone is a durable mineral surface with low silica content and great aesthetic value for your kitchen.",
+    "href": "https://www.cosentino.com/usa/silestone/"
+  },
+  {
+    "image": "/assets/eclos.png",
+    "description": "Ēclos is Cosentino's innovative mineral surface that combines the beauty of natural stones with the resistance and durability of the most advanced technology.",
+    "href": "https://www.cosentino.com/usa/eclos/"
+  },
+  {
+    "image": "/assets/sensa.jpg",
+    "description": "Thanks to its revolutionary stain-resistant treatment, Sensa provides the opportunity to enjoy natural stone without worrying about maintenance.",
+    "href": "https://www.cosentino.com/usa/sensa/"
+  }
+]
