@@ -51,7 +51,8 @@ button svg {
 }
 .replica-submenu {
   height: auto;
-  flex: 0;
+  flex: none;
+  display: block;
 }
 .menu-submenu .first-wrapper .first-submenu .menu-card {
   flex: 1;
@@ -64,10 +65,6 @@ button svg {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-.replica-mobile-header,
-.replica-mobile-nav {
-  display: none;
 }
 .carousel-arrow {
   display: inline-flex;
@@ -94,9 +91,7 @@ button svg {
 .core-tabs__nav__tags li {
   flex-shrink: 0;
 }
-.section-colores__content {
-  position: relative;
-}
+
 .section-colores__brands-list {
   display: flex;
   flex-direction: column;
@@ -106,20 +101,14 @@ button svg {
   padding: 0;
   margin: 0;
   text-align: left;
-  line-height: 1.5;
 }
 .section-colores__brands-list button.active {
   font-weight: 500;
   border-bottom: 1px solid currentColor;
 }
 .section-colores .section-colores__header-row {
-  position: absolute;
   top: -100px;
   left: 0;
-  width: 100%;
-}
-.section-colores__content {
-  margin-top: 100px;
 }
 .section-colores .arrow {
   display: flex;
@@ -130,10 +119,9 @@ button svg {
   align-items: center;
 }
 .section-colores select {
-  border: 0;
-  border-bottom: 1px solid;
+  border: 1px solid #c5c5be;
   background: white;
-  padding: 10px;
+  padding: 12px 16px;
   width: 100%;
 }
 .section-colores__filters-mobile label {
@@ -167,14 +155,10 @@ button svg {
 }
 .quote-tab {
   position: fixed;
-  right: 15px;
   top: 40%;
-  height: 65px;
-  padding: 0 64px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(255, 235, 103, 0.93);
+  background: #ffed72;
   color: #131313 !important;
   border-radius: 4px 0 0 4px;
   box-shadow: 0 1px 5px #0003;
@@ -188,8 +172,6 @@ button svg {
 }
 .chat-widget {
   position: fixed;
-  right: 35px;
-  bottom: 26px;
   z-index: 950;
   display: flex;
   flex-direction: column;
@@ -202,7 +184,6 @@ button svg {
   color: #111;
   background: #fff;
   border-radius: 6px;
-  padding: 18px 20px;
   box-shadow: 0 4px 24px #0001;
 }
 .chat-launcher {
@@ -216,7 +197,6 @@ button svg {
   color: #fff;
 }
 .chat-symbol {
-  font-size: 40px;
   line-height: 1;
   font-family: Arial, sans-serif;
   font-weight: 900;
@@ -336,14 +316,10 @@ button svg {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 24px;
 }
 .replica-newsletter > input,
 .replica-newsletter > select {
-  border: 0;
   border-bottom: 1px solid #3c3c3b;
-  background: transparent;
-  padding: 14px 0;
   width: 100%;
   font-size: 16px;
   border-radius: 0;
@@ -352,7 +328,6 @@ button svg {
 .replica-newsletter fieldset {
   border: 0;
   display: flex;
-  gap: 25px;
   padding: 0;
   margin: 0;
 }
@@ -371,9 +346,7 @@ button svg {
   flex-shrink: 0;
 }
 .replica-newsletter label.consent {
-  font-size: 12px;
   align-items: flex-start;
-  line-height: 1.6;
 }
 .replica-newsletter > .btn {
   align-self: flex-start;
@@ -403,76 +376,11 @@ button svg {
     background: white;
     padding: 8px 30px 8px 0;
   }
-  .replica-mobile-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2147483641;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 24px;
-    background: linear-gradient(#0002, transparent);
-  }
-  .replica-mobile-header.solid {
-    background: #f7f7f7;
-    color: #333;
-  }
-  .replica-mobile-header > button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-  }
-  .replica-mobile-nav {
-    display: block;
-    position: fixed;
-    inset: 61px 0 0;
-    background: #3c3c3b;
-    color: white;
-    z-index: 2147483640;
-    overflow: auto;
-    padding: 20px 25px;
-  }
-  .replica-mobile-nav button,
-  .replica-mobile-nav > div > a,
-  .replica-mobile-nav > a {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 24px;
-    padding: 18px 0;
-    color: white;
-    border-bottom: 1px solid #ffffff30;
-  }
-  .mobile-subitems {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 15px;
-    gap: 16px;
-  }
-  .mobile-subitems a {
-    color: white;
-    font-size: 16px;
-  }
-  .quote-tab {
-    padding: 0 25px;
-    height: 55px;
-  }
   .section-colores .section-colores__header-row {
     top: -80px;
   }
-  .section-colores__content {
-    margin-top: 80px;
-  }
   .section-colores__brands-list button {
     font-size: 16px;
-  }
-  .chat-widget {
-    right: 20px;
-    bottom: 20px;
   }
 }
 @media (max-width: 600px) {
@@ -480,38 +388,13 @@ button svg {
     width: 125px;
     height: 20px;
   }
-  .replica-mobile-header {
-    padding: 18px 20px;
-  }
-  .bg-section {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .bg-section__container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .section-colores .section-colores__header-row {
-    position: static;
-  }
-  .section-colores__content {
-    margin-top: 0;
-  }
-  .section-colores .section-colores__slider-nav {
-    margin-bottom: 25px;
-  }
+
   .quote-tab {
-    right: 0;
     top: auto;
     bottom: 0;
-    width: 100%;
-    height: 52px;
     border-radius: 0;
-    justify-content: center;
   }
   .chat-widget {
-    bottom: 72px;
-    right: 16px;
     gap: 12px;
   }
   .chat-launcher {
@@ -519,12 +402,9 @@ button svg {
     height: 50px;
   }
   .chat-prompt {
-    padding: 14px;
     font-size: 12px;
   }
-  .core-slider-novedades {
-    padding-inline: 20px;
-  }
+
   .country-dialog {
     padding: 24px;
     gap: 20px;
@@ -537,7 +417,6 @@ button svg {
   }
   .replica-newsletter fieldset {
     flex-direction: column;
-    gap: 12px;
   }
   .lightbox-content {
     padding: 50px 30px;
@@ -568,7 +447,293 @@ button svg {
   }
 }
 /* Pixel measurements taken at 1920 × 905. */
-.core-tabs__nav .carousel-arrow{min-width:25px;min-height:25px;width:25px;height:25px}.core-slider-novedades .carousel-arrow{min-width:33px;min-height:33px;width:33px;height:33px}.section-colores .carousel-arrow{min-width:24px;min-height:24px;width:24px;height:24px}.section-colores .core-tabs__content{position:static}.section-colores__content{margin-top:96px}.quote-tab{right:0;width:289px;height:64px;padding:19px 30px;justify-content:center;gap:10px;line-height:22px}.menu-main button>svg{width:23px;height:24px}.chat-widget{right:20px;bottom:20px}.chat-prompt{padding:18px 20px;line-height:16px}.chat-symbol{font-size:0;width:28px;height:28px;background:#fff;clip-path:polygon(5% 0,91% 0,84% 30%,39% 30%,39% 68%,91% 68%,85% 100%,5% 100%)}
-@media(max-width:600px){.section-colores__content{margin-top:0}.quote-tab{width:100%;height:52px}.chat-widget{right:16px;bottom:72px}}
+.core-tabs__nav .carousel-arrow {
+  min-width: 25px;
+  min-height: 25px;
+  width: 25px;
+  height: 25px;
+}
+.core-slider-novedades .carousel-arrow {
+  min-width: 33px;
+  min-height: 33px;
+  width: 33px;
+  height: 33px;
+}
+.section-colores .carousel-arrow {
+  min-width: 24px;
+  min-height: 24px;
+  width: 24px;
+  height: 24px;
+}
+.section-colores .core-tabs__content {
+  position: static;
+}
+.quote-tab {
+  right: 0;
+  width: 289px;
+  height: 64px;
+  padding: 19px 30px;
+  justify-content: center;
+  gap: 10px;
+  line-height: 22px;
+}
+.menu-main button > svg {
+  width: 23px;
+  height: 24px;
+}
+.chat-widget {
+  right: 20px;
+  bottom: 20px;
+}
+.chat-prompt {
+  padding: 18px 20px;
+  line-height: 16px;
+}
+.chat-symbol {
+  font-size: 0;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  clip-path: polygon(
+    5% 0,
+    91% 0,
+    84% 30%,
+    39% 30%,
+    39% 68%,
+    91% 68%,
+    85% 100%,
+    5% 100%
+  );
+}
+@media (max-width: 600px) {
+  .quote-tab {
+    width: 100%;
+    height: 52px;
+  }
+  .chat-widget {
+    right: 16px;
+    bottom: 72px;
+  }
+}
 
-.section-colores .section-colores__header-row{position:static;width:100%}.section-colores__content{margin-top:0}.section-colores__brands-list button{line-height:20px;letter-spacing:.5px}.section-colores__brands-list button.active{border:0}.section-colores .core-slider__slide__card-body__arrow .arrow svg{width:25px!important;height:25px!important;max-width:none!important}.section-colores .core-slider__slide__card-body__arrow .arrow{width:25px!important;height:25px!important;transform:none!important;background:none!important}
+.section-colores .section-colores__header-row {
+  position: static;
+  width: 100%;
+}
+.section-colores__content {
+  margin-top: 0;
+}
+.section-colores__brands-list button {
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+.section-colores__brands-list button.active {
+  border: 0;
+}
+.section-colores .core-slider__slide__card-body__arrow .arrow svg {
+  width: 25px !important;
+  height: 25px !important;
+  max-width: none !important;
+}
+.section-colores .core-slider__slide__card-body__arrow .arrow {
+  width: 25px !important;
+  height: 25px !important;
+  transform: none !important;
+  background: none !important;
+}
+
+/* Native controls preserve the reference form and footer appearance. */
+#site-footer button.footer-menu-title {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.collection-new-badge {
+  width: 48px;
+  height: 20px;
+  border-radius: 2px;
+  background: #faf9c2;
+  color: #3c3c3b;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+.replica-newsletter {
+  gap: 16px;
+}
+.replica-newsletter > input,
+.replica-newsletter > select {
+  border: 0;
+  background: #effdfd;
+  padding: 12.608px 17.6px;
+  height: 48px;
+}
+.replica-newsletter fieldset {
+  gap: 16px;
+}
+.replica-newsletter fieldset label {
+  flex: 1;
+  padding: 14px 24px;
+  background: #effdfd;
+  font-size: 14px;
+  gap: 16px;
+  min-height: 56px;
+}
+.replica-newsletter label.consent {
+  font-size: 10px;
+  line-height: 16.4px;
+  gap: 8px;
+}
+.replica-newsletter > .btn {
+  border: 1px solid #3f3f3e;
+  background: #3c3c3b;
+  color: white;
+  width: 100%;
+  height: 45px;
+  padding: 11px 23px;
+  justify-content: space-between;
+}
+.replica-newsletter > .btn:hover {
+  background: #d7f4f4;
+  color: #3c3c3b;
+}
+.replica-submenu {
+  overflow-y: auto;
+  max-height: calc(100dvh - 64px);
+}
+@media (max-width: 600px) {
+  .replica-newsletter fieldset {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .replica-newsletter fieldset label {
+    padding: 14px 10px;
+    gap: 8px;
+    font-size: 12px;
+  }
+  #site-footer button.footer-menu-title {
+    min-height: 48px;
+    margin-bottom: 0;
+  }
+}
+
+/* Mobile navigation uses the original header and drawer geometry. */
+.brand-logo,
+.brand-logo:hover {
+  color: inherit;
+}
+.core-menu-mobile .brand-logo {
+  width: 142px;
+  height: 16px;
+}
+.core-menu-mobile .mobile-navbar .menu-lang {
+  font-size: 16px;
+}
+.core-menu-mobile.replica-mobile-open .menu-container {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+.core-menu-mobile .links-wrapper {
+  padding: 0;
+  margin: 0;
+}
+.core-menu-mobile .menu-item > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font: inherit;
+}
+.mobile-brand-placeholder {
+  width: 100%;
+  aspect-ratio: 9/5;
+}
+.core-menu-mobile .menu-card .img-wrapper .mobile-brand-symbol {
+  position: absolute;
+  width: 142px;
+  height: 40px;
+  object-fit: contain;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.replica-mobile-details {
+  display: block !important;
+  height: auto !important;
+  padding: 24px !important;
+}
+.replica-mobile-details .inner-container {
+  display: block !important;
+}
+.replica-mobile-details .hover-preview {
+  display: none;
+}
+.replica-mobile-details .main-col {
+  margin-bottom: 24px;
+}
+.replica-mobile-details .sm-title {
+  font-size: 12px;
+  color: #979793;
+  text-transform: uppercase;
+  margin: 20px 0 16px;
+}
+.replica-mobile-details ul {
+  padding: 0;
+  list-style: none;
+}
+.replica-mobile-details li a {
+  display: block;
+  padding: 6px 0;
+  color: #c5c5be;
+  font-size: 16px;
+}
+.replica-mobile-details .submenu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: white;
+  color: #3c3c3b;
+  margin-top: 24px;
+}
+.quote-tab img {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 1079px) {
+  .quote-tab {
+    top: 72px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 41px;
+    border-radius: 0;
+    padding: 8px 16px;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  body:has(.replica-mobile-open) .quote-tab {
+    display: none;
+  }
+  #site-footer {
+    padding-bottom: 0;
+  }
+  .chat-widget {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+/* Tailwind also defines collapse; expanded Bootstrap-style footer panels must be visible. */
+#site-footer .collapse.show {
+  visibility: visible;
+}
+@media (max-width: 600px) {
+  .replica-newsletter {
+    padding-top: 16px;
+  }
+}

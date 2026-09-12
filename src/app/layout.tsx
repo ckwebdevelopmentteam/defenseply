@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LocalNavigation } from "@/components/layout/LocalNavigation";
 export const metadata: Metadata = {
   title: "Discover Cosentino and its materials - Cosentino USA",
   description:
@@ -18,6 +19,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>
+        <LocalNavigation />
         {children}
       </body>
     </html>

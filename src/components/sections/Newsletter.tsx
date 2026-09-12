@@ -68,11 +68,11 @@ export function Newsletter() {
                   {[
                     "Architect",
                     "Builder",
-                    "Designer",
+                    "Interior Designer",
                     "Fabricator",
-                    "Kitchen & bath studio",
+                    "Kitchen and bathroom shops",
                     "Installer",
-                    "Other",
+                    "Promoter",
                   ].map((p) => (
                     <option key={p}>{p}</option>
                   ))}

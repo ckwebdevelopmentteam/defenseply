@@ -16,7 +16,7 @@ export function Renovation() {
           </p>
           <a
             title="Where to buy"
-            href="https://www.cosentino.com/usa/where-to-buy/#appointment"
+            href="#"
             className="btn btn-negro-azul btn- font-14 mt-32"
           >
             {"Where to buy"}
@@ -30,6 +30,8 @@ export function Renovation() {
           src="/assets/Casa-Navacerrada-LGC-2.jpg"
           alt=""
           loading="lazy"
+          width={2000}
+          height={1333}
         />
       </div>
     </div>

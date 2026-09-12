@@ -13,7 +13,7 @@ export function Hybriq() {
         </h2>
         <a
           title="Learn more about Hybriq+"
-          href="https://www.cosentino.com/usa/silestone/"
+          href="#"
           className="btn btn-borde-negro-azul btn- font-14"
         >
           {"Learn more about Hybriq+"}
@@ -28,6 +28,8 @@ export function Hybriq() {
               src="/assets/hybriq.jpg"
               alt=""
               loading="lazy"
+              width={743}
+              height={531}
             />
             <div className="core-slider__slide__filter"></div>
             <div className="core-slider__slide__card-body">

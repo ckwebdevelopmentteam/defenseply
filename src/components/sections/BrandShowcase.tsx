@@ -29,11 +29,11 @@ export function BrandShowcase() {
         </div>
       </div>
       <div className="row-2">
-        <Carousel desktop={3} tablet={2} mobile={1.15}>
+        <Carousel desktop={3} tablet={2} mobile={1.1}>
           {brands.map((b, i) => (
             <a
               className="core-slider__slide keen-slider__slide"
-              key={b.href}
+              key={b.image}
               href={b.href}
             >
               <img

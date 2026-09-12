@@ -22,7 +22,7 @@ export function NewCollections() {
         className=""
         controls={(h) => <Progress handle={h} id="collections" />}
       >
-        {collections.map((c) => (
+        {collections.map((c, index) => (
           <div
             key={c.title}
             className="core-slider-novedades__slide keen-slider__slide"
@@ -50,7 +50,25 @@ export function NewCollections() {
                   </div>
                 </div>
                 <div className="extra">
-                  <span className="arrow-link" />
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      width="44"
+                      height="44"
+                      rx="22"
+                      fill="white"
+                      fillOpacity=".4"
+                    />
+                    <path d="M22 15v14m7-7H15" stroke="white" />
+                  </svg>
+                  {index < 7 && (
+                    <span className="collection-new-badge">New</span>
+                  )}
                 </div>
               </div>
             </a>

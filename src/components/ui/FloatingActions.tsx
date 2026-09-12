@@ -1,15 +1,18 @@
 "use client";
 import { useState } from "react";
-import { ChevronRight, X } from "lucide-react";
+import { X } from "lucide-react";
 export function FloatingActions() {
   const [chat, setChat] = useState(false);
   return (
     <>
-      <a
-        className="quote-tab"
-        href="https://www.cosentino.com/landings-usa/quotation-form/"
-      >
-        Request a quote <ChevronRight size={24} />
+      <a className="quote-tab" href="#">
+        Request a quote{" "}
+        <img
+          src="/assets/Arrow_circle-Copy.avif"
+          alt=""
+          width="24"
+          height="24"
+        />
       </a>
       <div className="chat-widget">
         {chat ? (
@@ -21,13 +24,9 @@ export function FloatingActions() {
               </button>
             </header>
             <p>How can we help you?</p>
-            <a href="https://www.cosentino.com/usa/contact/">Contact us</a>
-            <a href="https://www.cosentino.com/usa/where-to-buy/">
-              Find a showroom
-            </a>
-            <a href="https://www.cosentino.com/landings-usa/quotation-form/">
-              Request a quote
-            </a>
+            <a href="#">Contact us</a>
+            <a href="#">Find a showroom</a>
+            <a href="#">Request a quote</a>
           </section>
         ) : (
           <button className="chat-prompt" onClick={() => setChat(true)}>

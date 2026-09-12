@@ -14,7 +14,7 @@ export function Carousel({
   className = "core-slider",
   desktop = 3,
   tablet = 2,
-  mobile = 1.15,
+  mobile = 1.1,
   spacing = 16,
   controls,
   wrapSlider,
@@ -57,6 +57,14 @@ export function Carousel({
           typeof v === "object" ? Number(v?.perView ?? desktop) : desktop,
       });
     },
+    optionsChanged(s) {
+      const v = s.options.slides;
+      setPosition({
+        index: s.track.details.rel,
+        perView:
+          typeof v === "object" ? Number(v?.perView ?? desktop) : desktop,
+      });
+    },
     slideChanged(s) {
       setPosition((p) => ({ ...p, index: s.track.details.rel }));
     },
@@ -70,7 +78,11 @@ export function Carousel({
     position.index >= count - position.perView - 0.1
       ? pages
       : Math.floor(position.index / step) + 1;
-  const slider = <div ref={ref} className={`keen-slider ${className}`}>{children}</div>;
+  const slider = (
+    <div ref={ref} className={`keen-slider ${className}`}>
+      {children}
+    </div>
+  );
   return (
     <>
       {controls?.({

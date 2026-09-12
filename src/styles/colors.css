@@ -187,7 +187,7 @@
 .section-colores .section-colores__content {
   min-width: 0;
   display: flex;
-  flex-direction: rowf;
+  flex-direction: row;
   gap: 16px;
 }
 .section-colores .slider-nav-colores {

@@ -21,6 +21,11 @@ export function Spaces() {
             <div className="core-tabs pb-40">
               <Carousel
                 key={active}
+                wrapSlider={(slider) => (
+                  <div id="spaces-panel" role="tabpanel" aria-label={active}>
+                    {slider}
+                  </div>
+                )}
                 controls={(h) => (
                   <div className="core-tabs__nav">
                     <ul
@@ -65,7 +70,7 @@ export function Spaces() {
                   <a
                     key={c.title}
                     className="core-slider__slide keen-slider__slide"
-                    href={c.href || `https://www.cosentino.com/usa/kitchens/`}
+                    href="#"
                   >
                     <img
                       className="core-slider__slide__image"

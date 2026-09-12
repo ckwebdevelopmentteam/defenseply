@@ -11,30 +11,12 @@ import {
 import gallery from "@/data/gallery.json";
 import { Carousel } from "@/components/ui/Carousel";
 import { Dialog } from "@/components/ui/Dialog";
-const categories = [
-  "All spaces",
-  "Kitchens",
-  "Bathrooms",
-  "Other interiors",
-  "Outdoor",
-  "Facades",
-  "Commercial",
-];
-// The public gallery snapshot is kept local; category membership is editable here.
-const categoryIndices: Record<string, number[]> = {
-  "All spaces": gallery.map((_, i) => i),
-  Kitchens: [0, 2, 3, 5, 8, 12, 13, 14, 17],
-  Bathrooms: [1, 4, 6, 7, 9],
-  "Other interiors": [0, 1, 2, 9, 15, 16, 17],
-  Outdoor: [7, 10, 11, 12],
-  Facades: [10, 11, 12],
-  Commercial: [0, 1, 2, 6, 15],
-};
+const categories = Object.keys(gallery) as (keyof typeof gallery)[];
 export function InspirationGallery() {
-  const [category, setCategory] = useState("All spaces"),
+  const [category, setCategory] = useState<keyof typeof gallery>("All spaces"),
     [view, setView] = useState("grid-2x2"),
     [selected, setSelected] = useState<number | null>(null);
-  const items = categoryIndices[category].map((i) => gallery[i]);
+  const items = gallery[category];
   const groups = Array.from({ length: Math.ceil(items.length / 4) }, (_, i) =>
     items.slice(i * 4, i * 4 + 4),
   );
@@ -58,7 +40,9 @@ export function InspirationGallery() {
               className="gallery-mobile-select"
               aria-label="Gallery space"
               value={category}
-              onChange={(e) => setCategory(e.target.value)}
+              onChange={(e) =>
+                setCategory(e.target.value as keyof typeof gallery)
+              }
             >
               {categories.map((c) => (
                 <option key={c}>{c}</option>
@@ -114,9 +98,9 @@ export function InspirationGallery() {
                   {group.map((item) => (
                     <button
                       className="core-gallery__content__item__image"
-                      key={item.title}
+                      key={item.image}
                       aria-label={`View ${item.title}`}
-                      onClick={() => setSelected(gallery.indexOf(item))}
+                      onClick={() => setSelected(items.indexOf(item))}
                     >
                       <div className="core-gallery__content__item__filter">
                         <div className="core-gallery__content__item__filter__cruz" />
@@ -155,20 +139,23 @@ export function InspirationGallery() {
               className="lightbox-prev"
               aria-label="Previous image"
               onClick={() =>
-                setSelected((selected + gallery.length - 1) % gallery.length)
+                setSelected((selected + items.length - 1) % items.length)
               }
             >
               <ChevronLeft />
             </button>
-            <img src={gallery[selected].image} alt={gallery[selected].title} />
+            <img
+              src={items[selected].fullImage || items[selected].image}
+              alt={items[selected].title}
+            />
             <button
               className="lightbox-next"
               aria-label="Next image"
-              onClick={() => setSelected((selected + 1) % gallery.length)}
+              onClick={() => setSelected((selected + 1) % items.length)}
             >
               <ChevronRight />
             </button>
-            <a href={gallery[selected].href}>{gallery[selected].title}</a>
+            <a href={items[selected].href}>{items[selected].title}</a>
           </div>
         )}
       </Dialog>

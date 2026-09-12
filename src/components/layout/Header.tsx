@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Globe2, ChevronDown, Menu, X } from "lucide-react";
+import { Globe2, ChevronDown } from "lucide-react";
 import navigation from "@/data/navigation.json";
-import { Dialog } from "@/components/ui/Dialog";
+import { menuPanels, type MenuPanelId } from "./menus";
+import { MobileHeader } from "./MobileHeader";
+import { CountryDialog } from "./CountryDialog";
 const links = [
   "Colors",
   "Our Brands",
@@ -17,8 +19,9 @@ type MenuName = keyof typeof navigation;
 export function Header() {
   const [scrolled, setScrolled] = useState(false),
     [open, setOpen] = useState<MenuName | null>(null),
-    [mobile, setMobile] = useState(false),
-    [country, setCountry] = useState(false);
+    [country, setCountry] = useState(false),
+    [submenu, setSubmenu] = useState<MenuPanelId | null>(null);
+  const ActivePanel = submenu ? menuPanels[submenu] : null;
   const reduced = useReducedMotion();
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 40);
@@ -27,17 +30,19 @@ export function Header() {
     return () => window.removeEventListener("scroll", update);
   }, []);
   useEffect(() => {
-    if (!open && !mobile) return;
+    if (!open) return;
     const key = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(null);
-        setMobile(false);
       }
     };
     document.addEventListener("keydown", key);
     return () => document.removeEventListener("keydown", key);
-  }, [open, mobile]);
-  const toggle = (name: MenuName) => setOpen(open === name ? null : name);
+  }, [open]);
+  const toggle = (name: MenuName) => {
+    setOpen(open === name ? null : name);
+    setSubmenu(null);
+  };
   const logo = (
     <a href="/usa/" aria-label="Cosentino home" className="brand-logo" />
   );
@@ -88,29 +93,17 @@ export function Header() {
                         />
                       </button>
                     ) : (
-                      <a
-                        href={`https://www.cosentino.com/usa/${name === "Colors" ? "colors/" : "professional/cosentino-city/"}`}
-                      >
-                        {name}
-                      </a>
+                      <a href="#">{name}</a>
                     )}
                   </li>
                 ))}
               </ul>
             </nav>
             <div className="row-side row-right">
-              <a
-                className="menu-btn is-primary"
-                href="https://www.cosentino.com/usa/where-to-buy/"
-              >
+              <a className="menu-btn is-primary" href="#">
                 Where To Buy
               </a>
-              <a
-                className="menu-btn is-secondary"
-                href="https://we.cosentino.com/home"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a className="menu-btn is-secondary" href="#" rel="noreferrer">
                 Professional Area
               </a>
             </div>
@@ -131,7 +124,26 @@ export function Header() {
                 <div className="first-submenu">
                   {navigation[open].map((card) => (
                     <div className="menu-card" key={card.title}>
-                      <a className="card-wrapper" href={card.href}>
+                      <a
+                        className={`card-wrapper ${submenu === card.submenu ? "is-active" : ""}`}
+                        href={card.href}
+                        aria-expanded={
+                          card.submenu ? submenu === card.submenu : undefined
+                        }
+                        aria-controls={
+                          card.submenu ? "desktop-menu-panel" : undefined
+                        }
+                        onClick={(event) => {
+                          if (card.submenu) {
+                            event.preventDefault();
+                            setSubmenu(
+                              submenu === card.submenu
+                                ? null
+                                : (card.submenu as MenuPanelId),
+                            );
+                          }
+                        }}
+                      >
                         <div className="header-card">
                           <div className="img-wrapper scale-hover">
                             {card.image && (
@@ -155,7 +167,7 @@ export function Header() {
                             <p>{card.title}</p>
                             <ChevronDown size={15} />
                           </div>
-                          <div className="hover-text">
+                          <div className="hover-text" aria-hidden="true">
                             <p>{card.title}</p>
                             <ChevronDown size={15} />
                           </div>
@@ -165,151 +177,23 @@ export function Header() {
                   ))}
                 </div>
               </div>
+              {ActivePanel && (
+                <div
+                  className="second-wrapper"
+                  id="desktop-menu-panel"
+                  style={{ transform: "none" }}
+                >
+                  <div className="second-submenu">
+                    <ActivePanel key={submenu} />
+                  </div>
+                </div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-      <div
-        className={`replica-mobile-header ${scrolled || mobile ? "solid" : ""}`}
-      >
-        <button
-          onClick={() => setMobile(!mobile)}
-          aria-label={mobile ? "Close menu" : "Open menu"}
-          aria-expanded={mobile}
-        >
-          {mobile ? <X /> : <Menu />}
-        </button>
-        {logo}
-        <button
-          onClick={() => setCountry(true)}
-          aria-label="Choose country or region"
-        >
-          <Globe2 size={20} /> USA
-        </button>
-      </div>
-      {mobile && (
-        <nav className="replica-mobile-nav" aria-label="Mobile navigation">
-          {links.map((name) => (
-            <div key={name}>
-              {name in navigation ? (
-                <>
-                  <button
-                    onClick={() => toggle(name as MenuName)}
-                    aria-expanded={open === name}
-                  >
-                    {name}
-                    <ChevronDown size={20} />
-                  </button>
-                  {open === name && (
-                    <div className="mobile-subitems">
-                      {navigation[open].map((c) => (
-                        <a href={c.href} key={c.title}>
-                          {c.title}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <a
-                  href={`https://www.cosentino.com/usa/${name === "Colors" ? "colors/" : "professional/cosentino-city/"}`}
-                >
-                  {name}
-                </a>
-              )}
-            </div>
-          ))}
-          <a href="https://www.cosentino.com/usa/where-to-buy/">Where To Buy</a>
-          <a href="https://we.cosentino.com/home">Professional Area</a>
-        </nav>
-      )}
-      <CountryDialog open={country} onClose={() => setCountry(false)} />
+      <MobileHeader scrolled={scrolled} onCountry={() => setCountry(true)} />
+      {country && <CountryDialog open onClose={() => setCountry(false)} />}
     </header>
-  );
-}
-function CountryDialog({
-  open,
-  onClose,
-}: {
-  open: boolean;
-  onClose: () => void;
-}) {
-  const [continent, setContinent] = useState(""),
-    [region, setRegion] = useState("");
-  return (
-    <Dialog open={open} onClose={onClose} label="Choose your country or region">
-      <div className="country-dialog">
-        <div className="flex items-center justify-between gap-8">
-          <h2>Choose Your Country or Region</h2>
-          <button onClick={onClose} aria-label="Close country selector">
-            close <X size={20} />
-          </button>
-        </div>
-        <label className="sr-only" htmlFor="continent">
-          Continent
-        </label>
-        <select
-          id="continent"
-          value={continent}
-          onChange={(e) => {
-            setContinent(e.target.value);
-            setRegion("");
-          }}
-        >
-          <option value="">Continent</option>
-          {[
-            "North America",
-            "South America",
-            "Europe",
-            "Asia",
-            "Oceania",
-            "Africa",
-          ].map((s) => (
-            <option key={s}>{s}</option>
-          ))}
-        </select>
-        <label className="sr-only" htmlFor="region">
-          Country
-        </label>
-        <select
-          id="region"
-          disabled={!continent}
-          value={region}
-          onChange={(e) => setRegion(e.target.value)}
-        >
-          <option value="">Country</option>
-          {(continent === "North America"
-            ? ["United States", "Canada", "Mexico"]
-            : continent === "Europe"
-              ? ["Spain", "United Kingdom", "France", "Germany", "Italy"]
-              : continent === "Asia"
-                ? ["India", "Singapore", "Japan", "United Arab Emirates"]
-                : continent === "Oceania"
-                  ? ["Australia", "New Zealand"]
-                  : continent === "Africa"
-                    ? ["South Africa"]
-                    : ["Brazil", "Argentina", "Chile"]
-          ).map((s) => (
-            <option key={s}>{s}</option>
-          ))}
-        </select>
-        <label className="sr-only" htmlFor="language">
-          Language
-        </label>
-        <select id="language" disabled={!region}>
-          <option>English</option>
-        </select>
-        <button
-          className="btn btn-negro-azul"
-          disabled={!region}
-          onClick={onClose}
-        >
-          Continue <span className="arrow-link" />
-        </button>
-        <label className="remember">
-          <input type="checkbox" /> Remember my selection
-        </label>
-      </div>
-    </Dialog>
   );
 }

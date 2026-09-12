@@ -3,28 +3,28 @@
     {
       "title": "Countertops",
       "image": "/assets/Aplicaciones-13.png",
-      "href": "https://www.cosentino.com/usa/kitchens/kitchen-countertop/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Cladding and coverings",
       "image": "/assets/Aplicaciones-14.png",
-      "href": "https://www.cosentino.com/usa/kitchens/kitchen-claddings/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Sinks",
       "image": "/assets/Aplicaciones-15.png",
-      "href": "https://www.cosentino.com/usa/kitchens/kitchen-sinks/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Floors",
       "image": "/assets/Aplicaciones-16.png",
-      "href": "https://www.cosentino.com/usa/kitchens/kitchen-flooring/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
@@ -40,42 +40,42 @@
     {
       "title": "Bathroom countertops",
       "image": "/assets/Aplicaciones-8.png",
-      "href": "https://www.cosentino.com/usa/bathrooms/bathroom-countertops/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Bathroom Sink",
       "image": "/assets/Aplicaciones-11.png",
-      "href": "https://www.cosentino.com/usa/bathrooms/washbasins/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Shower Trays",
       "image": "/assets/Aplicaciones-12.png",
-      "href": "https://www.cosentino.com/usa/bathrooms/shower-trays/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Floors",
       "image": "/assets/Aplicaciones-9.png",
-      "href": "https://www.cosentino.com/usa/bathrooms/bathroom-flooring/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Cladding and coverings",
       "image": "/assets/Aplicaciones-10.png",
-      "href": "https://www.cosentino.com/usa/bathrooms/bathroom-claddings/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Furniture",
       "image": "/assets/00-Furniture-Hero.avif",
-      "href": "https://www.cosentino.com/usa/bathrooms/bathroom-furniture/",
+      "href": "#",
       "brand": "",
       "label": ""
     }
@@ -84,21 +84,21 @@
     {
       "title": "Interior flooring",
       "image": "/assets/Aplicaciones-5.png",
-      "href": "https://www.cosentino.com/usa/living-room/floor-coverings/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Claddings",
       "image": "/assets/Aplicaciones-6.png",
-      "href": "https://www.cosentino.com/usa/living-room/claddings/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Furniture and tables",
       "image": "/assets/Aplicaciones-7.png",
-      "href": "https://www.cosentino.com/usa/living-room/furniture/",
+      "href": "#",
       "brand": "",
       "label": ""
     }
@@ -107,21 +107,21 @@
     {
       "title": "Facades",
       "image": "/assets/Aplicaciones-0.png",
-      "href": "https://www.cosentino.com/usa/facades/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Outdoor Countertop",
       "image": "/assets/Aplicaciones-1.png",
-      "href": "https://www.cosentino.com/usa/outdoor/outside-use-kitchens/",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Floors",
       "image": "/assets/Aplicaciones-2.png",
-      "href": "https://www.cosentino.com/usa/outdoor/dekton-durable-resistant-and-versatile-flooring/",
+      "href": "#",
       "brand": "",
       "label": ""
     }
@@ -130,21 +130,21 @@
     {
       "title": "Hotels",
       "image": "/assets/Aplicaciones-18.png",
-      "href": "https://www.cosentino.com/usa/blog/?spaces=contract&project-type=hotels&uses=&brands=&content-typology=&styles=&country=&search=&extra=&sort=date",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Restaurants",
       "image": "/assets/Aplicaciones-19.png",
-      "href": "https://www.cosentino.com/usa/blog/?spaces=contract&project-type=restaurants&uses=&brands=&content-typology=&styles=&country=&search=&extra=&sort=date",
+      "href": "#",
       "brand": "",
       "label": ""
     },
     {
       "title": "Commercial",
       "image": "/assets/Aplicaciones-20.png",
-      "href": "https://www.cosentino.com/usa/blog/?spaces=contract&project-type=singular-projects&uses=&brands=&content-typology=&styles=&country=&search=&extra=&sort=date",
+      "href": "#",
       "brand": "",
       "label": ""
     }
