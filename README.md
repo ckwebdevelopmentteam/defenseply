@@ -1,6 +1,6 @@
 # Defenseply website
 
-Next.js, TypeScript and Tailwind v4. This branch combines Sahil’s Defenseply UI with the reusable homepage structure. Images and fonts are local; Framer Motion and Keen Slider handle animation and carousels.
+Next.js, TypeScript and Tailwind v4. This branch combines Sahil’s Defenseply UI and Ansab’s About section with the reusable homepage structure. Images and fonts are local; Framer Motion and Keen Slider handle animation and carousels.
 
 ## Run and verify
 
@@ -30,6 +30,7 @@ Stop the existing server before starting another on the same port.
 - `src/components/layout/`: shared desktop/mobile navigation, footer and newsletter form.
 - `src/components/ui/`: reusable headings, action links, cards, carousel controls, dialog and floating actions.
 - `src/data/site.ts`: navbar links, header actions, footer groups and social labels.
+- `src/data/about.json`: About headline, features, gallery images and statistics. The section follows the hero and owns the navbar’s `#about` destination.
 - `src/data/*.json`: editable homepage card content. Collection badges and brand logos are data fields, independent of card order.
 - `src/app/globals.css`: Tailwind theme, local fonts and small shared utilities. All section styles use Tailwind; no legacy stylesheet folder.
 - `public/assets/`: local media. Source manifests retain provenance URLs; those are not navigation links.

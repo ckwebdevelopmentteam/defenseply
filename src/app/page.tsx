@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
 import { Spaces } from "@/components/sections/Spaces";
 import { NewCollections } from "@/components/sections/NewCollections";
 import { ColorCollection } from "@/components/sections/ColorCollection";
@@ -18,6 +19,7 @@ export default function Home() {
         <div className="mx-auto w-full px-[38px] max-phone:px-5">
           <article>
             <Hero />
+            <About />
             <Spaces />
             <NewCollections />
             <ColorCollection />

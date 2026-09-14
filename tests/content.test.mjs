@@ -35,7 +35,7 @@ function localDestination(href) {
     );
 }
 test("homepage content has existing local assets and valid local destinations", () => {
-  for (const name of ["brands", "collections", "colors", "spaces", "gallery"])
+  for (const name of ["about", "brands", "collections", "colors", "spaces", "gallery"])
     walk(read(name), (key, value) => {
       if (key === "href") localDestination(value);
       if (["image", "fullImage", "logo"].includes(key) && value) {
