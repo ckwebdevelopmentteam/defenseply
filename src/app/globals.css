@@ -29,6 +29,8 @@
 @import "../styles/form-browser.css";
 @import "../styles/newsletter.css";
 @import "../styles/replica.css";
+@import "../styles/contact.css";
+@import "../styles/footer.css";
 @font-face {
   font-family: Diagramm;
   font-style: normal;
