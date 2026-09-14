@@ -178,6 +178,23 @@ button svg {
   align-items: flex-end;
   gap: 20px;
 }
+.chat-prompt-wrapper {
+  position: relative;
+}
+.chat-prompt-dismiss {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #3c3c3b;
+  color: white;
+}
 .chat-prompt {
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -715,6 +732,10 @@ button svg {
     gap: 10px;
     font-size: 16px;
     line-height: 24px;
+  }
+  /* Follow the same scroll state that reduces the mobile navbar to 48px. */
+  body:has(.mobile-navbar.is-scrolled) .quote-tab {
+    top: 48px;
   }
   body:has(.replica-mobile-open) .quote-tab {
     display: none;

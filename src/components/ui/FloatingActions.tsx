@@ -3,6 +3,7 @@ import { useState } from "react";
 import { X } from "lucide-react";
 export function FloatingActions() {
   const [chat, setChat] = useState(false);
+  const [promptDismissed, setPromptDismissed] = useState(false);
   return (
     <>
       <a className="quote-tab" href="#">
@@ -28,11 +29,21 @@ export function FloatingActions() {
             <a href="#">Find a showroom</a>
             <a href="#">Request a quote</a>
           </section>
-        ) : (
-          <button className="chat-prompt" onClick={() => setChat(true)}>
-            Can we help you?
-          </button>
-        )}
+        ) : !promptDismissed ? (
+          <div className="chat-prompt-wrapper">
+            <button className="chat-prompt" onClick={() => setChat(true)}>
+              Can we help you?
+            </button>
+            <button
+              type="button"
+              className="chat-prompt-dismiss"
+              aria-label="Dismiss help prompt"
+              onClick={() => setPromptDismissed(true)}
+            >
+              <X size={12} strokeWidth={2} aria-hidden="true" />
+            </button>
+          </div>
+        ) : null}
         <button
           className="chat-launcher"
           aria-label={chat ? "Close chat" : "Open chat"}
