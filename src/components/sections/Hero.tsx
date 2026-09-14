@@ -17,6 +17,7 @@ export function Hero() {
   }, [paused, reduced]);
   return (
     <section
+      id="home"
       data-section="hero"
       className="page-bleed relative flex h-screen max-w-screen flex-col justify-end overflow-hidden"
       aria-label="Sustainable architectural surfaces"
@@ -59,7 +60,7 @@ export function Hero() {
                   setPaused(true);
                 }}
                 onBlur={() => setPaused(false)}
-                href="#"
+                href="#product"
               >
                 {s.title}
               </a>
@@ -76,7 +77,7 @@ export function Hero() {
         </div>
       </div>
       <a
-        href="#spaces"
+        href="#product"
         className="absolute bottom-0 left-1/2 z-[9] -translate-1/2 max-phone:hidden"
         aria-label="Explore architectural surfaces"
       >

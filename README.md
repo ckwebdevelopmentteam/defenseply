@@ -1,15 +1,15 @@
-# Cosentino USA homepage replica
+# Defenseply website
 
-A component-based Next.js replica of the `/usa/` homepage, with responsive desktop and mobile layouts. Built with TypeScript, Tailwind CSS, Framer Motion, and Keen Slider. Images, logos, and fonts are served locally.
+Next.js, TypeScript and Tailwind v4. This branch combines Sahil’s Defenseply UI with the reusable homepage structure. Images and fonts are local; Framer Motion and Keen Slider handle animation and carousels.
 
-## Run
+## Run and verify
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open http://localhost:3000/usa/. The root route renders the same homepage.
+Routes: `/` and `/usa/` render the homepage; `/contact-us` renders the contact page.
 
 ```sh
 npm test
@@ -18,27 +18,30 @@ npm run build
 npm start
 ```
 
-Stop the running development server before starting the production server on the same port.
+Stop the existing server before starting another on the same port.
 
-## Edit or replace sections
+## Structure and section replacement
 
-- `src/app/page.tsx`: homepage section order. Remove, reorder, or replace component imports here.
-- `src/components/sections/`: one component per homepage section, from `Hero` through `Newsletter`.
-- `src/components/layout/`: desktop/mobile navigation, country dialog, footer, and placeholder-link behavior.
-- `src/components/layout/NavigationPanel.tsx`: one shared renderer for all desktop/mobile submenu content in `src/data/menu-panels.json`.
-- `src/components/ui/`: reusable headings, action links, surface cards, carousel controls, modal dialog, and floating controls.
-- `src/data/`: editable card content, brand/color filters, gallery categories, navigation, and region options.
-- `src/app/globals.css`: Tailwind v4 theme, local fonts, base rules, and a few shared utilities. Section styling lives directly in each component’s Tailwind classes; there is no legacy stylesheet folder.
-- `public/assets/`: local media and fonts. `sources.json` records source URLs; `src/data/asset-map.json` maps original URLs to local assets.
+- `src/app/layout.tsx`: shared navbar, footer and navigation state, used by every route.
+- `src/app/page.tsx`: homepage section order. Replace or reorder components here.
+- `src/app/contact-us/page.tsx`: contact section order and page metadata.
+- `src/components/sections/`: independently replaceable homepage sections.
+- `src/components/sections/contact/`: contact intro, project section/form, direct details, visit section and final CTA. Only the form needs client-side state.
+- `src/components/layout/`: shared desktop/mobile navigation, footer and newsletter form.
+- `src/components/ui/`: reusable headings, action links, cards, carousel controls, dialog and floating actions.
+- `src/data/site.ts`: navbar links, header actions, footer groups and social labels.
+- `src/data/*.json`: editable homepage card content. Collection badges and brand logos are data fields, independent of card order.
+- `src/app/globals.css`: Tailwind theme, local fonts and small shared utilities. All section styles use Tailwind; no legacy stylesheet folder.
+- `public/assets/`: local media. Source manifests retain provenance URLs; those are not navigation links.
 
-To replace a section, edit or swap its component in `src/app/page.tsx`. To change its cards, update its JSON file or supply its `items` prop. Collection badges (`isNew`) and brand logos are data fields, so reordering cards does not change their meaning. Static section copy stays beside its markup.
+Use the shared UI components when adding similar sections. Most card sections accept an `items` prop. Keep new sections inside the existing page container or use `page-bleed` for full-width backgrounds. Contact sections share their typography/layout utilities in `ContactUI.tsx`.
 
-Use `Heading`/`SectionHeading`, `ActionLink`, `SurfaceCard`, and `Carousel` for matching new sections. Theme utilities include `text-ink`, `bg-stone`, `bg-aqua`, `text-body`, and fluid heading sizes. Responsive breakpoints: `phone` 600px, `tablet` 1024px, `desktop` 1080px, `wide` 1440px. `NavigationProvider` shares scroll/menu state between the header and quote banner; keep it around the page chrome.
+Responsive breakpoints: `phone` 600px, `tablet` 1024px, `desktop` 1080px, `wide` 1440px. `NavigationProvider` shares menu/scroll state and the `--mobile-nav-height` value so the yellow quote banner follows the navbar. It hides while the mobile menu is open.
 
-Run `npm test` after editing content to detect missing local assets, invalid submenu references, or accidental outbound card links. Then run lint and build.
+## Interactions
 
-## Preview interactions
+Navbar/footer links navigate to implemented local pages and homepage anchors. Homepage section IDs are `home`, `product`, `gallery`, `about`, and `contact`; `contact` remains the homepage newsletter destination from Sahil’s branch. Placeholder `#` links remain inert. No promotional links redirect to Cosentino.
 
-Navigation drawers, nested menus, touch/draggable carousels, space and brand filters, gallery layouts/lightboxes, country selection, and mobile footer accordions work locally. Former external destinations use `href="#"`; `LocalNavigation` prevents clicks from navigating or jumping the page. The home logo and in-page anchors stay local.
+Carousels, filters, gallery lightboxes, mobile menus and help dismissal work locally. Contact and newsletter forms validate input but have no backend; submission feedback explicitly states that nothing was sent. Contact details remain the placeholders supplied by Sahil. No analytics or external form scripts are included.
 
-Only the USA homepage is implemented. Newsletter and chat are local previews without a backend or data submission. Country preferences can be remembered on this device, but country selection does not redirect. No analytics or third-party form scripts are included. The page uses `noindex` metadata.
+Tests validate local assets, navbar/footer destinations, homepage anchors and duplicate IDs. Run them whenever editing content or routes.

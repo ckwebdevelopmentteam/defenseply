@@ -1,6 +1,3 @@
-import { NavigationProvider } from "@/components/layout/NavigationState";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Spaces } from "@/components/sections/Spaces";
 import { NewCollections } from "@/components/sections/NewCollections";
@@ -16,8 +13,7 @@ import { FloatingActions } from "@/components/ui/FloatingActions";
 /** Edit, reorder, or replace an individual section here. */
 export default function Home() {
   return (
-    <NavigationProvider>
-      <Header />
+    <>
       <main id="main-content" className="overflow-hidden">
         <div className="mx-auto w-full px-[38px] max-phone:px-5">
           <article>
@@ -36,7 +32,6 @@ export default function Home() {
         </div>
       </main>
       <FloatingActions />
-      <Footer />
-    </NavigationProvider>
+    </>
   );
 }

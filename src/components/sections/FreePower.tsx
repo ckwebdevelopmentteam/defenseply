@@ -14,7 +14,9 @@ export function FreePower() {
             </h2>
           </div>
           <div>
-            <ActionLink variant="light">Discover more</ActionLink>
+            <ActionLink href="#contact" variant="light">
+              Discover more
+            </ActionLink>
           </div>
         </div>
         <div className="h-full w-full flex-[1_1_50%] max-tablet:aspect-video max-phone:aspect-[4/3]">

@@ -12,6 +12,12 @@
   --color-line: #c5c5be;
   --color-aqua: #effdfd;
   --color-quote: #ffed72;
+  --color-paper: #f4f3ef;
+  --color-contact-ink: #171717;
+  --color-contact-muted: #5d5d59;
+  --color-contact-line: #d7d5d0;
+  --color-footer-muted: #66655f;
+  --color-footer-accent: #d9c34a;
   --breakpoint-phone: 600px;
   --breakpoint-tablet: 1024px;
   --breakpoint-desktop: 1080px;
@@ -92,6 +98,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 125px;
     overflow-y: scroll;
   }
   body {

@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 import { useNavigationState } from "@/components/layout/NavigationState";
 import { cn } from "@/lib/cn";
 export function FloatingActions() {
-  const { scrolled, mobileOpen } = useNavigationState();
+  const { mobileOpen } = useNavigationState();
   const [chat, setChat] = useState(false);
   const [promptDismissed, setPromptDismissed] = useState(false);
   return (
@@ -13,10 +13,10 @@ export function FloatingActions() {
         data-testid="quote-banner"
         className={cn(
           "fixed top-[40%] right-0 z-[900] flex h-16 w-[289px] items-center justify-center gap-2.5 rounded-l bg-quote px-[30px] py-[19px] text-base leading-[22px] font-medium text-[#131313] shadow-[0_1px_5px_#0003] max-desktop:left-0 max-desktop:h-[41px] max-desktop:w-full max-desktop:rounded-none max-desktop:px-4 max-desktop:py-2 max-desktop:leading-6",
-          scrolled ? "max-desktop:top-12" : "max-desktop:top-[72px]",
+          "max-desktop:top-[var(--mobile-nav-height)]",
           mobileOpen && "max-desktop:hidden",
         )}
-        href="#"
+        href="#contact"
       >
         Request a quote{" "}
         <img
@@ -39,13 +39,22 @@ export function FloatingActions() {
               </button>
             </header>
             <p className="px-5 pt-5">How can we help you?</p>
-            <a className="mx-5 my-3 block border border-[#ddd] p-3" href="#">
+            <a
+              className="mx-5 my-3 block border border-[#ddd] p-3"
+              href="#contact"
+            >
               Contact us
             </a>
-            <a className="mx-5 my-3 block border border-[#ddd] p-3" href="#">
+            <a
+              className="mx-5 my-3 block border border-[#ddd] p-3"
+              href="#contact"
+            >
               Find a showroom
             </a>
-            <a className="mx-5 my-3 block border border-[#ddd] p-3" href="#">
+            <a
+              className="mx-5 my-3 block border border-[#ddd] p-3"
+              href="#contact"
+            >
               Request a quote
             </a>
           </section>

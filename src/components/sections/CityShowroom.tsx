@@ -26,7 +26,7 @@ export function CityShowroom() {
             A space for inspiration, connection, and creation to bring any
             design or architectural project to life.
           </p>
-          <ActionLink>More information</ActionLink>
+          <ActionLink href="#contact">More information</ActionLink>
         </div>
       </div>
       <div className="relative aspect-square w-full flex-[1_0_50%] overflow-hidden">

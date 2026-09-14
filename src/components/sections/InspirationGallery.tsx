@@ -24,7 +24,7 @@ export function InspirationGallery() {
     items.slice(i * 4, i * 4 + 4),
   );
   return (
-    <section data-section="gallery" id="inspiration">
+    <section data-section="gallery" id="gallery">
       <SectionHeading title="INSPIRATION GALLERIES" />
       <div>
         <div className="flex flex-col gap-6 pb-10">

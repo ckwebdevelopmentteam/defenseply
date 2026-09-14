@@ -1,57 +1,78 @@
+import Link from "next/link";
 import { cn } from "@/lib/cn";
-import navigation from "@/data/navigation.json";
-export { navigation };
-export type MenuName = keyof typeof navigation;
-export const navigationLinks = [
-  "Colors",
-  "Our Brands",
-  "Spaces",
-  "Inspiration",
-  "Showrooms",
-  "Professionals",
-  "Corporate",
-] as const;
-export function BrandLogo({ className }: { className?: string }) {
+import { siteActions } from "@/data/site";
+export function BrandLogo({
+  solid = false,
+  compact = false,
+  mobile = false,
+}: {
+  solid?: boolean;
+  compact?: boolean;
+  mobile?: boolean;
+}) {
+  const size = mobile
+    ? "h-[54px] max-h-[calc(var(--mobile-nav-height)-4px)] max-phone:h-11"
+    : compact
+      ? "h-[54px]"
+      : "h-[76px] max-[1200px]:h-[66px]";
   return (
-    <a
-      href="/usa/"
-      aria-label="Cosentino home"
-      className={cn(
-        "block h-6 w-[142px] shrink-0 bg-current [mask:url('/assets/cosentino-logo.svg')_center/contain_no-repeat]",
-        className,
-      )}
-    />
+    <Link
+      href="/"
+      aria-label="Defenseply home"
+      className="relative flex shrink-0 items-center transition-transform hover:scale-[1.03]"
+    >
+      <img
+        src="/assets/defenseply-logo.png"
+        alt="Defenseply"
+        className={cn(
+          "w-auto max-w-none object-contain transition-[height] duration-250 drop-shadow-[0_2px_8px_#0007]",
+          size,
+          solid ? "hidden" : "block group-hover/header:hidden",
+        )}
+      />
+      <img
+        src="/assets/defenseply-logo-dark.png"
+        alt="Defenseply"
+        className={cn(
+          "w-auto max-w-none object-contain transition-[height] duration-250 drop-shadow-[0_2px_6px_#0003]",
+          size,
+          solid ? "block" : "hidden group-hover/header:block",
+        )}
+      />
+    </Link>
   );
 }
-export function NavigationActions({ mobile = false }: { mobile?: boolean }) {
+export function NavigationActions({
+  onNavigate,
+  mobile = false,
+}: {
+  onNavigate?: () => void;
+  mobile?: boolean;
+}) {
   return (
     <div
       className={cn(
         "flex items-center gap-4 max-[1200px]:gap-2.5",
-        mobile && "w-full flex-col gap-2.5",
+        mobile && "w-full flex-col items-stretch",
       )}
     >
-      <a
-        href="#"
-        className={cn(
-          "whitespace-nowrap rounded-full px-[18px] py-2 text-[13px] leading-4 backdrop-blur-sm max-[1400px]:px-3",
-          mobile
-            ? "min-w-[190px] bg-[#1d1d1c] px-6 py-3 text-center text-body text-white"
-            : "bg-black/10 group-hover/header:bg-black/10",
-        )}
-      >
-        Where To Buy
-      </a>
-      <a
-        href="#"
-        className={cn(
-          "whitespace-nowrap text-[13px] leading-4",
-          mobile &&
-            "min-w-[190px] rounded-full border border-muted px-6 py-3 text-center text-body",
-        )}
-      >
-        Professional Area
-      </a>
+      {siteActions.map((item, i) => (
+        <Link
+          key={item.name}
+          href={item.href}
+          onClick={onNavigate}
+          className={cn(
+            "whitespace-nowrap text-[13px] leading-4",
+            !mobile &&
+              i === 0 &&
+              "rounded-full bg-black/10 px-[18px] py-2 backdrop-blur-sm max-[1400px]:px-3",
+            mobile &&
+              "border-b border-white/20 py-[18px] text-[22px] leading-normal font-light",
+          )}
+        >
+          {item.name}
+        </Link>
+      ))}
     </div>
   );
 }

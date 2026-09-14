@@ -11,7 +11,7 @@ export function Hybriq() {
           Silestone. The first mineral surface with low silica content. With
           exclusive Hybriq+ technology.
         </Heading>
-        <ActionLink>Learn more about Hybriq+</ActionLink>
+        <ActionLink href="#contact">Learn more about Hybriq+</ActionLink>
       </div>
       <div className="relative aspect-[4/3] w-full flex-[1_0_50%] overflow-hidden">
         <img

@@ -10,7 +10,7 @@ export function Spaces({ items = spaces }: { items?: typeof spaces }) {
   const [active, setActive] = useState(categories[0]);
   return (
     <section
-      id="spaces"
+      id="product"
       data-section="spaces"
       className="relative -mx-[38px] overflow-hidden bg-white px-[38px] pt-[61px]"
     >

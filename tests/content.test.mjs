@@ -1,7 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
+import { siteNavigation, siteActions, footerGroups } from "../src/data/site.ts";
 const read = (name) =>
   JSON.parse(readFileSync(resolve("src/data", `${name}.json`), "utf8"));
 function walk(value, check) {
@@ -12,19 +13,31 @@ function walk(value, check) {
       walk(item, check);
     });
 }
-test("editable content uses existing local assets and inert destinations", () => {
-  for (const name of [
-    "brands",
-    "collections",
-    "colors",
-    "spaces",
-    "gallery",
-    "navigation",
-    "menu-panels",
-  ]) {
+const homeSections = readdirSync("src/components/sections")
+  .filter((name) => name.endsWith(".tsx"))
+  .map((name) => readFileSync(resolve("src/components/sections", name), "utf8"))
+  .join("\n");
+function localDestination(href) {
+  assert.ok(
+    href.startsWith("#") || (href.startsWith("/") && !href.startsWith("//")),
+    `Nonlocal link: ${href}`,
+  );
+  const [path, anchor] = href.split("#");
+  if (path && path !== "/")
+    assert.ok(
+      existsSync(resolve("src/app", path.slice(1), "page.tsx")),
+      `Missing route: ${path}`,
+    );
+  if (anchor)
+    assert.ok(
+      homeSections.includes(`id="${anchor}"`),
+      `Missing homepage anchor: ${anchor}`,
+    );
+}
+test("homepage content has existing local assets and valid local destinations", () => {
+  for (const name of ["brands", "collections", "colors", "spaces", "gallery"])
     walk(read(name), (key, value) => {
-      if (key === "href")
-        assert.equal(value, "#", `${name}: outbound destination`);
+      if (key === "href") localDestination(value);
       if (["image", "fullImage", "logo"].includes(key) && value) {
         assert.ok(
           value.startsWith("/assets/"),
@@ -36,23 +49,22 @@ test("editable content uses existing local assets and inert destinations", () =>
         );
       }
     });
-  }
 });
-test("every submenu reference resolves and every panel has content", () => {
-  const panels = read("menu-panels");
-  for (const cards of Object.values(read("navigation"))) {
-    for (const card of cards)
-      if (card.submenu) assert.ok(panels[card.submenu], card.submenu);
-  }
-  for (const [id, panel] of Object.entries(panels)) {
-    assert.ok(panel.columns.length, id);
-    for (const column of panel.columns)
-      for (const group of column.groups)
-        assert.ok(group.items.length, `${id}: empty group`);
-  }
+test("shared navbar, actions and footer link to implemented destinations", () => {
+  for (const item of [
+    ...siteNavigation,
+    ...siteActions,
+    ...footerGroups.flatMap((group) => group.links),
+  ])
+    localDestination(item.href);
+  assert.equal(
+    new Set(siteNavigation.map((item) => item.name)).size,
+    siteNavigation.length,
+  );
 });
-test("footer groups have unique identifiers and links", () => {
-  const groups = read("footer");
-  assert.equal(new Set(groups.map((group) => group.id)).size, groups.length);
-  for (const group of groups) assert.ok(group.title && group.links.length);
+test("homepage section anchors are unique", () => {
+  const anchors = [...homeSections.matchAll(/\bid="([^"]+)"/g)].map(
+    (match) => match[1],
+  );
+  assert.equal(new Set(anchors).size, anchors.length);
 });

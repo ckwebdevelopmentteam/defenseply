@@ -15,7 +15,7 @@ export function Renovation() {
             Our extensive network of collaborators allows us to offer you advice
             for any renovation across five continents.
           </p>
-          <ActionLink variant="dark" className="mt-8">
+          <ActionLink href="#contact" variant="dark" className="mt-8">
             Where to buy
           </ActionLink>
         </div>

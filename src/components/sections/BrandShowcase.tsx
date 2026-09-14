@@ -6,7 +6,7 @@ import { SurfaceCard } from "@/components/ui/SurfaceCard";
 
 export function BrandShowcase({ items = brands }: { items?: typeof brands }) {
   return (
-    <section id="brands" data-section="brands" className="pb-15">
+    <section id="about" data-section="brands" className="pb-15">
       <SectionHeading
         title="Versatile solutions for any space"
         descriptions={[
