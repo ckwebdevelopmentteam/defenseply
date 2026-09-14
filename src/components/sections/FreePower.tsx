@@ -17,7 +17,7 @@ export function FreePower() {
           <div className="core-cta-customizable__text-col__bottom">
             <a
               title="Discover more"
-              href="https://www.cosentino.com/landings-usa/freepower/"
+              href="#contact"
               className="btn btn-blanco-negro btn- font-14"
             >
               {"Discover more"}

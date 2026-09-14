@@ -7,10 +7,11 @@ export function Footer() {
           <div className="col-12 text-center text-md-left footer-logo">
             <img
               className="mb-0 align-baseline"
-              src="/assets/logo-cosentino-white.svg"
-              alt="Cosentino"
+              src="/assets/defenseply-logo.png"
+              alt="Defenseply"
               loading="lazy"
-            width={143.0} height={18.0} />
+              style={{ height: "90px", width: "auto", objectFit: "contain" }}
+            />
           </div>
         </div>
         <div className="row mt-xxl" id="columnas-footer">

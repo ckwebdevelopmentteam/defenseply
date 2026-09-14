@@ -16,7 +16,7 @@ export function Renovation() {
           </p>
           <a
             title="Where to buy"
-            href="https://www.cosentino.com/usa/where-to-buy/#appointment"
+            href="#contact"
             className="btn btn-negro-azul btn- font-14 mt-32"
           >
             {"Where to buy"}

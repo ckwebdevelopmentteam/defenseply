@@ -13,7 +13,7 @@ export function Hybriq() {
         </h2>
         <a
           title="Learn more about Hybriq+"
-          href="https://www.cosentino.com/usa/silestone/"
+          href="#contact"
           className="btn btn-borde-negro-azul btn- font-14"
         >
           {"Learn more about Hybriq+"}

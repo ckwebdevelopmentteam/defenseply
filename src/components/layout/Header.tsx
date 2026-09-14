@@ -1,24 +1,20 @@
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Globe2, ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import navigation from "@/data/navigation.json";
-import { Dialog } from "@/components/ui/Dialog";
-const links = [
-  "Colors",
-  "Our Brands",
-  "Spaces",
-  "Inspiration",
-  "Showrooms",
-  "Professionals",
-  "Corporate",
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Product", href: "#product" },
+  { name: "Gallery", href: "#gallery" },
+  { name: "Contact Us", href: "#contact" },
 ];
 type MenuName = keyof typeof navigation;
 export function Header() {
   const [scrolled, setScrolled] = useState(false),
     [open, setOpen] = useState<MenuName | null>(null),
-    [mobile, setMobile] = useState(false),
-    [country, setCountry] = useState(false);
+    [mobile, setMobile] = useState(false);
   const reduced = useReducedMotion();
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 40);
@@ -39,7 +35,18 @@ export function Header() {
   }, [open, mobile]);
   const toggle = (name: MenuName) => setOpen(open === name ? null : name);
   const logo = (
-    <a href="/usa/" aria-label="Cosentino home" className="brand-logo" />
+    <a href="/" aria-label="Defenseply home" className="brand-logo">
+      <img
+        src="/assets/defenseply-logo.png"
+        alt="Defenseply"
+        className="brand-logo-img logo-light"
+      />
+      <img
+        src="/assets/defenseply-logo-dark.png"
+        alt="Defenseply"
+        className="brand-logo-img logo-dark"
+      />
+    </a>
   );
   return (
     <header id="core-main-menu" className="core-main-menu">
@@ -52,47 +59,34 @@ export function Header() {
       >
         <div
           className={`main-menu-container theme-regular ${scrolled ? "is-scrolled" : "is-at-top"}`}
-          style={{ padding: scrolled || open ? "12px 32px" : "32px" }}
+          style={{ padding: scrolled || open ? "10px 32px" : "18px 32px" }}
         >
           <div className="main-menu-wrapper">
             <div className="row-side row-left">
               <div className="menu-logo">{logo}</div>
-              <button
-                className="menu-lang"
-                onClick={() => setCountry(true)}
-                aria-label="Choose country or region"
-              >
-                <Globe2 size={24} strokeWidth={1} />
-                <p>USA</p>
-                <ChevronDown size={20} strokeWidth={1} />
-              </button>
             </div>
             <nav className="row-center" aria-label="Main navigation">
               <ul className="menu-main">
-                {links.map((name) => (
-                  <li className="menu-item" key={name}>
-                    {name in navigation ? (
+                {navItems.map((item) => (
+                  <li className="menu-item" key={item.name}>
+                    {item.name in navigation ? (
                       <button
-                        aria-expanded={open === name}
+                        aria-expanded={open === item.name}
                         aria-controls="desktop-submenu"
-                        onClick={() => toggle(name as MenuName)}
+                        onClick={() => toggle(item.name as MenuName)}
                       >
-                        {name}
+                        {item.name}
                         <ChevronDown
                           size={17}
                           strokeWidth={1}
                           style={{
                             transform:
-                              open === name ? "rotate(180deg)" : undefined,
+                              open === item.name ? "rotate(180deg)" : undefined,
                           }}
                         />
                       </button>
                     ) : (
-                      <a
-                        href={`https://www.cosentino.com/usa/${name === "Colors" ? "colors/" : "professional/cosentino-city/"}`}
-                      >
-                        {name}
-                      </a>
+                      <a href={item.href}>{item.name}</a>
                     )}
                   </li>
                 ))}
@@ -180,30 +174,29 @@ export function Header() {
           {mobile ? <X /> : <Menu />}
         </button>
         {logo}
-        <button
-          onClick={() => setCountry(true)}
-          aria-label="Choose country or region"
-        >
-          <Globe2 size={20} /> USA
-        </button>
+        <span style={{ width: 24 }} aria-hidden="true" />
       </div>
       {mobile && (
         <nav className="replica-mobile-nav" aria-label="Mobile navigation">
-          {links.map((name) => (
-            <div key={name}>
-              {name in navigation ? (
+          {navItems.map((item) => (
+            <div key={item.name}>
+              {item.name in navigation ? (
                 <>
                   <button
-                    onClick={() => toggle(name as MenuName)}
-                    aria-expanded={open === name}
+                    onClick={() => toggle(item.name as MenuName)}
+                    aria-expanded={open === item.name}
                   >
-                    {name}
+                    {item.name}
                     <ChevronDown size={20} />
                   </button>
-                  {open === name && (
+                  {open === item.name && (
                     <div className="mobile-subitems">
                       {navigation[open].map((c) => (
-                        <a href={c.href} key={c.title}>
+                        <a
+                          href={c.href}
+                          key={c.title}
+                          onClick={() => setMobile(false)}
+                        >
                           {c.title}
                         </a>
                       ))}
@@ -211,105 +204,28 @@ export function Header() {
                   )}
                 </>
               ) : (
-                <a
-                  href={`https://www.cosentino.com/usa/${name === "Colors" ? "colors/" : "professional/cosentino-city/"}`}
-                >
-                  {name}
+                <a href={item.href} onClick={() => setMobile(false)}>
+                  {item.name}
                 </a>
               )}
             </div>
           ))}
-          <a href="https://www.cosentino.com/usa/where-to-buy/">Where To Buy</a>
-          <a href="https://we.cosentino.com/home">Professional Area</a>
+          <a
+            href="https://www.cosentino.com/usa/where-to-buy/"
+            onClick={() => setMobile(false)}
+          >
+            Where To Buy
+          </a>
+          <a
+            href="https://we.cosentino.com/home"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setMobile(false)}
+          >
+            Professional Area
+          </a>
         </nav>
       )}
-      <CountryDialog open={country} onClose={() => setCountry(false)} />
     </header>
-  );
-}
-function CountryDialog({
-  open,
-  onClose,
-}: {
-  open: boolean;
-  onClose: () => void;
-}) {
-  const [continent, setContinent] = useState(""),
-    [region, setRegion] = useState("");
-  return (
-    <Dialog open={open} onClose={onClose} label="Choose your country or region">
-      <div className="country-dialog">
-        <div className="flex items-center justify-between gap-8">
-          <h2>Choose Your Country or Region</h2>
-          <button onClick={onClose} aria-label="Close country selector">
-            close <X size={20} />
-          </button>
-        </div>
-        <label className="sr-only" htmlFor="continent">
-          Continent
-        </label>
-        <select
-          id="continent"
-          value={continent}
-          onChange={(e) => {
-            setContinent(e.target.value);
-            setRegion("");
-          }}
-        >
-          <option value="">Continent</option>
-          {[
-            "North America",
-            "South America",
-            "Europe",
-            "Asia",
-            "Oceania",
-            "Africa",
-          ].map((s) => (
-            <option key={s}>{s}</option>
-          ))}
-        </select>
-        <label className="sr-only" htmlFor="region">
-          Country
-        </label>
-        <select
-          id="region"
-          disabled={!continent}
-          value={region}
-          onChange={(e) => setRegion(e.target.value)}
-        >
-          <option value="">Country</option>
-          {(continent === "North America"
-            ? ["United States", "Canada", "Mexico"]
-            : continent === "Europe"
-              ? ["Spain", "United Kingdom", "France", "Germany", "Italy"]
-              : continent === "Asia"
-                ? ["India", "Singapore", "Japan", "United Arab Emirates"]
-                : continent === "Oceania"
-                  ? ["Australia", "New Zealand"]
-                  : continent === "Africa"
-                    ? ["South Africa"]
-                    : ["Brazil", "Argentina", "Chile"]
-          ).map((s) => (
-            <option key={s}>{s}</option>
-          ))}
-        </select>
-        <label className="sr-only" htmlFor="language">
-          Language
-        </label>
-        <select id="language" disabled={!region}>
-          <option>English</option>
-        </select>
-        <button
-          className="btn btn-negro-azul"
-          disabled={!region}
-          onClick={onClose}
-        >
-          Continue <span className="arrow-link" />
-        </button>
-        <label className="remember">
-          <input type="checkbox" /> Remember my selection
-        </label>
-      </div>
-    </Dialog>
   );
 }

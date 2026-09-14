@@ -45,6 +45,7 @@ export function Hero() {
   }, [paused, reduced]);
   return (
     <section
+      id="home"
       className="section-hero"
       aria-label="Sustainable architectural surfaces"
     >

@@ -39,7 +39,7 @@ export function InspirationGallery() {
     items.slice(i * 4, i * 4 + 4),
   );
   return (
-    <section className="section-galeria" id="inspiration">
+    <section className="section-galeria" id="gallery">
       <div className="row-1">
         <div className="core-header p-80">
           <div className="core-header__col core-header__col__title">

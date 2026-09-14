@@ -35,11 +35,43 @@ button svg {
   flex-shrink: 0;
 }
 .brand-logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.brand-logo:hover {
+  transform: scale(1.03);
+}
+.brand-logo-img {
+  height: 76px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.25s ease, filter 0.25s ease;
+}
+.brand-logo .logo-dark {
+  display: none;
+}
+.brand-logo .logo-light {
   display: block;
-  width: 142px;
-  height: 24px;
-  background: currentColor;
-  mask: url("/assets/cosentino-logo.svg") center/contain no-repeat;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+}
+.is-scrolled .brand-logo-img {
+  height: 54px;
+}
+.main-menu-container:hover .brand-logo .logo-light,
+.main-menu-container.is-scrolled .brand-logo .logo-light,
+.core-menu-desktop.is-open .brand-logo .logo-light,
+.replica-mobile-header.solid .brand-logo .logo-light {
+  display: none;
+}
+.main-menu-container:hover .brand-logo .logo-dark,
+.main-menu-container.is-scrolled .brand-logo .logo-dark,
+.core-menu-desktop.is-open .brand-logo .logo-dark,
+.replica-mobile-header.solid .brand-logo .logo-dark {
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));
 }
 .menu-main button {
   display: flex;
@@ -475,13 +507,22 @@ button svg {
     bottom: 20px;
   }
 }
+@media (max-width: 1200px) {
+  .brand-logo-img {
+    height: 66px;
+  }
+}
+@media (max-width: 900px) {
+  .brand-logo-img {
+    height: 54px;
+  }
+}
 @media (max-width: 600px) {
-  .brand-logo {
-    width: 125px;
-    height: 20px;
+  .brand-logo-img {
+    height: 44px;
   }
   .replica-mobile-header {
-    padding: 18px 20px;
+    padding: 12px 20px;
   }
   .bg-section {
     margin-left: -20px;

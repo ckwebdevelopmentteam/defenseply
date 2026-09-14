@@ -4,7 +4,7 @@ export function Newsletter() {
   const [profile, setProfile] = useState(""),
     [message, setMessage] = useState("");
   return (
-    <div className="p-60">
+    <div className="p-60" id="contact">
       <section
         className="core-cta-reducido core-cta-reducido__form"
         aria-labelledby="newsletter-title"

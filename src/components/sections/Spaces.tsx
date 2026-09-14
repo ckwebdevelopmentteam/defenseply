@@ -5,7 +5,7 @@ import { Carousel, Arrow } from "@/components/ui/Carousel";
 export function Spaces() {
   const [active, setActive] = useState<keyof typeof spaces>("Kitchens");
   return (
-    <div className="bg-section bg-gris-claro" id="spaces">
+    <div className="bg-section bg-gris-claro" id="product">
       <div className="bg-section__container">
         <hr />
         <section className="section-espacios">
@@ -65,7 +65,7 @@ export function Spaces() {
                   <a
                     key={c.title}
                     className="core-slider__slide keen-slider__slide"
-                    href={c.href || `https://www.cosentino.com/usa/kitchens/`}
+                    href={c.href || "#contact"}
                   >
                     <img
                       className="core-slider__slide__image"

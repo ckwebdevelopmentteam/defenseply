@@ -2,109 +2,109 @@
   {
     "title": "Cosentino City Barcelona",
     "image": "/assets/cosentino-city-barcelona.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/6D5CD178-7504-4153-99B449F7A3F3BFD1/cosentino-city-barcelona.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/cosentino-city-barcelona"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Cosentino City Amsterdam",
     "image": "/assets/cosentino-city-amsterdam.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/915BA471-CB33-4CAD-A9E5D71D3E2B8378/cosentino-city-amsterdam.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/cosentino-city-amsterdam"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "SQala Design - Sqala Interior Design",
     "image": "/assets/sqala-design.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/4A436949-0C02-44EE-A3CA164734D6C736/sqala-design.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/sqala-design"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "FF Home by Dunarra Interior - Dunarra Interior",
     "image": "/assets/ff-home-by-dunarra-interior.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/C4819A08-079D-4633-BBA441509D712FD0/ff-home-by-dunarra-interior.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/ff-home-by-dunarra-interior"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Proyecto Barquillo - Mónica Diago",
     "image": "/assets/proyecto-barquillo.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/E4FE8197-7E60-485A-9287CDF61B5135AE/proyecto-barquillo.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/proyecto-barquillo"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Hayley Peterson Residential - Hayley Peterson",
     "image": "/assets/hayley-peterson-residential.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/A5A7F5C5-71C7-4137-819C351BEA0BE953/hayley-peterson-residential.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/hayley-peterson-residential"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Hotel Hyll Cotswolds - Youth Studio",
     "image": "/assets/hotel-hyll-cotswolds.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/1122DA2A-F4F7-4F23-878C9B7DDB4BBF0E/hotel-hyll-cotswolds.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/hotel-hyll-cotswolds"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "LLAVANERES - RICARD MENA GARRIGA",
     "image": "/assets/llavaneres.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/4F5E976C-588F-42F0-932FF9D92E19CBA5/llavaneres.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/llavaneres"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Battersea Residential - Aflux Interiors",
     "image": "/assets/battersea-residential.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/0728C074-BA73-455D-B294A1A670F099C0/battersea-residential.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/battersea-residential"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Imperfection of Matter - Catarina Carneiro, Jota Barbosa Interiores",
     "image": "/assets/imperfection-of-matter.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/B5659C2F-62A4-4E0E-87F1C55505B5A8A8/imperfection-of-matter.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/imperfection-of-matter"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Rocco Place NSW - DSD Design",
     "image": "/assets/rocco-place-nsw.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/21B1DEB1-9C61-4676-98400261483D37BE/rocco-place-nsw.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/rocco-place-nsw"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Facade NSW - Architecture / Design  KASA Design and Construct",
     "image": "/assets/facade-nsw.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/4974F1C9-CE5D-4F37-A01F703581C6C538/facade-nsw.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/facade-nsw"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Doncaster House - Piran Boutique Builders and interior Design",
     "image": "/assets/doncaster-house.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/C8376A2D-0CBB-4007-89DDE8214F305010/doncaster-house.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/doncaster-house"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Montenegro - Monica Arango, Tracy Audi, Johnny Matta / C’est ici Design",
     "image": "/assets/montenegro.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/ECE95CF4-EC87-4D9F-9C7B271F0B31D2E9/montenegro.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/montenegro"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Kollutchen - AOME Architects / Eclectic Designs LLC",
     "image": "/assets/kollutchen.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/85A87F53-F762-4CB0-AB45B6DD9844F6B3/kollutchen.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/kollutchen"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Piece of Rest by James Kaoru - James Kaoru Bury (James Bury Design Office Inc.)",
     "image": "/assets/piece-of-rest-by-james-kaoru.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/E18BC685-F225-49EA-B49AD9609BB0ADCF/piece-of-rest-by-james-kaoru.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/piece-of-rest-by-james-kaoru"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Laura Wontorra Home - Thomas Mang Studio GmbH",
     "image": "/assets/laura-wontorra-home.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/6FC868DB-E15D-415B-8ABAE04DA7930278/laura-wontorra-home.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/laura-wontorra-home"
+    "fullImage": "#products",
+    "href": "#products"
   },
   {
     "title": "Titirangi Originals - Rarebirds Interiors",
     "image": "/assets/titirangi-originals.avif",
-    "fullImage": "https://assetstools.cosentino.com/api/v1/bynder/image/6171ED0A-B077-4FF3-80669C26862BAB39/titirangi-originals.jpg?auto=format&q=80&fit=crop",
-    "href": "https://www.cosentino.com/usa/inspiration/projects/titirangi-originals"
+    "fullImage": "#products",
+    "href": "#products"
   }
 ]

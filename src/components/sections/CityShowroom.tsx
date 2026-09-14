@@ -21,7 +21,7 @@ export function CityShowroom() {
           </p>
           <a
             title="More information"
-            href="https://www.cosentino.com/usa/professional/cosentino-city/"
+            href="#contact"
             className="btn btn-borde-negro-azul btn- font-14"
           >
             {"More information"}

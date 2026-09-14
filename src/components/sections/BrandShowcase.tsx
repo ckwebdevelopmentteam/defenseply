@@ -4,7 +4,7 @@ import { Carousel } from "@/components/ui/Carousel";
 const names = ["dekton", "silestone", "eclos", "sensa"];
 export function BrandShowcase() {
   return (
-    <section className="section-marcas pb-60" id="brands">
+    <section className="section-marcas pb-60" id="about">
       <div className="row-1">
         <div className="core-header p-80">
           <div className="core-header__col core-header__col__title">
