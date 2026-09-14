@@ -31,7 +31,7 @@ export function NewCollections({
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="inline w-full aspect-[6/5] object-cover align-middle max-phone:aspect-[3/4] transition-[transform,filter] duration-500 group-hover:scale-105"
+                className="inline w-full aspect-[6/5] object-cover align-middle max-phone:aspect-[3/4] transition-[transform,filter] duration-[3000ms] ease-in-out group-hover:scale-105"
               />
               {/* Hover Image */}
               {"hoverImage" in item && item.hoverImage && (
@@ -39,7 +39,7 @@ export function NewCollections({
                   src={item.hoverImage}
                   alt={item.title}
                   loading="lazy"
-                  className="absolute inset-0 size-full aspect-[6/5] object-cover align-middle max-phone:aspect-[3/4] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  className="absolute inset-0 size-full aspect-[6/5] object-cover align-middle max-phone:aspect-[3/4] opacity-0 transition-opacity duration-[3000ms] ease-in-out group-hover:opacity-100"
                 />
               )}
               {/* Gradient Overlays */}
