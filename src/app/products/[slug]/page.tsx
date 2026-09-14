@@ -20,6 +20,7 @@ import {
 import { FloatingActions } from "@/components/ui/FloatingActions";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductInquiryForm } from "@/components/product/ProductInquiryForm";
+import { ProductPageAnimations } from "@/components/product/ProductPageAnimations";
 import { products, getProductBySlug, getAllProductSlugs } from "@/data/products";
 import "@/styles/product-detail.css";
 
@@ -65,6 +66,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <ProductPageAnimations />
       <main className="product-detail-page" id="main-content">
         {/* Breadcrumbs */}
         <div className="product-breadcrumb-wrap">
@@ -156,7 +158,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             </h2>
           </div>
 
-          <div className="product-overview-card">
+          <div className="product-overview-card reveal-on-scroll">
             <p>{product.description}</p>
             {product.extendedDescription.map((para, i) => (
               <p key={i}>{para}</p>
@@ -165,7 +167,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
           {/* Industry Insight Callout Box (from PDF) */}
           {product.industryInsight && (
-            <aside className="industry-insight-box" aria-label="Industry Market Insight">
+            <aside className="industry-insight-box reveal-on-scroll" aria-label="Industry Market Insight">
               <div className="industry-insight__stat-wrap">
                 <span className="industry-insight__badge">
                   <TrendingUp size={13} style={{ display: "inline", marginRight: "4px" }} />
@@ -195,7 +197,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             </h2>
           </div>
 
-          <div className="product-specs-table-wrap">
+          <div className="product-specs-table-wrap reveal-on-scroll">
             <table className="product-specs-table">
               <tbody>
                 <tr>
@@ -265,8 +267,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
 
           <div className="product-applications-grid">
-            {product.applications.map((app) => (
-              <article key={app.title} className="product-app-card">
+            {product.applications.map((app, idx) => (
+              <article
+                key={app.title}
+                className={`product-app-card reveal-on-scroll reveal-delay-${(idx % 2) + 1}`}
+              >
                 <div className="product-app-card__image-wrap">
                   <img src={app.image} alt={app.title} className="product-app-card__image" loading="lazy" />
                 </div>
@@ -281,7 +286,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
         {/* Green Promise Banner */}
         <section className="product-section" aria-label="Defenseply Green Promise">
-          <div className="green-promise-card">
+          <div className="green-promise-card reveal-on-scroll">
             <div className="green-promise__left">
               <span className="product-section__eyebrow">
                 Sustainable Eco-Architecture
@@ -311,7 +316,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
         {/* Inquiry & Direct Contact Form */}
         <section className="product-inquiry-section" id="inquiry" aria-label="Request Technical Quote">
-          <div className="product-inquiry-wrap">
+          <div className="product-inquiry-wrap reveal-on-scroll">
             <div className="product-inquiry__info">
               <span className="product-section__eyebrow">Direct Factory Connect</span>
               <h2 className="font-family-diagramm">Order or Request Specs for {product.title}</h2>
@@ -353,8 +358,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
 
           <div className="related-products-grid">
-            {relatedProducts.map((rel) => (
-              <Link key={rel.slug} href={`/products/${rel.slug}`} className="related-product-card">
+            {relatedProducts.map((rel, idx) => (
+              <Link
+                key={rel.slug}
+                href={`/products/${rel.slug}`}
+                className={`related-product-card reveal-on-scroll reveal-delay-${(idx % 3) + 1}`}
+              >
                 <div className="related-product-card__image-wrap">
                   <img
                     src={rel.gallery[0]?.src || "/assets/products/pvcfoamdf(main).webp"}
