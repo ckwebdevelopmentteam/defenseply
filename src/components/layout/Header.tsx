@@ -4,11 +4,11 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import navigation from "@/data/navigation.json";
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Product", href: "#product" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/#about" },
+  { name: "Product", href: "/#product" },
+  { name: "Gallery", href: "/#gallery" },
+  { name: "Contact Us", href: "/contact-us" },
 ];
 type MenuName = keyof typeof navigation;
 export function Header() {
@@ -95,13 +95,13 @@ export function Header() {
             <div className="row-side row-right">
               <a
                 className="menu-btn is-primary"
-                href="#contact"
+                href="/contact-us"
               >
                 Where To Buy
               </a>
               <a
                 className="menu-btn is-secondary"
-                href="#contact"
+                href="/contact-us"
               >
                 Professional Area
               </a>
@@ -209,13 +209,13 @@ export function Header() {
             </div>
           ))}
           <a
-            href="#contact"
+            href="/contact-us"
             onClick={() => setMobile(false)}
           >
             Where To Buy
           </a>
           <a
-            href="#contact"
+            href="/contact-us"
             onClick={() => setMobile(false)}
           >
             Professional Area

@@ -1,0 +1,166 @@
+.contact-page {
+  --contact-ink: #171717;
+  --contact-muted: #5d5d59;
+  --contact-paper: #f4f3ef;
+  --contact-line: #d7d5d0;
+  background: var(--contact-paper);
+  color: var(--contact-ink);
+}
+
+.contact-intro,
+.contact-form-section,
+.visit-section {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.contact-copy {
+  padding: clamp(48px, 7vw, 104px) clamp(24px, 6.8vw, 104px);
+}
+
+.contact-copy--intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 490px;
+}
+
+.contact-eyebrow {
+  margin: 0 0 22px;
+  color: var(--contact-muted);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.contact-copy h1,
+.contact-copy h2,
+.contact-final-cta h2 {
+  max-width: 580px;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.contact-copy h1 { font-size: clamp(42px, 5vw, 76px); }
+.contact-copy h2 { font-size: clamp(35px, 4vw, 58px); }
+
+.contact-lede,
+.contact-copy--visit > p:not(.contact-eyebrow),
+.contact-final-cta p:not(.contact-eyebrow) {
+  max-width: 440px;
+  margin: 26px 0 0;
+  color: var(--contact-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contact-outline-link,
+.contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  width: fit-content;
+  min-width: 146px;
+  margin-top: 30px;
+  padding: 13px 17px;
+  border: 1px solid #8e8d88;
+  color: var(--contact-ink);
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.contact-outline-link:hover { background: var(--contact-ink); color: #fff; }
+
+.contact-image { min-height: 490px; background-position: center; background-size: cover; }
+.contact-image--hero { background-image: url("/assets/00-Furniture-Hero.avif"); }
+.contact-image--showroom { background-image: url("/assets/facade-nsw.avif"); }
+
+.contact-form-section { background: #eae9e5; }
+.contact-copy--project { padding-top: clamp(48px, 7vw, 94px); }
+.contact-project-types { margin: 72px 0 0; padding: 18px 0 0; border-top: 1px solid var(--contact-line); list-style: none; font-size: 13px; line-height: 1.8; }
+
+.project-form { padding: clamp(48px, 6vw, 86px) clamp(24px, 6vw, 92px); background: #f8f7f4; }
+.project-form label,
+.project-form legend { display: block; margin: 0 0 15px; color: var(--contact-ink); font-size: 11px; }
+.project-form label > span { color: #9a6d00; }
+.form-grid { display: grid; gap: 16px; }
+.form-grid--two { grid-template-columns: 1fr 1fr; }
+.project-form input:not([type="radio"]),
+.project-form select,
+.project-form textarea { display: block; width: 100%; margin-top: 7px; padding: 10px 11px; border: 1px solid var(--contact-line); border-radius: 0; background: transparent; color: var(--contact-ink); font: inherit; font-size: 12px; outline: none; }
+.project-form input:focus, .project-form select:focus, .project-form textarea:focus { border-color: var(--contact-ink); }
+.project-form textarea { resize: vertical; }
+.project-form fieldset { margin: 2px 0 19px; padding: 0; border: 0; }
+.radio-row { display: flex; flex-wrap: wrap; gap: 18px; }
+.radio-row label { display: flex; align-items: center; gap: 7px; margin: 0; white-space: nowrap; }
+.radio-row input { accent-color: var(--contact-ink); }
+.contact-submit { border: 0; background: #f4d832; cursor: pointer; }
+.contact-submit:hover { background: #e8c825; }
+.project-form .contact-submit { width: 100%; margin-top: 2px; }
+.form-success { margin: 15px 0 0; color: #4c6b42; font-size: 12px; }
+
+.direct-contact { display: grid; grid-template-columns: 1fr 1.15fr; align-items: center; background: #f8f7f4; }
+.contact-copy--direct { padding-top: 54px; padding-bottom: 54px; }
+.contact-copy--direct h2 { max-width: 440px; }
+.contact-copy--direct > p:last-child { margin: 12px 0 0; color: var(--contact-muted); font-size: 13px; }
+.contact-details { display: grid; grid-template-columns: repeat(3, 1fr); margin-right: clamp(24px, 6vw, 92px); }
+.contact-details a { display: flex; align-items: center; gap: 12px; min-height: 70px; padding: 0 20px; border-left: 1px solid var(--contact-line); color: var(--contact-ink); font-size: 11px; }
+.contact-details span { display: grid; gap: 6px; }
+.contact-details small { color: var(--contact-muted); font-size: 9px; text-transform: uppercase; }
+
+.visit-section { background: #f8f7f4; }
+.contact-copy--visit { padding-top: clamp(48px, 7vw, 96px); padding-bottom: clamp(48px, 7vw, 96px); }
+.contact-copy--visit address { display: flex; position: relative; max-width: 290px; margin: 26px 0 0; padding-left: 30px; color: var(--contact-muted); font-size: 12px; font-style: normal; line-height: 1.5; }
+.contact-copy--visit address svg { position: absolute; top: 0; left: 0; color: var(--contact-ink); }
+
+.contact-final-cta { display: flex; align-items: center; justify-content: space-between; min-height: 260px; padding: 52px clamp(24px, 6.8vw, 104px); color: #fff; background: #27231f url("/assets/00-Furniture-Hero.avif") center / cover; background-blend-mode: multiply; }
+.contact-final-cta h2 { font-size: clamp(36px, 4vw, 60px); }
+.contact-final-cta p:not(.contact-eyebrow) { color: rgba(255,255,255,.8); }
+.contact-final-cta .contact-submit { flex: 0 0 auto; margin: 0; color: var(--contact-ink); }
+
+@media (max-width: 1024px) {
+  .contact-page { padding-top: 90px; }
+}
+
+@media (max-width: 800px) {
+  .contact-intro, .contact-form-section, .direct-contact, .visit-section { grid-template-columns: 1fr; }
+  .contact-image { min-height: 250px; }
+  .contact-copy--intro { min-height: 0; }
+  .contact-copy { padding: 36px 22px; }
+  .contact-copy--project { padding-top: 36px; }
+  .contact-project-types { margin-top: 30px; }
+  .contact-copy--direct { display: none; }
+  .direct-contact { display: block; }
+  .contact-details { margin: 0; }
+  .contact-final-cta { align-items: flex-start; flex-direction: column; gap: 18px; min-height: 210px; padding: 38px 22px; }
+}
+
+@media (max-width: 520px) {
+  .form-grid--two, .contact-details { grid-template-columns: 1fr; }
+  .contact-details a { gap: 12px; min-height: 64px; padding: 10px 12px; border-top: 1px solid var(--contact-line); border-left: 0; font-size: 14px; }
+  .contact-details a:first-child { border-top: 0; }
+  .contact-details a > svg { width: 23px; height: 23px; }
+  .contact-details span { gap: 4px; }
+  .contact-details small { font-size: 10px; }
+  .contact-copy h1 { font-size: 38px; }
+  .contact-copy h2 { font-size: 31px; }
+  .contact-eyebrow { margin-bottom: 14px; font-size: 9px; }
+  .contact-lede, .contact-copy--visit > p:not(.contact-eyebrow), .contact-final-cta p:not(.contact-eyebrow) { margin-top: 16px; font-size: 13px; }
+  .contact-outline-link { margin-top: 20px; padding: 11px 13px; font-size: 10px; }
+  .project-form { padding: 34px 22px; }
+  .project-form label, .project-form legend { margin-bottom: 11px; font-size: 10px; }
+  .project-form input:not([type="radio"]), .project-form select, .project-form textarea { padding: 8px 9px; font-size: 11px; }
+  .radio-row { gap: 11px; }
+  .contact-submit { min-height: 38px; margin-top: 20px; padding: 10px 13px; font-size: 10px; }
+}
+
+@media (max-width: 600px) {
+  .contact-page { padding-top: 68px; }
+}
