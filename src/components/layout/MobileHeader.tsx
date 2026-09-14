@@ -1,26 +1,26 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ChevronDown, Globe } from "lucide-react";
-import navigation from "@/data/navigation.json";
-import { menuPanels, type MenuPanelId } from "./menus";
-const links = [
-  "Colors",
-  "Our Brands",
-  "Spaces",
-  "Inspiration",
-  "Showrooms",
-  "Professionals",
-  "Corporate",
-];
-type MenuName = keyof typeof navigation;
-export function MobileHeader({
-  scrolled,
-  onCountry,
-}: {
-  scrolled: boolean;
-  onCountry: () => void;
-}) {
-  const [open, setOpen] = useState(false);
+import { ChevronDown, Globe, Menu, X } from "lucide-react";
+import {
+  NavigationPanel,
+  hasMenuPanel,
+  type MenuPanelId,
+} from "./NavigationPanel";
+import {
+  BrandLogo,
+  NavigationActions,
+  navigation,
+  navigationLinks,
+  type MenuName,
+} from "./NavigationElements";
+import { useNavigationState } from "./NavigationState";
+import { cn } from "@/lib/cn";
+export function MobileHeader({ onCountry }: { onCountry: () => void }) {
+  const {
+    scrolled,
+    mobileOpen: open,
+    setMobileOpen: setOpen,
+  } = useNavigationState();
   const [category, setCategory] = useState<MenuName | null>(null);
   const [expanded, setExpanded] = useState<MenuPanelId | null>(null);
   useEffect(() => {
@@ -35,19 +35,23 @@ export function MobileHeader({
       document.body.style.overflow = previous;
       document.removeEventListener("keydown", close);
     };
-  }, [open]);
+  }, [open, setOpen]);
   return (
-    <div
-      id="core-menu-mobile"
-      className={`core-menu-mobile ${open ? "replica-mobile-open" : ""}`}
-    >
+    <div className="pointer-events-none fixed inset-0 z-[2147483640] flex flex-col desktop:hidden">
       <nav
-        className={`mobile-navbar theme-regular ${scrolled ? "is-scrolled" : ""} ${open ? "is-open" : ""}`}
+        className={cn(
+          "pointer-events-auto flex items-center justify-between px-4 transition-colors",
+          scrolled || open ? "h-12 py-3" : "h-[72px] py-6",
+          open
+            ? "bg-ink text-white"
+            : scrolled
+              ? "bg-white text-ink shadow-sm"
+              : "bg-[linear-gradient(180deg,#0006,transparent)] text-white",
+        )}
         aria-label="Mobile navigation"
       >
-        <div className="logo-wrapper">
+        <div className="flex items-center gap-3">
           <button
-            className={`burger-btn ${open ? "is-open" : ""}`}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => {
@@ -56,42 +60,50 @@ export function MobileHeader({
               setExpanded(null);
             }}
           >
-            <span />
+            {open ? (
+              <X size={20} strokeWidth={1} />
+            ) : (
+              <Menu size={20} strokeWidth={1} />
+            )}
           </button>
-          <a href="/usa/" className="brand-logo" aria-label="Cosentino home" />
+          <BrandLogo className="h-4" />
         </div>
-        <div className="menu-actions">
-          <button
-            className="menu-lang"
-            onClick={onCountry}
-            aria-label="Choose country or region"
-          >
-            <Globe size={24} strokeWidth={1} />
-            USA
-            <ChevronDown size={24} strokeWidth={1} />
-          </button>
-        </div>
+        <button
+          className="flex items-center gap-1.5 text-base"
+          onClick={onCountry}
+          aria-label="Choose country or region"
+        >
+          <Globe size={24} strokeWidth={1} />
+          USA
+          <ChevronDown size={24} strokeWidth={1} />
+        </button>
       </nav>
       {open && (
-        <div className="menu-container">
+        <div className="relative min-h-0 w-full flex-1">
           <button
-            className="menu-overlay"
+            className="pointer-events-auto absolute inset-0 bg-black/50"
             aria-label="Close menu overlay"
             onClick={() => setOpen(false)}
-            style={{ opacity: 1, pointerEvents: "auto" }}
           />
           {!category ? (
-            <div
-              className="mobile-menu"
-              style={{ opacity: 1, pointerEvents: "auto" }}
-            >
-              <ul className="links-wrapper">
-                {links.map((name) => (
-                  <li key={name} className="menu-item">
+            <div className="pointer-events-auto absolute inset-y-0 left-0 flex w-[80%] flex-col items-start justify-between gap-8 overflow-y-auto bg-ink px-6 pt-20 pb-8 text-white">
+              <ul className="w-full">
+                {navigationLinks.map((name) => (
+                  <li
+                    key={name}
+                    className="flex h-12 w-full items-center border-b border-[#979793]/30 py-2 text-[22px] leading-6 font-light tracking-[.5px]"
+                  >
                     {name in navigation ? (
-                      <button onClick={() => setCategory(name as MenuName)}>
+                      <button
+                        className="flex w-full items-center justify-between"
+                        onClick={() => setCategory(name as MenuName)}
+                      >
                         {name}
-                        <ChevronDown size={24} strokeWidth={1} />
+                        <ChevronDown
+                          className="-rotate-90"
+                          size={24}
+                          strokeWidth={1}
+                        />
                       </button>
                     ) : (
                       <a href="#">{name}</a>
@@ -99,89 +111,76 @@ export function MobileHeader({
                   </li>
                 ))}
               </ul>
-              <div className="action-wrapper">
-                <a href="#" className="action-btn is-primary">
-                  Where To Buy
-                </a>
-                <a href="#" className="action-btn is-secondary">
-                  Professional Area
-                </a>
-              </div>
+              <NavigationActions mobile />
             </div>
           ) : (
-            <div
-              className="menu-submenu first-submenu"
-              style={{ opacity: 1, pointerEvents: "auto" }}
-            >
+            <div className="pointer-events-auto absolute inset-0 flex flex-col bg-ink text-white">
               <button
-                className="btn-back"
+                className="flex shrink-0 items-center justify-center border-b border-[#1d1d1c] p-4"
                 aria-label="Back to main menu"
                 onClick={() => {
                   setCategory(null);
                   setExpanded(null);
                 }}
               >
-                <span>
-                  <ChevronDown size={24} strokeWidth={1} />
+                <span className="flex size-[54px] items-center justify-center rounded-full bg-[#30302f]">
+                  <ChevronDown
+                    size={36}
+                    className="rotate-90"
+                    strokeWidth={1}
+                  />
                 </span>
               </button>
-              <div className="first-submenu-items">
-                {navigation[category].map((card) => {
-                  const id = card.submenu as MenuPanelId;
-                  const Panel = id ? menuPanels[id] : null;
-                  return (
-                    <div className="menu-card" key={card.title}>
-                      <div className="card-content">
-                        <button
-                          className={`card-wrapper ${expanded === id ? "is-open" : ""}`}
-                          aria-expanded={!!id && expanded === id}
-                          onClick={() => {
-                            if (id) setExpanded(expanded === id ? null : id);
-                          }}
-                        >
-                          <div className="header-card">
-                            <div className="img-wrapper">
-                              {card.image ? (
-                                <img
-                                  className="main-img"
-                                  src={card.image}
-                                  alt=""
-                                />
-                              ) : (
-                                <div className="mobile-brand-placeholder" />
-                              )}
-                              {card.logo && (
-                                <img
-                                  className="mobile-brand-symbol"
-                                  src={card.logo}
-                                  alt=""
-                                />
-                              )}
-                            </div>
-                          </div>
-                          <div className="footer-card">
-                            <div className="subtitle-wrapper">
-                              <div className="text-container">
-                                <p className="main-text">{card.title}</p>
-                                <p className="hover-text" aria-hidden="true">
-                                  {card.title}
-                                </p>
-                              </div>
-                              <div className="icon">
-                                <ChevronDown size={24} strokeWidth={1} />
-                              </div>
-                            </div>
-                          </div>
-                        </button>
+              <div className="flex flex-1 flex-col items-center gap-2.5 overflow-y-auto py-8 [scrollbar-width:none]">
+                {navigation[category].map((card) => (
+                  <div
+                    key={card.title}
+                    className="w-full max-w-[360px] border-b border-[#1d1d1c] px-4 pb-4"
+                  >
+                    <button
+                      className="w-full text-left"
+                      aria-expanded={
+                        !!card.submenu && expanded === card.submenu
+                      }
+                      onClick={() => {
+                        if (hasMenuPanel(card.submenu))
+                          setExpanded(
+                            expanded === card.submenu ? null : card.submenu,
+                          );
+                      }}
+                    >
+                      <div className="relative aspect-[9/5] overflow-hidden">
+                        {card.image && (
+                          <img
+                            className="size-full object-cover"
+                            src={card.image}
+                            alt=""
+                          />
+                        )}
+                        {card.logo && (
+                          <img
+                            className="absolute top-1/2 left-1/2 h-10 w-[142px] -translate-1/2 object-contain"
+                            src={card.logo}
+                            alt=""
+                          />
+                        )}
                       </div>
-                      {expanded === id && Panel && (
-                        <div className="second-submenu replica-mobile-details">
-                          <Panel />
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+                      <div className="flex items-center justify-between py-4 text-[22px] leading-6 font-light">
+                        <span>{card.title}</span>
+                        <ChevronDown
+                          size={24}
+                          strokeWidth={1}
+                          className={cn(
+                            expanded === card.submenu && "rotate-180",
+                          )}
+                        />
+                      </div>
+                    </button>
+                    {expanded === card.submenu && (
+                      <NavigationPanel id={expanded} mobile />
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           )}

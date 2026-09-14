@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import {
+  Plus,
   Grid2X2,
   Columns2,
   Square,
@@ -10,6 +11,8 @@ import {
 } from "lucide-react";
 import gallery from "@/data/gallery.json";
 import { Carousel } from "@/components/ui/Carousel";
+import { SectionHeading } from "@/components/ui/Heading";
+import { cn } from "@/lib/cn";
 import { Dialog } from "@/components/ui/Dialog";
 const categories = Object.keys(gallery) as (keyof typeof gallery)[];
 export function InspirationGallery() {
@@ -21,23 +24,13 @@ export function InspirationGallery() {
     items.slice(i * 4, i * 4 + 4),
   );
   return (
-    <section className="section-galeria" id="inspiration">
-      <div className="row-1">
-        <div className="core-header p-80">
-          <div className="core-header__col core-header__col__title">
-            <h2 className="font-display-md font-family-diagramm font-light">
-              INSPIRATION GALLERIES
-            </h2>
-          </div>
-          <div className="core-header__col core-header__col__description d-mobile-none" />
-          <div className="core-header__col core-header__col__description d-mobile-none" />
-        </div>
-      </div>
-      <div className="row-2">
-        <div className="core-gallery pb-40">
-          <div className="core-gallery__nav">
+    <section data-section="gallery" id="inspiration">
+      <SectionHeading title="INSPIRATION GALLERIES" />
+      <div>
+        <div className="flex flex-col gap-6 pb-10">
+          <div className="flex items-center justify-between">
             <select
-              className="gallery-mobile-select"
+              className="hidden border-b border-ink bg-transparent py-2 pr-[30px] text-fluid-sm max-tablet:block"
               aria-label="Gallery space"
               value={category}
               onChange={(e) =>
@@ -48,11 +41,17 @@ export function InspirationGallery() {
                 <option key={c}>{c}</option>
               ))}
             </select>
-            <ul className="core-gallery__nav__tags" aria-label="Gallery space">
+            <ul
+              className="flex gap-7 overflow-auto thin-scrollbar max-tablet:hidden"
+              aria-label="Gallery space"
+            >
               {categories.map((c) => (
                 <li key={c}>
                   <button
-                    className={`core-gallery__nav__tags-item font-body-base font-normal ${category === c ? "active" : ""}`}
+                    className={cn(
+                      "whitespace-nowrap border-b py-2 text-body",
+                      category === c ? "border-ink" : "border-transparent",
+                    )}
                     onClick={() => setCategory(c)}
                     aria-pressed={category === c}
                   >
@@ -61,7 +60,7 @@ export function InspirationGallery() {
                 </li>
               ))}
             </ul>
-            <div className="core-gallery__nav__view-switcher">
+            <div className="flex items-center gap-3">
               {[
                 [Grid2X2, "grid-2x2", "Four-image grid"],
                 [Columns2, "grid-2x1", "Two-image layout"],
@@ -71,42 +70,58 @@ export function InspirationGallery() {
                 return (
                   <button
                     key={String(id)}
-                    className={`view-option ${id} ${view === id ? "active" : ""}`}
+                    className={cn(
+                      "relative h-[2.15vw] min-w-[30px] max-tablet:h-[4.3vw] max-phone:h-[7vw]",
+                      id === "grid-2x1" && "max-tablet:hidden",
+                      view === id &&
+                        "after:absolute after:-bottom-[.417vw] after:left-[15%] after:w-[70%] after:border-b after:border-ink max-tablet:after:-bottom-[.833vw] max-phone:after:-bottom-[1.4vw]",
+                    )}
                     aria-label={String(label)}
                     aria-pressed={view === id}
                     onClick={() => setView(String(id))}
                   >
-                    <I strokeWidth={1} />
+                    <I className="size-[30px]" strokeWidth={1} />
                   </button>
                 );
               })}
             </div>
           </div>
-          <div className="core-gallery__content">
+          <div className="overflow-hidden">
             <Carousel
               key={category + view}
-              className="core-gallery__content__grid"
+
               desktop={view === "grid-2x2" ? 2 : view === "grid-2x1" ? 1 : 0.5}
               tablet={view === "grid-2x2" ? 1 : 1}
               mobile={view === "grid-2x2" ? 2 : 1}
             >
               {groups.map((group, g) => (
                 <div
-                  className={`core-gallery__content__item keen-slider__slide ${view}`}
+                  className={cn(
+                    "keen-slider__slide grid gap-4 max-phone:gap-2",
+                    view === "grid-2x2"
+                      ? "grid-flow-col grid-cols-2 grid-rows-2 max-phone:grid-cols-1 max-phone:grid-rows-4"
+                      : view === "grid-2x1"
+                        ? "grid-cols-4 grid-rows-1"
+                        : "grid-cols-4 grid-rows-1 gap-2 max-phone:grid-flow-col max-phone:grid-cols-2 max-phone:grid-rows-2",
+                  )}
                   key={g}
                 >
                   {group.map((item) => (
                     <button
-                      className="core-gallery__content__item__image"
+                      className={cn(
+                        "group relative aspect-square overflow-hidden bg-stone text-left",
+                        view === "grid-1x1" &&
+                          "h-[900px] aspect-auto max-phone:h-auto max-phone:aspect-square",
+                      )}
                       key={item.image}
                       aria-label={`View ${item.title}`}
                       onClick={() => setSelected(items.indexOf(item))}
                     >
-                      <div className="core-gallery__content__item__filter">
-                        <div className="core-gallery__content__item__filter__cruz" />
-                      </div>
+                      <span className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 text-white opacity-0 transition-opacity group-hover:opacity-100">
+                        <Plus size={48} strokeWidth={1} />
+                      </span>
                       <img
-                        className="core-gallery__thumb"
+                        className="absolute inset-0 size-full object-cover transition-[filter]"
                         draggable={false}
                         src={item.image}
                         alt={item.title}
@@ -124,19 +139,19 @@ export function InspirationGallery() {
         open={selected !== null}
         onClose={() => setSelected(null)}
         label="Project gallery"
-        className="gallery-lightbox"
+        className="h-dvh max-h-dvh! w-screen max-w-[100vw]! bg-transparent text-white! backdrop:bg-[#111]"
       >
         {selected !== null && (
-          <div className="lightbox-content">
+          <div className="flex h-full flex-col items-center justify-center gap-5 p-15 max-phone:px-[30px] max-phone:py-[50px]">
             <button
-              className="lightbox-close"
+              className="absolute top-[25px] right-[30px]"
               aria-label="Close gallery"
               onClick={() => setSelected(null)}
             >
               <X />
             </button>
             <button
-              className="lightbox-prev"
+              className="absolute top-1/2 left-0 p-5"
               aria-label="Previous image"
               onClick={() =>
                 setSelected((selected + items.length - 1) % items.length)
@@ -145,11 +160,12 @@ export function InspirationGallery() {
               <ChevronLeft />
             </button>
             <img
+              className="h-[75vh] max-w-[85vw] object-contain max-phone:h-[60vh]"
               src={items[selected].fullImage || items[selected].image}
               alt={items[selected].title}
             />
             <button
-              className="lightbox-next"
+              className="absolute top-1/2 right-0 p-5"
               aria-label="Next image"
               onClick={() => setSelected((selected + 1) % items.length)}
             >

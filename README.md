@@ -12,6 +12,7 @@ npm run dev
 Open http://localhost:3000/usa/. The root route renders the same homepage.
 
 ```sh
+npm test
 npm run lint
 npm run build
 npm start
@@ -24,13 +25,17 @@ Stop the running development server before starting the production server on the
 - `src/app/page.tsx`: homepage section order. Remove, reorder, or replace component imports here.
 - `src/components/sections/`: one component per homepage section, from `Hero` through `Newsletter`.
 - `src/components/layout/`: desktop/mobile navigation, country dialog, footer, and placeholder-link behavior.
-- `src/components/layout/menus/`: individual second-level navigation panels and their registry.
-- `src/components/ui/`: shared carousel, modal dialog, and floating controls.
+- `src/components/layout/NavigationPanel.tsx`: one shared renderer for all desktop/mobile submenu content in `src/data/menu-panels.json`.
+- `src/components/ui/`: reusable headings, action links, surface cards, carousel controls, modal dialog, and floating controls.
 - `src/data/`: editable card content, brand/color filters, gallery categories, navigation, and region options.
-- `src/styles/`: section styles plus shared reference styles. `replica.css` adapts the original geometry to React controls. Tailwind utilities are available without resetting the reference typography.
+- `src/app/globals.css`: Tailwind v4 theme, local fonts, base rules, and a few shared utilities. Section styling lives directly in each component’s Tailwind classes; there is no legacy stylesheet folder.
 - `public/assets/`: local media and fonts. `sources.json` records source URLs; `src/data/asset-map.json` maps original URLs to local assets.
 
-To replace a section, edit its component and matching stylesheet. To change its cards, update the corresponding JSON file. Shared carousel behavior lives in `Carousel.tsx`.
+To replace a section, edit or swap its component in `src/app/page.tsx`. To change its cards, update its JSON file or supply its `items` prop. Collection badges (`isNew`) and brand logos are data fields, so reordering cards does not change their meaning. Static section copy stays beside its markup.
+
+Use `Heading`/`SectionHeading`, `ActionLink`, `SurfaceCard`, and `Carousel` for matching new sections. Theme utilities include `text-ink`, `bg-stone`, `bg-aqua`, `text-body`, and fluid heading sizes. Responsive breakpoints: `phone` 600px, `tablet` 1024px, `desktop` 1080px, `wide` 1440px. `NavigationProvider` shares scroll/menu state between the header and quote banner; keep it around the page chrome.
+
+Run `npm test` after editing content to detect missing local assets, invalid submenu references, or accidental outbound card links. Then run lint and build.
 
 ## Preview interactions
 

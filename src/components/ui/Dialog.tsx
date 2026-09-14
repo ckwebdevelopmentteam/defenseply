@@ -33,7 +33,7 @@ export function Dialog({
     <dialog
       ref={ref}
       aria-label={label}
-      className={`replica-dialog ${className}`}
+      className={`m-auto max-h-[90dvh] max-w-[min(90vw,780px)] border-0 p-0 text-ink backdrop:bg-black/60 max-phone:max-w-[95vw] ${className}`}
       onCancel={onClose}
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();

@@ -15,8 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-US">
-      <body className="home page-template-core-home active-plugin-components">
-        <a className="skip-link" href="#main-content">
+      <body>
+        <a
+          className="fixed -top-25 left-5 z-[2147483646] bg-white p-3 text-black focus:top-2.5"
+          href="#main-content"
+        >
           Skip to content
         </a>
         <LocalNavigation />

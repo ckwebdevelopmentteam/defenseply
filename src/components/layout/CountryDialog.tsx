@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import { Dialog } from "@/components/ui/Dialog";
+import { ArrowIcon } from "@/components/ui/ActionLink";
+const selectClass = "border-0 border-b border-[#999] bg-white p-3.5";
 import regions from "@/data/regions.json";
 
 type Continent = keyof typeof regions;
@@ -64,10 +66,16 @@ export function CountryDialog({
   }
   return (
     <Dialog open={open} onClose={onClose} label="Choose your country or region">
-      <div className="country-dialog">
+      <div className="flex flex-col gap-[26px] p-[42px] max-phone:gap-5 max-phone:p-6">
         <div className="flex items-center justify-between gap-8">
-          <h2>Choose Your Country or Region</h2>
-          <button onClick={onClose} aria-label="Close country selector">
+          <h2 className="text-[32px] font-light max-phone:text-[25px]">
+            Choose Your Country or Region
+          </h2>
+          <button
+            className="flex items-center gap-3"
+            onClick={onClose}
+            aria-label="Close country selector"
+          >
             close <X size={20} />
           </button>
         </div>
@@ -75,6 +83,7 @@ export function CountryDialog({
           Continent
         </label>
         <select
+          className={selectClass}
           id="continent"
           value={continent}
           onChange={(event) => {
@@ -92,6 +101,7 @@ export function CountryDialog({
           Country
         </label>
         <select
+          className={selectClass}
           id="region"
           disabled={!continent || continent === "International"}
           value={country}
@@ -108,6 +118,7 @@ export function CountryDialog({
           Language
         </label>
         <select
+          className={selectClass}
           id="language"
           disabled={languages.length < 2 || continent === "International"}
           value={language}
@@ -121,13 +132,13 @@ export function CountryDialog({
           ))}
         </select>
         <button
-          className="btn btn-negro-azul"
+          className="flex items-center gap-3 border border-ink bg-ink px-[23px] py-[11px] text-sm text-white hover:bg-aqua hover:text-ink"
           disabled={!language}
           onClick={continueToRegion}
         >
-          Continue <span className="arrow-link" />
+          Continue <ArrowIcon className="h-[17px] w-[18px]" />
         </button>
-        <label className="remember">
+        <label className="flex items-center gap-2 text-sm">
           <input
             type="checkbox"
             checked={remember}
