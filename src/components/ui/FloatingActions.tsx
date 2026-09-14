@@ -7,7 +7,7 @@ export function FloatingActions() {
     <>
       <a
         className="quote-tab"
-        href="https://www.cosentino.com/landings-usa/quotation-form/"
+        href="#contact"
       >
         Request a quote <ChevronRight size={24} />
       </a>
@@ -21,11 +21,11 @@ export function FloatingActions() {
               </button>
             </header>
             <p>How can we help you?</p>
-            <a href="https://www.cosentino.com/usa/contact/">Contact us</a>
-            <a href="https://www.cosentino.com/usa/where-to-buy/">
+            <a href="#contact">Contact us</a>
+            <a href="#product">
               Find a showroom
             </a>
-            <a href="https://www.cosentino.com/landings-usa/quotation-form/">
+            <a href="#contact">
               Request a quote
             </a>
           </section>

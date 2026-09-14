@@ -82,7 +82,7 @@ export function Hero() {
                   setPaused(true);
                 }}
                 onBlur={() => setPaused(false)}
-                href={`https://www.cosentino.com/usa/${s.href}`}
+                href="#product"
               >
                 {s.title}
               </a>

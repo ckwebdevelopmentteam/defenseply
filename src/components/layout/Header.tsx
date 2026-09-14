@@ -95,15 +95,13 @@ export function Header() {
             <div className="row-side row-right">
               <a
                 className="menu-btn is-primary"
-                href="https://www.cosentino.com/usa/where-to-buy/"
+                href="#contact"
               >
                 Where To Buy
               </a>
               <a
                 className="menu-btn is-secondary"
-                href="https://we.cosentino.com/home"
-                target="_blank"
-                rel="noreferrer"
+                href="#contact"
               >
                 Professional Area
               </a>
@@ -211,15 +209,13 @@ export function Header() {
             </div>
           ))}
           <a
-            href="https://www.cosentino.com/usa/where-to-buy/"
+            href="#contact"
             onClick={() => setMobile(false)}
           >
             Where To Buy
           </a>
           <a
-            href="https://we.cosentino.com/home"
-            target="_blank"
-            rel="noreferrer"
+            href="#contact"
             onClick={() => setMobile(false)}
           >
             Professional Area

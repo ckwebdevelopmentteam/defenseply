@@ -36,7 +36,7 @@ export function Footer() {
                     id="menu-item-92290"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-92290"
                   >
-                    <a href="https://www.cosentino.com/usa/about-us/">
+                    <a href="#about">
                       {"About us"}
                     </a>
                   </li>
@@ -44,7 +44,7 @@ export function Footer() {
                     id="menu-item-31221"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-31221"
                   >
-                    <a href="https://www.cosentino.com/usa/innovation/">
+                    <a href="#about">
                       {"R&D and Innovation"}
                     </a>
                   </li>
@@ -52,7 +52,7 @@ export function Footer() {
                     id="menu-item-31220"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-31220"
                   >
-                    <a href="https://www.cosentino.com/usa/safety-at-cosentino/">
+                    <a href="#about">
                       {"Safety at Cosentino"}
                     </a>
                   </li>
@@ -62,7 +62,7 @@ export function Footer() {
                   >
                     <a
                       target="_blank"
-                      href="https://osh.cosentino.com/"
+                      href="#about"
                       rel="nofollow noopener"
                     >
                       {"Cosentino Safety Space"}
@@ -73,7 +73,7 @@ export function Footer() {
                     className="menu-item menu-item-type-custom menu-item-object-custom menu-item-31222"
                   >
                     <a
-                      href="https://static.cosentino.com/ESG/2023/Sustainability-2023.pdf"
+                      href="#about"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -85,7 +85,7 @@ export function Footer() {
                     className="menu-item menu-item-type-custom menu-item-object-custom menu-item-34129"
                   >
                     <a
-                      href="https://assetstools.cosentino.com/api/v1/bynder/doc/0D67A72D-5C67-48F7-9B9A86AFAFD7A0DF/EINF-2025-EN.pdf"
+                      href="#about"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -98,7 +98,7 @@ export function Footer() {
                   >
                     <a
                       target="_blank"
-                      href="https://www.cosentino.com/landings/ctquarry/"
+                      href="#about"
                     >
                       {"CT Quarry"}
                     </a>
@@ -152,7 +152,7 @@ export function Footer() {
                     id="menu-item-129111"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-129111"
                   >
-                    <a href="https://www.cosentino.com/usa/contact/">
+                    <a href="#contact">
                       {"Contact"}
                     </a>
                   </li>
@@ -160,7 +160,7 @@ export function Footer() {
                     id="menu-item-112000"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-112000"
                   >
-                    <a href="https://www.cosentino.com/usa/silestone/warranty/">
+                    <a href="#contact">
                       {"Warranty | Silestone"}
                     </a>
                   </li>
@@ -168,7 +168,7 @@ export function Footer() {
                     id="menu-item-19913"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19913"
                   >
-                    <a href="https://www.cosentino.com/usa/dekton/dekton-25-year-warranty-cosentino/">
+                    <a href="#contact">
                       {"Warranty | Dekton"}
                     </a>
                   </li>
@@ -176,7 +176,7 @@ export function Footer() {
                     id="menu-item-132010"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-132010"
                   >
-                    <a href="https://www.cosentino.com/usa/eclos/warranty-eclos/">
+                    <a href="#contact">
                       {"Warranty | Eclos"}
                     </a>
                   </li>
@@ -184,7 +184,7 @@ export function Footer() {
                     id="menu-item-19915"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19915"
                   >
-                    <a href="https://www.cosentino.com/usa/sensa/warranty/">
+                    <a href="#contact">
                       {"Warranty | Sensa"}
                     </a>
                   </li>
@@ -192,7 +192,7 @@ export function Footer() {
                     id="menu-item-32321"
                     className="menu-item menu-item-type-custom menu-item-object-custom menu-item-32321"
                   >
-                    <a href="http://www.cosentino.com/cgv/">
+                    <a href="#contact">
                       {"General Conditions of Sale"}
                     </a>
                   </li>
@@ -200,7 +200,7 @@ export function Footer() {
                     id="menu-item-68169"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-68169"
                   >
-                    <a href="https://www.cosentino.com/usa/ethics-compliance/">
+                    <a href="#contact">
                       {"Ethics & Compliance"}
                     </a>
                   </li>
@@ -208,7 +208,7 @@ export function Footer() {
                     id="menu-item-84004"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-84004"
                   >
-                    <a href="https://www.cosentino.com/usa/ethical-channel/">
+                    <a href="#contact">
                       {"Ethics Channel"}
                     </a>
                   </li>
@@ -237,7 +237,7 @@ export function Footer() {
                   >
                     <a
                       target="_blank"
-                      href="https://apps.cosentino.com/supplier/tabs/home"
+                      href="#contact"
                       rel="nofollow noopener"
                     >
                       {"Supplier Portal"}
@@ -249,7 +249,7 @@ export function Footer() {
                   >
                     <a
                       target="_blank"
-                      href="https://assetstools.cosentino.com/api/v1/bynder/doc/111A9314-D0CF-4AC6-A2EE07D45C4FD4D0/gpc.pdf"
+                      href="#contact"
                       rel="nofollow noopener"
                     >
                       {"General Purchase Conditions"}
@@ -280,7 +280,7 @@ export function Footer() {
                     id="menu-item-83313"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83313"
                   >
-                    <a href="https://www.cosentino.com/usa/professional/designers/">
+                    <a href="#contact">
                       {"Designers – CTOP"}
                     </a>
                   </li>
@@ -288,7 +288,7 @@ export function Footer() {
                     id="menu-item-83310"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83310"
                   >
-                    <a href="https://www.cosentino.com/usa/professional/architects/">
+                    <a href="#contact">
                       {"Architects"}
                     </a>
                   </li>
@@ -296,7 +296,7 @@ export function Footer() {
                     id="menu-item-83314"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83314"
                   >
-                    <a href="https://www.cosentino.com/usa/professional/fabricators/">
+                    <a href="#contact">
                       {"Fabricators"}
                     </a>
                   </li>
@@ -304,7 +304,7 @@ export function Footer() {
                     id="menu-item-83311"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83311"
                   >
-                    <a href="https://www.cosentino.com/usa/professional/kitchen-studios/">
+                    <a href="#contact">
                       {"Kitchen & bath studios"}
                     </a>
                   </li>
@@ -312,7 +312,7 @@ export function Footer() {
                     id="menu-item-83312"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83312"
                   >
-                    <a href="https://www.cosentino.com/usa/professional/installers-reformers/">
+                    <a href="#contact">
                       {"Installers reformers"}
                     </a>
                   </li>
@@ -320,7 +320,7 @@ export function Footer() {
                     id="menu-item-31719"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-31719"
                   >
-                    <a href="https://www.cosentino.com/usa/cosentino-center/">
+                    <a href="#contact">
                       {"Cosentino Center"}
                     </a>
                   </li>
@@ -328,7 +328,7 @@ export function Footer() {
                     id="menu-item-60333"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-60333"
                   >
-                    <a href="https://www.cosentino.com/usa/professional/cosentino-city/">
+                    <a href="#contact">
                       {"Cosentino City"}
                     </a>
                   </li>
@@ -337,7 +337,7 @@ export function Footer() {
                     className="menu-item menu-item-type-custom menu-item-object-custom menu-item-57649"
                   >
                     <a
-                      href="https://app.cosentino.com/supplier/tabs/home"
+                      href="#contact"
                       rel="nofollow noopener"
                       target="_blank"
                     >
@@ -367,7 +367,7 @@ export function Footer() {
                     id="menu-item-17999"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-17999"
                   >
-                    <a href="https://www.cosentino.com/usa/c-magazine/">
+                    <a href="#gallery">
                       {"C Magazine"}
                     </a>
                   </li>
@@ -375,7 +375,7 @@ export function Footer() {
                     id="menu-item-18000"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-18000"
                   >
-                    <a href="https://www.cosentino.com/usa/c-top-magazine/">
+                    <a href="#gallery">
                       {"C-Top Magazine"}
                     </a>
                   </li>
@@ -383,7 +383,7 @@ export function Footer() {
                     id="menu-item-68272"
                     className="menu-item menu-item-type-post_type menu-item-object-page menu-item-68272"
                   >
-                    <a href="https://www.cosentino.com/usa/professional/technical-documentation/">
+                    <a href="#contact">
                       {"Technical documentation"}
                     </a>
                   </li>
@@ -414,7 +414,7 @@ export function Footer() {
                   >
                     <a
                       target="_blank"
-                      href="https://jobs.cosentino.com/?locale=en_US"
+                      href="#contact"
                       rel="nofollow noopener"
                     >
                       {"Join Cosentino"}
@@ -455,13 +455,13 @@ export function Footer() {
                     id="menu-item-74920"
                     className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-74920"
                   >
-                    <a href="https://www.cosentino.com/usa/news/">{"News"}</a>
+                    <a href="#gallery">{"News"}</a>
                   </li>
                   <li
                     id="menu-item-100630"
                     className="menu-item menu-item-type-custom menu-item-object-custom menu-item-100630"
                   >
-                    <a href="mailto:presscosentino@cosentino.com">
+                    <a href="#contact">
                       {"Media Contact"}
                     </a>
                   </li>
@@ -559,7 +559,7 @@ export function Footer() {
             <p>
               <a
                 rel="nofollow"
-                href="https://forms.cosentino.com/legal-notice/"
+                href="#contact"
                 target="_blank"
               >
                 {"Legal Notice"}
@@ -567,7 +567,7 @@ export function Footer() {
               {" | "}
               <a
                 rel="nofollow"
-                href="https://forms.cosentino.com/privacy-policy/"
+                href="#contact"
                 target="_blank"
               >
                 {"Privacy Policy"}
@@ -575,7 +575,7 @@ export function Footer() {
               {" | "}
               <a
                 rel="nofollow"
-                href="https://forms.cosentino.com/cookie-policy-us/"
+                href="#contact"
                 target="_blank"
               >
                 {"Cookie Policy"}
@@ -584,7 +584,7 @@ export function Footer() {
           </div>
           <div className="col-12 col-md-3">
             <p>
-              <a href="https://www.cosentino.com/usa/sitemap/">{"Sitemap"}</a>
+              <a href="#home">{"Sitemap"}</a>
             </p>
           </div>
         </div>

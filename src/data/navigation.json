@@ -4,31 +4,31 @@
       "title": "Mineral Low Silica Surface",
       "image": "",
       "logo": "/assets/menu-brands-0.svg",
-      "href": "https://www.cosentino.com/usa/silestone/"
+      "href": "#about"
     },
     {
       "title": "The Ultracompact Surface",
       "image": "",
       "logo": "/assets/menu-brands-1.svg",
-      "href": "https://www.cosentino.com/usa/dekton/"
+      "href": "#about"
     },
     {
       "title": "Inlayered Mineral Surface",
       "image": "",
       "logo": "/assets/menu-brands-2.svg",
-      "href": "https://www.cosentino.com/usa/eclos/"
+      "href": "#about"
     },
     {
       "title": "Protected Natural Stone",
       "image": "",
       "logo": "/assets/menu-brands-3.svg",
-      "href": "https://www.cosentino.com/usa/sensa/"
+      "href": "#about"
     },
     {
       "title": "The Ultimate Natural Stone",
       "image": "",
       "logo": "/assets/menu-brands-4.svg",
-      "href": "https://www.cosentino.com/usa/scalea/"
+      "href": "#about"
     }
   ],
   "Spaces": [
@@ -36,25 +36,25 @@
       "title": "Kitchens",
       "image": "/assets/Spaces_Kitchens_2.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/kitchens/"
+      "href": "#product"
     },
     {
       "title": "Bathrooms",
       "image": "/assets/Spaces_BathroomNew.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/bathrooms/"
+      "href": "#product"
     },
     {
       "title": "Other interiors",
       "image": "/assets/Spaces_Other_IneriorsNew.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/living-room/"
+      "href": "#product"
     },
     {
       "title": "Outdoor",
       "image": "/assets/Spaces_Outdoor_crop.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/outdoor/"
+      "href": "#product"
     }
   ],
   "Inspiration": [
@@ -62,19 +62,19 @@
       "title": "Inspiration gallery",
       "image": "/assets/Inspiration_Gallery.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/inspiration/"
+      "href": "#gallery"
     },
     {
       "title": "C\u00b7Inspiration",
       "image": "/assets/inspiracion2.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/inspiration/"
+      "href": "#gallery"
     },
     {
       "title": "Design tools",
       "image": "/assets/Inspiration_DesignTools.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/professional/design-tools/"
+      "href": "#gallery"
     }
   ],
   "Professionals": [
@@ -82,31 +82,31 @@
       "title": "Services",
       "image": "/assets/Services_new.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/professional/"
+      "href": "#contact"
     },
     {
       "title": "Collaborators",
       "image": "/assets/Collaborations.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/professional/"
+      "href": "#contact"
     },
     {
       "title": "Applications",
       "image": "/assets/Applications.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/professional/"
+      "href": "#contact"
     },
     {
       "title": "Programs",
       "image": "/assets/Programs.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/professional/"
+      "href": "#contact"
     },
     {
       "title": "Technical documentation",
       "image": "/assets/Technical_Documentation.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/professional/technical-documentation/"
+      "href": "#contact"
     }
   ],
   "Corporate": [
@@ -114,25 +114,25 @@
       "title": "About us",
       "image": "/assets/About_Us.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/about-us/"
+      "href": "#about"
     },
     {
       "title": "Environmental Policy",
       "image": "/assets/Environmental.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/sustainability/"
+      "href": "#about"
     },
     {
       "title": "Work with us",
       "image": "/assets/Work_With_Us.jpg",
       "logo": "",
-      "href": "https://jobs.cosentino.com/"
+      "href": "#contact"
     },
     {
       "title": "News",
       "image": "/assets/News.jpg",
       "logo": "",
-      "href": "https://www.cosentino.com/usa/news"
+      "href": "#gallery"
     }
   ]
 }
