@@ -1,5 +1,3 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Spaces } from "@/components/sections/Spaces";
@@ -17,9 +15,8 @@ import { FloatingActions } from "@/components/ui/FloatingActions";
 export default function Home() {
   return (
     <>
-      <Header />
-      <main id="main-content">
-        <section className="core-container">
+      <main id="main-content" className="overflow-hidden">
+        <div className="mx-auto w-full px-[38px] max-phone:px-5">
           <article>
             <Hero />
             <About />
@@ -34,10 +31,9 @@ export default function Home() {
             <CityShowroom />
             <Newsletter />
           </article>
-        </section>
+        </div>
       </main>
       <FloatingActions />
-      <Footer />
     </>
   );
 }

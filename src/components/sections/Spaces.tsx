@@ -2,97 +2,80 @@
 import { useState } from "react";
 import spaces from "@/data/spaces.json";
 import { Carousel, Arrow } from "@/components/ui/Carousel";
-export function Spaces() {
-  const [active, setActive] = useState<keyof typeof spaces>("Kitchens");
+import { Heading } from "@/components/ui/Heading";
+import { SurfaceCard } from "@/components/ui/SurfaceCard";
+import { cn } from "@/lib/cn";
+export function Spaces({ items = spaces }: { items?: typeof spaces }) {
+  const categories = Object.keys(items) as (keyof typeof items)[];
+  const [active, setActive] = useState(categories[0]);
   return (
-    <div className="bg-section bg-gris-claro" id="product">
-      <div className="bg-section__container">
-        <hr />
-        <section className="section-espacios">
-          <div className="row-1">
-            <p className="font-16 font-family-diagramm font-normal text-center">
-              Cosentino Architectural Surfaces
-            </p>
-            <h2 className="font-40 font-family-diagramm font-light text-center">
-              Meaningful Design to Inspire People’s Lives
-            </h2>
-          </div>
-          <div className="row-2">
-            <div className="core-tabs pb-40">
-              <Carousel
-                key={active}
-                controls={(h) => (
-                  <div className="core-tabs__nav">
-                    <ul
-                      className="core-tabs__nav__tags"
-                      role="tablist"
-                      aria-label="Explore spaces"
-                    >
-                      {(Object.keys(spaces) as (keyof typeof spaces)[]).map(
-                        (t) => (
-                          <li key={t}>
-                            <button
-                              type="button"
-                              role="tab"
-                              aria-selected={active === t}
-                              aria-controls="spaces-panel"
-                              className={`core-tabs__nav__tags-item font-15 font-light ${active === t ? "active" : ""}`}
-                              onClick={() => setActive(t)}
-                            >
-                              {t}
-                            </button>
-                          </li>
-                        ),
-                      )}
-                    </ul>
-                    <div className="core-tabs__nav__arrows">
-                      <Arrow
-                        direction="left"
-                        aria-label="Previous spaces"
-                        onClick={h.previous}
-                        disabled={h.page === 1}
-                      />
-                      <Arrow
-                        aria-label="Next spaces"
-                        onClick={h.next}
-                        disabled={h.page === h.pages}
-                      />
-                    </div>
-                  </div>
-                )}
-              >
-                {spaces[active].map((c) => (
-                  <a
-                    key={c.title}
-                    className="core-slider__slide keen-slider__slide"
-                    href={c.href || "#contact"}
-                  >
-                    <img
-                      className="core-slider__slide__image"
-                      src={c.image}
-                      alt={c.title}
-                      loading="lazy"
-                    />
-                    <div className="core-slider__slide__filter" />
-                    <div className="core-slider__slide__card-body">
-                      <div className="core-slider__slide__card-body__block">
-                        <h3 className="core-slider__slide__card-body__name font-16">
-                          {c.title}
-                        </h3>
-                      </div>
-                      <div className="core-slider__slide__card-body__block">
-                        <div className="core-slider__slide__card-body__arrow">
-                          <span className="arrow-link" />
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </Carousel>
-            </div>
-          </div>
-        </section>
+    <section
+      id="product"
+      data-section="spaces"
+      className="relative -mx-[38px] overflow-hidden bg-white px-[38px] pt-[61px]"
+    >
+      <div className="mx-auto flex w-full max-w-[80%] flex-col gap-[25px] px-2.5 pb-15 max-phone:max-w-full">
+        <p className="text-center text-fluid">
+          Cosentino Architectural Surfaces
+        </p>
+        <Heading className="mx-auto max-w-1/2 text-center max-tablet:max-w-full">
+          Meaningful Design to Inspire People’s Lives
+        </Heading>
       </div>
-    </div>
+      <div className="relative flex h-full flex-col gap-6 pb-25">
+        <Carousel
+          key={active}
+          wrapSlider={(slider) => (
+            <div role="tabpanel" id="spaces-panel" aria-label={active}>
+              {slider}
+            </div>
+          )}
+          controls={(h) => (
+            <div className="flex items-center justify-between max-phone:mr-[calc(-50vw+50%)]">
+              <div
+                className="thin-scrollbar flex gap-7 overflow-x-auto max-phone:mb-4 max-phone:gap-5"
+                role="tablist"
+                aria-label="Explore spaces"
+              >
+                {categories.map((name) => (
+                  <button
+                    key={name}
+                    role="tab"
+                    aria-selected={name === active}
+                    aria-controls="spaces-panel"
+                    className={cn(
+                      "shrink-0 py-1 text-fluid-sm leading-[normal]",
+                      name === active
+                        ? "border-b border-ink font-normal"
+                        : "font-light",
+                    )}
+                    onClick={() => setActive(name)}
+                  >
+                    {name}
+                  </button>
+                ))}
+              </div>
+              <div className="flex gap-[1.7rem] max-phone:hidden">
+                <Arrow
+                  direction="left"
+                  aria-label="Previous spaces"
+                  onClick={h.previous}
+                  disabled={h.page === 1}
+                />
+                <Arrow
+                  aria-label="Next spaces"
+                  onClick={h.next}
+                  disabled={h.page === h.pages}
+                />
+              </div>
+            </div>
+          )}
+        >
+          {items[active].map((item) => (
+            <SurfaceCard key={item.title} {...item} />
+          ))}
+        </Carousel>
+      </div>
+    </section>
   );
 }

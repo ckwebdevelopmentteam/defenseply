@@ -16,8 +16,7 @@ import {
   ArrowRight,
   TrendingUp,
 } from "lucide-react";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+
 import { FloatingActions } from "@/components/ui/FloatingActions";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductInquiryForm } from "@/components/product/ProductInquiryForm";
@@ -66,8 +65,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   return (
     <>
-      <Header solid />
-
       <main className="product-detail-page" id="main-content">
         {/* Breadcrumbs */}
         <div className="product-breadcrumb-wrap">
@@ -378,7 +375,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
       </main>
 
       <FloatingActions />
-      <Footer />
     </>
   );
 }

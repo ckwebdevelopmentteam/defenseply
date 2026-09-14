@@ -1,90 +1,72 @@
-"use client";
-
-import { useState } from "react";
-
-const footerGroups = [
-  {
-    title: "Company",
-    links: [
-      ["About", "/#about"],
-      ["Products", "/#product"],
-      ["Projects", "/#gallery"],
-      ["Contact us", "/contact-us"],
-    ],
-  },
-  {
-    title: "Help",
-    links: [
-      ["Customer support", "/contact-us"],
-      ["Delivery details", "/contact-us"],
-      ["Terms & conditions", "/contact-us"],
-      ["Privacy policy", "/contact-us"],
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      ["Material guide", "/#product"],
-      ["Project inspiration", "/#gallery"],
-      ["Design journal", "/#gallery"],
-      ["Visit our showroom", "/contact-us"],
-    ],
-  },
-];
-
+import Link from "next/link";
+import { footerGroups, socialLinks } from "@/data/site";
+import { FooterNewsletter } from "./FooterNewsletter";
 export function Footer() {
-  const [subscribed, setSubscribed] = useState(false);
-
   return (
-    <footer className="site-footer">
-      <div className="footer-inner">
-        <section className="footer-newsletter" aria-labelledby="footer-newsletter-title">
-          <span className="footer-ring footer-ring--top" aria-hidden="true" />
-          <span className="footer-ring footer-ring--bottom" aria-hidden="true" />
-          <h2 id="footer-newsletter-title">Subscribe to our newsletter</h2>
-          <form
-            className="footer-newsletter-form"
-            onSubmit={(event) => {
-              event.preventDefault();
-              setSubscribed(true);
-            }}
-          >
-            <label className="sr-only" htmlFor="footer-first-name">First name</label>
-            <input id="footer-first-name" name="firstName" placeholder="First name" required />
-            <label className="sr-only" htmlFor="footer-email">Email address</label>
-            <input id="footer-email" name="email" type="email" placeholder="Email address" required />
-            <button type="submit">{subscribed ? "You’re subscribed" : "Subscribe now"}</button>
-          </form>
-        </section>
+    <footer
+      id="site-footer"
+      className="bg-paper px-6 pt-[76px] pb-7 text-[#1b1b1b] max-[760px]:px-4 max-[760px]:pt-8 max-[760px]:pb-4"
+    >
+      <div className="mx-auto w-full max-w-[1120px]">
+        <FooterNewsletter />
 
-        <div className="footer-content">
-          <div className="footer-brand">
-            <a href="/" aria-label="Defenseply home">
-              <img src="/assets/defenseply-logo-dark.png" alt="Defenseply" />
-            </a>
-            <p>Reliable plywood solutions for spaces built with purpose.</p>
-            <div className="footer-socials" aria-label="Social media">
-              <a href="#contact" aria-label="Facebook"><img src="/assets/facebook-icon.svg" alt="" /></a>
-              <a href="#contact" aria-label="Instagram"><img src="/assets/instagram-icon.svg" alt="" /></a>
-              <a href="#contact" aria-label="LinkedIn"><img src="/assets/linkedin-icon.svg" alt="" /></a>
-              <a href="#contact" aria-label="Twitter"><img src="/assets/twitter-icon.svg" alt="" /></a>
-              <a href="#contact" aria-label="YouTube"><img src="/assets/youtube-icon.svg" alt="" /></a>
+        <div className="grid grid-cols-[1.55fr_repeat(3,1fr)] gap-[52px] pt-[78px] pb-[72px] max-[760px]:grid-cols-2 max-[760px]:gap-x-5 max-[760px]:gap-y-[30px] max-[760px]:pt-[42px] max-[760px]:pb-[34px]">
+          <div className="max-[760px]:col-span-full">
+            <Link href="/" aria-label="Defenseply home">
+              <img
+                className="h-auto w-[116px] max-[760px]:w-24"
+                src="/assets/defenseply-logo-dark.png"
+                alt="Defenseply"
+              />
+            </Link>
+            <p className="mt-6 mb-[30px] max-w-[220px] text-[13px] leading-[1.55] text-footer-muted max-[760px]:mt-3.5 max-[760px]:mb-5 max-[760px]:max-w-[200px] max-[760px]:text-[11px]">
+              Reliable plywood solutions for spaces built with purpose.
+            </p>
+            <div className="flex gap-[9px]" aria-label="Social media">
+              {socialLinks.map((item) => (
+                <Link
+                  key={item.name}
+                  href="/#contact"
+                  aria-label={item.name}
+                  className="grid size-[25px] place-items-center rounded-full border border-[#c9c8c1] text-[#1b1b1b] hover:border-footer-accent hover:bg-footer-accent"
+                >
+                  <img
+                    className="size-[13px] object-contain"
+                    src={`/assets/${item.icon}-icon.svg`}
+                    alt=""
+                  />
+                </Link>
+              ))}
             </div>
           </div>
 
           {footerGroups.map((group) => (
-            <nav className="footer-links" aria-label={group.title} key={group.title}>
-              <h3>{group.title}</h3>
-              {group.links.map(([label, href]) => (
-                <a href={href} key={label}>{label}</a>
+            <nav
+              className="flex flex-col items-start gap-[19px] max-[760px]:gap-[13px] max-[420px]:gap-2.5"
+              aria-label={group.title}
+              key={group.title}
+            >
+              <h3 className="mb-[5px] text-[10px] font-medium tracking-[.14em] uppercase text-[#9a8220] max-[760px]:text-[9px]">
+                {group.title}
+              </h3>
+              {group.links.map(({ name: label, href }) => (
+                <Link
+                  className="text-xs text-footer-muted hover:text-[#1b1b1b] max-[760px]:text-[10px]"
+                  href={href}
+                  key={label}
+                >
+                  {label}
+                </Link>
               ))}
             </nav>
           ))}
         </div>
 
-        <div className="footer-bottom">
+        <div className="flex min-h-[66px] items-center justify-center border-t border-[#deddd8] text-center text-xs text-footer-muted max-[760px]:min-h-[50px] max-[760px]:text-[10px]">
           <p>© {new Date().getFullYear()} Defenseply. All rights reserved.</p>
-          <a href="#home">Back to top</a>
+          <Link className="hidden" href="/#home">
+            Back to top
+          </Link>
         </div>
       </div>
     </footer>

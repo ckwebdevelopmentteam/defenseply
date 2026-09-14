@@ -2,168 +2,168 @@
   {
     "title": "Legnd",
     "image": "/assets/Legnd.png",
-    "href": "#products",
+    "href": "#product",
     "brand": "eclos",
     "label": ""
   },
   {
     "title": "Tajnar",
     "image": "/assets/Tajnar.png",
-    "href": "#products",
+    "href": "#product",
     "brand": "eclos",
     "label": ""
   },
   {
     "title": "Ivora",
     "image": "/assets/Ivora.png",
-    "href": "#products",
+    "href": "#product",
     "brand": "eclos",
     "label": ""
   },
   {
     "title": "Wondr",
     "image": "/assets/Wondr.png",
-    "href": "#products",
+    "href": "#product",
     "brand": "eclos",
     "label": ""
   },
   {
     "title": "Landr",
     "image": "/assets/Landr.png",
-    "href": "#products",
+    "href": "#product",
     "brand": "eclos",
     "label": ""
   },
   {
     "title": "Phantome",
     "image": "/assets/Phantome.png",
-    "href": "#products",
+    "href": "#product",
     "brand": "eclos",
     "label": ""
   },
   {
     "title": "Nara",
     "image": "/assets/NARA.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "dekton",
     "label": ""
   },
   {
     "title": "Kedar",
     "image": "/assets/KEDAR.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "dekton",
     "label": ""
   },
   {
     "title": "Keena",
     "image": "/assets/KEENA.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "dekton",
     "label": ""
   },
   {
     "title": "Evok",
     "image": "/assets/EVOK.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "dekton",
     "label": ""
   },
   {
     "title": "Nebbia",
     "image": "/assets/NEBBIA.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "dekton",
     "label": ""
   },
   {
     "title": "Ceppo",
     "image": "/assets/CEPPO.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "dekton",
     "label": ""
   },
   {
     "title": "Jardin Emerald",
     "image": "/assets/Jardin-Emerald.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "silestone",
     "label": ""
   },
   {
     "title": "Blanc Elysee",
     "image": "/assets/Blanc-Elysee.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "silestone",
     "label": ""
   },
   {
     "title": "Raw A",
     "image": "/assets/Raw-A.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "silestone",
     "label": ""
   },
   {
     "title": "Parisien Bleu",
     "image": "/assets/Parisien-Bleu.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "silestone",
     "label": ""
   },
   {
     "title": "Raw D",
     "image": "/assets/Raw-D.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "silestone",
     "label": ""
   },
   {
     "title": "Brass Relish",
-    "image": "#products",
-    "href": "#products",
+    "image": "/assets/brass-relish.jpg",
+    "href": "#product",
     "brand": "silestone",
     "label": ""
   },
   {
     "title": "Taj Mahal",
     "image": "/assets/TAJ-MAHAL.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "sensa",
     "label": ""
   },
   {
     "title": "Orinoco",
     "image": "/assets/ORINOCO.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "sensa",
     "label": ""
   },
   {
     "title": "White Macaubas",
     "image": "/assets/WHITE-MACAUBAS.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "sensa",
     "label": ""
   },
   {
     "title": "Itara",
     "image": "/assets/ITARA.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "sensa",
     "label": ""
   },
   {
     "title": "Cristalo",
     "image": "/assets/CRISTALO.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "sensa",
     "label": ""
   },
   {
     "title": "Marau",
     "image": "/assets/MARAU.jpg",
-    "href": "#products",
+    "href": "#product",
     "brand": "sensa",
     "label": ""
   }
