@@ -11,11 +11,12 @@ const navItems = [
   { name: "Contact Us", href: "/contact-us" },
 ];
 type MenuName = keyof typeof navigation;
-export function Header() {
+export function Header({ solid }: { solid?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false),
     [open, setOpen] = useState<MenuName | null>(null),
     [mobile, setMobile] = useState(false);
   const reduced = useReducedMotion();
+  const isSolid = solid || scrolled;
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 40);
     update();
@@ -58,8 +59,8 @@ export function Header() {
         }}
       >
         <div
-          className={`main-menu-container theme-regular ${scrolled ? "is-scrolled" : "is-at-top"}`}
-          style={{ padding: scrolled || open ? "10px 32px" : "18px 32px" }}
+          className={`main-menu-container theme-regular ${isSolid ? "is-scrolled" : "is-at-top"}`}
+          style={{ padding: isSolid || open ? "10px 32px" : "18px 32px" }}
         >
           <div className="main-menu-wrapper">
             <div className="row-side row-left">
@@ -162,7 +163,7 @@ export function Header() {
         </AnimatePresence>
       </div>
       <div
-        className={`replica-mobile-header ${scrolled || mobile ? "solid" : ""}`}
+        className={`replica-mobile-header ${isSolid || mobile ? "solid" : ""}`}
       >
         <button
           onClick={() => setMobile(!mobile)}

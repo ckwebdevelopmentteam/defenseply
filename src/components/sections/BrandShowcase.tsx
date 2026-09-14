@@ -33,7 +33,7 @@ export function BrandShowcase() {
           {brands.map((b, i) => (
             <a
               className="core-slider__slide keen-slider__slide"
-              key={names[i] ?? i}
+              key={`${names[i] || i}-${b.href}`}
               href={b.href}
             >
               <img

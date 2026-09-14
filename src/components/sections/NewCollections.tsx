@@ -3,19 +3,12 @@ import collections from "@/data/collections.json";
 import { Carousel, Progress } from "@/components/ui/Carousel";
 export function NewCollections() {
   return (
-    <section className="core-slider-novedades" aria-label="New collections">
+    <section className="core-slider-novedades" aria-label="Our Products">
       <div className="header">
         <div className="d-flex">
-          <p className="font-body-base text-uppercase font-normal">New</p>
-          <svg
-            width="25"
-            height="24"
-            viewBox="0 0 25 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path d="m7 4 12 12M19 4v12H7" stroke="currentColor" />
-          </svg>
+          <h2 className="font-display-md font-family-diagramm font-light text-uppercase">
+            Our Products
+          </h2>
         </div>
       </div>
       <Carousel
@@ -38,6 +31,14 @@ export function NewCollections() {
                 alt={c.title}
                 loading="lazy"
               />
+              {"hoverImage" in c && c.hoverImage && (
+                <img
+                  className="core-slider-novedades__slide__image-hover"
+                  src={c.hoverImage}
+                  alt={c.title}
+                  loading="lazy"
+                />
+              )}
               <div className="core-slider-novedades__slide__card-body">
                 <div className="core-slider-novedades__slide__card-body_top">
                   <div className="core-slider-novedades__slide__card-body__logo">
@@ -50,7 +51,9 @@ export function NewCollections() {
                   </div>
                 </div>
                 <div className="extra">
-                  <span className="arrow-link" />
+                  <div className="core-slider__slide__card-body__arrow">
+                    <span className="arrow-link" />
+                  </div>
                 </div>
               </div>
             </a>
