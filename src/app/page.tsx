@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
 import { Spaces } from "@/components/sections/Spaces";
 import { NewCollections } from "@/components/sections/NewCollections";
 import { ColorCollection } from "@/components/sections/ColorCollection";
@@ -21,6 +22,7 @@ export default function Home() {
         <section className="core-container">
           <article>
             <Hero />
+            <About />
             <Spaces />
             <NewCollections />
             <ColorCollection />
