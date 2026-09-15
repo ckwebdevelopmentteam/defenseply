@@ -1,39 +1,63 @@
 {
-  "headline": "For over 25 years, our team has engineered bespoke architectural surfaces, uniting sustainable innovation with timeless design for spaces that inspire.",
-  "description": "Explore DefensePly surfaces with collections crafted for residential, commercial, and outdoor spaces. Exceptional durability, zero porosity, and bespoke finishes tailored to your vision.",
+  "headline": "Backed by the AP Group, DEFENSEPLY INTERNATIONAL LLP redefines the building materials industry through high-performance, eco-friendly composite solutions for sustainable eco-architecture.",
+  "description": "Headquartered at our 45,000 sq. ft. facility within the KINFRA Industrial Park in Kuttippuram, Kerala, DEFENSEPLY specializes in Wood Polymer Composite (WPC) and Polyvinyl Chloride (PVC) form boards, doors, and frames. Our solutions deliver the timeless aesthetic of natural wood while eliminating water damage, termite degradation, and warping for resilient, modern construction.",
   "features": [
-    { "icon": "shield", "label": "Zero Porosity" },
-    { "icon": "clock", "label": "25-Yr Warranty" },
-    { "icon": "sparkles", "label": "Eco-Engineered" }
+    {
+      "icon": "shield",
+      "label": "100% Water & Termite Proof"
+    },
+    {
+      "icon": "clock",
+      "label": "Unmatched Durability"
+    },
+    {
+      "icon": "sparkles",
+      "label": "100% Recyclable Composites"
+    }
   ],
-  "action": { "label": "Contact Us", "href": "#contact" },
+  "action": {
+    "label": "Contact Us",
+    "href": "#contact"
+  },
   "hero": {
     "image": "/assets/Casa-Navacerrada-LGC-2.jpg",
-    "alt": "Luxury architectural surface interior",
-    "title": "Architectural Mastery"
+    "alt": "DEFENSEPLY sustainable eco-architecture and composite solutions",
+    "title": "Sustainable Eco-Architecture"
   },
   "gallery": [
     {
       "position": "left",
       "image": "/assets/cosentino-city-barcelona.avif",
-      "alt": "City showroom surface installation"
+      "alt": "DEFENSEPLY WPC architectural installation"
     },
     {
       "position": "center",
       "image": "/assets/proyecto-barquillo.avif",
-      "alt": "Curated residential architectural space"
+      "alt": "Sustainable composite interior application"
     },
     {
       "position": "right",
       "image": "/assets/battersea-residential.avif",
-      "alt": "Architectural interior surface installation"
+      "alt": "High-performance composite fixtures"
     }
   ],
-  "galleryDescription": "Stories and moments from architects and homeowners who transformed their spaces with our surfaces.",
+  "galleryDescription": "Empowering architects, contractors, interior designers, and homeowners with reliable supply chains, seamless customization, and sustainable WPC and PVC composite solutions.",
   "statistics": [
-    { "value": "25+", "label": "years of excellence" },
-    { "value": "1,200+", "label": "completed projects" },
-    { "value": "50+", "label": "curated finishes" },
-    { "value": "100%", "label": "sustainable craft" }
+    {
+      "value": "45,000",
+      "label": "sq. ft. KINFRA facility"
+    },
+    {
+      "value": "2 Acres",
+      "label": "industrial site on NH66"
+    },
+    {
+      "value": "100%",
+      "label": "recyclable & toxin-free"
+    },
+    {
+      "value": "Zero",
+      "label": "deforestation commitment"
+    }
   ]
 }

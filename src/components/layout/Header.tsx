@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileHeader } from "./MobileHeader";
 import { BrandLogo } from "./NavigationElements";
-import { useNavigationState } from "./NavigationState";
+import { useNavigationState } from "../sections/NavigationState";
 import { siteNavigation } from "@/data/site";
 import { cn } from "@/lib/cn";
 
