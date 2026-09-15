@@ -15,13 +15,14 @@ export function ApplicationHero({ application }: { application: Application }) {
         <span aria-hidden="true">/</span>
         <span aria-current="page">{application.title}</span>
       </nav>
-      <section className="relative isolate flex aspect-video max-h-[850px] min-h-[460px] items-end overflow-hidden text-white max-phone:aspect-[3/4] max-phone:min-h-[440px]">
+      <section className="relative isolate flex w-full aspect-video max-h-[850px] min-h-[460px] items-end overflow-hidden text-white max-phone:aspect-[3/4] max-phone:min-h-[440px]">
         <ApplicationImage
           src={application.hero}
           mobileSrc={application.heroMobile}
           alt={application.heroAlt}
           priority
-          className="absolute inset-0 -z-20"
+          fill
+          className="-z-20"
         />
         <div className="absolute inset-0 -z-10 bg-linear-to-t from-black/65 via-black/10 to-transparent" />
         <div className="w-full px-[5%] py-[clamp(32px,5vw,80px)]">

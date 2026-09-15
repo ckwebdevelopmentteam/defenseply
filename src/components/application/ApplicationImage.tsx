@@ -6,16 +6,24 @@ export function ApplicationImage({
   mobileSrc,
   alt,
   priority = false,
+  fill = false,
   className,
 }: {
   src: string | null;
   mobileSrc?: string | null;
   alt: string;
   priority?: boolean;
+  fill?: boolean;
   className?: string;
 }) {
   return (
-    <div className={cn("relative overflow-hidden bg-stone", className)}>
+    <div
+      className={cn(
+        "overflow-hidden bg-stone",
+        fill ? "absolute inset-0" : "relative",
+        className,
+      )}
+    >
       {src || mobileSrc ? (
         <picture>
           {mobileSrc && (
