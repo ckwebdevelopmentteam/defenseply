@@ -15,7 +15,7 @@ export function NewCollections({
       aria-label="Our Products"
     >
       <div className="mb-8 flex items-center">
-        <h2 className="font-display-md font-family-diagramm font-light uppercase tracking-tight text-ink text-[clamp(28px,2.5vw,42px)]">
+        <h2 className="font-display-md font-family-diagramm font-light uppercase tracking-tight text-ink text-[clamp(20px,2.5vw,32px)]">
           Our Products
         </h2>
       </div>
@@ -31,7 +31,7 @@ export function NewCollections({
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="inline w-full aspect-[6/5] object-cover align-middle max-phone:aspect-[3/4] transition-[transform,filter] duration-[3000ms] ease-in-out group-hover:scale-105"
+                className="inline w-full aspect-[6/5] object-cover align-middle max-phone:aspect-[3/4] transition-[transform,filter] duration-1000 ease-in-out group-hover:scale-105"
               />
               {/* Hover Image */}
               {"hoverImage" in item && item.hoverImage && (
@@ -39,7 +39,7 @@ export function NewCollections({
                   src={item.hoverImage}
                   alt={item.title}
                   loading="lazy"
-                  className="absolute inset-0 size-full aspect-[6/5] object-cover align-middle max-phone:aspect-[3/4] opacity-0 transition-opacity duration-[3000ms] ease-in-out group-hover:opacity-100"
+                  className="absolute inset-0 size-full aspect-[6/5] object-cover align-middle max-phone:aspect-[3/4] opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"
                 />
               )}
               {/* Gradient Overlays */}
