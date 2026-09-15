@@ -32,7 +32,7 @@ export function AboutLeadership() {
       aria-label="Leadership and management"
       className="w-full bg-white py-24 max-[768px]:py-16"
     >
-      <div className="mx-auto w-full max-w-[1500px] px-[38px] max-[768px]:px-6">
+      <div className="w-full px-[38px] max-[768px]:px-6">
         <p className="mb-4 text-[10px] font-medium tracking-[.22em] uppercase text-[#979793]">
           Leadership & Management
         </p>

@@ -28,7 +28,7 @@ export function AboutVisionMission() {
       aria-label="Vision and mission"
       className="w-full bg-white py-24 max-[768px]:py-16"
     >
-      <div className="mx-auto w-full max-w-[1500px] px-[38px] max-[768px]:px-6">
+      <div className="w-full px-[38px] max-[768px]:px-6">
         {/* Vision */}
         <div className="mb-20 border-t border-black/8 pt-12 max-[768px]:mb-14 max-[768px]:pt-9">
           <p className="mb-6 text-[10px] font-medium tracking-[.22em] uppercase text-[#979793]">

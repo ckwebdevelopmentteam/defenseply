@@ -5,7 +5,7 @@ export function AboutCTA() {
     <section
       id="about-cta"
       aria-label="Contact DefensePly"
-      className="flex min-h-[280px] items-center justify-between gap-10 bg-[#1c1c1e] bg-[url('/assets/00-Furniture-Hero.avif')] bg-cover bg-center bg-blend-multiply px-[clamp(24px,6.8vw,104px)] py-[60px] text-white max-[800px]:min-h-[220px] max-[800px]:flex-col max-[800px]:items-start max-[800px]:gap-[22px] max-[800px]:px-[22px] max-[800px]:py-[42px]"
+      className="flex min-h-[280px] items-center justify-between gap-10 bg-[#1c1c1e] bg-[url('/assets/00-Furniture-Hero.avif')] bg-cover bg-center bg-blend-multiply px-[38px] py-[60px] text-white max-[800px]:min-h-[220px] max-[800px]:flex-col max-[800px]:items-start max-[800px]:gap-[22px] max-[768px]:px-6 max-[800px]:py-[42px]"
     >
       <div>
         <p className="mb-[22px] text-[10px] font-medium tracking-[.22em] uppercase text-white/55">

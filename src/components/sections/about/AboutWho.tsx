@@ -1,8 +1,28 @@
 const facts = [
-  { value: "45,000 sq. ft.", label: "Manufacturing Facility" },
-  { value: "WPC & PVC", label: "Composite Specialisation" },
-  { value: "KINFRA Park", label: "Kuttippuram, Kerala" },
-  { value: "AP Group", label: "Strategic Backing" },
+  {
+    value: "45,000 sq. ft.",
+    label: "Manufacturing Facility",
+    image: "/assets/About_Us.jpg",
+    alt: "45,000 sq. ft. manufacturing facility",
+  },
+  {
+    value: "WPC & PVC",
+    label: "Composite Specialisation",
+    image: "/assets/00-Furniture-Hero.avif",
+    alt: "WPC and PVC composite building materials",
+  },
+  {
+    value: "KINFRA Park",
+    label: "Kuttippuram, Kerala",
+    image: "/assets/antas-build.jpg",
+    alt: "KINFRA Industrial Park Kuttippuram Kerala facility",
+  },
+  {
+    value: "AP Group",
+    label: "Strategic Backing",
+    image: "/assets/kes-group.jpg",
+    alt: "AP Group strategic industrial backing",
+  },
 ];
 
 export function AboutWho() {
@@ -12,72 +32,102 @@ export function AboutWho() {
       aria-label="Who we are"
       className="w-full bg-white py-24 max-[768px]:py-16"
     >
-      <div className="mx-auto w-full max-w-[1500px] px-[38px] max-[768px]:px-6">
-        {/* Eyebrow */}
-        <p className="mb-10 text-[10px] font-medium tracking-[.22em] uppercase text-[#979793]">
-          Who We Are
-        </p>
+      <div className="w-full px-[38px] max-[768px]:px-6">
+        {/* Centered Editorial Header */}
+        <div className="mx-auto mb-10 max-w-[920px] text-center max-[768px]:mb-8">
+          {/* Refined Section Marker with subtle gold accent line */}
+          <div className="mb-5 flex items-center justify-center gap-2.5">
+            <span className="h-px w-5 bg-[#d9c34a]" aria-hidden="true" />
+            <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#8a8a86]">
+              Who We Are
+            </p>
+          </div>
 
-        {/* Split layout */}
-        <div className="grid grid-cols-[1.1fr_1fr] items-start gap-20 max-[900px]:grid-cols-1 max-[900px]:gap-12">
-          {/* Left — Company narrative */}
-          <div>
-            <h2 className="mb-8 text-[clamp(28px,2.5vw,44px)] leading-[1.14] font-light uppercase text-[#1a1a1a]">
-              Redefining Building Materials Through Sustainable Innovation
-            </h2>
-            <div className="space-y-5 text-[15px] leading-[1.7] text-[#555]">
-              <p>
-                <strong className="font-medium text-[#1a1a1a]">
-                  DEFENSEPLY INTERNATIONAL LLP
-                </strong>{" "}
-                is a new WPC manufacturing venture backed by the{" "}
-                <strong className="font-medium text-[#1a1a1a]">AP Group</strong>
-                , representing a strategic expansion into advanced composite
-                building materials.
-              </p>
-              <p>
-                The company specialises in{" "}
-                <strong className="font-medium text-[#1a1a1a]">
-                  Wood Polymer Composite (WPC)
-                </strong>{" "}
-                and{" "}
-                <strong className="font-medium text-[#1a1a1a]">
-                  Polyvinyl Chloride (PVC)
-                </strong>{" "}
-                form boards, doors, and frames — engineered to deliver the
-                timeless warmth and aesthetic appeal of natural wood, while
-                entirely eliminating traditional structural flaws such as water
-                damage, termite degradation, and warping.
-              </p>
-              <p>
-                Headquartered at our{" "}
-                <strong className="font-medium text-[#1a1a1a]">
-                  45,000 sq. ft. facility within KINFRA Industrial Park,
-                  Kuttippuram, Kerala
-                </strong>
-                , our operations harness cutting-edge extrusion technology to
-                produce sustainable, durable, and resilient alternatives for
-                modern construction and interior architecture.
-              </p>
+          {/* Main Headline — Two-line balanced architectural typography */}
+          <h2 className="mx-auto max-w-[820px] text-[clamp(30px,2.8vw,48px)] font-light leading-[1.12] tracking-[-0.02em] uppercase text-[#1a1a1a]">
+            Redefining Building Materials
+            <br className="hidden sm:inline" />
+            {" "}Through Sustainable Innovation
+          </h2>
+        </div>
+
+        {/* Editorial Description Block (900-1050px, Centered Container, Left-Aligned Text) */}
+        <div className="mx-auto mb-16 lg:mb-20 max-w-[1000px] text-left max-[768px]:mb-12">
+          {/* Lead Introductory Statement */}
+          <p className="mb-8 text-[17.5px] leading-[1.68] font-normal text-[#242423] sm:text-[18.5px] max-[768px]:mb-6">
+            <strong className="font-medium text-[#1a1a1a]">
+              DEFENSEPLY INTERNATIONAL LLP
+            </strong>{" "}
+            is a new WPC manufacturing venture backed by the{" "}
+            <strong className="font-medium text-[#1a1a1a]">AP Group</strong>
+            , representing a strategic expansion into advanced composite
+            building materials.
+          </p>
+
+          {/* Two-Column Editorial Company Description */}
+          <div className="grid grid-cols-2 gap-10 lg:gap-14 max-[768px]:grid-cols-1 max-[768px]:gap-6 text-[14.5px] sm:text-[15px] leading-[1.8] text-[#555552]">
+            <p>
+              The company specialises in{" "}
+              <strong className="font-medium text-[#1a1a1a]">
+                Wood Polymer Composite (WPC)
+              </strong>{" "}
+              and{" "}
+              <strong className="font-medium text-[#1a1a1a]">
+                Polyvinyl Chloride (PVC)
+              </strong>{" "}
+              form boards, doors, and frames — engineered to deliver the
+              timeless warmth and aesthetic appeal of natural wood, while
+              entirely eliminating traditional structural flaws such as water
+              damage, termite degradation, and warping.
+            </p>
+            <p>
+              Headquartered at our{" "}
+              <strong className="font-medium text-[#1a1a1a]">
+                45,000 sq. ft. facility
+              </strong>{" "}
+              within{" "}
+              <strong className="font-medium text-[#1a1a1a]">
+                KINFRA Industrial Park, Kuttippuram, Kerala
+              </strong>
+              , our operations harness cutting-edge extrusion technology to
+              produce sustainable, durable, and resilient alternatives for
+              modern construction and interior architecture.
+            </p>
+          </div>
+        </div>
+
+        {/* Architectural Specification Panels in 1 Horizontal Row */}
+        <div className="grid grid-cols-4 gap-4 lg:gap-5 max-[1024px]:grid-cols-2 max-[520px]:grid-cols-1">
+          {facts.map((fact) => (
+            <div
+              key={fact.label}
+              className="group relative flex min-h-[260px] flex-col justify-between overflow-hidden border border-black/10 bg-[#181818] p-7 lg:min-h-[285px] lg:p-8 max-[520px]:min-h-[190px] max-[520px]:p-5 transition-colors duration-300 hover:border-[#d9c34a]/60"
+            >
+              {/* Normalized background architectural image */}
+              <img
+                src={fact.image}
+                alt={fact.alt}
+                loading="lazy"
+                className="absolute inset-0 size-full object-cover object-center grayscale-[20%] contrast-[0.95] opacity-70 transition-[transform,opacity] duration-300 ease-out group-hover:scale-[1.02] group-hover:opacity-85"
+              />
+
+              {/* Subtle multi-stop gradient overlay supporting typography */}
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.72)_0%,rgba(17,17,17,0.38)_45%,rgba(17,17,17,0.85)_100%)] transition-opacity duration-300 group-hover:opacity-90" />
+
+              {/* Subtle gold accent indicator on hover at bottom */}
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#d9c34a] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+              {/* Primary Value (Top/Left) */}
+              <span className="relative z-10 text-[clamp(21px,1.55vw,28px)] font-light leading-[1.12] tracking-[-0.015em] text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.6)]">
+                {fact.value}
+              </span>
+
+              {/* Secondary Label (Bottom/Left) */}
+              <span className="relative z-10 text-[10px] font-medium tracking-[0.18em] uppercase text-[#dedcd5] [text-shadow:0_1px_4px_rgba(0,0,0,0.6)]">
+                {fact.label}
+              </span>
             </div>
-          </div>
-
-          {/* Right — Key facts grid */}
-          <div className="grid grid-cols-2 gap-px bg-black/8 border border-black/8">
-            {facts.map((fact) => (
-              <div
-                key={fact.label}
-                className="flex flex-col justify-between bg-[#f7f8f9] px-7 py-8 max-[520px]:px-5 max-[520px]:py-6"
-              >
-                <span className="mb-3 text-[clamp(20px,1.8vw,30px)] leading-[1.15] font-light text-[#1a1a1a]">
-                  {fact.value}
-                </span>
-                <span className="text-[11px] font-medium tracking-[.12em] uppercase text-[#979793]">
-                  {fact.label}
-                </span>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
