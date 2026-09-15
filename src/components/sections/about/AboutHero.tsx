@@ -3,7 +3,7 @@ export function AboutHero() {
     <section
       id="about-hero"
       aria-label="About DEFENSEPLY INTERNATIONAL LLP"
-      className="relative flex min-h-[92vh] w-full flex-col justify-end overflow-hidden bg-[#111] max-[768px]:min-h-[70vh]"
+      className="relative flex h-screen w-full flex-col justify-end overflow-hidden bg-[#111]"
     >
       {/* Background image */}
       <img
@@ -21,7 +21,7 @@ export function AboutHero() {
         <p className="mb-5 text-[10px] font-medium tracking-[.22em] uppercase text-white/60">
           About Defenseply
         </p>
-        <h1 className="max-w-[820px] text-[clamp(38px,4.5vw,80px)] leading-[1.04] font-light uppercase text-white max-[768px]:max-w-full">
+        <h1 className="max-w-[1020px] text-[clamp(38px,4.5vw,80px)] leading-[1.04] font-light uppercase text-white max-[768px]:max-w-full">
           Building a Better Future with Advanced Composite Materials
         </h1>
         <p className="mt-7 max-w-[560px] text-[15px] leading-[1.65] text-white/75 max-[768px]:mt-5 max-[768px]:max-w-full">

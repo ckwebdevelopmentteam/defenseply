@@ -28,7 +28,7 @@ export function AboutValues() {
       aria-label="Core values"
       className="w-full bg-[#f4f3ef] py-24 max-[768px]:py-16"
     >
-      <div className="mx-auto w-full max-w-[1500px] px-[38px] max-[768px]:px-6">
+      <div className="w-full px-[38px] max-[768px]:px-6">
         <div className="mb-12 flex items-end justify-between gap-6 max-[768px]:flex-col max-[768px]:items-start max-[768px]:gap-4">
           <div>
             <p className="mb-4 text-[10px] font-medium tracking-[.22em] uppercase text-[#979793]">
