@@ -54,7 +54,7 @@ export const products: ProductDetail[] = [
     badges: ["100% Waterproof", "Termite Proof", "Fire Retardant", "Zero Deforestation"],
     gallery: [
       {
-        src: "/assets/products/pvcfoamdf(main).webp",
+        src: "/assets/products/pvcfoamboard(main).jpg",
         alt: "Defenseply PVC Foam Board Installation",
         caption: "Suspended architectural PVC foam panels showcasing lightweight rigidity and flawless surface.",
       },
