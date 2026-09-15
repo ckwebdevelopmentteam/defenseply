@@ -7,7 +7,7 @@ import {
   contactLede,
 } from "./ContactUI";
 import { ContactForm } from "./ContactForm";
-export function ContactProject() {
+export function ContactProject({ context }: { context?: string } = {}) {
   return (
     <section className={cn(contactGrid, "bg-[#eae9e5]")} id="project-form">
       <div className={cn(contactCopy, "pt-[clamp(48px,7vw,94px)]")}>
@@ -24,7 +24,7 @@ export function ContactProject() {
           <li>Furniture &amp; fit-outs</li>
         </ul>
       </div>
-      <ContactForm />
+      <ContactForm context={context} />
     </section>
   );
 }

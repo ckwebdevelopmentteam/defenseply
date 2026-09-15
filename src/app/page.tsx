@@ -1,6 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
-import { Spaces } from "@/components/sections/Spaces";
+import { Applications } from "@/components/sections/Applications";
 import { Products } from "@/components/sections/Products";
 import { ColorCollection } from "@/components/sections/ColorCollection";
 import { FreePower } from "@/components/sections/FreePower";
@@ -20,7 +20,7 @@ export default function Home() {
           <article>
             <Hero />
             <About />
-            <Spaces />
+            <Applications />
             <Products />
             <ColorCollection />
             <FreePower />

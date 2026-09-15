@@ -40,14 +40,7 @@ function localDestination(href) {
     );
 }
 test("homepage content has existing local assets and valid local destinations", () => {
-  for (const name of [
-    "about",
-    "brands",
-    "products",
-    "colors",
-    "spaces",
-    "gallery",
-  ])
+  for (const name of ["about", "brands", "products", "colors", "gallery"])
     walk(read(name), (key, value) => {
       if (key === "href") localDestination(value);
       if (
@@ -93,5 +86,34 @@ test("catalog entries have unique slugs and complete card/gallery data", () => {
       product.slug,
     );
     assert.ok(product.specs && product.applications.length, product.slug);
+  }
+});
+
+// Future application images are optional; the server resolves absent files to placeholders.
+test("application content maps complete galleries to valid catalog products", () => {
+  const applications = read("applications");
+  const slugs = new Set(read("products").map((p) => p.slug));
+  assert.equal(applications.length, 6);
+  assert.equal(
+    new Set(applications.map((a) => a.slug)).size,
+    applications.length,
+  );
+  for (const application of applications) {
+    assert.ok(application.gallery.length > 3, application.slug);
+    assert.equal(
+      new Set(application.gallery.map((image) => image.id)).size,
+      application.gallery.length,
+    );
+    for (const slug of application.products) assert.ok(slugs.has(slug), slug);
+    assert.ok(
+      existsSync(resolve("public/assets/applications", application.slug)),
+    );
+    for (const image of application.gallery) {
+      assert.ok(image.alt && image.caption && image.title);
+      assert.equal(
+        image.image,
+        `/assets/applications/${application.slug}/${image.id}.webp`,
+      );
+    }
   }
 });

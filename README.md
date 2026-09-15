@@ -9,7 +9,7 @@ npm ci
 npm run dev
 ```
 
-Routes: `/` and `/usa/` render the homepage; `/contact-us` renders the contact page; `/products/[slug]` renders each catalog product.
+Routes: `/` and `/usa/` render the homepage; `/contact-us` renders the contact page; `/products/[slug]` renders each catalog product; `/applications/[slug]` renders six application categories.
 
 ```sh
 npm test
@@ -44,8 +44,22 @@ Responsive breakpoints: `phone` 600px, `tablet` 1024px, `desktop` 1080px, `wide`
 
 ## Interactions
 
-Navbar/footer links navigate to implemented local pages and homepage anchors. Homepage section IDs are `home`, `products`, `product` (spaces), `gallery`, `about`, and `contact`; `contact` remains the homepage newsletter destination from Sahil’s branch. Placeholder `#` links remain inert. No promotional links redirect to Cosentino.
+Navbar/footer links navigate to implemented local pages and homepage anchors. Homepage section IDs are `home`, `products`, `applications` (with legacy `product` anchor), `gallery`, `about`, and `contact`; `contact` remains the homepage newsletter destination from Sahil’s branch. Placeholder `#` links remain inert. No promotional links redirect to Cosentino.
 
 Carousels, filters, gallery lightboxes, mobile menus and help dismissal work locally. Contact and newsletter forms validate input but have no backend; submission feedback explicitly states that nothing was sent. Contact details remain the placeholders supplied by Sahil. No analytics or external form scripts are included.
 
 Tests validate local assets, navbar/footer destinations, homepage anchors and duplicate IDs. Run them whenever editing content or routes.
+
+
+## Applications and image handoff
+
+The product-detail UI (`components/product`) is **provisional, not an approved design reference**. New application pages follow the homepage/contact typography, spacing and palette. Product data and photography can be reused independently of that UI.
+
+- Homepage: `components/sections/Applications.tsx` composes the shared `ApplicationTabs` and `ApplicationCard`.
+- Six routes: `/applications/interiors`, `/applications/commercial`, `/applications/creative`, `/applications/wardrobe`, `/applications/bedroom`, `/applications/kitchen`.
+- Page composition: `app/applications/[slug]/page.tsx`; independently replaceable hero, navigation, story, gallery and materials components in `components/application/`.
+- Content and intended asset paths: `data/applications.json`; types: `types/application.ts`. All four cards within a category open that category page.
+- Image resolution: `data/applications.ts` runs on the server, selecting available WebP/PNG/JPG/JPEG/AVIF assets by basename. Missing images use neutral placeholders, with no broken requests. Add files and rebuild/restart a production preview; in development refresh the page.
+- Images: `public/assets/applications/<category>/`. Full copy-paste prompts, exact filenames, dimensions and crop guidance: [application-image-prompts.md](docs/application-image-prompts.md).
+- The category page reuses its homepage gallery images, existing product imagery, and `ContactProject` / `ContactForm`. Forms remain local previews, with no submission service.
+- Client attachments are reference-only and are not copied into the repository. Application images will be concepts rather than verified completed projects.

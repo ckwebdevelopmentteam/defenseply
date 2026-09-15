@@ -2,6 +2,7 @@ export const siteNavigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
   { name: "Product", href: "/#products" },
+  { name: "Applications", href: "/#applications" },
   { name: "Gallery", href: "/#gallery" },
   { name: "Contact Us", href: "/contact-us" },
 ];

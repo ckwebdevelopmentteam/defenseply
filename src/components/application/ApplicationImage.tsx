@@ -1,0 +1,46 @@
+import { cn } from "@/lib/cn";
+
+/** Shared responsive media slot. Assets can be supplied later without broken images. */
+export function ApplicationImage({
+  src,
+  mobileSrc,
+  alt,
+  priority = false,
+  className,
+}: {
+  src: string | null;
+  mobileSrc?: string | null;
+  alt: string;
+  priority?: boolean;
+  className?: string;
+}) {
+  return (
+    <div className={cn("relative overflow-hidden bg-stone", className)}>
+      {src || mobileSrc ? (
+        <picture>
+          {mobileSrc && (
+            <source media="(max-width: 600px)" srcSet={mobileSrc} />
+          )}
+          <img
+            src={src ?? mobileSrc!}
+            alt={alt}
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
+            className="absolute inset-0 size-full object-cover"
+          />
+        </picture>
+      ) : (
+        <div
+          role="img"
+          aria-label={`${alt} — image pending`}
+          className="absolute inset-0 bg-linear-to-br from-stone via-[#c9c5bc] to-[#8e8b82]"
+        >
+          <span
+            aria-hidden="true"
+            className="absolute inset-[12%] border border-white/25"
+          />
+        </div>
+      )}
+    </div>
+  );
+}

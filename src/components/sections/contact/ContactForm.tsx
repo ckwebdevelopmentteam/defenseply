@@ -7,7 +7,7 @@ const fieldClass =
   "block mt-[7px] w-full rounded-none border border-contact-line bg-transparent px-[11px] py-2.5 text-xs text-contact-ink focus:border-contact-ink max-[520px]:px-[9px] max-[520px]:py-2 max-[520px]:text-[11px]";
 const labelClass =
   "mb-[15px] block text-[11px] text-contact-ink max-[520px]:mb-[11px] max-[520px]:text-[10px]";
-export function ContactForm() {
+export function ContactForm({ context }: { context?: string } = {}) {
   const [submitted, setSubmitted] = useState(false);
   return (
     <form
@@ -17,6 +17,7 @@ export function ContactForm() {
         setSubmitted(true);
       }}
     >
+      {context && <input type="hidden" name="application" value={context} />}
       <div className="grid grid-cols-2 gap-4 max-[520px]:grid-cols-1">
         <label className={labelClass}>
           Your name <span className="text-[#9a6d00]">*</span>

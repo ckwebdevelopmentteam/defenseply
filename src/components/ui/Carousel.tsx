@@ -18,8 +18,10 @@ export function Carousel({
   spacing = 16,
   controls,
   wrapSlider,
+  resetKey,
 }: {
   children: ReactNode;
+  resetKey?: string;
   className?: string;
   desktop?: number;
   tablet?: number;
@@ -71,7 +73,10 @@ export function Carousel({
   });
   useEffect(() => {
     instance.current?.update();
-  }, [count, instance]);
+    if (resetKey !== undefined) {
+      instance.current?.moveToIdx(0, true, { duration: 0 });
+    }
+  }, [count, instance, resetKey]);
   const step = Math.max(1, Math.floor(position.perView));
   const pages = Math.max(1, Math.ceil(count / step));
   const maxIdx =
@@ -85,8 +90,7 @@ export function Carousel({
   const goToPage = (p: number) => {
     if (!instance.current) return;
     const targetPage = Math.max(1, Math.min(pages, p));
-    const targetIndex =
-      targetPage === pages ? maxIdx : (targetPage - 1) * step;
+    const targetIndex = targetPage === pages ? maxIdx : (targetPage - 1) * step;
     instance.current.moveToIdx(targetIndex);
   };
 
