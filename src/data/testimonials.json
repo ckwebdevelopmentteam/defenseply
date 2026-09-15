@@ -7,7 +7,8 @@
     "company": "Studio Archiform",
     "location": "Kochi, Kerala",
     "projectType": "Luxury Villas & Coastal Residences",
-    "rating": 5
+    "rating": 5,
+    "image": "/assets/verdizela-villa-c8f950.jpg"
   },
   {
     "id": "naveen-thomas",
@@ -17,7 +18,8 @@
     "company": "Skyline Builders & Developers",
     "location": "Kozhikode, Kerala",
     "projectType": "Commercial & Residential Towers",
-    "rating": 5
+    "rating": 5,
+    "image": "/assets/boreal-tower-1d4e7e.jpg"
   },
   {
     "id": "sreeja-menon",
@@ -27,7 +29,8 @@
     "company": "Atelier Living Spaces",
     "location": "Bangalore, Karnataka",
     "projectType": "Contemporary Interior Architecture",
-    "rating": 5
+    "rating": 5,
+    "image": "/assets/Spaces_Kitchens_Cosentino_Kitchens.jpg"
   },
   {
     "id": "kv-moideen",
@@ -37,6 +40,18 @@
     "company": "Malabar Commercial Infrastructure",
     "location": "Malappuram, Kerala",
     "projectType": "Healthcare & Institutional Fit-Outs",
-    "rating": 5
+    "rating": 5,
+    "image": "/assets/kes-group-f26ac1.jpg"
+  },
+  {
+    "id": "priya-nair",
+    "quote": "For our hospitality and luxury resort projects across Wayanad and coastal Karnataka, 100% water resistance and fire retardancy are non-negotiable. Defenseply delivers unmatched dimensional stability where wood composites consistently fail. Our go-to specification for high-exposure environments.",
+    "name": "Ar. Priya Nair",
+    "role": "Design Director",
+    "company": "Horizon Hospitality Architects",
+    "location": "Trivandrum, Kerala",
+    "projectType": "Eco-Resorts & Luxury Suites",
+    "rating": 5,
+    "image": "/assets/anatura-hotel-c753ea.jpg"
   }
 ]

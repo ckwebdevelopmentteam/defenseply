@@ -14,7 +14,7 @@ import { FloatingActions } from "@/components/ui/FloatingActions";
 export default function Home() {
   return (
     <>
-      <main id="main-content" className="overflow-hidden">
+      <main id="main-content" className="overflow-x-clip">
         <div className="mx-auto w-full px-[38px] max-phone:px-5">
           <article>
             <Hero />

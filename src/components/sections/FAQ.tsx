@@ -16,7 +16,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
     <section
       data-section="faq"
       id="faq"
-      className="mb-20 max-phone:mb-12"
+      className="mt-30 mb-20 max-phone:mb-12"
       aria-label="Frequently Asked Questions"
     >
       <div className="grid grid-cols-[1fr_1.4fr] items-start gap-14 max-desktop:grid-cols-1 max-desktop:gap-10">

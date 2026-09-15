@@ -223,3 +223,18 @@
     transition: none !important;
   }
 }
+
+/* Smooth navbar hide/show when drawer/modal is open */
+#core-main-menu .group\/header,
+#core-main-menu [data-testid="mobile-navbar"] {
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform, opacity;
+}
+
+body.drawer-open #core-main-menu .group\/header,
+body.drawer-open #core-main-menu [data-testid="mobile-navbar"] {
+  transform: translateY(-120%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
