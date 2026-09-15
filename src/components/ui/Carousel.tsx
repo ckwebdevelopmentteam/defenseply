@@ -21,6 +21,7 @@ export function Carousel({
   resetKey,
 }: {
   children: ReactNode;
+  /** Recreate the slider track when replacing a category, preserving control focus. */
   resetKey?: string;
   className?: string;
   desktop?: number;
@@ -73,10 +74,7 @@ export function Carousel({
   });
   useEffect(() => {
     instance.current?.update();
-    if (resetKey !== undefined) {
-      instance.current?.moveToIdx(0, true, { duration: 0 });
-    }
-  }, [count, instance, resetKey]);
+  }, [count, instance]);
   const step = Math.max(1, Math.floor(position.perView));
   const pages = Math.max(1, Math.ceil(count / step));
   const maxIdx =
@@ -96,6 +94,8 @@ export function Carousel({
 
   const slider = (
     <div
+      // A fresh DOM track makes Keen discard cached slide elements and widths.
+      key={resetKey}
       ref={ref}
       className={`keen-slider relative h-full overflow-visible! ${className}`}
     >
