@@ -4,7 +4,7 @@ export function Hybriq() {
   return (
     <section
       data-section="hybriq"
-      className="-mx-[38px] mb-25 flex bg-stone py-15 max-tablet:flex-col max-tablet:gap-12 max-tablet:p-8"
+      className="-mx-[38px] mb-20 flex bg-stone py-16 max-tablet:flex-col max-tablet:gap-12 max-tablet:p-8 max-phone:mb-12 max-phone:py-12"
     >
       <div className="flex w-full flex-[1_0_50%] flex-col items-start justify-between overflow-hidden px-[38px] max-tablet:gap-8 max-tablet:px-0">
         <Heading className="max-w-[90%] max-tablet:max-w-full">

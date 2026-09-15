@@ -8,7 +8,7 @@ export function Newsletter() {
   const [profile, setProfile] = useState(""),
     [message, setMessage] = useState("");
   return (
-    <div className="py-15" id="contact" data-section="newsletter">
+    <div className="py-20 max-phone:py-12" id="contact" data-section="newsletter">
       <section
         className="flex min-h-[366px] bg-stone max-[1139px]:flex-col max-phone:page-bleed"
         aria-labelledby="newsletter-title"

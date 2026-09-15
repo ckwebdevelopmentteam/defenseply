@@ -1,0 +1,42 @@
+[
+  {
+    "id": "faisal-rahman",
+    "quote": "In Kerala's heavy monsoon climate, conventional plywood in kitchen carcases and vanity counters always carries risk. Switching to Defenseply PVC Foam Boards has given our architectural studio complete peace of mind. Zero warping, razor-sharp edge finishes, and exceptional client satisfaction.",
+    "name": "Ar. Faisal Rahman",
+    "role": "Principal Architect",
+    "company": "Studio Archiform",
+    "location": "Kochi, Kerala",
+    "projectType": "Luxury Villas & Coastal Residences",
+    "rating": 5
+  },
+  {
+    "id": "naveen-thomas",
+    "quote": "We have specified Defenseply WPC Door Frames and 3-Layer Boards across multiple apartment towers in Calicut. The batch-to-batch density uniformity is outstanding, screw holding is rock solid, and our carpenters praise how cleanly the material routes without splintering.",
+    "name": "Naveen Thomas",
+    "role": "Managing Director",
+    "company": "Skyline Builders & Developers",
+    "location": "Kozhikode, Kerala",
+    "projectType": "Commercial & Residential Towers",
+    "rating": 5
+  },
+  {
+    "id": "sreeja-menon",
+    "quote": "The surface smoothness on Defenseply PVC Colour Boards eliminates the entire painting cycle for our modular cabinetry projects. It accepts PU coats, acrylic laminates, and CNC lattice work effortlessly. An indispensable material for high-end interior designers.",
+    "name": "Sreeja Menon",
+    "role": "Lead Interior Designer",
+    "company": "Atelier Living Spaces",
+    "location": "Bangalore, Karnataka",
+    "projectType": "Contemporary Interior Architecture",
+    "rating": 5
+  },
+  {
+    "id": "kv-moideen",
+    "quote": "Direct dispatch from their Kuttippuram factory has streamlined our commercial procurement. Defenseply 3-Layer Multi Boards have solved termite issues permanently in school and healthcare fit-outs. Their technical support and on-time supply are first-rate.",
+    "name": "K. V. Moideen",
+    "role": "Chief Contractor",
+    "company": "Malabar Commercial Infrastructure",
+    "location": "Malappuram, Kerala",
+    "projectType": "Healthcare & Institutional Fit-Outs",
+    "rating": 5
+  }
+]

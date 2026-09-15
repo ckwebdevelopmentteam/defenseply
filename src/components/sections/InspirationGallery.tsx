@@ -24,10 +24,10 @@ export function InspirationGallery() {
     items.slice(i * 4, i * 4 + 4),
   );
   return (
-    <section data-section="gallery" id="gallery">
+    <section data-section="gallery" id="gallery" className="mb-20 max-phone:mb-12">
       <SectionHeading title="INSPIRATION GALLERIES" />
       <div>
-        <div className="flex flex-col gap-6 pb-10">
+        <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between">
             <select
               className="hidden border-b border-ink bg-transparent py-2 pr-[30px] text-fluid-sm max-tablet:block"

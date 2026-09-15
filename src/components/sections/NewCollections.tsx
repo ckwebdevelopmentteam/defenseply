@@ -11,10 +11,10 @@ export function NewCollections({
   return (
     <section
       data-section="collections"
-      className="page-bleed relative mb-25 bg-stone px-[38px] py-15"
+      className="page-bleed relative mb-20 bg-stone px-[38px] py-16 max-phone:mb-12 max-phone:py-12"
       aria-label="Our Products"
     >
-      <div className="mb-8 flex items-center">
+      <div className="mb-8 flex items-center max-phone:mb-6">
         <h2 className="font-display-md font-family-diagramm font-light uppercase tracking-tight text-ink text-[clamp(20px,2.5vw,32px)]">
           Our Products
         </h2>

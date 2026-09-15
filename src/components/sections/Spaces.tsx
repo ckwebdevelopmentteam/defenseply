@@ -12,9 +12,9 @@ export function Spaces({ items = spaces }: { items?: typeof spaces }) {
     <section
       id="product"
       data-section="spaces"
-      className="relative -mx-[38px] overflow-hidden bg-white px-[38px] pt-[61px]"
+      className="relative -mx-[38px] overflow-hidden bg-white px-[38px] py-20 max-phone:py-12"
     >
-      <div className="mx-auto flex w-full max-w-[80%] flex-col gap-[25px] px-2.5 pb-15 max-phone:max-w-full">
+      <div className="mx-auto flex w-full max-w-[80%] flex-col gap-4 px-2.5 pb-8 max-phone:max-w-full max-phone:pb-6">
         <p className="text-center text-fluid">
           Cosentino Architectural Surfaces
         </p>
@@ -22,7 +22,7 @@ export function Spaces({ items = spaces }: { items?: typeof spaces }) {
           Meaningful Design to Inspire People’s Lives
         </Heading>
       </div>
-      <div className="relative flex h-full flex-col gap-6 pb-25">
+      <div className="relative flex h-full flex-col gap-6">
         <Carousel
           key={active}
           wrapSlider={(slider) => (

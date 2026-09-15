@@ -35,9 +35,9 @@ export function About({ data = content }: { data?: typeof content }) {
       data-section="about"
       id="about"
       aria-label="About Defense Ply"
-      className="relative w-full overflow-hidden bg-white pt-20 pb-25 max-[768px]:pt-15 max-[768px]:pb-[70px]"
+      className="relative w-full overflow-hidden bg-white py-20 max-phone:py-12"
     >
-      <header className="mb-14 max-desktop:mb-10">
+      <header className="mb-8 max-phone:mb-6">
         <h2 className="max-w-[1200px] text-[clamp(28px,2.5vw,48px)] leading-[1.18] font-light tracking-[-.01em] uppercase text-[#1a1a1a]">
           {data.headline}
         </h2>
