@@ -38,7 +38,7 @@ export function About({ data = content }: { data?: typeof content }) {
       className="relative w-full overflow-hidden bg-white pt-20 pb-25 max-[768px]:pt-15 max-[768px]:pb-[70px]"
     >
       <header className="mb-14 max-desktop:mb-10">
-        <h2 className="max-w-[1300px] text-[clamp(28px,2.5vw,48px)] leading-[1.18] font-light tracking-[-.01em] uppercase text-[#1a1a1a]">
+        <h2 className="max-w-[1500px] text-[clamp(28px,2.5vw,48px)] leading-[1.18] font-light tracking-[-.01em] uppercase text-[#1a1a1a]">
           {data.headline}
         </h2>
       </header>
