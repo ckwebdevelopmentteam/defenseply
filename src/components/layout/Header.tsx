@@ -6,10 +6,17 @@ import { BrandLogo, NavigationActions } from "./NavigationElements";
 import { useNavigationState } from "./NavigationState";
 import { siteNavigation } from "@/data/site";
 import { cn } from "@/lib/cn";
-export function Header() {
+
+export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
   const { scrolled } = useNavigationState();
   const pathname = usePathname();
-  const solid = scrolled || pathname.startsWith("/contact-us");
+  const solid = Boolean(
+    forceSolid ||
+      scrolled ||
+      pathname?.startsWith("/contact-us") ||
+      pathname?.startsWith("/products"),
+  );
+
   return (
     <header id="core-main-menu">
       <div

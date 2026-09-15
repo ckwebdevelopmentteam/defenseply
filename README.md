@@ -9,7 +9,7 @@ npm ci
 npm run dev
 ```
 
-Routes: `/` and `/usa/` render the homepage; `/contact-us` renders the contact page.
+Routes: `/` and `/usa/` render the homepage; `/contact-us` renders the contact page; `/products/[slug]` renders each catalog product.
 
 ```sh
 npm test
@@ -31,6 +31,9 @@ Stop the existing server before starting another on the same port.
 - `src/components/ui/`: reusable headings, action links, cards, carousel controls, dialog and floating actions.
 - `src/data/site.ts`: navbar links, header actions, footer groups and social labels.
 - `src/data/about.json`: About headline, features, gallery images and statistics. The section follows the hero and owns the navbar’s `#about` destination.
+- `src/components/sections/Products.tsx`: homepage product carousel, linked to detail pages.
+- `src/components/product/`: replaceable product overview, narrative, specifications, applications, green promise, enquiry, related products and gallery components. `ProductSection` shares section spacing/headings.
+- `src/data/products.json`: single product catalog, including card images, detail galleries, specifications and applications. `src/types/product.ts` defines its schema; `src/data/products.ts` provides lookups and derives homepage cards.
 - `src/data/*.json`: editable homepage card content. Collection badges and brand logos are data fields, independent of card order.
 - `src/app/globals.css`: Tailwind theme, local fonts and small shared utilities. All section styles use Tailwind; no legacy stylesheet folder.
 - `public/assets/`: local media. Source manifests retain provenance URLs; those are not navigation links.
@@ -41,7 +44,7 @@ Responsive breakpoints: `phone` 600px, `tablet` 1024px, `desktop` 1080px, `wide`
 
 ## Interactions
 
-Navbar/footer links navigate to implemented local pages and homepage anchors. Homepage section IDs are `home`, `product`, `gallery`, `about`, and `contact`; `contact` remains the homepage newsletter destination from Sahil’s branch. Placeholder `#` links remain inert. No promotional links redirect to Cosentino.
+Navbar/footer links navigate to implemented local pages and homepage anchors. Homepage section IDs are `home`, `products`, `product` (spaces), `gallery`, `about`, and `contact`; `contact` remains the homepage newsletter destination from Sahil’s branch. Placeholder `#` links remain inert. No promotional links redirect to Cosentino.
 
 Carousels, filters, gallery lightboxes, mobile menus and help dismissal work locally. Contact and newsletter forms validate input but have no backend; submission feedback explicitly states that nothing was sent. Contact details remain the placeholders supplied by Sahil. No analytics or external form scripts are included.
 

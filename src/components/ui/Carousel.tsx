@@ -74,10 +74,22 @@ export function Carousel({
   }, [count, instance]);
   const step = Math.max(1, Math.floor(position.perView));
   const pages = Math.max(1, Math.ceil(count / step));
+  const maxIdx =
+    instance.current?.track?.details?.maxIdx ??
+    Math.max(0, count - Math.floor(position.perView));
   const page =
-    position.index >= count - position.perView - 0.1
+    position.index >= maxIdx - 0.1
       ? pages
-      : Math.floor(position.index / step) + 1;
+      : Math.min(pages, Math.floor(position.index / step) + 1);
+
+  const goToPage = (p: number) => {
+    if (!instance.current) return;
+    const targetPage = Math.max(1, Math.min(pages, p));
+    const targetIndex =
+      targetPage === pages ? maxIdx : (targetPage - 1) * step;
+    instance.current.moveToIdx(targetIndex);
+  };
+
   const slider = (
     <div
       ref={ref}
@@ -91,8 +103,8 @@ export function Carousel({
       {controls?.({
         page,
         pages,
-        previous: () => instance.current?.moveToIdx(position.index - step),
-        next: () => instance.current?.moveToIdx(position.index + step),
+        previous: () => goToPage(page - 1),
+        next: () => goToPage(page + 1),
       })}
       {wrapSlider ? wrapSlider(slider) : slider}
     </>

@@ -1,7 +1,7 @@
 export const siteNavigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
-  { name: "Product", href: "/#product" },
+  { name: "Product", href: "/#products" },
   { name: "Gallery", href: "/#gallery" },
   { name: "Contact Us", href: "/contact-us" },
 ];
@@ -14,7 +14,7 @@ export const footerGroups = [
     title: "Company",
     links: [
       { name: "About", href: "/#about" },
-      { name: "Products", href: "/#product" },
+      { name: "Products", href: "/#products" },
       { name: "Projects", href: "/#gallery" },
       { name: "Contact us", href: "/contact-us" },
     ],
@@ -31,7 +31,7 @@ export const footerGroups = [
   {
     title: "Resources",
     links: [
-      { name: "Material guide", href: "/#product" },
+      { name: "Material guide", href: "/#products" },
       { name: "Project inspiration", href: "/#gallery" },
       { name: "Design journal", href: "/#gallery" },
       { name: "Visit our showroom", href: "/contact-us" },

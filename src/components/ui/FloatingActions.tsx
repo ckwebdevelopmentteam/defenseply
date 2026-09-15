@@ -3,7 +3,9 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { useNavigationState } from "@/components/layout/NavigationState";
 import { cn } from "@/lib/cn";
-export function FloatingActions() {
+export function FloatingActions({
+  quoteHref = "#contact",
+}: { quoteHref?: string } = {}) {
   const { mobileOpen } = useNavigationState();
   const [chat, setChat] = useState(false);
   const [promptDismissed, setPromptDismissed] = useState(false);
@@ -16,7 +18,7 @@ export function FloatingActions() {
           "max-desktop:top-[var(--mobile-nav-height)]",
           mobileOpen && "max-desktop:hidden",
         )}
-        href="#contact"
+        href={quoteHref}
       >
         Request a quote{" "}
         <img
@@ -41,19 +43,19 @@ export function FloatingActions() {
             <p className="px-5 pt-5">How can we help you?</p>
             <a
               className="mx-5 my-3 block border border-[#ddd] p-3"
-              href="#contact"
+              href={quoteHref}
             >
               Contact us
             </a>
             <a
               className="mx-5 my-3 block border border-[#ddd] p-3"
-              href="#contact"
+              href={quoteHref}
             >
               Find a showroom
             </a>
             <a
               className="mx-5 my-3 block border border-[#ddd] p-3"
-              href="#contact"
+              href={quoteHref}
             >
               Request a quote
             </a>

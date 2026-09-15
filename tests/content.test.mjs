@@ -23,7 +23,12 @@ function localDestination(href) {
     `Nonlocal link: ${href}`,
   );
   const [path, anchor] = href.split("#");
-  if (path && path !== "/")
+  if (path?.startsWith("/products/")) {
+    assert.ok(
+      read("products").some((product) => `/products/${product.slug}` === path),
+      `Missing product: ${path}`,
+    );
+  } else if (path && path !== "/")
     assert.ok(
       existsSync(resolve("src/app", path.slice(1), "page.tsx")),
       `Missing route: ${path}`,
@@ -35,10 +40,20 @@ function localDestination(href) {
     );
 }
 test("homepage content has existing local assets and valid local destinations", () => {
-  for (const name of ["about", "brands", "collections", "colors", "spaces", "gallery"])
+  for (const name of [
+    "about",
+    "brands",
+    "products",
+    "colors",
+    "spaces",
+    "gallery",
+  ])
     walk(read(name), (key, value) => {
       if (key === "href") localDestination(value);
-      if (["image", "fullImage", "logo"].includes(key) && value) {
+      if (
+        ["image", "hoverImage", "src", "fullImage", "logo"].includes(key) &&
+        value
+      ) {
         assert.ok(
           value.startsWith("/assets/"),
           `${name}: nonlocal asset ${value}`,
@@ -63,8 +78,20 @@ test("shared navbar, actions and footer link to implemented destinations", () =>
   );
 });
 test("homepage section anchors are unique", () => {
-  const anchors = [...homeSections.matchAll(/\bid="([^"]+)"/g)].map(
+  const anchors = [...homeSections.matchAll(/<[a-z][^>]*\bid="([^"]+)"/g)].map(
     (match) => match[1],
   );
   assert.equal(new Set(anchors).size, anchors.length);
+});
+
+test("catalog entries have unique slugs and complete card/gallery data", () => {
+  const products = read("products");
+  assert.equal(new Set(products.map((p) => p.slug)).size, products.length);
+  for (const product of products) {
+    assert.ok(
+      product.title && product.card.image && product.gallery.length,
+      product.slug,
+    );
+    assert.ok(product.specs && product.applications.length, product.slug);
+  }
 });

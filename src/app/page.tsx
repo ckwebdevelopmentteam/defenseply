@@ -1,7 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Spaces } from "@/components/sections/Spaces";
-import { NewCollections } from "@/components/sections/NewCollections";
+import { Products } from "@/components/sections/Products";
 import { ColorCollection } from "@/components/sections/ColorCollection";
 import { FreePower } from "@/components/sections/FreePower";
 import { InspirationGallery } from "@/components/sections/InspirationGallery";
@@ -21,7 +21,7 @@ export default function Home() {
             <Hero />
             <About />
             <Spaces />
-            <NewCollections />
+            <Products />
             <ColorCollection />
             <FreePower />
             <InspirationGallery />
