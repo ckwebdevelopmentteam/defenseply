@@ -1,6 +1,6 @@
 export const siteNavigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/#about" },
+  { name: "About", href: "/about" },
   { name: "Product", href: "/#product" },
   { name: "Gallery", href: "/#gallery" },
   { name: "Contact Us", href: "/contact-us" },
@@ -13,7 +13,7 @@ export const footerGroups = [
   {
     title: "Company",
     links: [
-      { name: "About", href: "/#about" },
+      { name: "About", href: "/about" },
       { name: "Products", href: "/#product" },
       { name: "Projects", href: "/#gallery" },
       { name: "Contact us", href: "/contact-us" },
