@@ -1,6 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { NavigationProvider } from "@/components/layout/NavigationState";
+import { NavigationProvider } from "@/components/sections/NavigationState";
 import type { Metadata } from "next";
 import "./globals.css";
 import { LocalNavigation } from "@/components/layout/LocalNavigation";

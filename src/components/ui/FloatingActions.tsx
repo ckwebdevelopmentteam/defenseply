@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { X } from "lucide-react";
-import { useNavigationState } from "@/components/layout/NavigationState";
+import { useNavigationState } from "@/components/sections/NavigationState";
 import { cn } from "@/lib/cn";
 export function FloatingActions() {
   const { mobileOpen } = useNavigationState();

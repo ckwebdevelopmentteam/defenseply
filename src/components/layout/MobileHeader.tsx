@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { BrandLogo, NavigationActions } from "./NavigationElements";
-import { useNavigationState } from "./NavigationState";
+import { useNavigationState } from "../sections/NavigationState";
 import { siteNavigation } from "@/data/site";
 import { cn } from "@/lib/cn";
 export function MobileHeader({ solid }: { solid: boolean }) {
