@@ -1,21 +1,25 @@
+export type MissionTone = "clay" | "sage" | "blue" | "sand";
+
 export type MissionItem = {
   id: "innovation" | "responsibility" | "quality" | "partnership";
   number: string;
-  title: string;
+  category: string;
+  headingLines: readonly [string, string];
   description: string;
+  tone: MissionTone;
 };
 
 export type AboutPurposeData = {
   vision: {
     label: string;
-    statement: readonly [string, string];
+    headingLines: readonly [string, string];
     description: string;
-    caption: string;
+    principles: readonly string[];
   };
   mission: {
     label: string;
-    heading: readonly [string, string];
-    intro: string;
+    headingLines: readonly [string, string];
+    description: string;
     items: readonly MissionItem[];
   };
 };
@@ -23,44 +27,56 @@ export type AboutPurposeData = {
 export const aboutPurposeData: AboutPurposeData = {
   vision: {
     label: "OUR VISION",
-    statement: ["A better material future.", "A lighter footprint."],
+    headingLines: ["Better spaces today.", "Better possibilities tomorrow."],
     description:
-      "To help shape a future where thoughtfully engineered WPC and PVC materials support better spaces and reduce dependence on conventional timber.",
-    caption: "The future we work towards.",
+      "Our vision is to help shape a future where thoughtfully engineered WPC and PVC materials support better spaces and a more considered use of resources.",
+    principles: [
+      "Thoughtful materials",
+      "Practical innovation",
+      "Long-term purpose",
+    ],
   },
   mission: {
     label: "OUR MISSION",
-    heading: ["Better materials.", "Considered at every step."],
-    intro:
-      "Our mission is to bring together material innovation, responsible choices, consistent quality and dependable support.",
+    headingLines: ["What we believe.", "What we build into every day."],
+    description:
+      "Four commitments guide how we develop materials, refine our processes and support the people who build with us.",
     items: [
       {
         id: "innovation",
         number: "01",
-        title: "Advance material possibilities",
+        category: "Innovation",
+        headingLines: ["Think forward.", "Make better."],
         description:
           "Improve WPC and PVC solutions through thoughtful engineering, manufacturing refinement and practical innovation.",
+        tone: "clay",
       },
       {
         id: "responsibility",
         number: "02",
-        title: "Make responsible choices",
+        category: "Responsibility",
+        headingLines: ["Choose wisely.", "Use thoughtfully."],
         description:
           "Develop alternatives to conventional timber and work towards more considered use of materials and resources.",
+        tone: "sage",
       },
       {
         id: "quality",
         number: "03",
-        title: "Build confidence in quality",
+        category: "Quality",
+        headingLines: ["Refine details.", "Build confidence."],
         description:
           "Focus on consistent manufacturing and dependable performance for the intended application.",
+        tone: "blue",
       },
       {
         id: "partnership",
         number: "04",
-        title: "Support every partnership",
+        category: "Partnership",
+        headingLines: ["Listen closely.", "Grow together."],
         description:
-          "Help architects, fabricators, dealers and homeowners make informed material choices with responsive guidance and support.",
+          "Support architects, fabricators, dealers and homeowners with informed material choices and responsive guidance.",
+        tone: "sand",
       },
     ],
   },
