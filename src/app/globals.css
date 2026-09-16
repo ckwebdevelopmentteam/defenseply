@@ -25,46 +25,52 @@
   --text-body: 15px;
   --text-body--line-height: 20px;
   --text-display: clamp(30px, 0.3787878788vw + 28.6363636364px, 35px);
-  --text-display--line-height: clamp(
-    32px,
-    0.3787878788vw + 30.6363636364px,
-    37px
-  );
+  --text-display--line-height: clamp(32px,
+      0.3787878788vw + 30.6363636364px,
+      37px);
   --text-heading: clamp(32px, 2.67vw, 80px);
   --text-heading-tablet: clamp(32px, 5.208vw, 80px);
   --text-heading-phone: clamp(32px, 8.27vw, 80px);
   --animate-scroll-cue: scroll-cue 1.5s infinite;
   --animate-fade-in: pdFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-fade-up: pdFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+
   @keyframes scroll-cue {
+
     0%,
     20% {
       top: 8px;
       height: 2px;
     }
+
     50% {
       top: 8px;
       height: 10px;
     }
+
     75%,
     100% {
       top: 18px;
       height: 2px;
     }
   }
+
   @keyframes pdFadeIn {
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
   }
+
   @keyframes pdFadeUp {
     from {
       opacity: 0;
       transform: translateY(24px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -79,6 +85,7 @@
   font-display: swap;
   src: url("/assets/diagramm-extra-light.woff2") format("woff2");
 }
+
 @font-face {
   font-family: Diagramm;
   font-style: normal;
@@ -86,6 +93,7 @@
   font-display: swap;
   src: url("/assets/diagramm-light.woff2") format("woff2");
 }
+
 @font-face {
   font-family: Diagramm;
   font-style: normal;
@@ -93,6 +101,7 @@
   font-display: swap;
   src: url("/assets/diagramm-regular.woff2") format("woff2");
 }
+
 @font-face {
   font-family: Diagramm;
   font-style: normal;
@@ -100,6 +109,7 @@
   font-display: swap;
   src: url("/assets/diagramm-medium.woff2") format("woff2");
 }
+
 @font-face {
   font-family: Diagramm;
   font-style: normal;
@@ -107,6 +117,7 @@
   font-display: swap;
   src: url("/assets/diagramm-semibold.woff2") format("woff2");
 }
+
 @font-face {
   font-family: Diagramm;
   font-style: normal;
@@ -121,24 +132,29 @@
     scroll-padding-top: 125px;
     overflow-y: scroll;
   }
+
   body {
     font-family: var(--font-sans);
     color: var(--color-ink);
     font-size: 16px;
     line-height: 1.5;
   }
+
   button,
   select {
     cursor: pointer;
   }
+
   button:disabled {
     cursor: default;
     opacity: 0.3;
   }
+
   :where(button, a, select, input):focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 5px;
   }
+
   dialog:not([open]) {
     display: none;
   }
@@ -148,33 +164,43 @@
 @utility page-bleed {
   margin-inline: calc(-50vw + 50%);
 }
+
 @utility text-fluid {
   font-size: clamp(16px, 1.06vw, 32px);
+
   @media (max-width: 1024px) {
     font-size: clamp(16px, 2.083vw, 32px);
   }
+
   @media (max-width: 600px) {
     font-size: clamp(16px, 4.57vw, 32px);
   }
 }
+
 @utility text-fluid-sm {
   font-size: clamp(15px, 1vw, 30px);
+
   @media (max-width: 1024px) {
     font-size: clamp(15px, 1.953vw, 30px);
   }
+
   @media (max-width: 600px) {
     font-size: clamp(15px, 4.28vw, 30px);
   }
 }
+
 @utility text-fluid-xs {
   font-size: clamp(14px, 0.93vw, 28px);
+
   @media (max-width: 1024px) {
     font-size: clamp(14px, 1.823vw, 28px);
   }
+
   @media (max-width: 600px) {
     font-size: clamp(14px, 4vw, 28px);
   }
 }
+
 @utility thin-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #e0e0e0 #f7f7f7;
@@ -183,14 +209,16 @@
 @utility reveal-on-scroll {
   opacity: 1;
   transform: none;
+
   &.reveal-pending:not(.is-revealed) {
     opacity: 0;
     transform: translateY(28px);
   }
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity,
+  transform;
 
   &.is-revealed {
     opacity: 1;
@@ -201,12 +229,15 @@
 @utility reveal-delay-1 {
   transition-delay: 0.1s;
 }
+
 @utility reveal-delay-2 {
   transition-delay: 0.2s;
 }
+
 @utility reveal-delay-3 {
   transition-delay: 0.3s;
 }
+
 @utility reveal-delay-4 {
   transition-delay: 0.4s;
 }
@@ -215,6 +246,7 @@
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
@@ -222,6 +254,7 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
   .reveal-on-scroll {
     opacity: 1 !important;
     transform: none !important;
