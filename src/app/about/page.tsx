@@ -19,7 +19,7 @@ export default function AboutPage() {
   return (
     <main
       id="main-content"
-      className="overflow-hidden"
+      className="overflow-x-clip"
     >
       <AboutHero />
       <AboutWho />

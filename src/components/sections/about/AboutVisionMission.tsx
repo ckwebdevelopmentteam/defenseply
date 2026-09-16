@@ -1,72 +1,60 @@
-const missionItems = [
-  {
-    title: "Innovation in Composite Technology",
-    description:
-      "To manufacture world-class WPC and PVC building materials utilising state-of-the-art extrusion technology and continuous process optimisation.",
-  },
-  {
-    title: "Environmental Stewardship",
-    description:
-      "To actively conserve natural forests by replacing conventional timber with 100% recyclable, toxin-free composite solutions that minimise environmental impact.",
-  },
-  {
-    title: "Uncompromised Quality",
-    description:
-      "To deliver unmatched product durability, superior screw-holding capacity, and complete resistance to moisture, fire, and pests across residential, commercial, and industrial applications.",
-  },
-  {
-    title: "Customer & Partner Success",
-    description:
-      "To empower architects, contractors, interior designers, and homeowners with reliable supply chains, seamless customisation, and exceptional service standards.",
-  },
-];
+import { aboutPurposeData as data } from "@/data/about-purpose";
+import { AboutMission } from "./AboutMission";
 
 export function AboutVisionMission() {
   return (
     <section
       id="about-vision"
-      aria-label="Vision and mission"
-      className="w-full bg-white py-24 max-[768px]:py-16"
+      aria-labelledby="about-vision-heading"
+      className="w-full font-sans"
     >
-      <div className="w-full px-[38px] max-[768px]:px-6">
-        {/* Vision */}
-        <div className="mb-20 border-t border-black/8 pt-12 max-[768px]:mb-14 max-[768px]:pt-9">
-          <p className="mb-6 text-[10px] font-medium tracking-[.22em] uppercase text-[#979793]">
-            Our Vision
-          </p>
-          <blockquote className="max-w-[900px] text-[clamp(22px,2.2vw,38px)] leading-[1.25] font-light text-[#1a1a1a]">
-            To be India&apos;s premier manufacturer of advanced composite
-            building materials, leading the global evolution toward
-            zero-deforestation, sustainable eco-architecture and
-            high-performance structural solutions.
-          </blockquote>
-        </div>
+      <h2 id="about-vision-heading" className="sr-only">
+        Our vision and mission
+      </h2>
 
-        {/* Mission */}
-        <div>
-          <p className="mb-10 text-[10px] font-medium tracking-[.22em] uppercase text-[#979793]">
-            Our Mission
+      {/* A. VISION — FULL-WIDTH DARK STATEMENT */}
+      <section
+        aria-labelledby="vision-statement-heading"
+        className="w-full bg-[#252725] pt-[60px] pb-[48px] md:pt-[80px] md:pb-[64px] min-[1200px]:pt-[104px] min-[1200px]:pb-[88px]"
+      >
+        <div className="w-full max-w-[1680px] mx-auto px-[20px] md:px-[36px] min-[1200px]:px-[64px] box-border flex flex-col items-center text-center">
+          {/* 1. Eyebrow */}
+          <p className="text-[12px] font-medium tracking-[0.18em] leading-[1.5] text-[#D1D3CC] uppercase">
+            {data.vision.label}
           </p>
-          <div className="grid grid-cols-2 gap-px bg-black/8 border border-black/8 max-[768px]:grid-cols-1">
-            {missionItems.map((item, i) => (
-              <article
-                key={item.title}
-                className="relative bg-[#f7f8f9] px-8 py-9 max-[768px]:px-6 max-[768px]:py-7"
-              >
-                <span className="mb-5 block text-[10px] font-medium tracking-[.2em] uppercase text-[#979793]">
-                  0{i + 1}
-                </span>
-                <h3 className="mb-4 text-[15px] font-medium uppercase tracking-[.02em] text-[#1a1a1a]">
-                  {item.title}
-                </h3>
-                <p className="text-[14px] leading-[1.7] text-[#666]">
-                  {item.description}
-                </p>
-              </article>
-            ))}
+
+          {/* 2. Main Statement */}
+          <h3
+            id="vision-statement-heading"
+            className="mt-[24px] md:mt-[32px] text-[clamp(32px,8.8vw,44px)] md:text-[48px] min-[1200px]:text-[clamp(48px,4.3vw,72px)] font-light leading-[1.08] tracking-[-0.025em] text-[#F5F4EF] max-w-[1180px] mx-auto [text-wrap:balance] uppercase"
+          >
+            <span className="block">{data.vision.headingLines[0]}</span>
+            <span className="block">
+              BETTER POSSIBILITIES{" "}
+              <span className="underline decoration-1 underline-offset-[0.13em] decoration-[#F5F4EF]/65">
+                TOMORROW.
+              </span>
+            </span>
+          </h3>
+
+          {/* 3. Supporting Paragraph */}
+          <p className="mt-[24px] md:mt-[32px] text-[16px] md:text-[17px] min-[1200px]:text-[18px] font-normal leading-[1.65] text-[#D1D3CC] max-w-[680px] mx-auto">
+            {data.vision.description}
+          </p>
+
+          {/* 4. Closing Principles Line */}
+          <div className="mt-[36px] md:mt-[56px] w-full max-w-[820px] mx-auto border-t border-white/20 pt-[22px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-[10px] md:gap-[24px] text-center text-[13px] md:text-[14px] font-normal text-[#D1D3CC]">
+              {data.vision.principles.map((principle) => (
+                <span key={principle}>{principle}</span>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* B. MISSION — EDITORIAL STICKY PHOTOGRAPH & PRINCIPLES */}
+      <AboutMission />
     </section>
   );
 }
