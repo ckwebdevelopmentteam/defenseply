@@ -63,3 +63,14 @@ The product-detail UI (`components/product`) is **provisional, not an approved d
 - Images: `public/assets/applications/<category>/`. Full copy-paste prompts, exact filenames, dimensions and crop guidance: [application-image-prompts.md](docs/application-image-prompts.md).
 - The category page reuses its homepage gallery images, existing product imagery, and `ContactProject` / `ContactForm`. Forms remain local previews, with no submission service.
 - Client attachments are reference-only and are not copied into the repository. Application images will be concepts rather than verified completed projects.
+
+
+## Rashid homepage integration
+
+The homepage composes Hero, About, Applications, Products, InspirationGallery, BlogSection, Testimonials, FAQ and Newsletter. Older promotional sections remain available as components but are no longer mounted, matching Rashid's updated page.
+
+- `components/blog/`: article cards, article detail content and the animated drawer controller. `types/blog.ts` describes the editorial schema; `data/blog.json` is the content source. Article HTML is trusted repository content; sanitize external CMS input before using it here.
+- `components/testimonial/TestimonialSection.tsx`: reusable testimonial layout, with active copy in `data/testimonials.json`.
+- `components/sections/FAQ.tsx`: accessible accordion backed by `data/faq.json`.
+- Shared primitives remain in `components/ui/`; class names use `lib/cn.ts`. Unused imported template demos and their unused dependency were removed.
+- Drawer animation uses GSAP; avatars use Radix. Existing Framer Motion and Keen Slider behavior is retained, including category-switch slider resets.

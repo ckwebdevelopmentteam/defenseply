@@ -11,7 +11,7 @@ export function ApplicationTabs({ categories }: { categories: Application[] }) {
   const active = categories[index];
   if (!active) return null;
   return (
-    <div className="flex flex-col gap-6 pb-20 max-phone:pb-12">
+    <div className="flex flex-col gap-6">
       <Carousel
         resetKey={active.slug}
         wrapSlider={(slider) => (

@@ -17,7 +17,7 @@
     ],
     "gallery": [
       {
-        "src": "/assets/products/pvcfoamdf(main).webp",
+        "src": "/assets/products/pvcfoamboard(main).jpg",
         "alt": "Defenseply PVC Foam Board Installation",
         "caption": "Suspended architectural PVC foam panels showcasing lightweight rigidity and flawless surface."
       },
@@ -102,7 +102,7 @@
       }
     ],
     "card": {
-      "image": "/assets/products/pvcfoamdf(main).webp",
+      "image": "/assets/products/pvcfoamboard(main).jpg",
       "hoverImage": "/assets/products/defenceplyfoamboard3.jpg",
       "label": "Defenseply"
     }

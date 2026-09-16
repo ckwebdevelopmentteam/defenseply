@@ -44,7 +44,14 @@ test("homepage content has existing local assets and valid local destinations", 
     walk(read(name), (key, value) => {
       if (key === "href") localDestination(value);
       if (
-        ["image", "hoverImage", "src", "fullImage", "logo"].includes(key) &&
+        [
+          "image",
+          "featuredImage",
+          "hoverImage",
+          "src",
+          "fullImage",
+          "logo",
+        ].includes(key) &&
         value
       ) {
         assert.ok(
@@ -116,4 +123,17 @@ test("application content maps complete galleries to valid catalog products", ()
       );
     }
   }
+});
+
+test("editorial content has unique identifiers and complete entries", () => {
+  const articles = read("blog");
+  assert.equal(
+    new Set(articles.map((article) => article.id)).size,
+    articles.length,
+  );
+  for (const article of articles)
+    assert.ok(article.title && article.content && article.featuredImage);
+  for (const item of read("faq")) assert.ok(item.question && item.answer);
+  for (const item of read("testimonials"))
+    assert.ok(item.quote && ["user", "quote"].includes(item.type));
 });

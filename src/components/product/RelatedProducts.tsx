@@ -22,7 +22,8 @@ export function RelatedProducts({
             <div className="w-full aspect-[6/5] bg-[#f5f4f0] overflow-hidden">
               <img
                 src={
-                  rel.gallery[0]?.src || "/assets/products/pvcfoamdf(main).webp"
+                  rel.gallery[0]?.src ||
+                  "/assets/products/pvcfoamboard(main).jpg"
                 }
                 alt={rel.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
