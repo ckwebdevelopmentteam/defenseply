@@ -1,48 +1,5 @@
-import {
-  aboutPurposeData as data,
-  type MissionItem,
-  type MissionTone,
-} from "@/data/about-purpose";
-
-const TONE_BG: Record<MissionTone, string> = {
-  clay: "bg-[#E9BFB1]",
-  sage: "bg-[#CED8C8]",
-  blue: "bg-[#BED3DC]",
-  sand: "bg-[#E6D8BD]",
-};
-
-function MissionPanel({ item }: { item: MissionItem }) {
-  return (
-    <li
-      className={`flex flex-col ${TONE_BG[item.tone]} py-[32px] px-[24px] md:p-[36px] min-[1200px]:py-[30px] min-[1200px]:px-[28px] text-[#252725]`}
-    >
-      <span
-        className="text-[12px] font-normal tracking-[0.08em] text-[#4C5149] tabular-nums"
-        aria-hidden="true"
-      >
-        {item.number}
-      </span>
-
-      <p className="mt-[24px] text-[12px] font-medium uppercase tracking-[0.1em] leading-[1.5] text-[#252725]">
-        {item.category}
-      </p>
-
-      <h4 className="mt-[14px] text-[38px] md:text-[42px] min-[1200px]:text-[38px] font-light leading-[1.08] tracking-[-0.025em] text-[#252725]">
-        <span className="block">{item.headingLines[0]}</span>
-        <span className="block">{item.headingLines[1]}</span>
-      </h4>
-
-      <div
-        className="mt-[28px] h-[1px] w-full bg-[#252725]/25"
-        aria-hidden="true"
-      />
-
-      <p className="mt-[20px] text-[15px] leading-[1.7] font-normal text-[#343A32]">
-        {item.description}
-      </p>
-    </li>
-  );
-}
+import { aboutPurposeData as data } from "@/data/about-purpose";
+import { AboutMission } from "./AboutMission";
 
 export function AboutVisionMission() {
   return (
@@ -73,9 +30,9 @@ export function AboutVisionMission() {
           >
             <span className="block">{data.vision.headingLines[0]}</span>
             <span className="block">
-              Better possibilities{" "}
+              Better Possibilities{" "}
               <span className="underline decoration-1 underline-offset-[0.13em] decoration-[#F5F4EF]/65">
-                tomorrow.
+                Tomorrow.
               </span>
             </span>
           </h3>
@@ -96,42 +53,8 @@ export function AboutVisionMission() {
         </div>
       </section>
 
-      {/* B. MISSION — LIGHT INTRODUCTION AND COLOURED PANELS */}
-      <section
-        aria-labelledby="mission-statement-heading"
-        className="w-full bg-[#FFFFFF] py-[48px] md:py-[64px] min-[1200px]:pt-[88px] min-[1200px]:pb-[96px]"
-      >
-        <div className="w-full max-w-[1680px] mx-auto px-[20px] md:px-[36px] min-[1200px]:px-[64px] box-border">
-          {/* 1. Mission Introduction */}
-          <div className="w-full max-w-[920px] mx-auto text-center flex flex-col items-center">
-            {/* Eyebrow */}
-            <p className="text-[12px] font-medium tracking-[0.18em] text-[#62665F] uppercase">
-              {data.mission.label}
-            </p>
-
-            {/* Heading */}
-            <h3
-              id="mission-statement-heading"
-              className="mt-[24px] text-[32px] md:text-[42px] min-[1200px]:text-[48px] font-light leading-[1.12] tracking-[-0.02em] text-[#252725] [text-wrap:balance]"
-            >
-              <span className="block">{data.mission.headingLines[0]}</span>
-              <span className="block">{data.mission.headingLines[1]}</span>
-            </h3>
-
-            {/* Paragraph */}
-            <p className="mt-[24px] text-[16px] min-[1200px]:text-[17px] font-normal leading-[1.65] text-[#565B53] max-w-[620px] mx-auto">
-              {data.mission.description}
-            </p>
-          </div>
-
-          {/* 2. Mission Panels */}
-          <ol className="mt-[32px] md:mt-[40px] min-[1200px]:mt-[56px] w-full list-none p-0 m-0 grid grid-cols-1 md:grid-cols-2 min-[1200px]:grid-cols-4 gap-0">
-            {data.mission.items.map((item) => (
-              <MissionPanel key={item.id} item={item} />
-            ))}
-          </ol>
-        </div>
-      </section>
+      {/* B. MISSION — EDITORIAL STICKY PHOTOGRAPH & PRINCIPLES */}
+      <AboutMission />
     </section>
   );
 }
