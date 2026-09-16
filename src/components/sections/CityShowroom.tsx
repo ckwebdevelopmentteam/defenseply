@@ -3,7 +3,7 @@ export function CityShowroom() {
   return (
     <section
       data-section="city"
-      className="flex bg-stone max-tablet:flex-col max-tablet:gap-12"
+      className="mb-20 flex bg-stone max-tablet:flex-col max-tablet:gap-12 max-phone:mb-12"
     >
       <div className="flex w-full flex-[1_0_50%] flex-col items-center justify-between gap-12 overflow-hidden px-[38px] pt-[77px] pb-12 max-phone:gap-8 max-phone:pb-0">
         <img

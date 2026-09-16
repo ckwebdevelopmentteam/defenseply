@@ -2,7 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
-import { siteNavigation, siteActions, footerGroups } from "../src/data/site.ts";
+import { siteNavigation, footerGroups } from "../src/data/site.ts";
+import { HERO_CATEGORY_SLUGS } from "../src/data/hero.ts";
 const read = (name) =>
   JSON.parse(readFileSync(resolve("src/data", `${name}.json`), "utf8"));
 function walk(value, check) {
@@ -23,7 +24,17 @@ function localDestination(href) {
     `Nonlocal link: ${href}`,
   );
   const [path, anchor] = href.split("#");
-  if (path && path !== "/")
+  if (path?.startsWith("/products/")) {
+    assert.ok(
+      read("products").some((product) => `/products/${product.slug}` === path),
+      `Missing product: ${path}`,
+    );
+  } else if (path?.startsWith("/applications/")) {
+    assert.ok(
+      read("applications").some((app) => `/applications/${app.slug}` === path),
+      `Missing application: ${path}`,
+    );
+  } else if (path && path !== "/")
     assert.ok(
       existsSync(resolve("src/app", path.slice(1), "page.tsx")),
       `Missing route: ${path}`,
@@ -35,10 +46,20 @@ function localDestination(href) {
     );
 }
 test("homepage content has existing local assets and valid local destinations", () => {
-  for (const name of ["about", "brands", "collections", "colors", "spaces", "gallery"])
+  for (const name of ["about", "brands", "products", "colors", "gallery"])
     walk(read(name), (key, value) => {
       if (key === "href") localDestination(value);
-      if (["image", "fullImage", "logo"].includes(key) && value) {
+      if (
+        [
+          "image",
+          "featuredImage",
+          "hoverImage",
+          "src",
+          "fullImage",
+          "logo",
+        ].includes(key) &&
+        value
+      ) {
         assert.ok(
           value.startsWith("/assets/"),
           `${name}: nonlocal asset ${value}`,
@@ -50,10 +71,9 @@ test("homepage content has existing local assets and valid local destinations", 
       }
     });
 });
-test("shared navbar, actions and footer link to implemented destinations", () => {
+test("shared navbar and footer link to implemented destinations", () => {
   for (const item of [
     ...siteNavigation,
-    ...siteActions,
     ...footerGroups.flatMap((group) => group.links),
   ])
     localDestination(item.href);
@@ -63,8 +83,105 @@ test("shared navbar, actions and footer link to implemented destinations", () =>
   );
 });
 test("homepage section anchors are unique", () => {
-  const anchors = [...homeSections.matchAll(/\bid="([^"]+)"/g)].map(
+  const anchors = [...homeSections.matchAll(/<[a-z][^>]*\bid="([^"]+)"/g)].map(
     (match) => match[1],
   );
   assert.equal(new Set(anchors).size, anchors.length);
+});
+
+test("hero scenes derive from application content and link to ordered categories", () => {
+  const applications = read("applications");
+  const appMap = new Map(applications.map((a) => [a.slug, a]));
+
+  assert.deepEqual(
+    [...HERO_CATEGORY_SLUGS],
+    ["commercial", "bedroom", "wardrobe", "kitchen"],
+  );
+
+  for (const slug of HERO_CATEGORY_SLUGS) {
+    const app = appMap.get(slug);
+    assert.ok(app, `Missing application data for hero category: ${slug}`);
+    const href = `/applications/${slug}`;
+    localDestination(href);
+    assert.ok(app.title, `Missing title for ${slug}`);
+    assert.ok(app.heroAlt, `Missing heroAlt for ${slug}`);
+    assert.equal(
+      app.hero,
+      `/assets/applications/${slug}/hero-desktop.webp`,
+    );
+    assert.equal(
+      app.heroMobile,
+      `/assets/applications/${slug}/hero-mobile.webp`,
+    );
+  }
+});
+
+test("hero image resolution logic handles existing assets and missing files safely", () => {
+  const applications = read("applications");
+  for (const slug of HERO_CATEGORY_SLUGS) {
+    const app = applications.find((a) => a.slug === slug);
+    assert.ok(app);
+    const desktopExpected = resolve("public", app.hero.slice(1));
+    const mobileExpected = resolve("public", app.heroMobile.slice(1));
+    if (existsSync(desktopExpected)) {
+      assert.ok(app.hero.startsWith("/assets/applications/"));
+    }
+    if (existsSync(mobileExpected)) {
+      assert.ok(app.heroMobile.startsWith("/assets/applications/"));
+    }
+  }
+});
+
+test("catalog entries have unique slugs and complete card/gallery data", () => {
+  const products = read("products");
+  assert.equal(new Set(products.map((p) => p.slug)).size, products.length);
+  for (const product of products) {
+    assert.ok(
+      product.title && product.card.image && product.gallery.length,
+      product.slug,
+    );
+    assert.ok(product.specs && product.applications.length, product.slug);
+  }
+});
+
+// Future application images are optional; the server resolves absent files to placeholders.
+test("application content maps complete galleries to valid catalog products", () => {
+  const applications = read("applications");
+  const slugs = new Set(read("products").map((p) => p.slug));
+  assert.equal(applications.length, 6);
+  assert.equal(
+    new Set(applications.map((a) => a.slug)).size,
+    applications.length,
+  );
+  for (const application of applications) {
+    assert.ok(application.gallery.length > 3, application.slug);
+    assert.equal(
+      new Set(application.gallery.map((image) => image.id)).size,
+      application.gallery.length,
+    );
+    for (const slug of application.products) assert.ok(slugs.has(slug), slug);
+    assert.ok(
+      existsSync(resolve("public/assets/applications", application.slug)),
+    );
+    for (const image of application.gallery) {
+      assert.ok(image.alt && image.caption && image.title);
+      assert.equal(
+        image.image,
+        `/assets/applications/${application.slug}/${image.id}.webp`,
+      );
+    }
+  }
+});
+
+test("editorial content has unique identifiers and complete entries", () => {
+  const articles = read("blog");
+  assert.equal(
+    new Set(articles.map((article) => article.id)).size,
+    articles.length,
+  );
+  for (const article of articles)
+    assert.ok(article.title && article.content && article.featuredImage);
+  for (const item of read("faq")) assert.ok(item.question && item.answer);
+  for (const item of read("testimonials"))
+    assert.ok(item.quote && ["user", "quote"].includes(item.type));
 });

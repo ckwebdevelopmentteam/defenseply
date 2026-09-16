@@ -16,7 +16,7 @@ export function DirectContact() {
         <ContactEyebrow>Direct contact</ContactEyebrow>
         <h2 className={contactHeading}>Have a project in mind?</h2>
         <p className="mt-3 text-[13px] text-contact-muted">
-          Let&apos;s talk about the right plywood for your space.
+          Let&apos;s talk about the right WPC and PVC solutions for your space.
         </p>
       </div>
       <div className="mr-[clamp(24px,6vw,92px)] grid grid-cols-3 max-[800px]:mr-0 max-[520px]:grid-cols-1">

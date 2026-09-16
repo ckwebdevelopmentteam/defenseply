@@ -1,30 +1,17 @@
-export const heroScenes = [
-  {
-    title: "Kitchens",
-    image: "cocinasEclos.jpg",
-    brand: "Ēclos",
-    color: "Legnd",
-    href: "kitchens/",
-  },
-  {
-    title: "Bathrooms",
-    image: "BATHROOMS.jpg",
-    brand: "Dekton",
-    color: "Trevi & Polar",
-    href: "bathrooms/",
-  },
-  {
-    title: "Facades",
-    image: "fachadas.jpg",
-    brand: "Dekton",
-    color: "Danae & Zenith",
-    href: "facades/",
-  },
-  {
-    title: "Commercial",
-    image: "contract-v3.jpg",
-    brand: "Dekton",
-    color: "Awake",
-    href: "inspiration/contract/",
-  },
-];
+export const HERO_CATEGORY_SLUGS = [
+  "commercial",
+  "bedroom",
+  "wardrobe",
+  "kitchen",
+] as const;
+
+export type HeroCategorySlug = (typeof HERO_CATEGORY_SLUGS)[number];
+
+export type HeroScene = {
+  slug: string;
+  title: string;
+  href: string;
+  hero: string | null;
+  heroMobile: string | null;
+  heroAlt: string;
+};

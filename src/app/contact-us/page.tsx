@@ -5,8 +5,9 @@ import { DirectContact } from "@/components/sections/contact/DirectContact";
 import { ContactVisit } from "@/components/sections/contact/ContactVisit";
 import { ContactCTA } from "@/components/sections/contact/ContactCTA";
 export const metadata: Metadata = {
-  title: "Contact Us | Defenseply",
-  description: "Contact Defenseply about your plywood project.",
+  title: "Contact Us | DefensePly",
+  description:
+    "Contact DefensePly about your WPC and PVC board, door and architectural surface solutions.",
 };
 export default function ContactUsPage() {
   return (

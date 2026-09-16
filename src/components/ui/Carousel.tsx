@@ -18,8 +18,11 @@ export function Carousel({
   spacing = 16,
   controls,
   wrapSlider,
+  resetKey,
 }: {
   children: ReactNode;
+  /** Recreate the slider track when replacing a category, preserving control focus. */
+  resetKey?: string;
   className?: string;
   desktop?: number;
   tablet?: number;
@@ -74,12 +77,25 @@ export function Carousel({
   }, [count, instance]);
   const step = Math.max(1, Math.floor(position.perView));
   const pages = Math.max(1, Math.ceil(count / step));
+  const maxIdx =
+    instance.current?.track?.details?.maxIdx ??
+    Math.max(0, count - Math.floor(position.perView));
   const page =
-    position.index >= count - position.perView - 0.1
+    position.index >= maxIdx - 0.1
       ? pages
-      : Math.floor(position.index / step) + 1;
+      : Math.min(pages, Math.floor(position.index / step) + 1);
+
+  const goToPage = (p: number) => {
+    if (!instance.current) return;
+    const targetPage = Math.max(1, Math.min(pages, p));
+    const targetIndex = targetPage === pages ? maxIdx : (targetPage - 1) * step;
+    instance.current.moveToIdx(targetIndex);
+  };
+
   const slider = (
     <div
+      // A fresh DOM track makes Keen discard cached slide elements and widths.
+      key={resetKey}
       ref={ref}
       className={`keen-slider relative h-full overflow-visible! ${className}`}
     >
@@ -91,8 +107,8 @@ export function Carousel({
       {controls?.({
         page,
         pages,
-        previous: () => instance.current?.moveToIdx(position.index - step),
-        next: () => instance.current?.moveToIdx(position.index + step),
+        previous: () => goToPage(page - 1),
+        next: () => goToPage(page + 1),
       })}
       {wrapSlider ? wrapSlider(slider) : slider}
     </>

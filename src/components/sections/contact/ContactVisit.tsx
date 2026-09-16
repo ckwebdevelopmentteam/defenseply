@@ -14,7 +14,7 @@ export function ContactVisit() {
       <div
         className="min-h-[490px] bg-[url('/assets/facade-nsw.avif')] bg-cover bg-center max-[800px]:min-h-[250px]"
         role="img"
-        aria-label="Defenseply manufacturing facility"
+        aria-label="DefensePly manufacturing facility"
       />
       <div className={cn(contactCopy, "py-[clamp(48px,7vw,96px)]")}>
         <ContactEyebrow>Visit us</ContactEyebrow>
@@ -27,7 +27,7 @@ export function ContactVisit() {
             className="absolute top-0 left-0 text-contact-ink"
             size={20}
           />
-          Defenseply Plywood
+          DefensePly International LLP
           <br />
           Industrial Area, Kerala, India
         </address>

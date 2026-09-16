@@ -12,15 +12,15 @@ export function Footer() {
 
         <div className="grid grid-cols-[1.55fr_repeat(3,1fr)] gap-[52px] pt-[78px] pb-[72px] max-[760px]:grid-cols-2 max-[760px]:gap-x-5 max-[760px]:gap-y-[30px] max-[760px]:pt-[42px] max-[760px]:pb-[34px]">
           <div className="max-[760px]:col-span-full">
-            <Link href="/" aria-label="Defenseply home">
+            <Link href="/" aria-label="DefensePly home">
               <img
                 className="h-auto w-[116px] max-[760px]:w-24"
                 src="/assets/defenseply-logo-dark.png"
-                alt="Defenseply"
+                alt="DefensePly"
               />
             </Link>
             <p className="mt-6 mb-[30px] max-w-[220px] text-[13px] leading-[1.55] text-footer-muted max-[760px]:mt-3.5 max-[760px]:mb-5 max-[760px]:max-w-[200px] max-[760px]:text-[11px]">
-              Reliable plywood solutions for spaces built with purpose.
+              Reliable WPC and PVC solutions for spaces built with purpose.
             </p>
             <div className="flex gap-[9px]" aria-label="Social media">
               {socialLinks.map((item) => (
@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="flex min-h-[66px] items-center justify-center border-t border-[#deddd8] text-center text-xs text-footer-muted max-[760px]:min-h-[50px] max-[760px]:text-[10px]">
-          <p>© {new Date().getFullYear()} Defenseply. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} DefensePly. All rights reserved.</p>
           <Link className="hidden" href="/#home">
             Back to top
           </Link>

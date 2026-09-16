@@ -4,7 +4,7 @@ export function Renovation() {
   return (
     <section
       data-section="renovation"
-      className="flex min-h-[525px] max-tablet:flex-col-reverse max-phone:page-bleed"
+      className="mb-20 flex min-h-[525px] max-tablet:flex-col-reverse max-phone:page-bleed max-phone:mb-12"
     >
       <div className="flex flex-[1_1_50%] flex-col justify-between gap-[198px] bg-stone py-12 pl-[38px] pr-10 max-phone:gap-10 max-phone:px-6">
         <Heading className="max-w-[80%] max-phone:max-w-full">

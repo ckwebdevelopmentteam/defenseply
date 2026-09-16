@@ -20,7 +20,7 @@ export function ContactCTA() {
           Build with confidence.
         </h2>
         <p className={cn(contactLede, "text-white/80")}>
-          Choose plywood engineered for strength, durability and lasting
+          Choose WPC and PVC solutions engineered for strength, durability and lasting
           performance.
         </p>
       </div>

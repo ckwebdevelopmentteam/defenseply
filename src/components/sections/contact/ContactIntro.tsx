@@ -22,7 +22,7 @@ export function ContactIntro() {
         </h1>
         <p className={contactLede}>
           Whether you&apos;re planning a residential project, commercial space,
-          or looking for reliable plywood solutions, our team is ready to help.
+          or looking for reliable WPC and PVC solutions, our team is ready to help.
         </p>
         <a className={contactOutline} href="#project-form">
           Start a conversation <ArrowRight size={16} />

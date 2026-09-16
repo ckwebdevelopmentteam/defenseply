@@ -1,13 +1,16 @@
 "use client";
+
 import { useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { BrandLogo, NavigationActions } from "./NavigationElements";
+import { BrandLogo } from "./NavigationElements";
 import { useNavigationState } from "../sections/NavigationState";
 import { siteNavigation } from "@/data/site";
 import { cn } from "@/lib/cn";
+
 export function MobileHeader({ solid }: { solid: boolean }) {
   const { mobileOpen: open, setMobileOpen: setOpen } = useNavigationState();
+
   useEffect(() => {
     if (!open) return;
     const previous = document.body.style.overflow;
@@ -21,6 +24,7 @@ export function MobileHeader({ solid }: { solid: boolean }) {
       document.removeEventListener("keydown", close);
     };
   }, [open, setOpen]);
+
   return (
     <div className="pointer-events-none fixed inset-0 z-[2147483640] flex flex-col desktop:hidden">
       <div
@@ -58,7 +62,6 @@ export function MobileHeader({ solid }: { solid: boolean }) {
               {item.name}
             </Link>
           ))}
-          <NavigationActions mobile onNavigate={() => setOpen(false)} />
         </nav>
       )}
     </div>
