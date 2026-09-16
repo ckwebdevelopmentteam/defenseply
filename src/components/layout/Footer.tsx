@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function Footer() {
   return (
-    <motion.footer 
+    <motion.footer
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
@@ -16,7 +16,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex flex-wrap justify-between gap-y-12 lg:gap-x-8">
           <div className="flex w-full flex-col items-start text-left md:w-[45%] lg:w-[35%]">
-            <Link href="/" aria-label="DefensePly home">
+            <Link href="/" aria-label="DefensePly home" className="hidden md:block">
               <img
                 className="h-auto w-[130px] invert brightness-200"
                 src="/assets/defenseply-logo-dark.png"
@@ -99,7 +99,7 @@ export function Footer() {
 
         <div className="mt-6 flex w-full justify-center md:mt-12 md:mb-[-0.5%]">
           <h1 className="pointer-events-none select-none text-center text-[clamp(4.5rem,19.5vw,25rem)] font-extrabold leading-[0.70] tracking-tighter text-zinc-900">
-            defensePly
+            defenseply
           </h1>
         </div>
       </div>
