@@ -35,7 +35,7 @@ export function About({ data = content }: { data?: typeof content }) {
       data-section="about"
       id="about"
       aria-label="About DEFENSEPLY INTERNATIONAL LLP"
-      className="relative w-full overflow-hidden bg-white pt-20 pb-25 max-[768px]:pt-15 max-[768px]:pb-[70px]"
+      className="relative w-full overflow-hidden bg-white pt-20 pb-25 max-phone:pt-12 max-phone:pb-0 max-phone:mb-12 max-md:pt-12 max-md:pb-0 max-md:mb-12"
     >
       <header className="mb-14 max-desktop:mb-10">
         <h2 className="max-w-[1500px] text-[clamp(28px,2.5vw,48px)] leading-[1.18] font-light tracking-[-.01em] uppercase text-[#1a1a1a]">

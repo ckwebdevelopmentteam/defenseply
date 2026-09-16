@@ -244,7 +244,7 @@ export default function BlogDrawer({
     <section
       id="blog"
       data-section="blog"
-      className={`relative w-full mb-20 max-phone:mb-12 ${className}`}
+      className={`relative w-full mb-20 max-phone:mb-12 max-md:mb-12 ${className}`}
       style={sectionStyle}
       aria-label="Editorial Journal & Insights"
     >

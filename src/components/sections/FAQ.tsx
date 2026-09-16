@@ -16,7 +16,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
     <section
       data-section="faq"
       id="faq"
-      className="mt-30 mb-20 max-phone:mb-12"
+      className="mt-30 mb-20 max-phone:mt-0 max-phone:mb-12 max-md:mt-0 max-md:mb-12"
       aria-label="Frequently Asked Questions"
     >
       <div className="grid grid-cols-[1fr_1.4fr] items-start gap-14 max-desktop:grid-cols-1 max-desktop:gap-10">
@@ -37,7 +37,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
           </div>
 
           {/* Quick Technical Help Box */}
-          <div className="rounded-[2px] border border-black/8 bg-[#fafaf8] p-7 max-phone:p-5">
+          <div className="rounded-[2px] border border-black/8 bg-[#fafaf8] p-7 max-phone:hidden max-md:hidden">
             <h4 className="mb-2 text-[15px] font-medium uppercase tracking-[0.5px] text-[#1a1a1a]">
               Have a Custom Architectural Spec?
             </h4>

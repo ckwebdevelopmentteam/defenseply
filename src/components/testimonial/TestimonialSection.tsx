@@ -112,7 +112,7 @@ const TestimonialSection = React.forwardRef<
   return (
     <section
       ref={ref}
-      className={cn("w-full bg-white mb-24 max-phone:mb-14 pb-4", className)}
+      className={cn("w-full bg-white mb-24 pb-4 max-phone:mb-12 max-phone:pb-0 max-md:mb-12 max-md:pb-0", className)}
       {...props}
     >
       {/* Section Heading: Centered */}

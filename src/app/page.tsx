@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main id="main-content" className="overflow-x-clip">
-        <div className="mx-auto w-full px-[38px] max-phone:px-5">
+        <div className="mx-auto w-full px-[38px] max-md:px-5 max-phone:px-5">
           <article>
             <Hero />
             <About />

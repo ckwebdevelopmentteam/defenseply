@@ -26,7 +26,7 @@ export function Products({
     <section
       id="products"
       data-section="products"
-      className="page-bleed relative mb-20 overflow-hidden border-y border-black/8 bg-[#f5f3ee] px-[38px] pt-12 pb-14 max-phone:mb-12 max-phone:px-5 max-phone:pt-8 max-phone:pb-10"
+      className="page-bleed relative mb-20 overflow-hidden border-y border-black/8 bg-[#f5f3ee] px-[38px] pt-12 pb-14 max-phone:mb-12 max-phone:px-5 max-phone:pt-8 max-phone:pb-10 max-md:mb-12 max-md:px-5"
       aria-label="Our Products"
     >
       {/* Ambient Section Highlight */}
