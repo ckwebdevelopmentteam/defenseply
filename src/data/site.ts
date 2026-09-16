@@ -6,10 +6,7 @@ export const siteNavigation = [
   { name: "Gallery", href: "/#gallery" },
   { name: "Contact Us", href: "/contact-us" },
 ];
-export const siteActions = [
-  { name: "Where To Buy", href: "/contact-us" },
-  { name: "Professional Area", href: "/contact-us" },
-];
+
 export const footerGroups = [
   {
     title: "Company",
@@ -39,6 +36,7 @@ export const footerGroups = [
     ],
   },
 ];
+
 export const socialLinks = [
   { name: "Facebook", icon: "facebook" },
   { name: "Instagram", icon: "instagram" },

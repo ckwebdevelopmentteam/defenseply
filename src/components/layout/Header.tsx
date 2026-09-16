@@ -1,8 +1,9 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileHeader } from "./MobileHeader";
-import { BrandLogo, NavigationActions } from "./NavigationElements";
+import { BrandLogo } from "./NavigationElements";
 import { useNavigationState } from "./NavigationState";
 import { siteNavigation } from "@/data/site";
 import { cn } from "@/lib/cn";
@@ -12,10 +13,10 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
   const pathname = usePathname();
   const solid = Boolean(
     forceSolid ||
-    scrolled ||
-    pathname?.startsWith("/contact-us") ||
-    pathname?.startsWith("/products") ||
-    pathname?.startsWith("/applications"),
+      scrolled ||
+      pathname?.startsWith("/contact-us") ||
+      pathname?.startsWith("/products") ||
+      pathname?.startsWith("/applications"),
   );
 
   return (
@@ -36,14 +37,13 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
               {siteNavigation.map((item) => (
                 <li
                   key={item.name}
-                  className="whitespace-nowrap text-[13px] max-[1200px]:text-xs"
+                  className="whitespace-nowrap text-[13px] transition-opacity hover:opacity-80 max-[1200px]:text-xs"
                 >
                   <Link href={item.href}>{item.name}</Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <NavigationActions />
         </div>
       </div>
       <MobileHeader solid={solid} />

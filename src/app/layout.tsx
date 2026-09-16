@@ -4,13 +4,14 @@ import { NavigationProvider } from "@/components/layout/NavigationState";
 import type { Metadata } from "next";
 import "./globals.css";
 import { LocalNavigation } from "@/components/layout/LocalNavigation";
+
 export const metadata: Metadata = {
-  title: "Discover Cosentino and its materials - Cosentino USA",
+  title: "DefensePly | WPC & PVC Boards, Doors and Frames",
   description:
-    "Sustainable surfaces for architecture and design. Discover Cosentino architectural surfaces, kitchens, bathrooms, and inspiring spaces.",
+    "Explore DefensePly WPC and PVC boards, doors and frames for interiors, furniture and commercial applications.",
   robots: { index: false, follow: false },
-  icons: { icon: "/assets/favicon.ico" },
 };
+
 export default function RootLayout({
   children,
 }: {

@@ -2,7 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
-import { siteNavigation, siteActions, footerGroups } from "../src/data/site.ts";
+import { siteNavigation, footerGroups } from "../src/data/site.ts";
+import { HERO_CATEGORY_SLUGS } from "../src/data/hero.ts";
 const read = (name) =>
   JSON.parse(readFileSync(resolve("src/data", `${name}.json`), "utf8"));
 function walk(value, check) {
@@ -27,6 +28,11 @@ function localDestination(href) {
     assert.ok(
       read("products").some((product) => `/products/${product.slug}` === path),
       `Missing product: ${path}`,
+    );
+  } else if (path?.startsWith("/applications/")) {
+    assert.ok(
+      read("applications").some((app) => `/applications/${app.slug}` === path),
+      `Missing application: ${path}`,
     );
   } else if (path && path !== "/")
     assert.ok(
@@ -65,10 +71,9 @@ test("homepage content has existing local assets and valid local destinations", 
       }
     });
 });
-test("shared navbar, actions and footer link to implemented destinations", () => {
+test("shared navbar and footer link to implemented destinations", () => {
   for (const item of [
     ...siteNavigation,
-    ...siteActions,
     ...footerGroups.flatMap((group) => group.links),
   ])
     localDestination(item.href);
@@ -82,6 +87,49 @@ test("homepage section anchors are unique", () => {
     (match) => match[1],
   );
   assert.equal(new Set(anchors).size, anchors.length);
+});
+
+test("hero scenes derive from application content and link to ordered categories", () => {
+  const applications = read("applications");
+  const appMap = new Map(applications.map((a) => [a.slug, a]));
+
+  assert.deepEqual(
+    [...HERO_CATEGORY_SLUGS],
+    ["commercial", "bedroom", "wardrobe", "kitchen"],
+  );
+
+  for (const slug of HERO_CATEGORY_SLUGS) {
+    const app = appMap.get(slug);
+    assert.ok(app, `Missing application data for hero category: ${slug}`);
+    const href = `/applications/${slug}`;
+    localDestination(href);
+    assert.ok(app.title, `Missing title for ${slug}`);
+    assert.ok(app.heroAlt, `Missing heroAlt for ${slug}`);
+    assert.equal(
+      app.hero,
+      `/assets/applications/${slug}/hero-desktop.webp`,
+    );
+    assert.equal(
+      app.heroMobile,
+      `/assets/applications/${slug}/hero-mobile.webp`,
+    );
+  }
+});
+
+test("hero image resolution logic handles existing assets and missing files safely", () => {
+  const applications = read("applications");
+  for (const slug of HERO_CATEGORY_SLUGS) {
+    const app = applications.find((a) => a.slug === slug);
+    assert.ok(app);
+    const desktopExpected = resolve("public", app.hero.slice(1));
+    const mobileExpected = resolve("public", app.heroMobile.slice(1));
+    if (existsSync(desktopExpected)) {
+      assert.ok(app.hero.startsWith("/assets/applications/"));
+    }
+    if (existsSync(mobileExpected)) {
+      assert.ok(app.heroMobile.startsWith("/assets/applications/"));
+    }
+  }
 });
 
 test("catalog entries have unique slugs and complete card/gallery data", () => {

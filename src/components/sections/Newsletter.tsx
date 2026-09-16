@@ -103,11 +103,8 @@ export function Newsletter() {
                 required
               />
               <span>
-                I agree to receive valuable content from Cosentino in the form
-                of commercial emails. Cosentino Global is the owner of this
-                data. Your data will be processed to keep you informed of our
-                products and services. The legal basis for the processing is
-                your consent.
+                I agree to receive product updates and project inspiration from
+                DefensePly International LLP.
               </span>
             </label>
             <button

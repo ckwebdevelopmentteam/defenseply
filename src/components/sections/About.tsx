@@ -34,7 +34,7 @@ export function About({ data = content }: { data?: typeof content }) {
     <section
       data-section="about"
       id="about"
-      aria-label="About Defense Ply"
+      aria-label="About DefensePly"
       className="relative w-full overflow-hidden bg-white py-20 max-phone:py-12"
     >
       <header className="mb-8 max-phone:mb-6">
@@ -92,7 +92,7 @@ export function About({ data = content }: { data?: typeof content }) {
                   actionClass,
                   "w-12 shrink-0 rounded-full hover:rotate-45",
                 )}
-                aria-label="Contact Defense Ply team"
+                aria-label="Contact DefensePly team"
               >
                 <ArrowUpRight size={18} strokeWidth={2} />
               </a>

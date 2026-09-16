@@ -1,6 +1,6 @@
 {
   "headline": "For over 25 years, our team has engineered bespoke architectural surfaces, uniting sustainable innovation with timeless design for spaces that inspire.",
-  "description": "Explore Defense Ply surfaces with collections crafted for residential, commercial, and outdoor spaces. Exceptional durability, zero porosity, and bespoke finishes tailored to your vision.",
+  "description": "Explore DefensePly surfaces with collections crafted for residential, commercial, and outdoor spaces. Exceptional durability, zero porosity, and bespoke finishes tailored to your vision.",
   "features": [
     { "icon": "shield", "label": "Zero Porosity" },
     { "icon": "clock", "label": "25-Yr Warranty" },
@@ -26,7 +26,7 @@
     {
       "position": "right",
       "image": "/assets/battersea-residential.avif",
-      "alt": "Premium stone countertop and cladding"
+      "alt": "Architectural interior surface installation"
     }
   ],
   "galleryDescription": "Stories and moments from architects and homeowners who transformed their spaces with our surfaces.",
