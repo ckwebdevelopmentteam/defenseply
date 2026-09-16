@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     "Explore DefensePly WPC and PVC boards, doors and frames for interiors, furniture and commercial applications.",
   robots: { index: false, follow: false },
+  icons: {
+    icon: "/assets/fav-icon.png",
+  },
 };
 
 export default function RootLayout({
