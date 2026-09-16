@@ -10,9 +10,10 @@ import type { ProductDetail } from "@/data/products";
 export function ProductOverview({ product }: { product: ProductDetail }) {
   return (
     <section
-      className="max-w-[1440px] mx-auto px-[5%] pb-[60px] grid grid-cols-[1.15fr_1fr] gap-[50px] items-start max-lg:grid-cols-1 max-lg:gap-8 max-lg:pb-[50px] max-sm:px-[4%] max-sm:pb-9 max-sm:gap-5 max-[390px]:pb-7"
+      className="w-full px-[5%] pb-[clamp(40px,4.5vw,68px)] max-sm:px-[4%] max-sm:pb-8"
       aria-label="Product Overview"
     >
+      <div className="mx-auto max-w-[1440px] grid grid-cols-[1.15fr_1fr] gap-[50px] items-start max-lg:grid-cols-1 max-lg:gap-8 max-sm:gap-5">
       {/* Gallery Column */}
       <ProductGallery
         key={product.slug}
@@ -100,6 +101,7 @@ export function ProductOverview({ product }: { product: ProductDetail }) {
           >
             <Phone size={15} /> +91 9605 170 000
           </a>
+          </div>
         </div>
       </div>
     </section>

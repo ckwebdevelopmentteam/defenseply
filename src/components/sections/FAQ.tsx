@@ -28,7 +28,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
           <div>
 
           <h2 className="mb-4 text-[50px] font-semibold uppercase tracking-tight text-[#1a1a1a]">
-            FAQ's
+            FAQ&apos;s
           </h2>
           <p className="mb-8 max-w-[460px] text-[15px] leading-[1.7] text-[#595653]">
             Everything you need to know about specifying, machining, and

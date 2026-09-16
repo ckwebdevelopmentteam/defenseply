@@ -1,8 +1,6 @@
 "use client";
 
 import { useNavigationState } from "@/components/sections/NavigationState";
-// import { useState } from "react";
-// import { X } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 export function FloatingActions({
