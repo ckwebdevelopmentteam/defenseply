@@ -5,9 +5,11 @@ export type MissionItemData = {
   headingLines: readonly [string, string];
   description: string;
   preferredFileBase: string;
+  preferredAlt: string;
   fallbackSrc: string;
-  alt: string;
-  objectPosition?: string;
+  fallbackAlt: string;
+  desktopObjectPosition: string;
+  mobileObjectPosition: string;
 };
 
 export type AboutPurposeData = {
@@ -57,9 +59,12 @@ export const aboutPurposeData: AboutPurposeData = {
         description:
           "Improve WPC and PVC solutions through thoughtful engineering, manufacturing refinement and practical innovation.",
         preferredFileBase: "assets/about/mission/innovation",
+        preferredAlt: "CNC-routed composite board on a fabrication workbench.",
         fallbackSrc: "/assets/applications/creative/cnc-screens.webp",
-        alt: "Decorative CNC-routed geometric screens showcasing precise fabrication and detail",
-        objectPosition: "center",
+        fallbackAlt:
+          "Decorative CNC-routed geometric screens showcasing precise fabrication and detail",
+        desktopObjectPosition: "50% 50%",
+        mobileObjectPosition: "50% 50%",
       },
       {
         id: "responsibility",
@@ -69,9 +74,14 @@ export const aboutPurposeData: AboutPurposeData = {
         description:
           "Develop alternatives to conventional timber and work towards more considered use of materials and resources.",
         preferredFileBase: "assets/about/mission/responsibility",
-        fallbackSrc: "/assets/applications/interiors/living-room-partitions.webp",
-        alt: "Architectural living room partition screens fabricated from engineered composite boards",
-        objectPosition: "center",
+        preferredAlt:
+          "Composite boards and sorted offcuts arranged for material planning.",
+        fallbackSrc:
+          "/assets/applications/interiors/living-room-partitions.webp",
+        fallbackAlt:
+          "Architectural living room partition screens fabricated from engineered composite boards",
+        desktopObjectPosition: "50% 50%",
+        mobileObjectPosition: "50% 50%",
       },
       {
         id: "quality",
@@ -81,9 +91,13 @@ export const aboutPurposeData: AboutPurposeData = {
         description:
           "Focus on consistent manufacturing and dependable performance for the intended application.",
         preferredFileBase: "assets/about/mission/quality",
+        preferredAlt:
+          "Cabinet joinery showing aligned fronts, finished edges and a concealed hinge.",
         fallbackSrc: "/assets/applications/interiors/built-in-storage.webp",
-        alt: "Built-in interior cabinetry and storage with clean joinery and finished edges",
-        objectPosition: "center",
+        fallbackAlt:
+          "Built-in interior cabinetry and storage with clean joinery and finished edges",
+        desktopObjectPosition: "50% 50%",
+        mobileObjectPosition: "50% 50%",
       },
       {
         id: "partnership",
@@ -93,9 +107,13 @@ export const aboutPurposeData: AboutPurposeData = {
         description:
           "Support architects, fabricators, dealers and homeowners with informed material choices and responsive guidance.",
         preferredFileBase: "assets/about/mission/partnership",
+        preferredAlt:
+          "Designer and fabricator reviewing board samples together.",
         fallbackSrc: "/assets/applications/commercial/office-furniture.webp",
-        alt: "Modern commercial office workstation setting with durable engineered board surfaces",
-        objectPosition: "center",
+        fallbackAlt:
+          "Modern commercial office workstation setting with durable engineered board surfaces",
+        desktopObjectPosition: "50% 50%",
+        mobileObjectPosition: "50% 50%",
       },
     ],
   },
