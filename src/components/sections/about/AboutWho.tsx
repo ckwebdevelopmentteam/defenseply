@@ -1,3 +1,5 @@
+import { Heading } from "@/components/ui/Heading";
+
 const facts = [
   {
     value: "45,000 sq. ft.",
@@ -33,22 +35,16 @@ export function AboutWho() {
       className="w-full bg-white py-24 max-[768px]:py-16"
     >
       <div className="w-full px-[38px] max-[768px]:px-6">
-        {/* Centered Editorial Header */}
-        <div className="mx-auto mb-10 max-w-[920px] text-center max-[768px]:mb-8">
-          {/* Refined Section Marker with subtle gold accent line */}
-          <div className="mb-5 flex items-center justify-center gap-2.5">
-            <span className="h-px w-5 bg-[#d9c34a]" aria-hidden="true" />
-            <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#8a8a86]">
-              Who We Are
-            </p>
-          </div>
-
-          {/* Main Headline — Two-line balanced architectural typography */}
-          <h2 className="mx-auto max-w-[820px] text-[clamp(30px,2.8vw,48px)] font-light leading-[1.12] tracking-[-0.02em] uppercase text-[#1a1a1a]">
+        {/* Header styled like Spaces section / Cosentino Architectural Surfaces */}
+        <div className="mx-auto mb-14 flex w-full max-w-[920px] flex-col gap-[25px] px-2.5 text-center max-[768px]:mb-10 max-phone:max-w-full">
+          <p className="text-center text-fluid">
+            Who We Are
+          </p>
+          <Heading className="mx-auto max-w-[860px] text-center max-tablet:max-w-full">
             Redefining Building Materials
             <br className="hidden sm:inline" />
             {" "}Through Sustainable Innovation
-          </h2>
+          </Heading>
         </div>
 
         {/* Editorial Description Block (900-1050px, Centered Container, Left-Aligned Text) */}
