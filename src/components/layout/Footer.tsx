@@ -98,8 +98,8 @@ export function Footer() {
         </div>
 
         <div className="mt-6 flex w-full justify-center md:mt-12 md:mb-[-0.5%]">
-          <h1 className="pointer-events-none select-none text-center text-[clamp(4.5rem,19.5vw,25rem)] font-extrabold leading-[0.70] tracking-tighter text-zinc-900">
-            defenseply
+          <h1 className="pointer-events-none select-none text-center text-[clamp(4.8rem,30vw,20rem)] font-extrabold leading-[0.70] tracking-[-0.1em] text-zinc-900">
+            DEFENSEPLY
           </h1>
         </div>
       </div>
