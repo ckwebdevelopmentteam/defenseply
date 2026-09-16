@@ -6,7 +6,6 @@ import { InspirationGallery } from "@/components/sections/InspirationGallery";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
-import { Newsletter } from "@/components/sections/Newsletter";
 import { FloatingActions } from "@/components/ui/FloatingActions";
 /** Edit, reorder, or replace an individual section here. */
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
             <BlogSection />
             <Testimonials />
             <FAQ />
-            <Newsletter />
           </article>
         </div>
       </main>

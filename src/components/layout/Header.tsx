@@ -13,10 +13,10 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
   const pathname = usePathname();
   const solid = Boolean(
     forceSolid ||
-      scrolled ||
-      pathname?.startsWith("/contact-us") ||
-      pathname?.startsWith("/products") ||
-      pathname?.startsWith("/applications"),
+    scrolled ||
+    pathname?.startsWith("/contact-us") ||
+    pathname?.startsWith("/products") ||
+    pathname?.startsWith("/applications"),
   );
 
   return (
