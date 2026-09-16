@@ -12,13 +12,20 @@ export function Products({
     <section
       id="products"
       data-section="products"
-      className="page-bleed relative mb-20 bg-stone px-[38px] py-16 max-phone:mb-12 max-phone:py-12"
+      className="page-bleed relative mb-20 border-y border-black/8 bg-stone px-[38px] py-18 max-phone:mb-12 max-phone:py-12"
       aria-label="Our Products"
     >
-      <div className="mb-8 flex items-center max-phone:mb-6">
-        <h2 className="font-light uppercase tracking-tight text-ink text-[clamp(20px,2.5vw,32px)]">
+      {/* Ambient Section Highlight */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.65),transparent_70%)]" />
+
+      {/* Centered Heading with Description */}
+      <div className="relative mx-auto  flex max-w-[840px] flex-col items-center text-center max-phone:mb-8">
+        <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-center">
           Our Products
         </h2>
+        <p className="max-w-[700px] text-fluid font-light leading-[1.6] text-[#55534e] text-center mx-auto">
+          Calibrated cellular composite boards, waterproof formulations, and precision-moulded architectural profiles engineered for demanding interior and structural environments.
+        </p>
       </div>
       <Carousel controls={(h) => <Progress handle={h} id="products" />}>
         {items.map((item) => (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ProductSection, ProductSectionHeading } from "./ProductSection";
+import { ProductSection } from "./ProductSection";
 import type { ProductDetail } from "@/data/products";
 export function RelatedProducts({
   relatedProducts,
@@ -8,9 +8,18 @@ export function RelatedProducts({
 }) {
   return (
     <ProductSection aria-label="Explore Related Products">
-      <ProductSectionHeading eyebrow="Complete Portfolio">
-        Explore Related Surfaces
-      </ProductSectionHeading>
+      <div className="mx-auto mb-12 flex max-w-[760px] flex-col items-center text-center max-phone:mb-8">
+        <span className="mb-3.5 inline-flex items-center gap-2 rounded-full border border-black/15 bg-white px-4 py-1 text-[11px] font-semibold tracking-[2.5px] uppercase font-sans text-ink shadow-xs">
+          <span className="size-1.5 rounded-full bg-[#9a6d00]" />
+          Complete Portfolio
+        </span>
+        <h2 className="text-[clamp(24px,2.4vw,36px)] font-semibold tracking-[1px] uppercase text-[#1a1a1a] mb-3 text-center font-sans">
+          Explore Related Surfaces
+        </h2>
+        <p className="max-w-[620px] text-[15px] font-light leading-[1.6] text-[#595653] text-center mx-auto">
+          Discover complementary composite grades, moisture-resistant boards, and specialized profiles engineered for seamless architectural coordination.
+        </p>
+      </div>
 
       <div className="grid grid-cols-3 gap-6 max-[860px]:grid-cols-2 max-[860px]:gap-4 max-sm:grid-cols-1 max-sm:gap-3">
         {relatedProducts.map((rel, idx) => (

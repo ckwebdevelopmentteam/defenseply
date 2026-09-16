@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Plus, Minus, MessageCircle, ArrowRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import faqData from "@/data/faq.json";
 
 export function FAQ({ items = faqData }: { items?: typeof faqData }) {
@@ -26,8 +27,8 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
           </span> */}
           <div>
 
-          <h2 className="mb-4 text-display font-light uppercase tracking-tight text-[#1a1a1a]">
-            Frequently Asked Questions
+          <h2 className="mb-4 text-[50px] font-semibold uppercase tracking-tight text-[#1a1a1a]">
+            FAQ's
           </h2>
           <p className="mb-8 max-w-[460px] text-[15px] leading-[1.7] text-[#595653]">
             Everything you need to know about specifying, machining, and
@@ -80,18 +81,63 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
                   <span className="text-[17px] font-normal leading-[1.35] tracking-[0.2px] text-[#1a1a1a] max-phone:text-[15px]">
                     {item.question}
                   </span>
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white text-ink transition-transform duration-200">
+                  <motion.span
+                    className="flex size-8 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white text-ink"
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  >
                     {isOpen ? <Minus size={16} /> : <Plus size={16} />}
-                  </span>
+                  </motion.span>
                 </button>
 
-                <div
-                  hidden={!isOpen}
-                  id={`faq-answer-${idx}`}
-                  className="pt-1 pb-6 text-[14.5px] leading-[1.75] text-[#555] max-phone:text-[13.5px]"
-                >
-                  <p>{item.answer}</p>
-                </div>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      id={`faq-answer-${idx}`}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{
+                        height: "auto",
+                        opacity: 1,
+                        transition: {
+                          height: {
+                            duration: 0.45,
+                            ease: [0.16, 1, 0.3, 1],
+                          },
+                          opacity: {
+                            duration: 0.35,
+                            delay: 0.08,
+                            ease: "easeOut",
+                          },
+                        },
+                      }}
+                      exit={{
+                        height: 0,
+                        opacity: 0,
+                        transition: {
+                          height: {
+                            duration: 0.35,
+                            ease: [0.16, 1, 0.3, 1],
+                          },
+                          opacity: {
+                            duration: 0.2,
+                            ease: "easeIn",
+                          },
+                        },
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <motion.div
+                        initial={{ y: -8, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -6, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                        className="pt-1 pb-6 text-[14.5px] leading-[1.75] text-[#555] max-phone:text-[13.5px]"
+                      >
+                        <p>{item.answer}</p>
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}

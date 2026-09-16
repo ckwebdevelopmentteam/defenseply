@@ -13,7 +13,7 @@ import { ProductNarrative } from "@/components/product/ProductNarrative";
 import { ProductSpecifications } from "@/components/product/ProductSpecifications";
 import { ProductApplications } from "@/components/product/ProductApplications";
 import { ProductGreenPromise } from "@/components/product/ProductGreenPromise";
-import { ProductInquiry } from "@/components/product/ProductInquiry";
+import { ContactProject } from "@/components/sections/contact/ContactProject";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -64,7 +64,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     <>
       <ProductPageAnimations key={product.slug} />
       <main
-        className="bg-[#f7f7f6] text-[#1a1a1a] min-h-screen pb-20 max-sm:pb-[50px]"
+        className="bg-[#f7f7f6] text-[#1a1a1a] min-h-screen overflow-hidden"
         id="main-content"
       >
         {/* Breadcrumbs */}
@@ -108,14 +108,17 @@ export default async function ProductDetailPage({ params }: PageProps) {
         {/* Green Promise Banner */}
         <ProductGreenPromise />
 
-        {/* Inquiry & Direct Contact Form */}
-        <ProductInquiry product={product} />
-
-        {/* Related Products Section */}
+        {/* Related Products Section ("Explore Related Surfaces") */}
         <RelatedProducts relatedProducts={relatedProducts} />
+
+        {/* Contact Section */}
+        <ContactProject
+          key={product.slug}
+          context={`${product.title} product inquiry`}
+        />
       </main>
 
-      <FloatingActions quoteHref="#inquiry" />
+      <FloatingActions quoteHref="#project-form" />
     </>
   );
 }

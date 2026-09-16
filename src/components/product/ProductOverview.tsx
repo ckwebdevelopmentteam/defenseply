@@ -81,7 +81,7 @@ export function ProductOverview({ product }: { product: ProductDetail }) {
         {/* Action Buttons */}
         <div className="flex flex-wrap gap-3 pt-2 max-sm:flex-col max-sm:gap-2.5">
           <a
-            href="#inquiry"
+            href="#project-form"
             className="inline-flex items-center justify-center gap-2.5 bg-[#1a1a1a] !text-white text-xs tracking-[1.2px] uppercase font-medium font-sans py-[15px] px-7 rounded-[2px] no-underline transition-all duration-200 border border-[#1a1a1a] hover:bg-[#333333] hover:-translate-y-0.5 max-sm:w-full max-sm:py-[13px] max-sm:px-[18px] max-sm:text-[11px]"
           >
             Request a Quote <ArrowRight size={15} />

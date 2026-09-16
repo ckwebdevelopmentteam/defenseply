@@ -258,7 +258,7 @@ export default function BlogDrawer({
               {badge}
             </span>
           )}
-          <h2 className="text-display font-light uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-left">
+          <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-left">
             {title}
           </h2>
           {description && (

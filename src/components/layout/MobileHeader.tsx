@@ -9,7 +9,7 @@ import { siteNavigation } from "@/data/site";
 import { cn } from "@/lib/cn";
 
 export function MobileHeader({ solid }: { solid: boolean }) {
-  const { mobileOpen: open, setMobileOpen: setOpen } = useNavigationState();
+  const { mobileOpen: open, setMobileOpen: setOpen, visible } = useNavigationState();
 
   useEffect(() => {
     if (!open) return;
@@ -30,9 +30,10 @@ export function MobileHeader({ solid }: { solid: boolean }) {
       <div
         data-testid="mobile-navbar"
         className={cn(
-          "pointer-events-auto flex shrink-0 items-center justify-between px-5 transition-colors",
+          "pointer-events-auto flex shrink-0 items-center justify-between px-5 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
           "h-[var(--mobile-nav-height)]",
           solid || open ? "bg-white text-ink shadow-sm" : "text-white",
+          !visible && !open ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100",
         )}
       >
         <button
