@@ -18,6 +18,8 @@ export type AboutPurposeData = {
     headingLines: readonly [string, string];
     description: string;
     principles: readonly string[];
+    desktopImageBase?: string;
+    mobileImageBase?: string;
   };
   mission: {
     label: string;
@@ -39,6 +41,8 @@ export const aboutPurposeData: AboutPurposeData = {
       "Practical innovation",
       "Long-term purpose",
     ],
+    desktopImageBase: "assets/about/vision/vision-desktop",
+    mobileImageBase: "assets/about/vision/vision-mobile",
   },
   mission: {
     label: "OUR MISSION",
