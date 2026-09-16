@@ -20,10 +20,12 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
     >
       <div className="grid grid-cols-[1fr_1.4fr] items-start gap-14 max-desktop:grid-cols-1 max-desktop:gap-10">
         {/* Left Column: Heading & Support Callout */}
-        <div className="flex flex-col">
-          <span className="mb-2 text-[11px] font-medium tracking-[2.5px] uppercase text-[#8c827a]">
+        <div className="flex flex-col justify-between h-full">
+          {/* <span className="mb-2 text-[11px] font-medium tracking-[2.5px] uppercase text-[#8c827a]">
             Technical Parameters & Inquiries
-          </span>
+          </span> */}
+          <div>
+
           <h2 className="mb-4 text-display font-light uppercase tracking-tight text-[#1a1a1a]">
             Frequently Asked Questions
           </h2>
@@ -31,6 +33,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
             Everything you need to know about specifying, machining, and
             installing Defenseply cellular composite boards and profiles.
           </p>
+          </div>
 
           {/* Quick Technical Help Box */}
           <div className="rounded-[2px] border border-black/8 bg-[#fafaf8] p-7 max-phone:p-5">
