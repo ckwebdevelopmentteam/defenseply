@@ -26,13 +26,13 @@ export function AboutVisionMission() {
           {/* 2. Main Statement */}
           <h3
             id="vision-statement-heading"
-            className="mt-[24px] md:mt-[32px] text-[clamp(32px,8.8vw,44px)] md:text-[48px] min-[1200px]:text-[clamp(48px,4.3vw,72px)] font-light leading-[1.08] tracking-[-0.025em] text-[#F5F4EF] max-w-[1180px] mx-auto [text-wrap:balance]"
+            className="mt-[24px] md:mt-[32px] text-[clamp(32px,8.8vw,44px)] md:text-[48px] min-[1200px]:text-[clamp(48px,4.3vw,72px)] font-light leading-[1.08] tracking-[-0.025em] text-[#F5F4EF] max-w-[1180px] mx-auto [text-wrap:balance] uppercase"
           >
             <span className="block">{data.vision.headingLines[0]}</span>
             <span className="block">
-              Better Possibilities{" "}
+              BETTER POSSIBILITIES{" "}
               <span className="underline decoration-1 underline-offset-[0.13em] decoration-[#F5F4EF]/65">
-                Tomorrow.
+                TOMORROW.
               </span>
             </span>
           </h3>

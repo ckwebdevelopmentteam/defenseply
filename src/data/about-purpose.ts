@@ -29,7 +29,7 @@ export type AboutPurposeData = {
 export const aboutPurposeData: AboutPurposeData = {
   vision: {
     label: "OUR VISION",
-    headingLines: ["Better Spaces Today.", "Better Possibilities Tomorrow."],
+    headingLines: ["BETTER SPACES TODAY.", "BETTER POSSIBILITIES TOMORROW."],
     description:
       "Our vision is to help shape a future where thoughtfully engineered WPC and PVC materials support better spaces and a more considered use of resources.",
     principles: [
