@@ -121,7 +121,7 @@ const TestimonialSection = React.forwardRef<
           {title}
         </h2>
         {description && (
-          <p className="max-w-[720px] text-fluid font-light leading-[1.5] text-[#5d5d59] text-center mx-auto">
+          <p className="max-w-[720px] text-fluid font-light leading-[1.5] text-[#5d5d59] text-center mx-auto max-sm:text-[13.5px] max-sm:leading-[1.35] max-phone:text-[13px] max-phone:leading-[1.35] max-phone:max-w-[340px]">
             {description}
           </p>
         )}

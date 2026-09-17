@@ -66,7 +66,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
         id="main-content"
       >
         {/* Breadcrumbs */}
-        <div className="w-full pt-[120px] pb-4 px-[5%] max-desktop:pt-[144px] max-phone:pt-[124px] max-sm:pb-3 max-sm:px-[4%] animate-fade-in">
+        <div className="w-full pt-[120px] pb-4 px-[5%] max-desktop:pt-[130px] max-phone:pt-[106px] max-sm:pb-3 max-sm:px-[4%] animate-fade-in">
           <div className="mx-auto max-w-[1440px]">
             <nav
               aria-label="Breadcrumb"

@@ -16,24 +16,20 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
     <section
       data-section="faq"
       id="faq"
-      className="mt-30 mb-20 max-phone:mt-0 max-phone:mb-12 max-md:mt-0 max-md:mb-12"
+      className="mt-44 mb-20 max-phone:mt-0 max-phone:mb-8 max-md:mt-0 max-md:mb-8"
       aria-label="Frequently Asked Questions"
     >
-      <div className="grid grid-cols-[1fr_1.4fr] items-start gap-14 max-desktop:grid-cols-1 max-desktop:gap-10">
+      <div className="grid grid-cols-[1fr_1.4fr] items-start gap-14 max-desktop:grid-cols-1 max-desktop:gap-8 max-phone:gap-3">
         {/* Left Column: Heading & Support Callout */}
         <div className="flex flex-col justify-between h-full">
-          {/* <span className="mb-2 text-[11px] font-medium tracking-[2.5px] uppercase text-[#8c827a]">
-            Technical Parameters & Inquiries
-          </span> */}
-          <div>
-
-          <h2 className="mb-4 text-[50px] font-semibold uppercase tracking-tight text-[#1a1a1a]">
-            FAQ&apos;s
-          </h2>
-          <p className="mb-8 max-w-[460px] text-[15px] leading-[1.7] text-[#595653]">
-            Everything you need to know about specifying, machining, and
-            installing Defenseply cellular composite boards and profiles.
-          </p>
+          <div className="flex flex-col items-start max-phone:items-center max-phone:text-center">
+            <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-left max-phone:text-center">
+              FAQ&apos;s
+            </h2>
+            <p className="max-w-[460px] text-fluid font-light leading-[1.6] text-[#55534e] text-left max-phone:text-center mx-0 max-phone:mx-auto max-sm:text-[13.5px] max-sm:leading-[1.35] max-phone:text-[13px] max-phone:leading-[1.35] max-phone:max-w-[340px] mb-8 max-phone:mb-3">
+              Everything you need to know about specifying, machining, and
+              installing Defenseply cellular composite boards and profiles.
+            </p>
           </div>
 
           {/* Quick Technical Help Box */}

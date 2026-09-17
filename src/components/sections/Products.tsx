@@ -37,7 +37,7 @@ export function Products({
         <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-center">
           Our Products
         </h2>
-        <p className="max-w-[700px] text-fluid font-light leading-[1.6] text-[#55534e] text-center mx-auto">
+        <p className="max-w-[700px] text-fluid font-light leading-[1.6] text-[#55534e] text-center mx-auto max-sm:text-[13.5px] max-sm:leading-[1.35] max-phone:text-[13px] max-phone:leading-[1.35] max-phone:max-w-[340px]">
           Calibrated cellular composite boards, waterproof formulations, and precision-moulded architectural profiles engineered for demanding interior and structural environments.
         </p>
       </div>
