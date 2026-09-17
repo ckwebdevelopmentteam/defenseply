@@ -86,8 +86,7 @@ export function AboutStory() {
               Panvel–Kochi–Kanyakumari National Highway provides seamless raw
               material intake and product delivery connectivity across India.
             </p>
-            <p>
-              DEFENSEPLY is positioned to lead India's transition toward{" "}
+              DEFENSEPLY is positioned to lead India&apos;s transition toward{" "}
               <strong className="font-medium text-[#1a1a1a]">
                 green architectural solutions
               </strong>{" "}
@@ -97,9 +96,9 @@ export function AboutStory() {
 
             {/* Strategic Highlight Callout */}
             <div className="mt-8 border-l-2 border-[#d9c34a] pl-5 py-1 text-[13.5px] leading-[1.7] text-[#6b6b66] italic">
-              "Engineered for durability and seamless nationwide accessibility,
-              our facility stands at the forefront of India's composite building
-              revolution."
+              &ldquo;Engineered for durability and seamless nationwide accessibility,
+              our facility stands at the forefront of India&apos;s composite building
+              revolution.&rdquo;
             </div>
           </div>
         </div>
