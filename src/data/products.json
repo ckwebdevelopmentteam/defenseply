@@ -30,11 +30,6 @@
         "src": "/assets/products/defenceplayfoamboard4.webp",
         "alt": "PVC Foam Architectural Wall Panel",
         "caption": "Sculptural curved interior partition wall created with Defenseply boards."
-      },
-      {
-        "src": "/assets/Spaces_Other_IneriorsNew.jpg",
-        "alt": "Luxury Interior Fitout",
-        "caption": "Clean, minimalist architectural bedroom and wardrobe application."
       }
     ],
     "traits": [
@@ -48,9 +43,18 @@
     "specs": {
       "thickness": "0.5 mm to 35 mm",
       "density": "0.40 g/cc to 0.90 g/cc",
-      "standardSize": "8 ft × 4 ft (2440 × 1220 mm) & custom sizes",
-      "finishes": ["Matte", "Glossy", "Embossed"],
-      "colors": ["Pure White", "Ivory", "Grey", "Custom Shades"],
+      "standardSize": "8 ft \u00d7 4 ft (2440 \u00d7 1220 mm) & custom sizes",
+      "finishes": [
+        "Matte",
+        "Glossy",
+        "Embossed"
+      ],
+      "colors": [
+        "Pure White",
+        "Ivory",
+        "Grey",
+        "Custom Shades"
+      ],
       "fireRating": "Self-extinguishing Class 1 (Fire retardant)",
       "waterResistance": "100% Waterproof (Zero water absorption)",
       "screwHolding": "High screw withdrawal strength with solid cellular core"
@@ -58,7 +62,7 @@
     "industryInsight": {
       "headline": "Surging Demand for Advanced Polymers",
       "stat": "3 Million+ Tons",
-      "description": "In 2023, India's PVC imports hit a record 3 million+ tons—up 70% from the previous year—driven by nationwide infrastructure growth and a massive transition away from natural timber.",
+      "description": "In 2023, India's PVC imports hit a record 3 million+ tons\u2014up 70% from the previous year\u2014driven by nationwide infrastructure growth and a massive transition away from natural timber.",
       "source": "ChemOrbis Market Report"
     },
     "applications": [
@@ -86,11 +90,11 @@
     "highlights": [
       {
         "label": "Thickness Range",
-        "value": "0.5 – 35 mm"
+        "value": "0.5 \u2013 35 mm"
       },
       {
         "label": "Density Range",
-        "value": "0.40 – 0.90 g/cc"
+        "value": "0.40 \u2013 0.90 g/cc"
       },
       {
         "label": "Water Resistance",
@@ -138,16 +142,11 @@
         "src": "/assets/products/3layerwpccolourboard2.jpg",
         "alt": "Studio Material Display",
         "caption": "Contemporary architectural color swatches with micro-finished edges."
-      },
-      {
-        "src": "/assets/00-Furniture-Hero.avif",
-        "alt": "Modern Interior Cabinetry",
-        "caption": "Turnkey modular cabinetry executed in rich factory-colored composite boards."
       }
     ],
     "traits": [
       "Coloured PVC, high-finish boards with zero lead time",
-      "No need for painting or laminating—saves time, labour, and finishing cost",
+      "No need for painting or laminating\u2014saves time, labour, and finishing cost",
       "Perfect for CNC routing, PU lamination, bending, cutting, & drilling",
       "High durability and precision-ready surface",
       "Consistent color density across face and core",
@@ -156,8 +155,13 @@
     "specs": {
       "thickness": "0.5 mm to 35 mm",
       "density": "0.45 g/cc to 0.85 g/cc",
-      "standardSize": "8 ft × 4 ft (custom sizes on volume orders)",
-      "finishes": ["Satin Matte", "Soft Velvet", "High Gloss", "Textured"],
+      "standardSize": "8 ft \u00d7 4 ft (custom sizes on volume orders)",
+      "finishes": [
+        "Satin Matte",
+        "Soft Velvet",
+        "High Gloss",
+        "Textured"
+      ],
       "colors": [
         "White",
         "Slate Grey",
@@ -176,7 +180,7 @@
     "industryInsight": {
       "headline": "Explosive Demand for Pre-Finished Boards",
       "stat": "35,678 Tonnes",
-      "description": "In 2022–23, India imported 35,678 tonnes of PVC foam boards & similar products, indicating rapid nationwide market adoption of pre-finished boards over labor-intensive manual painting.",
+      "description": "In 2022\u201323, India imported 35,678 tonnes of PVC foam boards & similar products, indicating rapid nationwide market adoption of pre-finished boards over labor-intensive manual painting.",
       "source": "Plexconcil Annual Report"
     },
     "applications": [
@@ -232,7 +236,7 @@
     "tagline": "The best of wood and plastic combined: high screw holding, eco-friendly, and waterproof",
     "description": "Defenseply WPC Boards fuse virgin polymers with fine natural wood fibers using precision German extrusion technology. The result is a high-density, eco-friendly composite that delivers the warmth and workability of timber with total immunity to moisture, rot, termites, and fungal decay.",
     "extendedDescription": [
-      "Manufactured at our dedicated 2-acre production facility along the Panvel–Kochi–Kanyakumari National Highway in KINFRA Industrial Park, Kuttippuram, Kerala. With an installed capacity of 110,400 boards annually, each board is precision-calibrated for thickness and density.",
+      "Manufactured at our dedicated 2-acre production facility along the Panvel\u2013Kochi\u2013Kanyakumari National Highway in KINFRA Industrial Park, Kuttippuram, Kerala. With an installed capacity of 110,400 boards annually, each board is precision-calibrated for thickness and density.",
       "Unlike ordinary composites, Defenseply WPC features extraordinary screw withdrawal strength, can be cut with standard carpentry tools, and takes paints, polishes, and laminates with supreme adhesion."
     ],
     "badges": [
@@ -256,11 +260,6 @@
         "src": "/assets/Spaces_Outdoor_crop.jpg",
         "alt": "Outdoor Patio and Decking Application",
         "caption": "Weather-resistant outdoor architectural decking and wall cladding."
-      },
-      {
-        "src": "/assets/00-Furniture-Hero.avif",
-        "alt": "Heavy Duty Furniture Application",
-        "caption": "Robust structural carpentry built for generational longevity."
       }
     ],
     "traits": [
@@ -268,14 +267,18 @@
       "Strong screw holding capacity, high tensile strength, paintable and polishable",
       "Waterproof, termite-proof, borer-proof, and fungus-proof",
       "Ideal for outdoor furniture, exterior wall panels, interior cabinetry, & decking",
-      "Eco-friendly and 100% recyclable — saves trees with zero deforestation",
+      "Eco-friendly and 100% recyclable \u2014 saves trees with zero deforestation",
       "Works with standard carpentry tools, saws, routers, and fasteners"
     ],
     "specs": {
       "thickness": "5 mm to 35 mm",
       "density": "0.55 g/cc to 0.90 g/cc",
-      "standardSize": "8 ft × 4 ft (2440 × 1220 mm)",
-      "finishes": ["Natural Wood Grain", "Matte Sanded", "Smooth Calibrated"],
+      "standardSize": "8 ft \u00d7 4 ft (2440 \u00d7 1220 mm)",
+      "finishes": [
+        "Natural Wood Grain",
+        "Matte Sanded",
+        "Smooth Calibrated"
+      ],
       "colors": [
         "Teak Brown",
         "Coffee Brown",
@@ -289,8 +292,8 @@
     },
     "industryInsight": {
       "headline": "Rapid Composite Market Expansion",
-      "stat": "20–22% CAGR",
-      "description": "WPC boards in India sustain a consistent annual growth rate of 20–22%, far outpacing traditional plywood (which struggles at 4–5%), as builders seek rot-free, termite-proof sustainable alternatives.",
+      "stat": "20\u201322% CAGR",
+      "description": "WPC boards in India sustain a consistent annual growth rate of 20\u201322%, far outpacing traditional plywood (which struggles at 4\u20135%), as builders seek rot-free, termite-proof sustainable alternatives.",
       "source": "Amulya Mica Industry Research"
     },
     "applications": [
@@ -376,12 +379,12 @@
       "Tough, stylish, & built to last for generations",
       "High density, high screw withdrawal strength for heavy architectural doors",
       "100% waterproof, termite-proof, pest-proof & virtually maintenance-free",
-      "Smooth finish with the elegance of natural wood—minus the drawbacks",
+      "Smooth finish with the elegance of natural wood\u2014minus the drawbacks",
       "Perfect for all types of residential, commercial, hotel, and hospital projects",
-      "No seasonal expansion or contraction — doors always close smoothly"
+      "No seasonal expansion or contraction \u2014 doors always close smoothly"
     ],
     "specs": {
-      "thickness": "Sizes: 3×2 inch, 4×2 inch, 4×2.5 inch, 5×2.5 inch, custom",
+      "thickness": "Sizes: 3\u00d72 inch, 4\u00d72 inch, 4\u00d72.5 inch, 5\u00d72.5 inch, custom",
       "density": "0.75 g/cc to 0.95 g/cc",
       "standardSize": "Lengths: 6.5 ft, 7 ft, 8 ft & custom project cuts",
       "finishes": [
@@ -390,7 +393,12 @@
         "Smooth White",
         "Paint-Ready"
       ],
-      "colors": ["Teak Brown", "Coffee Brown", "Ivory White", "Charcoal Grey"],
+      "colors": [
+        "Teak Brown",
+        "Coffee Brown",
+        "Ivory White",
+        "Charcoal Grey"
+      ],
       "fireRating": "Class 1 fire retardant rating",
       "waterResistance": "Impermeable to moisture and standing water",
       "screwHolding": "Exceeds 2200 N screw pull-out resistance"
@@ -478,27 +486,32 @@
         "src": "/assets/products/wpcwindowframesdf.webp",
         "alt": "Window Frame Profile Section",
         "caption": "Architectural fenestration profile engineered for glass bead retention."
-      },
-      {
-        "src": "/assets/Spaces_Outdoor_crop.jpg",
-        "alt": "Facade Integration",
-        "caption": "Exterior facade integration with high thermal and acoustic protection."
       }
     ],
     "traits": [
       "Tough, stylish, & built to last for generations without maintenance",
       "High density, high screw withdrawal strength for heavy window sashes and stays",
       "100% waterproof, termite-proof, pest-proof, and impervious to coastal humidity",
-      "Smooth finish with the elegance of natural wood—minus the drawbacks",
+      "Smooth finish with the elegance of natural wood\u2014minus the drawbacks",
       "Compatible with casement, sliding, and fixed architectural window systems",
       "High thermal and acoustic dampening for quieter, energy-efficient living"
     ],
     "specs": {
-      "thickness": "Custom architectural profiles & standard 4×2.5 / 5×2.5 inch",
+      "thickness": "Custom architectural profiles & standard 4\u00d72.5 / 5\u00d72.5 inch",
       "density": "0.80 g/cc to 0.95 g/cc",
       "standardSize": "Custom lengths up to 10 ft to minimize installation joints",
-      "finishes": ["Warm Oak", "Teak", "Walnut", "Modern Charcoal", "White"],
-      "colors": ["Natural Wood Tones", "Architectural White", "Dark Bronze"],
+      "finishes": [
+        "Warm Oak",
+        "Teak",
+        "Walnut",
+        "Modern Charcoal",
+        "White"
+      ],
+      "colors": [
+        "Natural Wood Tones",
+        "Architectural White",
+        "Dark Bronze"
+      ],
       "fireRating": "Class 1 fire retardant",
       "waterResistance": "100% Waterproof, weather-sealed",
       "screwHolding": "Engineered for heavy-duty friction stays and multipoint locks"
@@ -560,7 +573,7 @@
     "title": "WPC Doors",
     "category": "Composite Architectural Doors",
     "tagline": "Robust solid composite doors engineered for excellence in every environment",
-    "description": "Defenseply WPC Doors represent the pinnacle of composite door engineering. Molded and extruded under immense hydraulic pressure, these solid-core doors will never warp, crack, splinter, or fade — even when exposed to direct water spray or fluctuating humidity.",
+    "description": "Defenseply WPC Doors represent the pinnacle of composite door engineering. Molded and extruded under immense hydraulic pressure, these solid-core doors will never warp, crack, splinter, or fade \u2014 even when exposed to direct water spray or fluctuating humidity.",
     "extendedDescription": [
       "Natural flush doors often delaminate and sag under their own weight over time. Defenseply WPC doors are engineered with a monolithic composite matrix that guarantees lifelong dimensional stability.",
       "They can be easily routed with classic paneled designs, painted, PU polished, or laminated to match any architectural interior vision from minimalist contemporary to timeless classic."
@@ -590,10 +603,10 @@
     ],
     "traits": [
       "Engineered for excellence in every residential and commercial environment",
-      "Robust monolithic structure—absolutely no warping, cracking, or fading",
+      "Robust monolithic structure\u2014absolutely no warping, cracking, or fading",
       "Easy to customize: paint, laminate, CNC route, or polish to perfection",
       "Ideal for homes, offices, hotels, hospitals, and premium commercial spaces",
-      "100% waterproof throughout the entire thickness—perfect for bathrooms",
+      "100% waterproof throughout the entire thickness\u2014perfect for bathrooms",
       "High density sound insulation and solid feel when closing"
     ],
     "specs": {
@@ -618,9 +631,9 @@
       "screwHolding": "Reinforced hinge and lock-rail zones for heavy commercial hardware"
     },
     "industryInsight": {
-      "headline": "₹900 Crore Market Transformation",
-      "stat": "₹900 Crore",
-      "description": "PVC/WPC boards emerged in India ~20 years ago. Today the market has reached nearly ₹900 crore with a 20–22% growth rate, outpacing plywood which struggles at 4–5%.",
+      "headline": "\u20b9900 Crore Market Transformation",
+      "stat": "\u20b9900 Crore",
+      "description": "PVC/WPC boards emerged in India ~20 years ago. Today the market has reached nearly \u20b9900 crore with a 20\u201322% growth rate, outpacing plywood which struggles at 4\u20135%.",
       "source": "Amulya Mica Industry Overview"
     },
     "applications": [
@@ -652,7 +665,7 @@
       },
       {
         "label": "Thickness Options",
-        "value": "28 – 35 mm"
+        "value": "28 \u2013 35 mm"
       },
       {
         "label": "Water Resistance",
@@ -674,7 +687,7 @@
     "title": "3 Layer Boards",
     "category": "Tri-Layer Engineered Boards",
     "tagline": "Enhanced strength, impact resistance, and a glossy waterproof surface for modern construction",
-    "description": "Built with a robust three-layered structure, Defenseply 3 Layer Boards offer enhanced strength, impact resistance, and a glossy, waterproof surface—perfect for modern construction needs. With a wood powder-rich core, it ensures higher screw-holding capacity, durability, and grip. Toxin-free, nonflammable, and chemical-resistant, it's the ideal choice for projects that demand performance, safety, and style.",
+    "description": "Built with a robust three-layered structure, Defenseply 3 Layer Boards offer enhanced strength, impact resistance, and a glossy, waterproof surface\u2014perfect for modern construction needs. With a wood powder-rich core, it ensures higher screw-holding capacity, durability, and grip. Toxin-free, nonflammable, and chemical-resistant, it's the ideal choice for projects that demand performance, safety, and style.",
     "extendedDescription": [
       "The tri-layer configuration sandwiches a dense, fiber-reinforced core between two ultra-hard, non-porous outer layers. This delivers a board with vastly superior flexural strength, rigidity, and surface hardness compared to conventional single-layer boards.",
       "The smooth glossy skin resists scratches, chemical cleaning agents, and heavy impacts, making it the premier choice for modular casework, kitchen counters, and load-bearing interior fitouts."
@@ -697,9 +710,9 @@
         "caption": "Natural grain face veneers bonded over high-density composite core."
       },
       {
-        "src": "/assets/products/3layerwpcboard_main.webp",
-        "alt": "Calibrated Layer Profile",
-        "caption": "Cross-section illustrating the multi-layer co-extrusion technology."
+        "src": "/assets/products/3layerboards_studio_detail.jpg",
+        "alt": "Calibrated 3-Layer Composite Core",
+        "caption": "Precision-engineered 3-layer co-extruded boards with dense core and ultra-smooth white surfaces."
       }
     ],
     "traits": [
@@ -708,14 +721,23 @@
       "Glossy, waterproof surface engineered for modern construction demands",
       "Toxin-free, nonflammable, and chemical-resistant for total safety",
       "Perfect for high-load furniture, kitchen carcases, and luxury wall panels",
-      "Zero formaldehyde emissions — promotes healthy indoor air quality"
+      "Zero formaldehyde emissions \u2014 promotes healthy indoor air quality"
     ],
     "specs": {
       "thickness": "6 mm to 30 mm",
       "density": "0.55 g/cc to 0.85 g/cc",
-      "standardSize": "8 ft × 4 ft (2440 × 1220 mm)",
-      "finishes": ["Hard Glossy", "Satin Smooth", "Matte Architectural"],
-      "colors": ["White", "Natural Wood Tone", "Ivory", "Grey"],
+      "standardSize": "8 ft \u00d7 4 ft (2440 \u00d7 1220 mm)",
+      "finishes": [
+        "Hard Glossy",
+        "Satin Smooth",
+        "Matte Architectural"
+      ],
+      "colors": [
+        "White",
+        "Natural Wood Tone",
+        "Ivory",
+        "Grey"
+      ],
       "fireRating": "Class 1 Nonflammable, low smoke emission",
       "waterResistance": "100% Waterproof, zero swelling",
       "screwHolding": "Extra wood powder core delivers >2000 N grip strength"
@@ -800,9 +822,9 @@
         "caption": "Technical exploded view showing outer protective skins and dense composite core."
       },
       {
-        "src": "/assets/products/3layerboard2.jpg",
-        "alt": "Multi-Panel Stack Detail",
-        "caption": "Precision calibrated edges displaying multi-layer structural co-extrusion."
+        "src": "/assets/products/3layerwpcboard_lifestyle.jpg",
+        "alt": "Heavy-Duty 3-Layer WPC Structural Profile",
+        "caption": "Dense wood polymer composite core flanked by weather-resistant, scratch-proof woodgrain armor layers."
       }
     ],
     "traits": [
@@ -816,8 +838,12 @@
     "specs": {
       "thickness": "8 mm to 35 mm",
       "density": "0.60 g/cc to 0.88 g/cc",
-      "standardSize": "8 ft × 4 ft (2440 × 1220 mm)",
-      "finishes": ["Glossy Smooth", "Architectural Matte", "Textured Embossed"],
+      "standardSize": "8 ft \u00d7 4 ft (2440 \u00d7 1220 mm)",
+      "finishes": [
+        "Glossy Smooth",
+        "Architectural Matte",
+        "Textured Embossed"
+      ],
       "colors": [
         "Teak Brown",
         "Ivory White",
@@ -908,13 +934,13 @@
         "caption": "Precision-milled composite sample boards illustrating layered edge construction."
       },
       {
-        "src": "/assets/products/pvccolourboraddf6.webp",
-        "alt": "Architectural Gallery Display",
-        "caption": "Color panel installation demonstrating rich light reflection and satin texture."
+        "src": "/assets/products/3layervpccolourboard(main).jpg",
+        "alt": "Curated Designer Multi-Layer Colour Boards",
+        "caption": "Comprehensive palette of co-extruded architectural finishes showcasing chamfered edges and internal core."
       }
     ],
     "traits": [
-      "Feature: Pre-coloured factory finish—absolutely no painting or lamination needed",
+      "Feature: Pre-coloured factory finish\u2014absolutely no painting or lamination needed",
       "Use: Interior & decorative architectural applications, luxury furniture, accent walls",
       "Traits: 100% Waterproof, vibrant long-lasting pigments, toxin-free",
       "Colours: Available in multiple vibrant, curated designer shades",
@@ -924,8 +950,12 @@
     "specs": {
       "thickness": "8 mm to 25 mm",
       "density": "0.55 g/cc to 0.85 g/cc",
-      "standardSize": "8 ft × 4 ft (2440 × 1220 mm)",
-      "finishes": ["Velvety Matte", "Glossy Glaze", "Fine Sanded"],
+      "standardSize": "8 ft \u00d7 4 ft (2440 \u00d7 1220 mm)",
+      "finishes": [
+        "Velvety Matte",
+        "Glossy Glaze",
+        "Fine Sanded"
+      ],
       "colors": [
         "Sage Green",
         "Terracotta Rust",
@@ -1019,14 +1049,9 @@
         "caption": "Cross-section showing hard glossy co-extruded armor layers."
       },
       {
-        "src": "/assets/products/3layerboard2.jpg",
-        "alt": "Studio Material Display",
-        "caption": "Stacked precision-calibrated boards ready for high-end furnishing."
-      },
-      {
-        "src": "/assets/Spaces_Outdoor_crop.jpg",
-        "alt": "Outdoor Patio and Deck Application",
-        "caption": "Outdoor architectural installation with high UV and weather resistance."
+        "src": "/assets/products/3layerWpcboards(main).jpg",
+        "alt": "Multi-Layer Composite Production Stack",
+        "caption": "Industrial calibrated stack of multi-layer cellular panels with durable protective surface."
       }
     ],
     "traits": [
@@ -1040,7 +1065,7 @@
     "specs": {
       "thickness": "6 mm to 35 mm",
       "density": "0.55 g/cc to 0.90 g/cc",
-      "standardSize": "8 ft × 4 ft (2440 × 1220 mm)",
+      "standardSize": "8 ft \u00d7 4 ft (2440 \u00d7 1220 mm)",
       "finishes": [
         "Hard Glossy Armor",
         "Satin Matte",

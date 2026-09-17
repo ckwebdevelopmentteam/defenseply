@@ -6,12 +6,12 @@ export function Applications() {
     <section
       id="applications"
       data-section="applications"
-      className="relative bg-white py-20 max-phone:py-12"
+      className="relative bg-white py-20 max-phone:py-0 max-phone:mb-12 max-md:py-0 max-md:mb-12"
     >
       <span id="product" className="absolute top-0" aria-hidden="true" />
       <div className="mx-auto flex max-w-[1000px] flex-col gap-4 pb-8 max-phone:pb-6">
         <p className="text-center text-fluid">Defenseply Applications</p>
-        <Heading className="mx-auto max-w-[800px] text-center">
+        <Heading className="mx-auto font-semibold max-w-[800px] text-center">
           Meaningful design for the spaces we live in
         </Heading>
       </div>

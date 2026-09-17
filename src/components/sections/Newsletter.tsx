@@ -16,7 +16,7 @@ export function Newsletter() {
         <div className="flex-[1_1_22%] py-12 pl-[38px] max-[1499px]:basis-[30%] max-[1139px]:px-[38px] max-[1139px]:pb-0">
           <div className="flex flex-col gap-4">
             <Heading
-              className="max-w-[80%] max-phone:max-w-full"
+              className="max-w-[80%] max-phone:max-w-full font-semibold"
               id="newsletter-title"
             >
               Get inspired with our newsletter

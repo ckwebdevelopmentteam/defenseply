@@ -2,16 +2,19 @@ import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 export function ProductSection({
   className,
+  children,
   ...props
 }: ComponentProps<"section">) {
   return (
     <section
       {...props}
       className={cn(
-        "max-w-[1440px] mx-auto py-[60px] px-[5%] max-[860px]:py-11 max-[860px]:px-[5%] max-sm:py-[34px] max-sm:px-[4%] max-[390px]:py-7",
+        "w-full px-[5%] py-[clamp(44px,5vw,76px)] max-sm:px-[4%] max-sm:py-8",
         className,
       )}
-    />
+    >
+      <div className="mx-auto max-w-[1440px]">{children}</div>
+    </section>
   );
 }
 export function ProductSectionHeading({

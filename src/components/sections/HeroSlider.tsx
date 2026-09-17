@@ -52,7 +52,7 @@ export function HeroSlider({ scenes }: { scenes: HeroScene[] }) {
 
       <div className="pointer-events-none absolute inset-0 z-[3] bg-black/25" />
 
-      <div className="relative z-[4] flex shrink-0 flex-col items-start justify-end gap-[2.1875em] self-stretch px-[2.375em] py-[2.0625em] max-tablet:pb-[6.0625em] max-phone:gap-[2em] max-phone:pb-[9.0625em] max-phone:text-[2.767vw]">
+      <div className="relative z-[4] flex shrink-0 flex-col items-start justify-end gap-[2.1875em] self-stretch px-[2.375em] py-[2.0625em] max-tablet:pb-[6.0625em] max-phone:gap-[2em] max-phone:pb-[9.0625em] max-phone:text-[2.767vw] max-md:px-5 max-phone:px-5">
         <div className="max-w-[20%] text-white max-tablet:max-w-[40%] max-phone:max-w-[85%]">
           <p className="text-[clamp(16px,1.06vw,32px)] leading-[1.375] tracking-[.03125em] max-tablet:text-[clamp(17px,2.214vw,34px)] max-phone:text-[clamp(15px,4.28vw,30px)] max-phone:leading-[1.315rem]">
             WPC and PVC solutions for thoughtfully designed spaces.

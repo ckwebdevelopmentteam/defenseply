@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { FloatingActions } from "@/components/ui/FloatingActions";
 import {
   products,
   getProductBySlug,
@@ -13,7 +12,6 @@ import { ProductNarrative } from "@/components/product/ProductNarrative";
 import { ProductSpecifications } from "@/components/product/ProductSpecifications";
 import { ProductApplications } from "@/components/product/ProductApplications";
 import { ProductGreenPromise } from "@/components/product/ProductGreenPromise";
-import { ProductInquiry } from "@/components/product/ProductInquiry";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -64,33 +62,35 @@ export default async function ProductDetailPage({ params }: PageProps) {
     <>
       <ProductPageAnimations key={product.slug} />
       <main
-        className="bg-[#f7f7f6] text-[#1a1a1a] min-h-screen pb-20 max-sm:pb-[50px]"
+        className="bg-[#f7f7f6] text-[#1a1a1a] min-h-screen overflow-hidden"
         id="main-content"
       >
         {/* Breadcrumbs */}
-        <div className="pt-[120px] pb-6 px-[5%] max-w-[1440px] mx-auto max-desktop:pt-[147px] max-phone:pt-[125px] max-sm:pb-3.5 max-sm:px-[4%] max-[390px]:pb-3 animate-fade-in">
-          <nav
-            aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-xs tracking-[0.8px] uppercase text-[#767472] flex-wrap max-sm:text-[10px] max-sm:gap-1.5"
-          >
-            <Link
-              href="/"
-              className="text-[#767472] no-underline transition-colors duration-200 hover:text-[#1a1a1a]"
+        <div className="w-full pt-[120px] pb-4 px-[5%] max-desktop:pt-[130px] max-phone:pt-[106px] max-sm:pb-3 max-sm:px-[4%] animate-fade-in">
+          <div className="mx-auto max-w-[1440px]">
+            <nav
+              aria-label="Breadcrumb"
+              className="flex items-center gap-2 text-xs tracking-[0.8px] uppercase text-[#767472] flex-wrap max-sm:text-[10px] max-sm:gap-1.5"
             >
-              Home
-            </Link>
-            <span className="opacity-40 text-[11px]">/</span>
-            <Link
-              href="/#products"
-              className="text-[#767472] no-underline transition-colors duration-200 hover:text-[#1a1a1a]"
-            >
-              Products
-            </Link>
-            <span className="opacity-40 text-[11px]">/</span>
-            <span className="text-[#1a1a1a] font-medium" aria-current="page">
-              {product.title}
-            </span>
-          </nav>
+              <Link
+                href="/"
+                className="text-[#767472] no-underline transition-colors duration-200 hover:text-[#1a1a1a]"
+              >
+                Home
+              </Link>
+              <span className="opacity-40 text-[11px]">/</span>
+              <Link
+                href="/#products"
+                className="text-[#767472] no-underline transition-colors duration-200 hover:text-[#1a1a1a]"
+              >
+                Products
+              </Link>
+              <span className="opacity-40 text-[11px]">/</span>
+              <span className="text-[#1a1a1a] font-medium" aria-current="page">
+                {product.title}
+              </span>
+            </nav>
+          </div>
         </div>
 
         {/* Product Hero Section */}
@@ -108,14 +108,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
         {/* Green Promise Banner */}
         <ProductGreenPromise />
 
-        {/* Inquiry & Direct Contact Form */}
-        <ProductInquiry product={product} />
-
-        {/* Related Products Section */}
+        {/* Related Products Section ("Explore Related Surfaces") */}
         <RelatedProducts relatedProducts={relatedProducts} />
       </main>
-
-      <FloatingActions quoteHref="#inquiry" />
     </>
   );
 }

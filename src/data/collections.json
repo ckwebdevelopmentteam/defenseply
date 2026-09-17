@@ -1,0 +1,82 @@
+[
+  {
+    "title": "PVC Foam Boards",
+    "image": "/assets/products/defenceplyfoamboard4.jpg",
+    "hoverImage": "/assets/products/defenceplyfoamboard3.jpg",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "PVC Colour Boards",
+    "image": "/assets/products/pvccolourboraddf6.webp",
+    "hoverImage": "/assets/products/pvccolourboarddf4.jpg",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "WPC Boards",
+    "image": "/assets/products/wpcboardsdf2.webp",
+    "hoverImage": "/assets/products/wpcboardsdf1.webp",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "WPC Door Frames",
+    "image": "/assets/products/wpcdoorframedfdf2.jpg",
+    "hoverImage": "/assets/products/wpcdoorframe2.webp",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "WPC Window Frames",
+    "image": "/assets/products/wpcwindowframesdf2.webp",
+    "hoverImage": "/assets/products/wpcwindowframesdf.webp",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "WPC Doors",
+    "image": "/assets/products/wpcdoors(main).webp",
+    "hoverImage": "/assets/products/wpcdoors1.jpg",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "3 Layer Boards",
+    "image": "/assets/products/3layerboards(main).jpg",
+    "hoverImage": "/assets/products/3layerboard2.jpg",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "3 Layer WPC Board",
+    "image": "/assets/products/3layerWpcboards(main).jpg",
+    "hoverImage": "/assets/products/3layerwpcboard2.jpg",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "3 Layer WPC Colour Board",
+    "image": "/assets/products/3layervpccolourboard(main).jpg",
+    "hoverImage": "/assets/products/3layerwpccolourboard2.jpg",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  },
+  {
+    "title": "3 Layer Multi Board",
+    "image": "/assets/products/3layermultiboard(main).jpg",
+    "hoverImage": "/assets/products/3layermultiboard2.jpg",
+    "href": "#products",
+    "brand": "Defenseply",
+    "label": "Defenseply"
+  }
+]

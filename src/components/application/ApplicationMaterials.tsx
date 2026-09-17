@@ -3,21 +3,29 @@ import type { ProductDetail } from "@/types/product";
 import { Heading } from "@/components/ui/Heading";
 import { ArrowIcon } from "@/components/ui/ActionLink";
 
+import { cn } from "@/lib/cn";
+
 /** Uses catalog content and imagery, independently of the provisional detail-page UI. */
 export function ApplicationMaterials({
   products,
+  title = "Materials for your next idea",
+  description = "Explore the board range with your designer or fabricator. The right grade, thickness and finish depend on your application and installation.",
+  className,
 }: {
   products: ProductDetail[];
+  title?: string;
+  description?: string;
+  className?: string;
 }) {
   return (
-    <section className="px-[5%] py-[clamp(56px,7vw,112px)]">
+    <section className={cn("w-full px-[5%] py-[clamp(44px,5vw,76px)] max-sm:px-[4%] max-sm:py-8", className)} aria-label={title}>
       <div className="mx-auto max-w-[1440px]">
-        <Heading className="max-w-3xl">Materials for your next idea</Heading>
-        <p className="mt-6 mb-10 max-w-2xl text-base leading-relaxed font-light">
-          Explore the board range with your designer or fabricator. The right
-          grade, thickness and finish depend on your application and
-          installation.
-        </p>
+        <Heading className="max-w-3xl">{title}</Heading>
+        {description && (
+          <p className="mt-6 mb-10 max-w-2xl text-base leading-relaxed font-light">
+            {description}
+          </p>
+        )}
         <div className="grid grid-cols-3 gap-6 max-phone:grid-cols-1 max-phone:gap-10">
           {products.map((product) => (
             <Link

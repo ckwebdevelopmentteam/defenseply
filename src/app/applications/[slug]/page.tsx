@@ -7,8 +7,6 @@ import { ApplicationNavigation } from "@/components/application/ApplicationNavig
 import { ApplicationStory } from "@/components/application/ApplicationStory";
 import { ApplicationGallery } from "@/components/application/ApplicationGallery";
 import { ApplicationMaterials } from "@/components/application/ApplicationMaterials";
-import { ContactProject } from "@/components/sections/contact/ContactProject";
-import { FloatingActions } from "@/components/ui/FloatingActions";
 
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
@@ -41,12 +39,7 @@ export default async function ApplicationPage({ params }: Props) {
         <ApplicationStory application={application} />
         <ApplicationGallery application={application} />
         <ApplicationMaterials products={materials} />
-        <ContactProject
-          key={application.slug}
-          context={`${application.title} application`}
-        />
       </main>
-      <FloatingActions quoteHref="#project-form" />
     </>
   );
 }

@@ -15,8 +15,9 @@ interface ProductGalleryProps {
 }
 
 export function ProductGallery({ gallery, title, badge }: ProductGalleryProps) {
+  const displayGallery = gallery.slice(0, 3);
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeImage = gallery[activeIndex] || gallery[0];
+  const activeImage = displayGallery[activeIndex] || displayGallery[0];
 
   if (!activeImage) return null;
   return (
@@ -43,13 +44,13 @@ export function ProductGallery({ gallery, title, badge }: ProductGalleryProps) {
       </div>
 
       {/* Thumbnails */}
-      {gallery.length > 1 && (
+      {displayGallery.length > 1 && (
         <div
           className="flex gap-2.5 overflow-x-auto pb-1 [scrollbar-width:thin]"
           role="group"
           aria-label="Product image gallery"
         >
-          {gallery.map((item, idx) => (
+          {displayGallery.map((item, idx) => (
             <button
               key={item.src + idx}
               type="button"
