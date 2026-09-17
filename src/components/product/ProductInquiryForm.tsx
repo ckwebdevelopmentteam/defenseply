@@ -124,7 +124,7 @@ export function ProductInquiryForm({ productTitle }: ProductInquiryFormProps) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full inline-flex items-center justify-center gap-2.5 bg-[#1a1a1a] text-white text-xs tracking-[1.2px] uppercase font-medium font-sans py-[15px] px-7 rounded-[2px] transition-all duration-200 border border-[#1a1a1a] hover:bg-[#333333] hover:-translate-y-0.5 max-sm:py-[13px] max-sm:px-[18px] max-sm:text-[11px] disabled:opacity-50 disabled:cursor-wait cursor-pointer"
+            className="w-full inline-flex items-center justify-center gap-2.5 bg-[#1c3f21] text-white text-xs tracking-[1.2px] uppercase font-medium font-sans py-[15px] px-7 rounded-[2px] transition-all duration-200 border border-[#1c3f21] hover:bg-[#15321a] hover:-translate-y-0.5 max-sm:py-[13px] max-sm:px-[18px] max-sm:text-[11px] disabled:opacity-50 disabled:cursor-wait cursor-pointer"
           >
             {loading ? "Submitting Inquiry..." : "Submit Technical Inquiry"}
             <ArrowRight size={16} />

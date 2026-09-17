@@ -109,7 +109,7 @@ export function Newsletter() {
             </label>
             <button
               type="submit"
-              className="flex h-[45px] w-full items-center justify-between gap-2.5 border border-ink bg-ink px-[23px] py-[11px] text-sm text-white transition-colors hover:border-[#c3ffff] hover:bg-[#c3ffff] hover:text-ink"
+              className="flex h-[45px] w-full items-center justify-between gap-2.5 border border-[#1c3f21] bg-[#1c3f21] px-[23px] py-[11px] text-sm text-white transition-colors hover:bg-[#15321a] hover:border-[#15321a]"
             >
               I want to subscribe <ArrowIcon className="h-[17px] w-[18px]" />
             </button>

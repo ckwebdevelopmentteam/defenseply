@@ -13,11 +13,11 @@ export function ArrowIcon({ className }: { className?: string }) {
   );
 }
 const variants = {
-  dark: "border-ink bg-ink text-white hover:bg-[#c3ffff] hover:text-ink hover:border-[#c3ffff]",
+  dark: "border-[#1c3f21] bg-[#1c3f21] text-white hover:bg-[#15321a] hover:border-[#15321a]",
   light:
-    "border-white bg-white text-ink hover:bg-[#c3ffff] hover:border-[#c3ffff]",
+    "border-white bg-white text-ink hover:bg-[#1c3f21] hover:text-white hover:border-[#1c3f21]",
   outline:
-    "border-ink bg-transparent text-ink hover:bg-[#c3ffff] hover:border-[#c3ffff]",
+    "border-ink bg-transparent text-ink hover:bg-[#1c3f21] hover:text-white hover:border-[#1c3f21]",
 };
 /** All promotional destinations remain inert until a local href is deliberately supplied. */
 export function ActionLink({

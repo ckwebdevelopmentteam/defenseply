@@ -29,9 +29,9 @@ export function AboutStory() {
       className="w-full bg-[#f4f3ef] py-24 max-[768px]:py-16"
     >
       <div className="w-full px-[38px] max-[768px]:px-6">
-        {/* Refined Section Marker with subtle gold accent line */}
+        {/* Refined Section Marker with subtle green accent line */}
         <div className="mb-8 flex items-center gap-2.5">
-          <span className="h-px w-5 bg-[#d9c34a]" aria-hidden="true" />
+          <span className="h-px w-5 bg-[#1c3f21]" aria-hidden="true" />
           <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#8a8a86]">
             Our Story
           </p>
@@ -60,7 +60,7 @@ export function AboutStory() {
                   <span className="text-[11px] font-medium tracking-[0.16em] uppercase text-[#e7e7e6]">
                     Plot 06, KINFRA Park · NH66 Corridor
                   </span>
-                  <span className="text-[10px] font-medium tracking-[0.18em] uppercase text-[#d9c34a]">
+                  <span className="text-[10px] font-medium tracking-[0.18em] uppercase text-[#a3d9a5]">
                     2-Acre Infrastructure
                   </span>
                 </div>
@@ -96,7 +96,7 @@ export function AboutStory() {
             </p>
 
             {/* Strategic Highlight Callout */}
-            <div className="mt-8 border-l-2 border-[#d9c34a] pl-5 py-1 text-[13.5px] leading-[1.7] text-[#6b6b66] italic">
+            <div className="mt-8 border-l-2 border-[#1c3f21] pl-5 py-1 text-[13.5px] leading-[1.7] text-[#6b6b66] italic">
               &ldquo;Engineered for durability and seamless nationwide accessibility,
               our facility stands at the forefront of India&apos;s composite building
               revolution.&rdquo;
@@ -109,10 +109,10 @@ export function AboutStory() {
           {storyStats.map((stat) => (
             <div
               key={stat.label}
-              className="group relative flex flex-col justify-between border border-black/10 bg-white/90 p-7 lg:p-8 transition-all duration-300 hover:border-[#d9c34a]/60 hover:bg-white"
+              className="group relative flex flex-col justify-between border border-black/10 bg-white/90 p-7 lg:p-8 transition-all duration-300 hover:border-[#1c3f21]/60 hover:bg-white"
             >
-              {/* Subtle gold indicator on hover */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#d9c34a] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              {/* Subtle green indicator on hover */}
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#1c3f21] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               <div>
                 <span className="block text-[clamp(26px,2.2vw,38px)] font-light leading-[1.1] tracking-[-0.02em] text-[#1a1a1a]">

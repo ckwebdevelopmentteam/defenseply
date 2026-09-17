@@ -20,7 +20,7 @@ export function ContactForm({ context }: { context?: string } = {}) {
       {context && <input type="hidden" name="application" value={context} />}
       <div className="grid grid-cols-2 gap-4 max-[520px]:grid-cols-1">
         <label className={labelClass}>
-          Your name <span className="text-[#9a6d00]">*</span>
+          Your name <span className="text-[#1c3f21]">*</span>
           <input
             className={fieldClass}
             name="name"
@@ -29,7 +29,7 @@ export function ContactForm({ context }: { context?: string } = {}) {
           />
         </label>
         <label className={labelClass}>
-          Email address <span className="text-[#9a6d00]">*</span>
+          Email address <span className="text-[#1c3f21]">*</span>
           <input
             className={fieldClass}
             name="email"
@@ -40,7 +40,7 @@ export function ContactForm({ context }: { context?: string } = {}) {
         </label>
       </div>
       <label className={labelClass}>
-        Phone number <span className="text-[#9a6d00]">*</span>
+        Phone number <span className="text-[#1c3f21]">*</span>
         <input
           className={fieldClass}
           name="phone"
@@ -92,9 +92,15 @@ export function ContactForm({ context }: { context?: string } = {}) {
           rows={4}
         />
       </label>
-      <button className={cn(contactSubmit, "mt-0.5! w-full")} type="submit">
-        {submitted ? "Thank you" : "Send enquiry"}
-        <ArrowRight size={17} />
+      <button
+        className={cn(
+          contactSubmit,
+          "mt-0.5! w-full cursor-pointer justify-between text-white font-medium",
+        )}
+        type="submit"
+      >
+        <span>{submitted ? "Thank you" : "Send enquiry"}</span>
+        <ArrowRight size={17} className="text-white" />
       </button>
       {submitted && (
         <p className="mt-[15px] text-xs text-[#4c6b42]" role="status">

@@ -46,7 +46,7 @@ export function ApplicationTabs({ categories }: { categories: Application[] }) {
                   className={cn(
                     "min-h-11 shrink-0 border-b py-2 text-fluid-sm focus-visible:outline-2 focus-visible:outline-offset-[-2px]",
                     i === index
-                      ? "border-ink"
+                      ? "border-[#1c3f21] text-[#1c3f21] font-medium"
                       : "border-transparent font-light",
                   )}
                   onClick={() => setIndex(i)}

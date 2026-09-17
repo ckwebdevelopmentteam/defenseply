@@ -64,7 +64,7 @@ export function Products({
               {/* Progress Line */}
               <div className="relative h-[2px] w-full max-w-[480px] flex-1 overflow-hidden rounded-full bg-[#dcd8d1] max-phone:max-w-none">
                 <div
-                  className="h-full bg-[#1a1a1a] transition-all duration-300 ease-out"
+                  className="h-full bg-[#1c3f21] transition-all duration-300 ease-out"
                   style={{ width: `${(handle.page / handle.pages) * 100}%` }}
                 />
               </div>
