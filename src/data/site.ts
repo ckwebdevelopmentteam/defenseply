@@ -1,10 +1,41 @@
-export const siteNavigation = [
+export interface NavSubItem {
+  title: string;
+  href: string;
+  description?: string;
+}
+
+export interface NavItem {
+  name: string;
+  href: string;
+  children?: NavSubItem[];
+}
+
+export const siteNavigation: NavItem[] = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Product", href: "/#products" },
-  { name: "Applications", href: "/#applications" },
+  { name: "About Us", href: "/about" },
+  {
+    name: "Products",
+    href: "/#products",
+    children: [
+      { title: "PVC Foam Boards", href: "/products/pvc-foam-boards", description: "Lightweight, moisture-immune & durable" },
+      { title: "PVC Colour Boards", href: "/products/pvc-colour-boards", description: "Vibrant solid color polymer boards" },
+      { title: "WPC Boards", href: "/products/wpc-boards", description: "High-density wood-polymer composites" },
+      { title: "PVC Doors & Frames", href: "/products/pvc-doors-and-door-frames", description: "100% waterproof residential doors" },
+      { title: "All Products", href: "/#products", description: "Explore the complete Defenseply collection" },
+    ],
+  },
+  {
+    name: "Applications",
+    href: "/#applications",
+    children: [
+      { title: "Interiors & Modular Kitchens", href: "/applications/interiors", description: "Kitchens, wardrobes & living partitions" },
+      { title: "Commercial Spaces", href: "/applications/commercial", description: "High-traffic & hospitality environments" },
+      { title: "Creative & Signage", href: "/applications/creative", description: "CNC routing, 3D cutting & displays" },
+      { title: "All Applications", href: "/#applications", description: "Explore all application spaces" },
+    ],
+  },
   { name: "Gallery", href: "/#gallery" },
-  { name: "Contact Us", href: "/contact-us" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 export const footerGroups = [

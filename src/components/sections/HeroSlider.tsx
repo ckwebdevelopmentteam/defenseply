@@ -1,103 +1,97 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ApplicationImage } from "@/components/application/ApplicationImage";
+import { ArrowRight } from "lucide-react";
 import type { HeroScene } from "@/data/hero";
-import { cn } from "@/lib/cn";
 
-export function HeroSlider({ scenes }: { scenes: HeroScene[] }) {
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const reduced = useReducedMotion();
+export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    if (paused || reduced || scenes.length <= 1) return;
-    const timer = setInterval(
-      () => setActive((i) => (i + 1) % scenes.length),
-      5000,
-    );
-    return () => clearInterval(timer);
-  }, [paused, reduced, scenes.length]);
-
-  if (!scenes.length) return null;
-  const current = scenes[active] ?? scenes[0];
+  const handleTimeUpdate = () => {
+    if (videoRef.current && videoRef.current.currentTime >= 8) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(() => {});
+    }
+  };
 
   return (
     <section
       id="home"
       data-section="hero"
-      className="page-bleed relative flex h-screen max-w-screen flex-col justify-end overflow-hidden"
-      aria-label="WPC and PVC solutions for thoughtfully designed spaces"
+      className="relative w-full pt-[76px] sm:pt-[84px] lg:pt-[90px]"
+      aria-label="One of Kerala's biggest plywood manufacturing companies"
     >
-      <AnimatePresence initial={false}>
-        <motion.div
-          key={current.slug}
-          className="absolute inset-0 z-[2]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: reduced ? 0 : 1 }}
-        >
-          <ApplicationImage
-            src={current.hero}
-            mobileSrc={current.heroMobile}
-            alt={current.heroAlt}
-            fill
-            priority={active === 0}
-          />
-        </motion.div>
-      </AnimatePresence>
-
-      <div className="pointer-events-none absolute inset-0 z-[3] bg-black/25" />
-
-      <div className="relative z-[4] flex shrink-0 flex-col items-start justify-end gap-[2.1875em] self-stretch px-[2.375em] py-[2.0625em] max-tablet:pb-[6.0625em] max-phone:gap-[2em] max-phone:pb-[9.0625em] max-phone:text-[2.767vw] max-md:px-5 max-phone:px-5">
-        <div className="max-w-[20%] text-white max-tablet:max-w-[40%] max-phone:max-w-[85%]">
-          <p className="text-[clamp(16px,1.06vw,32px)] leading-[1.375] tracking-[.03125em] max-tablet:text-[clamp(17px,2.214vw,34px)] max-phone:text-[clamp(15px,4.28vw,30px)] max-phone:leading-[1.315rem]">
-            WPC and PVC solutions for thoughtfully designed spaces.
-          </p>
+      {/* Video Container cleanly fitted under the navbar, extending fully to viewport bottom */}
+      <div className="relative flex w-full h-[calc(100vh-76px)] sm:h-[calc(100vh-84px)] lg:h-[calc(100vh-90px)] min-h-[520px] items-end overflow-hidden">
+        {/* Background Manufacturing Facility Video (plays up to 8s) */}
+        <div className="absolute inset-0 z-[1] overflow-hidden">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            onTimeUpdate={handleTimeUpdate}
+            className="h-full w-full object-cover"
+          >
+            <source src="/assets/hero-facility.mp4#t=0,8" type="video/mp4" />
+            <source
+              src="/Plywood_manufacturing_facility_p._1080p_20260917175126.mp4#t=0,8"
+              type="video/mp4"
+            />
+          </video>
+          {/* Cinematic Overlays to blend smoothly and highlight bottom corner content */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
         </div>
 
-        <div
-          className="flex flex-col items-start justify-center gap-[1.1em]"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          {scenes.map((scene, i) => (
-            <h2
-              key={scene.slug}
-              className={cn(
-                "cursor-pointer text-[clamp(75px,5vw,150px)] font-extralight uppercase leading-[.7333] text-white transition-opacity duration-200 hover:opacity-100 max-tablet:text-[clamp(75px,9.766vw,150px)] max-phone:text-[clamp(48px,12.8vw,96px)]",
-                active === i ? "opacity-100" : "opacity-60",
-              )}
-              onMouseEnter={() => setActive(i)}
-            >
+        {/* Content Area - Placed at corner side below */}
+        <div className="relative z-[3] w-full px-6 sm:px-10 lg:px-14 pb-10 sm:pb-14 lg:pb-16 pt-10">
+          <div className="flex max-w-2xl flex-col items-start gap-3.5 sm:gap-4.5">
+
+            {/* Non-bold, Well-proportioned Headline */}
+            <h1 className="text-[clamp(28px,3.4vw,48px)] font-normal text-white leading-[1.18] tracking-normal">
+              One of the biggest plywood manufacturing companies in Kerala
+            </h1>
+
+            {/* Description */}
+            <p className="max-w-xl text-[clamp(15px,1.08vw,18px)] font-light leading-relaxed text-white/85">
+              Decades of industrial expertise and calibrated precision manufacturing, delivering high-grade plywood, blockboards, and veneers across Kerala.
+            </p>
+
+            {/* Action CTAs */}
+            <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <Link
-                href={scene.href}
-                onFocus={() => {
-                  setActive(i);
-                  setPaused(true);
-                }}
-                onBlur={() => setPaused(false)}
-                className="focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                href="#products"
+                className="inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 text-sm font-medium text-[#163326] shadow-md transition-all duration-200 hover:bg-white/90 hover:scale-[1.01] active:scale-[0.98]"
               >
-                {scene.title}
+                <span>Explore Products</span>
+                <ArrowRight className="h-4 w-4" />
               </Link>
-            </h2>
-          ))}
-        </div>
-      </div>
 
-      <a
-        href="#applications"
-        className="absolute bottom-0 left-1/2 z-[9] -translate-1/2 max-phone:hidden"
-        aria-label="Explore DefensePly applications"
-      >
-        <span className="relative inline-block h-9 w-[26px] rounded-[40px] border border-white">
-          <span className="absolute top-2 left-[11px] size-0.5 animate-scroll-cue rounded-full bg-white" />
-        </span>
-      </a>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/10 px-6 py-3 text-sm font-normal text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 active:scale-[0.98]"
+              >
+                <span>Contact Us</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Subtle scroll cue */}
+        <a
+          href="#about"
+          className="absolute bottom-3 left-1/2 z-[9] -translate-x-1/2 max-tablet:hidden opacity-60 transition-opacity hover:opacity-100"
+          aria-label="Scroll down"
+        >
+          <span className="relative inline-block h-7 w-4.5 rounded-[40px] border border-white/50">
+            <span className="absolute top-1.5 left-[7px] h-1.5 w-0.5 animate-scroll-cue rounded-full bg-white" />
+          </span>
+        </a>
+      </div>
     </section>
   );
 }
