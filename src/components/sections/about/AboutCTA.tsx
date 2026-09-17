@@ -22,9 +22,9 @@ export function AboutCTA() {
       </div>
       <a
         href="/contact-us"
-        className="mt-0 inline-flex shrink-0 items-center justify-between gap-7 border-0 bg-[#f4d832] px-[17px] py-[13px] text-[11px] leading-none uppercase text-[#171717] transition-colors hover:bg-[#e8c825] min-w-[160px] max-[520px]:min-w-[130px] max-[520px]:text-[10px] max-[520px]:px-[13px] max-[520px]:py-2.5"
+        className="mt-0 inline-flex shrink-0 items-center justify-between gap-7 border-0 bg-[#1c3f21] px-[17px] py-[13px] text-[11px] leading-none uppercase text-white font-medium transition-colors hover:bg-[#15321a] min-w-[160px] max-[520px]:min-w-[130px] max-[520px]:text-[10px] max-[520px]:px-[13px] max-[520px]:py-2.5"
       >
-        Contact Us <ArrowRight size={16} />
+        Contact Us <ArrowRight size={16} className="text-white" />
       </a>
     </section>
   );

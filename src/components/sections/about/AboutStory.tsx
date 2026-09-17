@@ -35,9 +35,12 @@ export function AboutStory() {
       <div className="w-full px-[38px] max-[768px]:px-6 max-phone:px-4">
         {/* Header: Left-aligned editorial title and headline */}
         <div className="mb-12 lg:mb-16 flex w-full max-w-[1020px] flex-col gap-3.5 sm:gap-5 text-left items-start max-[768px]:mb-10 max-phone:mb-8">
-          <p className="text-fluid text-left">
-            Our Story
-          </p>
+          <div className="flex items-center gap-2.5">
+            <span className="h-px w-5 bg-[#1c3f21]" aria-hidden="true" />
+            <p className="text-fluid text-left">
+              Our Story
+            </p>
+          </div>
           <h2 className="max-w-[1020px] text-left text-[clamp(28px,2.8vw,46px)] font-light leading-[1.12] tracking-[-0.02em] uppercase text-[#1a1a1a]">
             Founded to Meet the Accelerating Demand for Sustainable Construction Alternatives
           </h2>
@@ -76,7 +79,7 @@ export function AboutStory() {
                   </span>
                 </div>
                 <div className="text-right max-[520px]:text-left">
-                  <span className="block text-[9.5px] font-medium tracking-[0.22em] uppercase text-white/60">
+                  <span className="block text-[9.5px] font-medium tracking-[0.22em] uppercase text-[#a3d9a5]">
                     Industrial Scale
                   </span>
                   <span className="mt-0.5 block text-[12px] font-light tracking-[0.06em] uppercase text-white/95">
@@ -125,7 +128,7 @@ export function AboutStory() {
             </div>
 
             {/* Highlighted Statement Callout */}
-            <div className="mt-6 border-l-2 border-[#d9c34a] bg-black/[0.025] py-3.5 pl-5 pr-4">
+            <div className="mt-6 border-l-2 border-[#1c3f21] bg-black/[0.025] py-3.5 pl-5 pr-4">
               <p className="text-[13.5px] leading-[1.68] font-light text-[#444440] italic">
                 &ldquo;Engineered for durability and seamless nationwide accessibility, our facility stands at the forefront of India&apos;s composite building revolution.&rdquo;
               </p>
@@ -139,14 +142,14 @@ export function AboutStory() {
             {storyFacts.map((fact) => (
               <div
                 key={fact.label}
-                className="group flex flex-col justify-between border-l border-black/10 pl-6 transition-colors duration-250 hover:border-[#d9c34a]"
+                className="group flex flex-col justify-between border-l border-black/10 pl-6 transition-colors duration-250 hover:border-[#1c3f21]"
               >
                 <div>
                   <div className="mb-3 flex items-center justify-between">
                     <span className="text-[11px] font-mono tracking-[0.16em] text-[#979793]">
                       {fact.number}
                     </span>
-                    <span className="h-px w-3 bg-[#d9c34a]/60 opacity-0 transition-opacity duration-200 group-hover:opacity-100" aria-hidden="true" />
+                    <span className="h-px w-3 bg-[#1c3f21]/60 opacity-0 transition-opacity duration-200 group-hover:opacity-100" aria-hidden="true" />
                   </div>
                   <span className="block text-[clamp(24px,1.9vw,32px)] font-light leading-[1.1] tracking-[-0.02em] text-[#1a1a1a]">
                     {fact.value}

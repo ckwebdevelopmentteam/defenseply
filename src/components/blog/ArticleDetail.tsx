@@ -20,7 +20,7 @@ export function ArticleDetail({
         <button
           type="button"
           aria-label="Close article detail"
-          className="size-10 cursor-pointer flex items-center justify-center rounded-full border border-black/15 bg-[#f5f5f3] text-[#111] transition-all hover:bg-black hover:text-white"
+          className="size-10 cursor-pointer flex items-center justify-center rounded-full border border-black/15 bg-[#f5f5f3] text-[#111] transition-all hover:bg-[#1c3f21] hover:border-[#1c3f21] hover:text-white"
           onClick={handleClose}
         >
           <svg
@@ -106,7 +106,7 @@ export function ArticleDetail({
         <a
           href="/contact-us#project-form"
           onClick={handleClose}
-          className="inline-flex items-center gap-2 rounded-full bg-[#111] px-6 py-2.5 text-xs font-mono uppercase tracking-wider text-white transition-all hover:bg-[#333] shadow-xs active:scale-95"
+          className="inline-flex items-center gap-2 rounded-full bg-[#1c3f21] px-6 py-2.5 text-xs font-mono uppercase tracking-wider text-white transition-all hover:bg-[#15321a] shadow-xs active:scale-95"
         >
           Inquire Materials
           <svg

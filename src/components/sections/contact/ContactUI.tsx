@@ -12,9 +12,9 @@ export const contactAction =
   "mt-[30px] inline-flex w-fit min-w-[146px] items-center justify-between gap-7 px-[17px] py-[13px] text-[11px] leading-none uppercase text-contact-ink max-[520px]:min-h-[38px] max-[520px]:mt-5 max-[520px]:px-[13px] max-[520px]:py-2.5 max-[520px]:text-[10px]";
 export const contactOutline =
   contactAction +
-  " border border-[#8e8d88] hover:bg-contact-ink hover:text-white";
+  " border border-[#8e8d88] hover:bg-[#1c3f21] hover:border-[#1c3f21] hover:text-white transition-colors";
 export const contactSubmit =
-  contactAction + " border-0 bg-[#f4d832] hover:bg-[#e8c825]";
+  contactAction + " border-0 bg-[#1c3f21] !text-white hover:bg-[#15321a] transition-colors";
 export function ContactEyebrow({ className, ...props }: ComponentProps<"p">) {
   return (
     <p

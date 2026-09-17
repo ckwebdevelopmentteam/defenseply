@@ -45,7 +45,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
             <div className="flex flex-wrap gap-3">
               <a
                 href="/contact-us#project-form"
-                className="inline-flex items-center justify-center gap-2 rounded-[2px] bg-[#1a1a1a] px-5 py-3 text-[12px] font-medium tracking-[1px] uppercase text-white transition-colors hover:bg-[#333]"
+                className="inline-flex items-center justify-center gap-2 rounded-[2px] bg-[#1c3f21] px-5 py-3 text-[12px] font-medium tracking-[1px] uppercase text-white transition-colors hover:bg-[#15321a]"
               >
                 Inquire Directly <ArrowRight size={14} />
               </a>
@@ -78,7 +78,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
                     {item.question}
                   </span>
                   <motion.span
-                    className="flex size-8 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white text-ink"
+                    className={`flex size-8 shrink-0 items-center justify-center rounded-full border transition-colors ${isOpen ? "bg-[#1c3f21] text-white border-[#1c3f21]" : "border-black/10 bg-white text-ink"}`}
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                   >

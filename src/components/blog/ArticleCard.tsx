@@ -25,8 +25,8 @@ export function ArticleCard({
       aria-label={`Read article: ${article.title}`}
     >
       <div className="w-full aspect-[16/11] group cursor-pointer relative overflow-hidden bg-stone">
-        {/* Top-Right Pill/Plus Icon from prompt */}
-        <div className="bg-black/40 absolute opacity-0 group-hover:opacity-100 max-[1025px]:opacity-100 w-8 h-8 rounded-full backdrop-blur-lg text-white flex items-center justify-center top-3 right-3 z-10 pointer-events-none transition-opacity duration-300">
+        {/* Top-Right Pill/Plus Icon with brand green background */}
+        <div className="bg-[#1c3f21]/90 absolute opacity-0 group-hover:opacity-100 max-[1025px]:opacity-100 w-8 h-8 rounded-full backdrop-blur-lg text-white flex items-center justify-center top-3 right-3 z-10 pointer-events-none transition-opacity duration-300 shadow-[0_2px_8px_rgba(28,63,33,0.4)]">
           <span className="absolute w-3.5 h-[1.5px] bg-white"></span>
           <span className="absolute w-[1.5px] h-3.5 bg-white"></span>
         </div>

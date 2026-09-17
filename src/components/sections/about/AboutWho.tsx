@@ -95,7 +95,7 @@ export function AboutWho() {
           {facts.map((fact) => (
             <div
               key={fact.label}
-              className="group relative flex min-h-[260px] flex-col justify-between overflow-hidden border border-black/10 bg-[#181818] p-7 lg:min-h-[285px] lg:p-8 max-[520px]:min-h-[190px] max-[520px]:p-5 transition-colors duration-300 hover:border-[#d9c34a]/60"
+              className="group relative flex min-h-[260px] flex-col justify-between overflow-hidden border border-black/10 bg-[#181818] p-7 lg:min-h-[285px] lg:p-8 max-[520px]:min-h-[190px] max-[520px]:p-5 transition-colors duration-300 hover:border-[#1c3f21]/60"
             >
               {/* Normalized background architectural image */}
               <img
@@ -108,8 +108,8 @@ export function AboutWho() {
               {/* Subtle multi-stop gradient overlay supporting typography */}
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.72)_0%,rgba(17,17,17,0.38)_45%,rgba(17,17,17,0.85)_100%)] transition-opacity duration-300 group-hover:opacity-90" />
 
-              {/* Subtle gold accent indicator on hover at bottom */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#d9c34a] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              {/* Subtle green accent indicator on hover at bottom */}
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#1c3f21] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               {/* Primary Value (Top/Left) */}
               <span className="relative z-10 text-[clamp(21px,1.55vw,28px)] font-light leading-[1.12] tracking-[-0.015em] text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.6)]">

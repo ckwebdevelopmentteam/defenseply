@@ -83,7 +83,7 @@ export function ProductOverview({ product }: { product: ProductDetail }) {
         <div className="flex flex-wrap gap-3 pt-2 max-sm:flex-col max-sm:gap-2.5">
           <a
             href="#project-form"
-            className="inline-flex items-center justify-center gap-2.5 bg-[#1a1a1a] !text-white text-xs tracking-[1.2px] uppercase font-medium font-sans py-[15px] px-7 rounded-[2px] no-underline transition-all duration-200 border border-[#1a1a1a] hover:bg-[#333333] hover:-translate-y-0.5 max-sm:w-full max-sm:py-[13px] max-sm:px-[18px] max-sm:text-[11px]"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#1c3f21] !text-white text-xs tracking-[1.2px] uppercase font-medium font-sans py-[15px] px-7 rounded-[2px] no-underline transition-all duration-200 border border-[#1c3f21] hover:bg-[#15321a] hover:-translate-y-0.5 max-sm:w-full max-sm:py-[13px] max-sm:px-[18px] max-sm:text-[11px]"
           >
             Request a Quote <ArrowRight size={15} />
           </a>
@@ -97,7 +97,7 @@ export function ProductOverview({ product }: { product: ProductDetail }) {
           </a>
           <a
             href="tel:+919605170000"
-            className="inline-flex items-center justify-center gap-2.5 bg-transparent !text-[#1a1a1a] text-xs tracking-[1.2px] uppercase font-medium font-sans py-[15px] px-6 rounded-[2px] no-underline transition-all duration-200 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:!text-white hover:-translate-y-0.5 max-sm:w-full max-sm:py-[13px] max-sm:px-[18px] max-sm:text-[11px]"
+            className="inline-flex items-center justify-center gap-2.5 bg-transparent !text-[#1a1a1a] text-xs tracking-[1.2px] uppercase font-medium font-sans py-[15px] px-6 rounded-[2px] no-underline transition-all duration-200 border border-[#1c3f21] hover:bg-[#1c3f21] hover:!text-white hover:-translate-y-0.5 max-sm:w-full max-sm:py-[13px] max-sm:px-[18px] max-sm:text-[11px]"
           >
             <Phone size={15} /> +91 9605 170 000
           </a>

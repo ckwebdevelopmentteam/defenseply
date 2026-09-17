@@ -28,7 +28,7 @@ function AboutCard({ className, ...props }: ComponentProps<"article">) {
   );
 }
 const actionClass =
-  "inline-flex h-12 items-center justify-center bg-[#111] text-white transition-[background-color,transform,box-shadow] duration-250 hover:-translate-y-px hover:bg-[#2d2d2d] hover:shadow-[0_6px_18px_#00000026]";
+  "inline-flex h-12 items-center justify-center bg-[#1c3f21] text-white transition-[background-color,transform,box-shadow] duration-250 hover:-translate-y-px hover:bg-[#15321a] hover:shadow-[0_6px_18px_rgba(28,63,33,0.35)]";
 export function About({ data = content }: { data?: typeof content }) {
   return (
     <section
@@ -46,7 +46,7 @@ export function About({ data = content }: { data?: typeof content }) {
         <AboutCard className="justify-between px-8 pt-9 pb-8">
           <div>
             <div
-              className="mb-6 flex size-11 items-center justify-center rounded-full border border-black/10 bg-white text-[#1a1a1a] shadow-[0_2px_8px_#0000000a]"
+              className="mb-6 flex size-11 items-center justify-center rounded-full bg-[#1c3f21] text-white shadow-[0_4px_12px_rgba(28,63,33,0.25)]"
               aria-hidden="true"
             >
               <Compass size={22} strokeWidth={1.75} />

@@ -59,7 +59,7 @@ export function ProductGallery({ gallery, title, badge }: ProductGalleryProps) {
               aria-label={`View image ${idx + 1}: ${item.alt}`}
               className={`shrink-0 basis-[72px] h-[72px] rounded-[3px] overflow-hidden border-2 cursor-pointer p-0 transition-all duration-200 bg-white max-sm:basis-[58px] max-sm:h-[58px] ${
                 activeIndex === idx
-                  ? "border-[#1a1a1a] opacity-100"
+                  ? "border-[#1c3f21] opacity-100 shadow-xs"
                   : "border-transparent opacity-65 hover:opacity-95 hover:-translate-y-0.5"
               }`}
               onClick={() => setActiveIndex(idx)}
