@@ -25,14 +25,14 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
         className={cn(
           "group/header fixed inset-x-0 top-0 z-[2147483640] flex justify-center px-8 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] max-desktop:hidden",
           visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none",
-          scrolled ? "py-2.5" : "py-[18px]",
+          "py-2.5",
           solid
             ? "bg-white text-ink shadow-sm"
             : "bg-[linear-gradient(180deg,#0006,transparent)] text-white hover:bg-white hover:bg-none hover:text-ink",
         )}
       >
         <div className="flex w-full max-w-[1650px] items-center justify-between gap-5 max-[1200px]:gap-2.5">
-          <BrandLogo solid={solid} compact={scrolled} />
+          <BrandLogo solid={solid} compact />
           <nav aria-label="Main navigation">
             <ul className="flex items-center gap-8 max-[1400px]:gap-[18px] max-[1200px]:gap-2.5">
               {siteNavigation.map((item) => (

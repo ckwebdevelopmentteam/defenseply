@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn";
 
 export function BrandLogo({
   solid = false,
-  compact = false,
+  compact = true,
   mobile = false,
 }: {
   solid?: boolean;
@@ -11,10 +11,8 @@ export function BrandLogo({
   mobile?: boolean;
 }) {
   const size = mobile
-    ? "h-[54px] max-h-[calc(var(--mobile-nav-height)-6px)] max-phone:h-[38px]"
-    : compact
-      ? "h-[54px]"
-      : "h-[76px] max-[1200px]:h-[66px]";
+    ? "h-[36px] max-h-[calc(var(--mobile-nav-height)-8px)]"
+    : "h-[54px]";
   return (
     <Link
       href="/"

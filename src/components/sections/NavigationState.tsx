@@ -65,13 +65,7 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
   }, []);
   return (
     <NavigationContext.Provider value={{ scrolled, visible, mobileOpen, setMobileOpen }}>
-      <div
-        className={
-          scrolled && !mobileOpen
-            ? "contents [--mobile-nav-height:48px]"
-            : "contents [--mobile-nav-height:90px] max-phone:[--mobile-nav-height:56px]"
-        }
-      >
+      <div className="contents [--mobile-nav-height:48px]">
         {children}
       </div>
     </NavigationContext.Provider>
