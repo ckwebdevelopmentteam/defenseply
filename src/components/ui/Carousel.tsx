@@ -76,11 +76,7 @@ export function Carousel({
     instance.current?.update();
   }, [count, instance]);
   const step = Math.max(1, Math.floor(position.perView));
-<<<<<<< Updated upstream
   const pages = Math.max(1, Math.ceil(count / step));
-=======
-  const pages = Math.ceil(count / step);
->>>>>>> Stashed changes
   const maxIdx =
     instance.current?.track?.details?.maxIdx ??
     Math.max(0, count - Math.floor(position.perView));
@@ -92,7 +88,6 @@ export function Carousel({
   const goToPage = (p: number) => {
     if (!instance.current) return;
     const targetPage = Math.max(1, Math.min(pages, p));
-<<<<<<< Updated upstream
     const targetIndex = targetPage === pages ? maxIdx : (targetPage - 1) * step;
     instance.current.moveToIdx(targetIndex);
   };
@@ -107,14 +102,6 @@ export function Carousel({
       {children}
     </div>
   );
-=======
-    const targetIndex =
-      targetPage === pages ? maxIdx : (targetPage - 1) * step;
-    instance.current.moveToIdx(targetIndex);
-  };
-
-  const slider = <div ref={ref} className={`keen-slider ${className}`}>{children}</div>;
->>>>>>> Stashed changes
   return (
     <>
       {controls?.({
