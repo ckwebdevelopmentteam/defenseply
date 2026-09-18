@@ -18,31 +18,51 @@ export function ApplicationMaterials({
   className?: string;
 }) {
   return (
-    <section className={cn("w-full px-[5%] py-[clamp(44px,5vw,76px)] max-sm:px-[4%] max-sm:py-8", className)} aria-label={title}>
-      <div className="mx-auto max-w-[1440px]">
-        <Heading className="max-w-3xl">{title}</Heading>
-        {description && (
-          <p className="mt-6 mb-10 max-w-2xl text-base leading-relaxed font-light">
-            {description}
+    <section
+      id="materials"
+      className={cn(
+        "w-full px-[5%] py-[clamp(40px,4.5vw,64px)] scroll-mt-24 max-sm:px-[4%] max-sm:py-8",
+        className,
+      )}
+      aria-label={title}
+    >
+      <div className="mx-auto max-w-[1600px]">
+        <div className="mb-8 max-w-3xl">
+          <p className="mb-2 text-xs tracking-[.2em] uppercase text-muted font-medium">
+            Recommended Composite Boards
           </p>
-        )}
-        <div className="grid grid-cols-3 gap-6 max-phone:grid-cols-1 max-phone:gap-10">
+          <Heading className="max-w-3xl">{title}</Heading>
+          {description && (
+            <p className="mt-4 max-w-2xl text-base leading-relaxed font-light text-ink/80">
+              {description}
+            </p>
+          )}
+        </div>
+
+        <div className="grid grid-cols-3 gap-6 max-phone:grid-cols-1 max-phone:gap-8">
           {products.map((product) => (
             <Link
               key={product.slug}
               href={`/products/${product.slug}`}
-              className="group block"
+              className="group flex flex-col justify-between rounded-xs border border-line/60 bg-white p-4 transition-all duration-300 hover:border-ink/40 hover:shadow-sm"
             >
-              <div className="overflow-hidden bg-stone">
-                <img
-                  src={product.card.image}
-                  alt={product.title}
-                  loading="lazy"
-                  className="aspect-[6/5] w-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none"
-                />
+              <div>
+                <div className="overflow-hidden rounded-xs bg-stone">
+                  <img
+                    src={product.card.image}
+                    alt={product.title}
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none"
+                  />
+                </div>
+                {product.specs?.thickness && (
+                  <p className="mt-3 text-[11px] font-mono uppercase tracking-wider text-muted">
+                    Available: {product.specs.thickness}
+                  </p>
+                )}
               </div>
-              <div className="mt-5 flex items-center justify-between gap-4 border-b border-line pb-5">
-                <h3 className="text-lg font-light uppercase">
+              <div className="mt-4 flex items-center justify-between gap-4 border-t border-line/60 pt-3.5">
+                <h3 className="text-base font-normal uppercase tracking-tight text-ink group-hover:text-black">
                   {product.title}
                 </h3>
                 <ArrowIcon />

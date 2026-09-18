@@ -41,8 +41,15 @@ export function About({ data = content }: { data?: typeof content }) {
       <header className="mb-14 flex flex-col items-start gap-4 max-desktop:mb-10 max-phone:mb-6 desktop:grid desktop:grid-cols-[1fr_auto] desktop:items-end desktop:gap-8">
         <h2 className="max-w-[1500px] text-[clamp(28px,2.5vw,48px)] leading-[1.18] font-light tracking-[-.01em] uppercase text-[#1a1a1a] max-md:text-[20px] max-md:leading-[1.28] max-phone:text-[clamp(15.5px,4.4vw,17.5px)] max-phone:leading-[1.32]">
           {(data.headline || "").split("\n").map((line, idx) => (
-            <span key={idx} className="block desktop:whitespace-nowrap">
+            <span
+              key={idx}
+              className={cn(
+                "desktop:whitespace-nowrap",
+                idx === 0 ? "block" : "md:block",
+              )}
+            >
               {line}
+              {idx === 1 ? " " : ""}
             </span>
           ))}
         </h2>
