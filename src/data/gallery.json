@@ -1,772 +1,354 @@
 {
-  "All spaces": [
+  "All Applications": [
     {
-      "title": "Barcelona Design Space",
-      "image": "/assets/cosentino-city-barcelona.avif",
-      "fullImage": "/assets/cosentino-city-barcelona.jpg",
-      "href": "#"
+      "title": "DefensePly Full-Height Wardrobe System with Matte Finish",
+      "image": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp",
+      "fullImage": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Matte White WPC & PVC Boards \u00b7 Seamless Edge Profiles"
     },
     {
-      "title": "Amsterdam Design Studio",
-      "image": "/assets/cosentino-city-amsterdam.avif",
-      "fullImage": "/assets/cosentino-city-amsterdam.jpg",
-      "href": "#"
+      "title": "100% Waterproof WPC Kitchen Sink Carcass & Drawers",
+      "image": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
+      "fullImage": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
+      "category": "Modular Kitchens",
+      "spec": "Calibrated Waterproof WPC Boards \u00b7 Anti-Fungal \u00b7 Zero Swelling"
     },
     {
-      "title": "SQala Design - Sqala Interior Design",
-      "image": "/assets/sqala-design.avif",
-      "fullImage": "/assets/sqala-design.jpg",
-      "href": "#"
+      "title": "Parametric CNC Jali Partition Cut from PVC Foam Board",
+      "image": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "fullImage": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "High-Density PVC Foam Board \u00b7 Chip-Free 90\u00b0 Routing"
     },
     {
-      "title": "FF Home by Dunarra Interior - Dunarra Interior",
-      "image": "/assets/ff-home-by-dunarra-interior.avif",
-      "fullImage": "/assets/ff-home-by-dunarra-interior.jpg",
-      "href": "#"
+      "title": "Modular Kitchen Cabinetry with Moisture-Resistant Shutters",
+      "image": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "fullImage": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "category": "Modular Kitchens",
+      "spec": "High Screw-Holding Composite Core \u00b7 Direct Paintable Finish"
     },
     {
-      "title": "Proyecto Barquillo - Mónica Diago",
-      "image": "/assets/proyecto-barquillo.avif",
-      "fullImage": "/assets/proyecto-barquillo.jpg",
-      "href": "#"
+      "title": "Engineered WPC Door & Window Profiles Array",
+      "image": "/assets/products/wpc-door-window-frames-collection.webp",
+      "fullImage": "/assets/products/wpc-door-window-frames-collection.webp",
+      "category": "Doors & Frames",
+      "spec": "100% Waterproof \u00b7 High Screw Withdrawal \u00b7 Termite Impervious"
     },
     {
-      "title": "Hayley Peterson Residential - Hayley Peterson",
-      "image": "/assets/hayley-peterson-residential.avif",
-      "fullImage": "/assets/hayley-peterson-residential-7f3322.jpg",
-      "href": "#"
+      "title": "Solid WPC Architectural Doors with Woodgrain Embossing",
+      "image": "/assets/products/wpc-designer-doors-collection.webp",
+      "fullImage": "/assets/products/wpc-designer-doors-collection.webp",
+      "category": "Doors & Frames",
+      "spec": "Non-Warping Composite Core \u00b7 Paintable & Laminate-Ready"
     },
     {
-      "title": "Hotel Hyll Cotswolds - Youth Studio",
-      "image": "/assets/hotel-hyll-cotswolds.avif",
-      "fullImage": "/assets/hotel-hyll-cotswolds.jpg",
-      "href": "#"
+      "title": "Modular Walk-In Wardrobe System with Heavy-Duty Carcass",
+      "image": "/assets/applications/wardrobe/brochure-wardrobe-organizer.webp",
+      "fullImage": "/assets/applications/wardrobe/brochure-wardrobe-organizer.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Calibrated Board Matrix \u00b7 High Load-Bearing Shelves"
     },
     {
-      "title": "LLAVANERES - RICARD MENA GARRIGA",
-      "image": "/assets/llavaneres.avif",
-      "fullImage": "/assets/llavaneres.jpg",
-      "href": "#"
+      "title": "Integrated Fluted Headboard & Bedroom Wall Paneling",
+      "image": "/assets/applications/bedroom/brochure-bedroom-headboard-panel.webp",
+      "fullImage": "/assets/applications/bedroom/brochure-bedroom-headboard-panel.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "WPC Fluted Paneling \u00b7 Natural Timber Texture \u00b7 Acoustic Damping"
     },
     {
-      "title": "Battersea Residential - Aflux Interiors",
-      "image": "/assets/battersea-residential.avif",
-      "fullImage": "/assets/battersea-residential-0a89c3.jpg",
-      "href": "#"
+      "title": "Vibrant Pre-Coloured PVC Boards with High-Finish Crust",
+      "image": "/assets/products/pvc-colour-boards-fan-stack.webp",
+      "fullImage": "/assets/products/pvc-colour-boards-fan-stack.webp",
+      "category": "Composite Board Systems",
+      "spec": "Zero Lead Time \u00b7 Pre-Finished Colours \u00b7 No Painting Needed"
     },
     {
-      "title": "Imperfection of Matter - Catarina Carneiro, Jota Barbosa Interiores",
-      "image": "/assets/imperfection-of-matter.avif",
-      "fullImage": "/assets/imperfection-of-matter-229566.jpg",
-      "href": "#"
+      "title": "DefensePly 3-Layer WPC Board Structural Core",
+      "image": "/assets/products/3-layer-wpc-board-structure.webp",
+      "fullImage": "/assets/products/3-layer-wpc-board-structure.webp",
+      "category": "Composite Board Systems",
+      "spec": "Extra Wood Powder Core \u00b7 Enhanced Impact Resistance"
     },
     {
-      "title": "Rocco Place NSW - DSD Design",
-      "image": "/assets/rocco-place-nsw.avif",
-      "fullImage": "/assets/rocco-place-nsw-de2854.jpg",
-      "href": "#"
+      "title": "Commercial Office Workstation Pods & Privacy Dividers",
+      "image": "/assets/applications/commercial/brochure-commercial-office.webp",
+      "fullImage": "/assets/applications/commercial/brochure-commercial-office.webp",
+      "category": "Commercial & Office",
+      "spec": "Rigid PVC/WPC Partitions \u00b7 Flame-Retardant \u00b7 Clean Wireways"
     },
     {
-      "title": "Facade NSW - Architecture / Design  KASA Design and Construct",
-      "image": "/assets/facade-nsw.avif",
-      "fullImage": "/assets/facade-nsw.jpg",
-      "href": "#"
+      "title": "Contemporary Architectural Lounge with Composite Paneling",
+      "image": "/assets/applications/interiors/brochure-interiors-lounge.webp",
+      "fullImage": "/assets/applications/interiors/brochure-interiors-lounge.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "Eco-Friendly Composite Substrates \u00b7 Zero Formaldehyde"
     },
     {
-      "title": "Doncaster House - Piran Boutique Builders and interior Design",
-      "image": "/assets/doncaster-house.avif",
-      "fullImage": "/assets/doncaster-house-07d60c.jpg",
-      "href": "#"
+      "title": "Living Room CNC Partition Lattice with Walnut Finish",
+      "image": "/assets/applications/creative/cnc-screens.webp",
+      "fullImage": "/assets/applications/creative/cnc-screens.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "Parametric Jali Design \u00b7 Ultra-Clean Router Edges"
     },
     {
-      "title": "Montenegro - Monica Arango, Tracy Audi, Johnny Matta / C’est ici Design",
-      "image": "/assets/montenegro.avif",
-      "fullImage": "/assets/montenegro-0fd05a.jpg",
-      "href": "#"
+      "title": "Luxury Walk-in Dressing Wardrobe with Built-in Drawers",
+      "image": "/assets/applications/wardrobe/walk-in-closets.webp",
+      "fullImage": "/assets/applications/wardrobe/walk-in-closets.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "High-Density WPC Carcase \u00b7 Zero Moisture Absorption"
     },
     {
-      "title": "Kollutchen - AOME Architects / Eclectic Designs LLC",
-      "image": "/assets/kollutchen.avif",
-      "fullImage": "/assets/kollutchen.jpg",
-      "href": "#"
+      "title": "Architectural 3D Wall Relief Panels in Commercial Atrium",
+      "image": "/assets/applications/creative/relief-panels.webp",
+      "fullImage": "/assets/applications/creative/relief-panels.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "Precision CNC Milling \u00b7 UV-Resistant Surface Crust"
     },
     {
-      "title": "Piece of Rest by James Kaoru - James Kaoru Bury (James Bury Design Office Inc.)",
-      "image": "/assets/piece-of-rest-by-james-kaoru.avif",
-      "fullImage": "/assets/piece-of-rest-by-james-kaoru.jpg",
-      "href": "#"
+      "title": "Modern Kitchen Island with High-Gloss Composite Shutters",
+      "image": "/assets/applications/interiors/modular-kitchens.webp",
+      "fullImage": "/assets/applications/interiors/modular-kitchens.webp",
+      "category": "Modular Kitchens",
+      "spec": "100% Termite & Borer Proof \u00b7 High Screw Holding"
     },
     {
-      "title": "Laura Wontorra Home - Thomas Mang Studio GmbH",
-      "image": "/assets/laura-wontorra-home.avif",
-      "fullImage": "/assets/laura-wontorra-home-b04def.jpg",
-      "href": "#"
+      "title": "Commercial Reception Counter & 3D Brand Signage",
+      "image": "/assets/applications/commercial/reception-signage.webp",
+      "fullImage": "/assets/applications/commercial/reception-signage.webp",
+      "category": "Commercial & Office",
+      "spec": "Direct Paintable PVC Board \u00b7 Crisp CNC Lettering"
     },
     {
-      "title": "Titirangi Originals - Rarebirds Interiors",
-      "image": "/assets/titirangi-originals.avif",
-      "fullImage": "/assets/titirangi-originals.jpg",
-      "href": "#"
+      "title": "Moisture-Impervious WPC Door Frame with Hardwood Grain",
+      "image": "/assets/products/wpcdoorframedfdf2.jpg",
+      "fullImage": "/assets/products/wpcdoorframedfdf2.jpg",
+      "category": "Doors & Frames",
+      "spec": "High Screw Holding \u00b7 Zero Core Warping \u00b7 Pre-Mitred Joints"
+    },
+    {
+      "title": "DefensePly 3-Layer Multi Board with Glossy Co-Extrusion Layer",
+      "image": "/assets/products/3-layer-multi-board-glossy.webp",
+      "fullImage": "/assets/products/3-layer-multi-board-glossy.webp",
+      "category": "Composite Board Systems",
+      "spec": "UV-Resistant Co-Extrusion \u00b7 Extreme Durability \u00b7 Indoor/Outdoor"
+    },
+    {
+      "title": "High-Density WPC Board Quality Testing & Core Calibration",
+      "image": "/assets/products/wpc-composite-boards-inspection.webp",
+      "fullImage": "/assets/products/wpc-composite-boards-inspection.webp",
+      "category": "Composite Board Systems",
+      "spec": "Calibrated Thickness Tolerance \u00b7 Zero Core Voids"
+    },
+    {
+      "title": "Full-Height Wardrobe Sliding Shutters with Smooth Tracks",
+      "image": "/assets/applications/wardrobe/sliding-shutters.webp",
+      "fullImage": "/assets/applications/wardrobe/sliding-shutters.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Lightweight PVC Foam Core \u00b7 Stable Dimensional Profile"
+    },
+    {
+      "title": "Suspended Board Ceiling with Integrated Indirect Lighting",
+      "image": "/assets/applications/interiors/ceiling-details.webp",
+      "fullImage": "/assets/applications/interiors/ceiling-details.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "Lightweight Moisture-Proof Ceiling Substrate"
+    },
+    {
+      "title": "Boutique Retail Display Fixtures & Modular Shelving",
+      "image": "/assets/applications/commercial/retail-fixtures.webp",
+      "fullImage": "/assets/applications/commercial/retail-fixtures.webp",
+      "category": "Commercial & Office",
+      "spec": "High Impact Resistant Composite \u00b7 Easy Assembly"
+    },
+    {
+      "title": "Ultra-Smooth White PVC Foam Board Panel Stack",
+      "image": "/assets/products/pvcfoamboard(main).jpg",
+      "fullImage": "/assets/products/pvcfoamboard(main).jpg",
+      "category": "Composite Board Systems",
+      "spec": "Direct UV Printable \u00b7 Water & Termite Resistant"
     }
   ],
-  "Kitchens": [
+  "Modular Kitchens": [
     {
-      "title": "Barcelona Design Space",
-      "image": "/assets/cosentino-city-barcelona-906143.jpg",
-      "fullImage": "/assets/cosentino-city-barcelona-7b5966.jpg",
-      "href": "#"
+      "title": "100% Waterproof WPC Kitchen Sink Carcass & Drawers",
+      "image": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
+      "fullImage": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
+      "category": "Modular Kitchens",
+      "spec": "Calibrated Waterproof WPC Boards \u00b7 Anti-Fungal \u00b7 Zero Swelling"
     },
     {
-      "title": "Amsterdam Design Studio",
-      "image": "/assets/cosentino-city-amsterdam-060f47.jpg",
-      "fullImage": "/assets/cosentino-city-amsterdam.jpg",
-      "href": "#"
+      "title": "Modular Kitchen Cabinetry with Moisture-Resistant Shutters",
+      "image": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "fullImage": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "category": "Modular Kitchens",
+      "spec": "High Screw-Holding Composite Core \u00b7 Direct Paintable Finish"
     },
     {
-      "title": "FF Home by Dunarra Interior - Dunarra Interior",
-      "image": "/assets/ff-home-by-dunarra-interior.avif",
-      "fullImage": "/assets/ff-home-by-dunarra-interior.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Proyecto Barquillo - Mónica Diago",
-      "image": "/assets/proyecto-barquillo.avif",
-      "fullImage": "/assets/proyecto-barquillo.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Hayley Peterson Residential - Hayley Peterson",
-      "image": "/assets/hayley-peterson-residential.avif",
-      "fullImage": "/assets/hayley-peterson-residential-7f3322.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Battersea Residential - Aflux Interiors",
-      "image": "/assets/battersea-residential.avif",
-      "fullImage": "/assets/battersea-residential-0a89c3.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Imperfection of Matter - Catarina Carneiro, Jota Barbosa Interiores",
-      "image": "/assets/imperfection-of-matter.avif",
-      "fullImage": "/assets/imperfection-of-matter-229566.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Rocco Place NSW - DSD Design",
-      "image": "/assets/rocco-place-nsw.avif",
-      "fullImage": "/assets/rocco-place-nsw-de2854.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Doncaster House - Piran Boutique Builders and interior Design",
-      "image": "/assets/doncaster-house.avif",
-      "fullImage": "/assets/doncaster-house-07d60c.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Montenegro - Monica Arango, Tracy Audi, Johnny Matta / C’est ici Design",
-      "image": "/assets/montenegro.jpg",
-      "fullImage": "/assets/montenegro-712b8a.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Kollutchen - AOME Architects / Eclectic Designs LLC",
-      "image": "/assets/kollutchen.avif",
-      "fullImage": "/assets/kollutchen.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Laura Wontorra Home - Thomas Mang Studio GmbH",
-      "image": "/assets/laura-wontorra-home.avif",
-      "fullImage": "/assets/laura-wontorra-home-b04def.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Titirangi Originals - Rarebirds Interiors",
-      "image": "/assets/titirangi-originals.avif",
-      "fullImage": "/assets/titirangi-originals.jpg",
-      "href": "#"
-    },
-    {
-      "title": "House SI Matosinhos - Matos dos Santos Architects (Luis Santos and Rita Sousa)",
-      "image": "/assets/house-si-matosinhos-4ff17d.jpg",
-      "fullImage": "/assets/house-si-matosinhos.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Contemporary Kitchen - Wilson Hill Architects (Adrian Hill)",
-      "image": "/assets/kitchen-with-silestone-le-chic.jpg",
-      "fullImage": "/assets/kitchen-with-silestone-le-chic-cdabfe.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Restaurante Masi - Adriana Floistad Mir",
-      "image": "/assets/restaurante-masi.jpg",
-      "fullImage": "/assets/restaurante-masi-f6c888.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Ballingslöv Järfälla N Stengruppen - Ulrika Audelius, Ballingslöv Järfälla",
-      "image": "/assets/ballingsloev-jaerfaella-n-stengruppen.jpg",
-      "fullImage": "/assets/ballingsloev-jaerfaella-n-stengruppen-34fc55.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Boreal Tower - Michelaine Schmidt (FG Empreendimentos) / Maria Fernanda Wiethorn Aliano (we.arch)",
-      "image": "/assets/boreal-tower-b4391a.jpg",
-      "fullImage": "/assets/boreal-tower-36b534.jpg",
-      "href": "#"
+      "title": "Modern Kitchen Island with High-Gloss Composite Shutters",
+      "image": "/assets/applications/interiors/modular-kitchens.webp",
+      "fullImage": "/assets/applications/interiors/modular-kitchens.webp",
+      "category": "Modular Kitchens",
+      "spec": "100% Termite & Borer Proof \u00b7 High Screw Holding"
     }
   ],
-  "Bathrooms": [
+  "Wardrobes & Closets": [
     {
-      "title": "Barcelona Design Space",
-      "image": "/assets/cosentino-city-barcelona.jpg",
-      "fullImage": "/assets/cosentino-city-barcelona.jpg",
-      "href": "#"
+      "title": "DefensePly Full-Height Wardrobe System with Matte Finish",
+      "image": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp",
+      "fullImage": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Matte White WPC & PVC Boards \u00b7 Seamless Edge Profiles"
     },
     {
-      "title": "Amsterdam Design Studio",
-      "image": "/assets/cosentino-city-amsterdam-8a4fcc.jpg",
-      "fullImage": "/assets/cosentino-city-amsterdam-dd2148.jpg",
-      "href": "#"
+      "title": "Modular Walk-In Wardrobe System with Heavy-Duty Carcass",
+      "image": "/assets/applications/wardrobe/brochure-wardrobe-organizer.webp",
+      "fullImage": "/assets/applications/wardrobe/brochure-wardrobe-organizer.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Calibrated Board Matrix \u00b7 High Load-Bearing Shelves"
     },
     {
-      "title": "SQala Design - Sqala Interior Design",
-      "image": "/assets/sqala-design-36ea9c.jpg",
-      "fullImage": "/assets/sqala-design-2b3a3c.jpg",
-      "href": "#"
+      "title": "Luxury Walk-in Dressing Wardrobe with Built-in Drawers",
+      "image": "/assets/applications/wardrobe/walk-in-closets.webp",
+      "fullImage": "/assets/applications/wardrobe/walk-in-closets.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "High-Density WPC Carcase \u00b7 Zero Moisture Absorption"
     },
     {
-      "title": "Hayley Peterson Residential - Hayley Peterson",
-      "image": "/assets/hayley-peterson-residential-2a2792.jpg",
-      "fullImage": "/assets/hayley-peterson-residential.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Battersea Residential - Aflux Interiors",
-      "image": "/assets/battersea-residential-461a3e.jpg",
-      "fullImage": "/assets/battersea-residential.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Imperfection of Matter - Catarina Carneiro, Jota Barbosa Interiores",
-      "image": "/assets/imperfection-of-matter-b2cded.jpg",
-      "fullImage": "/assets/imperfection-of-matter.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Rocco Place NSW - DSD Design",
-      "image": "/assets/rocco-place-nsw.jpg",
-      "fullImage": "/assets/rocco-place-nsw-8f4239.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Doncaster House - Piran Boutique Builders and interior Design",
-      "image": "/assets/doncaster-house-1843d5.jpg",
-      "fullImage": "/assets/doncaster-house.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Montenegro - Monica Arango, Tracy Audi, Johnny Matta / C’est ici Design",
-      "image": "/assets/montenegro-40d027.jpg",
-      "fullImage": "/assets/montenegro-e8975d.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Kollutchen - AOME Architects / Eclectic Designs LLC",
-      "image": "/assets/kollutchen-e596df.jpg",
-      "fullImage": "/assets/kollutchen-dc02c4.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Laura Wontorra Home - Thomas Mang Studio GmbH",
-      "image": "/assets/laura-wontorra-home.jpg",
-      "fullImage": "/assets/laura-wontorra-home-219c20.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Titirangi Originals - Rarebirds Interiors",
-      "image": "/assets/titirangi-originals-d26abf.jpg",
-      "fullImage": "/assets/titirangi-originals.jpg",
-      "href": "#"
-    },
-    {
-      "title": "House SI Matosinhos - Matos dos Santos Architects (Luis Santos and Rita Sousa)",
-      "image": "/assets/house-si-matosinhos-861a0c.jpg",
-      "fullImage": "/assets/house-si-matosinhos-8159f7.jpg",
-      "href": "#"
-    },
-    {
-      "title": "KES Group - KES Group",
-      "image": "/assets/kes-group.jpg",
-      "fullImage": "/assets/kes-group-913bbd.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Villa Nöhmer",
-      "image": "/assets/villa-noehmer-3a7fdb.jpg",
-      "fullImage": "/assets/villa-noehmer-0209e1.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Villa D25 - Egea Arquitectos (Eduardo Egea and José Javier Cullen)",
-      "image": "/assets/villa-d25-bec4e8.jpg",
-      "fullImage": "/assets/villa-d25.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Dorota Czaja - Ilona Wysocka",
-      "image": "/assets/dorota-czaja-7d65bd.jpg",
-      "fullImage": "/assets/dorota-czaja.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Suwandy Bath - Interiors by Popov",
-      "image": "/assets/suwandy-bath-948679.jpg",
-      "fullImage": "/assets/suwandy-bath.jpg",
-      "href": "#"
+      "title": "Full-Height Wardrobe Sliding Shutters with Smooth Tracks",
+      "image": "/assets/applications/wardrobe/sliding-shutters.webp",
+      "fullImage": "/assets/applications/wardrobe/sliding-shutters.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Lightweight PVC Foam Core \u00b7 Stable Dimensional Profile"
     }
   ],
-  "Other interiors": [
+  "Creative CNC & Jali": [
     {
-      "title": "FF Home by Dunarra Interior - Dunarra Interior",
-      "image": "/assets/ff-home-by-dunarra-interior-73a465.jpg",
-      "fullImage": "/assets/ff-home-by-dunarra-interior.jpg",
-      "href": "#"
+      "title": "Parametric CNC Jali Partition Cut from PVC Foam Board",
+      "image": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "fullImage": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "High-Density PVC Foam Board \u00b7 Chip-Free 90\u00b0 Routing"
     },
     {
-      "title": "Hayley Peterson Residential - Hayley Peterson",
-      "image": "/assets/hayley-peterson-residential-424fd9.jpg",
-      "fullImage": "/assets/hayley-peterson-residential-52eebe.jpg",
-      "href": "#"
+      "title": "Living Room CNC Partition Lattice with Walnut Finish",
+      "image": "/assets/applications/creative/cnc-screens.webp",
+      "fullImage": "/assets/applications/creative/cnc-screens.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "Parametric Jali Design \u00b7 Ultra-Clean Router Edges"
     },
     {
-      "title": "Doncaster House - Piran Boutique Builders and interior Design",
-      "image": "/assets/doncaster-house-6dfc03.jpg",
-      "fullImage": "/assets/doncaster-house-993e0e.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Montenegro - Monica Arango, Tracy Audi, Johnny Matta / C’est ici Design",
-      "image": "/assets/montenegro.avif",
-      "fullImage": "/assets/montenegro-0fd05a.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Kollutchen - AOME Architects / Eclectic Designs LLC",
-      "image": "/assets/kollutchen-d3107b.jpg",
-      "fullImage": "/assets/kollutchen-83e577.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Villa Nöhmer",
-      "image": "/assets/villa-noehmer.jpg",
-      "fullImage": "/assets/villa-noehmer-dbe708.jpg",
-      "href": "#"
-    },
-    {
-      "title": "ESPAÇO FG Praia Brava - we.arch, Maria Fernanda Wiethorn Aliano",
-      "image": "/assets/espaco-fg-praia-brava.jpg",
-      "fullImage": "/assets/espaco-fg-praia-brava-c44651.jpg",
-      "href": "#"
-    },
-    {
-      "title": "KIPS BAY NY - Leyden Lewis Design Studio | Corey Damen Jenkins & Associates | Christopher Peacock | Jim Dove Design Studio | Pavarini Design",
-      "image": "/assets/kips-bay-ny.jpg",
-      "fullImage": "/assets/kips-bay-ny-5dcc0f.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Casa CA - Carol Scarpelli",
-      "image": "/assets/casa-ca-db8ab9.jpg",
-      "fullImage": "/assets/casa-ca.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Barrio Playa - Estudio Jankovic / Fontanet",
-      "image": "/assets/barrio-playa.jpg",
-      "fullImage": "/assets/barrio-playa-7c81a8.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Lisbon Design Week - João Xará and Mut Design",
-      "image": "/assets/lisbon-design-week-4bf40d.jpg",
-      "fullImage": "/assets/lisbon-design-week.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Loft Rotterdam Bath - Bouwerij Baan",
-      "image": "/assets/loft-rotterdam-bath.jpg",
-      "fullImage": "/assets/loft-rotterdam-bath-7c6108.jpg",
-      "href": "#"
-    },
-    {
-      "title": "River Penthouse - Wicherson Interiors",
-      "image": "/assets/river-penthouse.jpg",
-      "fullImage": "/assets/river-penthouse-b4cb71.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Estudio 404 - 404 Arquitectura",
-      "image": "/assets/estudio-404.jpg",
-      "fullImage": "/assets/estudio-404-8b7ef2.jpg",
-      "href": "#"
-    },
-    {
-      "title": "San Ramon - Nakisa Rezvani, NRK Design Studio",
-      "image": "/assets/san-ramon.jpg",
-      "fullImage": "/assets/san-ramon-568f89.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Villa Panamá - Ricard Armengol Ballester (Architect) and Daniel Expósito (Project Manager - Disnay Proyectos SL)",
-      "image": "/assets/villa-panama-f1ae99.jpg",
-      "fullImage": "/assets/villa-panama-fc0829.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Rozkoszny - Mistovia",
-      "image": "/assets/rozkoszny.jpg",
-      "fullImage": "/assets/rozkoszny-19f6db.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Residential Millennium Brothers - Millennium Brothers Company Limited",
-      "image": "/assets/residential-millennium-brothers.jpg",
-      "fullImage": "/assets/residential-millennium-brothers-4675e7.jpg",
-      "href": "#"
+      "title": "Architectural 3D Wall Relief Panels in Commercial Atrium",
+      "image": "/assets/applications/creative/relief-panels.webp",
+      "fullImage": "/assets/applications/creative/relief-panels.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "Precision CNC Milling \u00b7 UV-Resistant Surface Crust"
     }
   ],
-  "Outdoor": [
+  "Doors & Frames": [
     {
-      "title": "Amsterdam Design Studio",
-      "image": "/assets/cosentino-city-amsterdam-0fae7f.jpg",
-      "fullImage": "/assets/cosentino-city-amsterdam-771b0a.jpg",
-      "href": "#"
+      "title": "Engineered WPC Door & Window Profiles Array",
+      "image": "/assets/products/wpc-door-window-frames-collection.webp",
+      "fullImage": "/assets/products/wpc-door-window-frames-collection.webp",
+      "category": "Doors & Frames",
+      "spec": "100% Waterproof \u00b7 High Screw Withdrawal \u00b7 Termite Impervious"
     },
     {
-      "title": "Doncaster House - Piran Boutique Builders and interior Design",
-      "image": "/assets/doncaster-house-9bd5ef.jpg",
-      "fullImage": "/assets/doncaster-house.jpg",
-      "href": "#"
+      "title": "Solid WPC Architectural Doors with Woodgrain Embossing",
+      "image": "/assets/products/wpc-designer-doors-collection.webp",
+      "fullImage": "/assets/products/wpc-designer-doors-collection.webp",
+      "category": "Doors & Frames",
+      "spec": "Non-Warping Composite Core \u00b7 Paintable & Laminate-Ready"
     },
     {
-      "title": "Layers of Art - Ifat Mentesh Interior Planning and Design",
-      "image": "/assets/layers-of-art.jpg",
-      "fullImage": "/assets/layers-of-art-63b010.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Outdoor Kitchen - Gerhard Dragschitz",
-      "image": "/assets/house-outdoor-kitchen.jpg",
-      "fullImage": "/assets/house-outdoor-kitchen-66e4ba.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Danver - Kohlsaat & Associates (Gary Kohlsaat)| Murray Landscape Architecture (Peter Murrey)",
-      "image": "/assets/danver.jpg",
-      "fullImage": "/assets/danver-f11545.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Port-Kembla House - Design Workshop Australia",
-      "image": "/assets/port-kembla-house-9ac2e8.jpg",
-      "fullImage": "/assets/port-kembla-house.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Buckinghamshire Residential - Kaoru Designs",
-      "image": "/assets/buckinghamshire-residential-7c78bb.jpg",
-      "fullImage": "/assets/buckinghamshire-residential.jpg",
-      "href": "#"
-    },
-    {
-      "title": "UBF George Nelson House - Urban Bonfire",
-      "image": "/assets/ubf-george-nelson-house.jpg",
-      "fullImage": "/assets/ubf-george-nelson-house-deef10.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Northern Israel Villa - Shiran Philosof – SP Design",
-      "image": "/assets/northern-israel-villa-36057b.jpg",
-      "fullImage": "/assets/northern-israel-villa.jpg",
-      "href": "#"
-    },
-    {
-      "title": "House in Central Israel - Vered Kadouri Architect and Interior Design",
-      "image": "/assets/house-in-central-israel.jpg",
-      "fullImage": "/assets/house-in-central-israel-b11601.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Cinque House Ryan & Rachel - Rachel & Ryan / The R&R Design Co",
-      "image": "/assets/cinque-house-ryan-rachel-100769.jpg",
-      "fullImage": "/assets/cinque-house-ryan-rachel.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Triplex Wabi Sabi - Fábio Morozini",
-      "image": "/assets/triplex-wabi-sabi-6171c6.jpg",
-      "fullImage": "/assets/triplex-wabi-sabi.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Urban Bonfire Earth Inc. - Urban Bonfire, Earth Inc.",
-      "image": "/assets/urban-bonfire-earth-inc.jpg",
-      "fullImage": "/assets/urban-bonfire-earth-inc-fb523c.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Urban Bonfire Outdoor Kitchen - Stefan Marchant",
-      "image": "/assets/urban-bonfire-x-dekton-collection.jpg",
-      "fullImage": "/assets/urban-bonfire-x-dekton-collection-48410b.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Villa Imagine - José Luis Troyano (Troyano Arquitectos) / María Ortega (Natural Interiors)",
-      "image": "/assets/villa-imagine.jpg",
-      "fullImage": "/assets/villa-imagine-32f2f5.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Club de Pádel Estepona - Javier Ruiz Muñoz and Nieves Montero",
-      "image": "/assets/club-de-padel-estepona.jpg",
-      "fullImage": "/assets/club-de-padel-estepona-cb6794.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Casa de Angra - Erick Figueira de Melo",
-      "image": "/assets/casa-de-angra.jpg",
-      "fullImage": "/assets/casa-de-angra.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Piscina rooftop Jurere - Jobim Carlevaro Arquitetos",
-      "image": "/assets/piscina-rooftop-jurere-8dc64f.jpg",
-      "fullImage": "/assets/piscina-rooftop-jurere.jpg",
-      "href": "#"
+      "title": "Moisture-Impervious WPC Door Frame with Hardwood Grain",
+      "image": "/assets/products/wpcdoorframedfdf2.jpg",
+      "fullImage": "/assets/products/wpcdoorframedfdf2.jpg",
+      "category": "Doors & Frames",
+      "spec": "High Screw Holding \u00b7 Zero Core Warping \u00b7 Pre-Mitred Joints"
     }
   ],
-  "Facades": [
+  "Commercial & Office": [
     {
-      "title": "Facade NSW - Architecture / Design  KASA Design and Construct",
-      "image": "/assets/facade-nsw.avif",
-      "fullImage": "/assets/facade-nsw.jpg",
-      "href": "#"
+      "title": "Commercial Office Workstation Pods & Privacy Dividers",
+      "image": "/assets/applications/commercial/brochure-commercial-office.webp",
+      "fullImage": "/assets/applications/commercial/brochure-commercial-office.webp",
+      "category": "Commercial & Office",
+      "spec": "Rigid PVC/WPC Partitions \u00b7 Flame-Retardant \u00b7 Clean Wireways"
     },
     {
-      "title": "KES Group - KES Group",
-      "image": "/assets/kes-group-ca229a.jpg",
-      "fullImage": "/assets/kes-group-f26ac1.jpg",
-      "href": "#"
+      "title": "Commercial Reception Counter & 3D Brand Signage",
+      "image": "/assets/applications/commercial/reception-signage.webp",
+      "fullImage": "/assets/applications/commercial/reception-signage.webp",
+      "category": "Commercial & Office",
+      "spec": "Direct Paintable PVC Board \u00b7 Crisp CNC Lettering"
     },
     {
-      "title": "Boreal Tower - Michelaine Schmidt (FG Empreendimentos) / Maria Fernanda Wiethorn Aliano (we.arch)",
-      "image": "/assets/boreal-tower.jpg",
-      "fullImage": "/assets/boreal-tower-1d4e7e.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Villa Nöhmer",
-      "image": "/assets/villa-noehmer-3f43f1.jpg",
-      "fullImage": "/assets/villa-noehmer-ffbe80.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Anatura Hotel - Valentiny Architectes",
-      "image": "/assets/anatura-hotel.jpg",
-      "fullImage": "/assets/anatura-hotel-c753ea.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Maritiem Huis - Yugening",
-      "image": "/assets/maritiem-huis.jpg",
-      "fullImage": "/assets/maritiem-huis-0049fd.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Tandem House - TiniTj Interior (Tini Tjemerlang)",
-      "image": "/assets/tandem-house.jpg",
-      "fullImage": "/assets/tandem-house-804648.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Fachada Mariscal - OMAA Arquitectura, Miguel Monteagudo Pazo",
-      "image": "/assets/fachada-mariscal.jpg",
-      "fullImage": "/assets/fachada-mariscal-c23f23.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Pool Janne - Janne Ekman (VK Pool & Bygg AB)",
-      "image": "/assets/pool-janne-44b702.jpg",
-      "fullImage": "/assets/pool-janne.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Centro de Día Madre Rosario - Modesto Martínez Sienes",
-      "image": "/assets/centro-de-dia-madre-rosario-f0b678.jpg",
-      "fullImage": "/assets/centro-de-dia-madre-rosario.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Villa Panamá - Ricard Armengol Ballester (Architect) and Daniel Expósito (Project Manager - Disnay Proyectos SL)",
-      "image": "/assets/villa-panama-cc0cfb.jpg",
-      "fullImage": "/assets/villa-panama.jpg",
-      "href": "#"
-    },
-    {
-      "title": "IMSS Puebla - Faculty of Higher Studies Acatlan UNAM",
-      "image": "/assets/imss-puebla-cd68a2.jpg",
-      "fullImage": "/assets/imss-puebla.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Indian Embassy - de Giuli & Portier Architects S.A. - Jean-Claude Portier / Luís Valdir Barata",
-      "image": "/assets/indian-embassy.jpg",
-      "fullImage": "/assets/indian-embassy-0cf300.jpg",
-      "href": "#"
-    },
-    {
-      "title": "The Precedent - Gevelinzicht",
-      "image": "/assets/the-precedent.jpg",
-      "fullImage": "/assets/the-precedent-ae0811.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Volksbank Müllheim - Mario Eggen, Eggen Architekten GmbH",
-      "image": "/assets/volksbank-muellheim.jpg",
-      "fullImage": "/assets/volksbank-muellheim-d4ca73.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Bayview house QLD - Stuart Osaman / Baden Behrens, Belle Casa Interiors",
-      "image": "/assets/bayview-house-qld.jpg",
-      "fullImage": "/assets/bayview-house-qld-a728fc.jpg",
-      "href": "#"
-    },
-    {
-      "title": "The Knott Residence - Artwood Design / Knott Family",
-      "image": "/assets/the-knott-residence-f52f9f.jpg",
-      "fullImage": "/assets/the-knott-residence.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Apartamentos Málaga - Tango Estudio / Fluinsa",
-      "image": "/assets/apartamentos-malaga.jpg",
-      "fullImage": "/assets/apartamentos-malaga-2acce1.jpg",
-      "href": "#"
+      "title": "Boutique Retail Display Fixtures & Modular Shelving",
+      "image": "/assets/applications/commercial/retail-fixtures.webp",
+      "fullImage": "/assets/applications/commercial/retail-fixtures.webp",
+      "category": "Commercial & Office",
+      "spec": "High Impact Resistant Composite \u00b7 Easy Assembly"
     }
   ],
-  "Commercial": [
+  "Bedroom & Paneling": [
     {
-      "title": "Private House - Sofie Noyen",
-      "image": "/assets/private-house-897db4.jpg",
-      "fullImage": "/assets/private-house.jpg",
-      "href": "#"
+      "title": "Integrated Fluted Headboard & Bedroom Wall Paneling",
+      "image": "/assets/applications/bedroom/brochure-bedroom-headboard-panel.webp",
+      "fullImage": "/assets/applications/bedroom/brochure-bedroom-headboard-panel.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "WPC Fluted Paneling \u00b7 Natural Timber Texture \u00b7 Acoustic Damping"
     },
     {
-      "title": "Dalvey Haus - Eco ID",
-      "image": "/assets/dalvey-haus-21910a.jpg",
-      "fullImage": "/assets/dalvey-haus.jpg",
-      "href": "#"
+      "title": "Contemporary Architectural Lounge with Composite Paneling",
+      "image": "/assets/applications/interiors/brochure-interiors-lounge.webp",
+      "fullImage": "/assets/applications/interiors/brochure-interiors-lounge.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "Eco-Friendly Composite Substrates \u00b7 Zero Formaldehyde"
     },
     {
-      "title": "Verdizela Villa - AMATAM Studio",
-      "image": "/assets/verdizela-villa.jpg",
-      "fullImage": "/assets/verdizela-villa-c8f950.jpg",
-      "href": "#"
+      "title": "Suspended Board Ceiling with Integrated Indirect Lighting",
+      "image": "/assets/applications/interiors/ceiling-details.webp",
+      "fullImage": "/assets/applications/interiors/ceiling-details.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "Lightweight Moisture-Proof Ceiling Substrate"
+    }
+  ],
+  "Composite Board Systems": [
+    {
+      "title": "Vibrant Pre-Coloured PVC Boards with High-Finish Crust",
+      "image": "/assets/products/pvc-colour-boards-fan-stack.webp",
+      "fullImage": "/assets/products/pvc-colour-boards-fan-stack.webp",
+      "category": "Composite Board Systems",
+      "spec": "Zero Lead Time \u00b7 Pre-Finished Colours \u00b7 No Painting Needed"
     },
     {
-      "title": "Villa Hartl",
-      "image": "/assets/villa-hartl.jpg",
-      "fullImage": "/assets/villa-hartl-17ad7c.jpg",
-      "href": "#"
+      "title": "DefensePly 3-Layer WPC Board Structural Core",
+      "image": "/assets/products/3-layer-wpc-board-structure.webp",
+      "fullImage": "/assets/products/3-layer-wpc-board-structure.webp",
+      "category": "Composite Board Systems",
+      "spec": "Extra Wood Powder Core \u00b7 Enhanced Impact Resistance"
     },
     {
-      "title": "Casa 114",
-      "image": "/assets/casa-114.jpg",
-      "fullImage": "/assets/casa-114-49f403.jpg",
-      "href": "#"
+      "title": "DefensePly 3-Layer Multi Board with Glossy Co-Extrusion Layer",
+      "image": "/assets/products/3-layer-multi-board-glossy.webp",
+      "fullImage": "/assets/products/3-layer-multi-board-glossy.webp",
+      "category": "Composite Board Systems",
+      "spec": "UV-Resistant Co-Extrusion \u00b7 Extreme Durability \u00b7 Indoor/Outdoor"
     },
     {
-      "title": "Residencial Gardens Valdenoja",
-      "image": "/assets/residencial-gardens-valdenoja-f2bc00.jpg",
-      "fullImage": "/assets/residencial-gardens-valdenoja.jpg",
-      "href": "#"
+      "title": "High-Density WPC Board Quality Testing & Core Calibration",
+      "image": "/assets/products/wpc-composite-boards-inspection.webp",
+      "fullImage": "/assets/products/wpc-composite-boards-inspection.webp",
+      "category": "Composite Board Systems",
+      "spec": "Calibrated Thickness Tolerance \u00b7 Zero Core Voids"
     },
     {
-      "title": "Church in Taiwan",
-      "image": "/assets/church-in-taiwan-65b992.jpg",
-      "fullImage": "/assets/church-in-taiwan.jpg",
-      "href": "#"
-    },
-    {
-      "title": "House Vizela",
-      "image": "/assets/house-vizela.jpg",
-      "fullImage": "/assets/house-vizela-8cc2e6.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Antas Build",
-      "image": "/assets/antas-build.jpg",
-      "fullImage": "/assets/antas-build-05e867.jpg",
-      "href": "#"
-    },
-    {
-      "title": "MUSC",
-      "image": "/assets/musc.jpg",
-      "fullImage": "/assets/musc.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Residencial Nei Fatuchi",
-      "image": "/assets/residencial-nei-fatuchi.jpg",
-      "fullImage": "/assets/residencial-nei-fatuchi-7ca47d.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Kyoob Architects - Residential Project",
-      "image": "/assets/kyoob-architects-residential-project-76c8ef.jpg",
-      "fullImage": "/assets/kyoob-architects-residential-project.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Delfin Tower",
-      "image": "/assets/delfin-tower.jpg",
-      "fullImage": "/assets/delfin-tower-f04658.jpg",
-      "href": "#"
-    },
-    {
-      "title": "York Paramedic Station",
-      "image": "/assets/york-paramedic-station.jpg",
-      "fullImage": "/assets/york-paramedic-station-6abe0d.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Saba Estate House",
-      "image": "/assets/saba-estate-house-1687a4.jpg",
-      "fullImage": "/assets/saba-estate-house.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Edificio Aresa",
-      "image": "/assets/edificio-aresa.jpg",
-      "fullImage": "/assets/edificio-aresa-6e6622.jpg",
-      "href": "#"
-    },
-    {
-      "title": "HER Villa Grey - Maria Cira Ferrara Architect",
-      "image": "/assets/her-villa-grey-4fc82b.jpg",
-      "fullImage": "/assets/her-villa-grey.jpg",
-      "href": "#"
-    },
-    {
-      "title": "Résidence Morgan - Design Pascale Nakhlé",
-      "image": "/assets/residence-morgan-d4b84d.jpg",
-      "fullImage": "/assets/residence-morgan.jpg",
-      "href": "#"
+      "title": "Ultra-Smooth White PVC Foam Board Panel Stack",
+      "image": "/assets/products/pvcfoamboard(main).jpg",
+      "fullImage": "/assets/products/pvcfoamboard(main).jpg",
+      "category": "Composite Board Systems",
+      "spec": "Direct UV Printable \u00b7 Water & Termite Resistant"
     }
   ]
 }
