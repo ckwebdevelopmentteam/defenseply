@@ -48,7 +48,7 @@ export function Products({
         <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.7),transparent_70%)]" />
       </div>
 
-      {/* Centered Heading with Description - No image, centered layout */}
+      {/* Centered Heading with Description */}
       <div className="relative z-10 mx-auto mb-10 flex max-w-[840px] flex-col items-center text-center max-phone:mb-6">
         <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-center">
           Our Products

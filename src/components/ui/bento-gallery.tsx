@@ -158,32 +158,34 @@ export const InteractiveImageBentoGallery: React.FC<
 
   return (
     <div className="relative w-full" aria-label={title}>
-      {/* Centered Heading with strictly 2-line balanced description on desktop */}
-      <div className="relative mx-auto mb-8 flex max-w-[960px] flex-col items-center text-center max-phone:mb-6">
-        <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-center">
+      {/* Start-aligned Heading with Description & parallel right-corner Arrows */}
+      <div className="relative mb-6 max-phone:mb-5">
+        <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-left">
           {title}
         </h2>
-        <div className="max-w-[920px] text-fluid font-light leading-[1.6] text-muted-foreground text-center mx-auto max-sm:text-[13.5px] max-sm:leading-[1.35] max-phone:text-[13px] max-phone:leading-[1.35] max-phone:max-w-[340px]">
-          {description}
-        </div>
-      </div>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div className="max-w-[840px] text-fluid font-light leading-[1.6] text-muted-foreground text-left max-sm:text-[13.5px] max-sm:leading-[1.35] max-phone:text-[13px] max-phone:leading-[1.35]">
+            {description}
+          </div>
 
-      {/* Right Corner: Standard Defenseply Arrow Controls (no border lines, no view full gallery) */}
-      <div className="mb-4 flex items-center justify-end gap-2 text-[#1a1a1a]">
-        <Arrow
-          direction="left"
-          aria-label="Previous gallery projects"
-          className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
-          onClick={() => scrollBy(520)}
-          disabled={!canScrollLeft}
-        />
-        <Arrow
-          direction="right"
-          aria-label="Next gallery projects"
-          className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
-          onClick={() => scrollBy(-520)}
-          disabled={!canScrollRight}
-        />
+          {/* Right Corner: Arrows parallel to the 2-line description */}
+          <div className="flex shrink-0 items-center gap-2 self-end md:self-end text-[#1a1a1a] pb-0.5">
+            <Arrow
+              direction="left"
+              aria-label="Previous gallery projects"
+              className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
+              onClick={() => scrollBy(520)}
+              disabled={!canScrollLeft}
+            />
+            <Arrow
+              direction="right"
+              aria-label="Next gallery projects"
+              className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
+              onClick={() => scrollBy(-520)}
+              disabled={!canScrollRight}
+            />
+          </div>
+        </div>
       </div>
 
       {/* Draggable Bento Grid Container flush with standard left & right page margins */}
@@ -247,9 +249,9 @@ export const InteractiveImageBentoGallery: React.FC<
                   <h3 className="text-base sm:text-lg font-semibold text-white tracking-wide font-sans leading-tight">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-xs sm:text-sm text-white/80 line-clamp-2 font-sans leading-snug">
+                  {/* <p className="mt-1 text-xs sm:text-sm text-white/80 line-clamp-2 font-sans leading-snug">
                     {item.desc}
-                  </p>
+                  </p> */}
                 </div>
               </motion.div>
             ))}
