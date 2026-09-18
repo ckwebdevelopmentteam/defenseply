@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import {
   Plus,
-  Grid2X2,
-  Columns2,
-  Square,
+  ArrowRight,
   X,
   ChevronLeft,
   ChevronRight,
@@ -14,43 +13,36 @@ import { Carousel } from "@/components/ui/Carousel";
 import { SectionHeading } from "@/components/ui/Heading";
 import { cn } from "@/lib/cn";
 import { Dialog } from "@/components/ui/Dialog";
+
 const categories = Object.keys(gallery) as (keyof typeof gallery)[];
+
 export function InspirationGallery() {
-  const [category, setCategory] = useState<keyof typeof gallery>("All spaces"),
-    [view, setView] = useState("grid-2x2"),
-    [selected, setSelected] = useState<number | null>(null);
-  const items = gallery[category];
+  const [category, setCategory] = useState<keyof typeof gallery>("All Applications");
+  const [selected, setSelected] = useState<number | null>(null);
+
+  const items = gallery[category] || [];
   const groups = Array.from({ length: Math.ceil(items.length / 4) }, (_, i) =>
     items.slice(i * 4, i * 4 + 4),
   );
+
   return (
     <section data-section="gallery" id="gallery" className="mb-20 max-phone:mb-12 max-md:mb-12">
       <SectionHeading title="INSPIRATION GALLERIES" />
       <div>
         <div className="flex flex-col gap-6">
-          <div className="flex items-center justify-between">
-            <select
-              className="hidden border-b border-ink bg-transparent py-2 pr-[30px] text-fluid-sm max-tablet:block"
-              aria-label="Gallery space"
-              value={category}
-              onChange={(e) =>
-                setCategory(e.target.value as keyof typeof gallery)
-              }
-            >
-              {categories.map((c) => (
-                <option key={c}>{c}</option>
-              ))}
-            </select>
+          <div className="flex items-center justify-between gap-3 sm:gap-4">
             <ul
-              className="flex gap-7 overflow-auto thin-scrollbar max-tablet:hidden"
-              aria-label="Gallery space"
+              className="flex min-w-0 flex-1 items-center gap-5 sm:gap-6 overflow-x-auto thin-scrollbar py-1 scroll-smooth"
+              aria-label="Gallery applications"
             >
               {categories.map((c) => (
-                <li key={c}>
+                <li key={c} className="shrink-0">
                   <button
                     className={cn(
-                      "whitespace-nowrap border-b py-2 text-body",
-                      category === c ? "border-ink" : "border-transparent",
+                      "whitespace-nowrap border-b-2 py-1 text-sm font-sans transition-colors cursor-pointer",
+                      category === c
+                        ? "border-[#1c3f21] font-medium text-[#1c3f21]"
+                        : "border-transparent text-ink/60 hover:text-ink",
                     )}
                     onClick={() => setCategory(c)}
                     aria-pressed={category === c}
@@ -60,68 +52,42 @@ export function InspirationGallery() {
                 </li>
               ))}
             </ul>
-            <div className="flex items-center gap-3">
-              {[
-                [Grid2X2, "grid-2x2", "Four-image grid"],
-                [Columns2, "grid-2x1", "Two-image layout"],
-                [Square, "grid-1x1", "Large-image layout"],
-              ].map(([Icon, id, label]) => {
-                const I = Icon as typeof Grid2X2;
-                return (
-                  <button
-                    key={String(id)}
-                    className={cn(
-                      "relative h-[2.15vw] min-w-[30px] max-tablet:h-[4.3vw] max-phone:h-[7vw]",
-                      id === "grid-2x1" && "max-tablet:hidden",
-                      view === id &&
-                        "after:absolute after:-bottom-[.417vw] after:left-[15%] after:w-[70%] after:border-b after:border-ink max-tablet:after:-bottom-[.833vw] max-phone:after:-bottom-[1.4vw]",
-                    )}
-                    aria-label={String(label)}
-                    aria-pressed={view === id}
-                    onClick={() => setView(String(id))}
-                  >
-                    <I className="size-[30px]" strokeWidth={1} />
-                  </button>
-                );
-              })}
-            </div>
+
+            {/* Link to dedicated full gallery page */}
+            <Link
+              href="/gallery"
+              className="group inline-flex shrink-0 items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-ink/80 transition-colors hover:text-[#1c3f21]"
+            >
+              <span className="max-phone:hidden">View Full Gallery</span>
+              <span className="phone:hidden">Gallery</span>
+              <ArrowRight size={13} className="text-[#1c3f21] transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
           </div>
+
           <div className="overflow-hidden">
             <Carousel
-              key={category + view}
-
-              desktop={view === "grid-2x2" ? 2 : view === "grid-2x1" ? 1 : 0.5}
-              tablet={view === "grid-2x2" ? 1 : 1}
-              mobile={view === "grid-2x2" ? 2 : 1}
+              key={category}
+              desktop={1}
+              tablet={1}
+              mobile={1}
             >
               {groups.map((group, g) => (
                 <div
-                  className={cn(
-                    "keen-slider__slide grid gap-4 max-phone:gap-2",
-                    view === "grid-2x2"
-                      ? "grid-flow-col grid-cols-2 grid-rows-2 max-phone:grid-cols-1 max-phone:grid-rows-4"
-                      : view === "grid-2x1"
-                        ? "grid-cols-4 grid-rows-1"
-                        : "grid-cols-4 grid-rows-1 gap-2 max-phone:grid-flow-col max-phone:grid-cols-2 max-phone:grid-rows-2",
-                  )}
+                  className="keen-slider__slide grid grid-cols-4 max-tablet:grid-cols-2 max-phone:grid-cols-2 gap-4 max-phone:gap-2.5"
                   key={g}
                 >
                   {group.map((item) => (
                     <button
-                      className={cn(
-                        "group relative aspect-square overflow-hidden bg-stone text-left",
-                        view === "grid-1x1" &&
-                          "h-[900px] aspect-auto max-phone:h-auto max-phone:aspect-square",
-                      )}
+                      className="group relative aspect-square overflow-hidden bg-stone text-left cursor-pointer"
                       key={item.image}
                       aria-label={`View ${item.title}`}
                       onClick={() => setSelected(items.indexOf(item))}
                     >
-                      <span className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 text-white opacity-0 transition-opacity group-hover:opacity-100">
-                        <Plus size={48} strokeWidth={1} />
+                      <span className="absolute inset-0 z-10 flex items-center justify-center bg-black/25 text-white opacity-0 transition-opacity group-hover:opacity-100">
+                        <Plus size={44} strokeWidth={1.5} />
                       </span>
                       <img
-                        className="absolute inset-0 size-full object-cover transition-[filter]"
+                        className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
                         draggable={false}
                         src={item.image}
                         alt={item.title}
@@ -171,7 +137,14 @@ export function InspirationGallery() {
             >
               <ChevronRight />
             </button>
-            <a href={items[selected].href}>{items[selected].title}</a>
+            <div className="text-center mt-2">
+              <p className="text-[16px] font-medium text-white">{items[selected].title}</p>
+              {items[selected].spec && (
+                <p className="mt-1 font-mono text-[11px] text-white/60 uppercase tracking-[0.1em]">
+                  {items[selected].spec}
+                </p>
+              )}
+            </div>
           </div>
         )}
       </Dialog>
