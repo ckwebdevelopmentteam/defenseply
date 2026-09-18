@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { BrandLogo } from "./NavigationElements";
 import { useNavigationState } from "../sections/NavigationState";
 import { siteNavigation } from "@/data/site";
@@ -11,7 +11,6 @@ import { cn } from "@/lib/cn";
 
 export function MobileHeader({ solid }: { solid: boolean }) {
   const { mobileOpen: open, setMobileOpen: setOpen, visible } = useNavigationState();
-  const [expanded, setExpanded] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -32,10 +31,6 @@ export function MobileHeader({ solid }: { solid: boolean }) {
   useEffect(() => {
     setOpen(false);
   }, [pathname, setOpen]);
-
-  const toggleExpand = (name: string) => {
-    setExpanded((curr) => (curr === name ? null : name));
-  };
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[2147483640] flex flex-col desktop:hidden">
@@ -78,8 +73,6 @@ export function MobileHeader({ solid }: { solid: boolean }) {
             {siteNavigation.map((item) => {
               const isHome = item.href === "/";
               const isActive = isHome ? pathname === "/" : pathname?.startsWith(item.href) && item.href !== "/#products" && item.href !== "/#applications";
-              const hasChildren = Boolean(item.children?.length);
-              const isExpanded = expanded === item.name;
 
               return (
                 <div key={item.name} className="border-b border-[#E8E5DC]/80">
@@ -88,45 +81,13 @@ export function MobileHeader({ solid }: { solid: boolean }) {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "text-[18px] transition-colors",
+                        "text-[18px] transition-colors block w-full",
                         isActive ? "font-semibold text-[#163326]" : "font-normal text-[#38473e]",
                       )}
                     >
                       {item.name}
                     </Link>
-
-                    {hasChildren && (
-                      <button
-                        onClick={() => toggleExpand(item.name)}
-                        aria-label={`Toggle ${item.name} submenu`}
-                        aria-expanded={isExpanded}
-                        className="p-2 text-[#79887E]"
-                      >
-                        <ChevronDown
-                          className={cn(
-                            "h-4 w-4 transition-transform duration-200",
-                            isExpanded ? "rotate-180 text-[#163326]" : "",
-                          )}
-                        />
-                      </button>
-                    )}
                   </div>
-
-                  {/* Submenu */}
-                  {hasChildren && isExpanded && (
-                    <div className="pb-3 pl-3 space-y-2">
-                      {item.children?.map((child) => (
-                        <Link
-                          key={child.title}
-                          href={child.href}
-                          onClick={() => setOpen(false)}
-                          className="block rounded-lg py-1.5 px-2 text-[14px] text-[#48564e] hover:bg-[#EFECE3] hover:text-[#163326]"
-                        >
-                          <span className="font-medium">{child.title}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
                 </div>
               );
             })}

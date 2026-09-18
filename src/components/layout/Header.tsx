@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { MobileHeader } from "./MobileHeader";
 import { BrandLogo } from "./NavigationElements";
 import { useNavigationState } from "../sections/NavigationState";
@@ -13,7 +12,6 @@ import { cn } from "@/lib/cn";
 export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
   const { scrolled, visible } = useNavigationState();
   const pathname = usePathname();
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const solid = Boolean(
     forceSolid ||
@@ -43,36 +41,25 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
             <ul className="flex items-center gap-6 lg:gap-8">
               {siteNavigation.map((item) => {
                 const isHome = item.href === "/";
-                const isActive = isHome ? pathname === "/" : pathname?.startsWith(item.href) && item.href !== "/#products" && item.href !== "/#applications" && item.href !== "/#gallery";
-                const hasChildren = Boolean(item.children?.length);
+                const isActive = isHome
+                  ? pathname === "/"
+                  : pathname?.startsWith(item.href) &&
+                    item.href !== "/#products" &&
+                    item.href !== "/#applications" &&
+                    item.href !== "/#gallery";
 
                 return (
-                  <li
-                    key={item.name}
-                    className="relative group/nav"
-                    onMouseEnter={() => hasChildren && setOpenDropdown(item.name)}
-                    onMouseLeave={() => hasChildren && setOpenDropdown(null)}
-                  >
+                  <li key={item.name} className="relative">
                     <Link
                       href={item.href}
                       className={cn(
-                        "relative flex items-center gap-1 text-[13.5px] lg:text-[14px] transition-colors py-1",
+                        "relative flex items-center text-[13.5px] lg:text-[14px] transition-colors py-1",
                         isActive
                           ? "font-semibold text-[#163326]"
                           : "font-normal text-[#435249] hover:text-[#163326]",
                       )}
                     >
                       <span>{item.name}</span>
-                      {hasChildren && (
-                        <ChevronDown
-                          className={cn(
-                            "w-3 h-3 text-[#79887E] transition-transform duration-200",
-                            openDropdown === item.name ? "rotate-180 text-[#163326]" : "group-hover/nav:text-[#163326]",
-                          )}
-                          strokeWidth={2}
-                          aria-hidden="true"
-                        />
-                      )}
                       {/* Active indicator bar */}
                       {isActive && (
                         <span
@@ -81,36 +68,6 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
                         />
                       )}
                     </Link>
-
-                    {/* Dropdown Menu */}
-                    {hasChildren && (
-                      <div
-                        className={cn(
-                          "absolute top-full left-1/2 -translate-x-1/2 pt-2.5 w-60 transition-all duration-200",
-                          openDropdown === item.name
-                            ? "opacity-100 visible translate-y-0"
-                            : "opacity-0 invisible -translate-y-1 pointer-events-none",
-                        )}
-                      >
-                        <div className="rounded-xl border border-[#E5E2D8] bg-[#FAF9F5] p-2 shadow-lg shadow-black/5 backdrop-blur-md">
-                          {item.children?.map((child) => (
-                            <Link
-                              key={child.title}
-                              href={child.href}
-                              onClick={() => setOpenDropdown(null)}
-                              className="group/item block rounded-lg px-3 py-2 text-[13px] text-[#334239] transition-colors hover:bg-[#EFECE3] hover:text-[#163326]"
-                            >
-                              <div className="font-medium">{child.title}</div>
-                              {child.description && (
-                                <div className="mt-0.5 text-[11px] text-[#718076] font-normal leading-tight line-clamp-1">
-                                  {child.description}
-                                </div>
-                              )}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )}
                   </li>
                 );
               })}
