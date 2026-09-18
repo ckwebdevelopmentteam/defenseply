@@ -29,8 +29,24 @@ export function Products({
       className="page-bleed relative mb-20 overflow-hidden border-y border-black/8 bg-[#f5f3ee] px-[38px] pt-12 pb-14 max-phone:mb-12 max-phone:px-5 max-phone:pt-8 max-phone:pb-10 max-md:mb-12 max-md:px-5"
       aria-label="Our Products"
     >
-      {/* Ambient Section Highlight */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.65),transparent_70%)]" />
+      {/* Background Texture Image Layer */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden select-none">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcSet="/assets/products/productbgimage1-wide.webp"
+          />
+          <img
+            src="/assets/products/productbgimage1.webp"
+            alt=""
+            aria-hidden="true"
+            className="size-full object-cover object-center opacity-90"
+          />
+        </picture>
+        {/* Soft edge gradients and ambient highlights for premium depth and readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f5f3ee]/40 via-transparent to-[#f5f3ee]/60" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.7),transparent_70%)]" />
+      </div>
 
       {/* Centered Heading with Description - No image, centered layout */}
       <div className="relative z-10 mx-auto mb-10 flex max-w-[840px] flex-col items-center text-center max-phone:mb-6">
