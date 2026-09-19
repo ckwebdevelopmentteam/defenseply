@@ -11,7 +11,7 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
   const handleTimeUpdate = () => {
     if (videoRef.current && videoRef.current.currentTime >= 8) {
       videoRef.current.currentTime = 0;
-      videoRef.current.play().catch(() => {});
+      videoRef.current.play().catch(() => { });
     }
   };
 
@@ -19,10 +19,10 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
     <section
       id="home"
       data-section="hero"
-      className="relative flex h-screen min-h-[560px] w-full items-end overflow-hidden bg-black"
+      className="relative flex h-[80vh] min-h-[480px] sm:min-h-[520px] w-full items-end overflow-hidden bg-black"
       aria-label="One of Kerala's biggest plywood manufacturing companies"
     >
-      {/* Video Container cleanly extending to full viewport underneath transparent header */}
+      {/* Video Container cleanly extending to 70% viewport underneath transparent header */}
       <div className="relative flex h-full w-full items-end overflow-hidden">
         {/* Background Manufacturing Facility Video (plays up to 8s) */}
         <div className="absolute inset-0 z-[1] overflow-hidden">
@@ -43,14 +43,14 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
             />
           </video>
           {/* Subtle top vignette gradient for header legibility over hero content */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-40 bg-gradient-to-b from-black/75 via-black/35 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-32 bg-gradient-to-b from-black/75 via-black/35 to-transparent" />
           {/* Cinematic Overlays to blend smoothly and highlight bottom corner content */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
         </div>
 
         {/* Content Area - Placed at corner side below */}
-        <div className="relative z-[3] w-full px-6 sm:px-10 lg:px-14 pb-10 sm:pb-14 lg:pb-16 pt-10">
+        <div className="relative z-[3] w-full px-6 sm:px-10 lg:px-14 pb-7 sm:pb-9 lg:pb-10 pt-20">
           <div className="flex max-w-2xl flex-col items-start gap-3.5 sm:gap-4.5">
 
             {/* Non-bold, Well-proportioned Headline */}
