@@ -29,7 +29,7 @@ export function Carousel({
   mobile?: number;
   spacing?: number;
   controls?: (handle: CarouselHandle) => ReactNode;
-  wrapSlider?: (slider: ReactNode) => ReactNode;
+  wrapSlider?: (slider: ReactNode, handle: CarouselHandle) => ReactNode;
 }) {
   const count = Children.count(children);
   const [position, setPosition] = useState({ index: 0, perView: desktop });
@@ -102,15 +102,17 @@ export function Carousel({
       {children}
     </div>
   );
+  const handle: CarouselHandle = {
+    page,
+    pages,
+    previous: () => goToPage(page - 1),
+    next: () => goToPage(page + 1),
+  };
+
   return (
     <>
-      {controls?.({
-        page,
-        pages,
-        previous: () => goToPage(page - 1),
-        next: () => goToPage(page + 1),
-      })}
-      {wrapSlider ? wrapSlider(slider) : slider}
+      {controls?.(handle)}
+      {wrapSlider ? wrapSlider(slider, handle) : slider}
     </>
   );
 }

@@ -41,11 +41,11 @@ export function ApplicationImage({
         <div
           role="img"
           aria-label={`${alt} — image pending`}
-          className="absolute inset-0 bg-linear-to-br from-stone via-[#c9c5bc] to-[#8e8b82]"
+          className="absolute inset-0 bg-linear-to-br from-[#2c2b29] via-[#201f1d] to-[#151413] flex items-center justify-center"
         >
           <span
             aria-hidden="true"
-            className="absolute inset-[12%] border border-white/25"
+            className="absolute inset-[12%] border border-white/10"
           />
         </div>
       )}

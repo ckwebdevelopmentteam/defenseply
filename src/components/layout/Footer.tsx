@@ -63,7 +63,7 @@ export function Footer() {
             <h3 className="text-sm font-medium text-white">Start a Conversation</h3>
             <p className="mt-4 text-xs leading-relaxed text-white/60">
               <strong className="font-semibold text-white">Building the Future of Sustainable Architecture</strong><br /><br />
-              Partner with India's emerging leader in WPC and PVC composite materials. Reach out to discuss your project, product requirements, or dealership opportunities.
+              Partner with India&apos;s emerging leader in WPC and PVC composite materials. Reach out to discuss your project, product requirements, or dealership opportunities.
             </p>
             <Link
               href="/contact-us"
