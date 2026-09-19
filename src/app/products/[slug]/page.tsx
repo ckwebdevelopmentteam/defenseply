@@ -80,7 +80,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               </Link>
               <span className="opacity-40 text-[11px]">/</span>
               <Link
-                href="/#products"
+                href="/products"
                 className="text-[#767472] no-underline transition-colors duration-200 hover:text-[#1a1a1a]"
               >
                 Products

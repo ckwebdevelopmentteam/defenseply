@@ -2,7 +2,8 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { BrandLogo } from "./NavigationElements";
 import { useNavigationState } from "../sections/NavigationState";
 import { siteNavigation } from "@/data/site";
@@ -10,6 +11,7 @@ import { cn } from "@/lib/cn";
 
 export function MobileHeader({ solid }: { solid: boolean }) {
   const { mobileOpen: open, setMobileOpen: setOpen, visible } = useNavigationState();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!open) return;
@@ -25,14 +27,18 @@ export function MobileHeader({ solid }: { solid: boolean }) {
     };
   }, [open, setOpen]);
 
+  // Close drawer on path changes
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname, setOpen]);
+
   return (
     <div className="pointer-events-none fixed inset-0 z-[2147483640] flex flex-col desktop:hidden">
       <div
         data-testid="mobile-navbar"
         className={cn(
-          "pointer-events-auto flex shrink-0 items-center justify-between px-5 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-          "h-[var(--mobile-nav-height)]",
-          solid || open ? "bg-white text-ink shadow-sm" : "text-white",
+          "pointer-events-auto flex shrink-0 items-center justify-between px-4 sm:px-6 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "h-[var(--mobile-nav-height)] bg-[#FAF9F5] text-[#163326] border-b border-[#E8E5DC] shadow-[0_2px_10px_-2px_rgba(0,0,0,0.05)]",
           !visible && !open ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100",
         )}
       >
@@ -41,28 +47,62 @@ export function MobileHeader({ solid }: { solid: boolean }) {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-navigation"
+          className="p-2 text-[#163326] transition-transform active:scale-95"
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
-        <BrandLogo solid={solid || open} mobile />
-        <span className="w-6" aria-hidden="true" />
+
+        <BrandLogo mobile />
+
+        <Link
+          href="/contact-us"
+          onClick={() => setOpen(false)}
+          className="rounded-full bg-[#173326] px-3.5 py-1.5 text-[11px] font-medium text-white shadow-sm transition-all hover:bg-[#0f241a] active:scale-95"
+        >
+          Contact
+        </Link>
       </div>
+
       {open && (
         <nav
           id="mobile-navigation"
-          className="pointer-events-auto flex-1 overflow-y-auto bg-ink px-6 py-8 text-white"
+          className="pointer-events-auto flex flex-1 flex-col justify-between overflow-y-auto bg-[#FAF9F5] px-6 py-6 text-[#163326]"
           aria-label="Mobile navigation"
         >
-          {siteNavigation.map((item) => (
+          <div className="space-y-1">
+            {siteNavigation.map((item) => {
+              const isHome = item.href === "/";
+              const isActive = isHome ? pathname === "/" : pathname?.startsWith(item.href) && item.href !== "/#products" && item.href !== "/#applications";
+
+              return (
+                <div key={item.name} className="border-b border-[#E8E5DC]/80">
+                  <div className="flex items-center justify-between py-3.5">
+                    <Link
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className={cn(
+                        "text-[18px] transition-colors block w-full",
+                        isActive ? "font-semibold text-[#163326]" : "font-normal text-[#38473e]",
+                      )}
+                    >
+                      {item.name}
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="pt-6 pb-2">
             <Link
-              key={item.name}
-              href={item.href}
+              href="/contact-us"
               onClick={() => setOpen(false)}
-              className="block border-b border-white/20 py-[18px] text-[22px] font-light"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[#173326] py-3.5 text-[14px] font-medium text-white shadow-md transition-all hover:bg-[#0f241a] active:scale-[0.98]"
             >
-              {item.name}
+              <span>Get in Touch</span>
+              <ArrowRight className="h-4 w-4" />
             </Link>
-          ))}
+          </div>
         </nav>
       )}
     </div>
