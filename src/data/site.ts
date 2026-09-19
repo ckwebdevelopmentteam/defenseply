@@ -1,10 +1,22 @@
-export const siteNavigation = [
+export interface NavSubItem {
+  title: string;
+  href: string;
+  description?: string;
+}
+
+export interface NavItem {
+  name: string;
+  href: string;
+  children?: NavSubItem[];
+}
+
+export const siteNavigation: NavItem[] = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Product", href: "/#products" },
+  { name: "About Us", href: "/about" },
+  { name: "Products", href: "/products" },
   { name: "Applications", href: "/applications" },
   { name: "Gallery", href: "/#gallery" },
-  { name: "Contact Us", href: "/contact-us" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 export const footerGroups = [
@@ -12,7 +24,7 @@ export const footerGroups = [
     title: "Company",
     links: [
       { name: "About", href: "/about" },
-      { name: "Products", href: "/#products" },
+      { name: "Products", href: "/products" },
       { name: "Projects", href: "/#gallery" },
       { name: "Contact us", href: "/contact-us" },
     ],
@@ -29,7 +41,7 @@ export const footerGroups = [
   {
     title: "Resources",
     links: [
-      { name: "Material guide", href: "/#products" },
+      { name: "Material guide", href: "/products" },
       { name: "Project inspiration", href: "/#gallery" },
       { name: "Design journal", href: "/#gallery" },
       { name: "Visit our showroom", href: "/contact-us" },
