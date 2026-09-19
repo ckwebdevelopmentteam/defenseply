@@ -143,7 +143,7 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
 
           {/* Scroll Cue */}
           <div className="mt-3 pt-2.5 border-t border-[#E5E1D5]/60 flex items-center justify-between text-[#55645b] text-[11px]">
-            <a href="#about" className="inline-flex items-center gap-2 hover:text-[#163326] transition-colors">
+            <a href="#who-we-are" className="inline-flex items-center gap-2 hover:text-[#163326] transition-colors">
               <Mouse className="h-3.5 w-3.5" />
               <span className="tracking-[0.18em] uppercase font-medium">Scroll to discover</span>
             </a>
