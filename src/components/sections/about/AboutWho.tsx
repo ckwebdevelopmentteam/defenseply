@@ -1,5 +1,3 @@
-import { Heading } from "@/components/ui/Heading";
-
 const facts = [
   {
     value: "45,000 sq. ft.",
@@ -35,16 +33,16 @@ export function AboutWho() {
       className="w-full bg-white py-24 max-[768px]:py-16"
     >
       <div className="w-full px-[38px] max-[768px]:px-6">
-        {/* Header styled like Spaces section / Cosentino Architectural Surfaces */}
-        <div className="mx-auto mb-14 flex w-full max-w-[920px] flex-col gap-[25px] px-2.5 text-center max-[768px]:mb-10 max-phone:max-w-full">
-          <p className="text-center text-fluid">
+        {/* Header: Centered on desktop, left-aligned on mobile */}
+        <div className="mx-auto mb-14 flex w-full max-w-[920px] flex-col gap-4 sm:gap-[25px] px-2.5 text-center max-[768px]:mb-10 max-phone:mb-8 max-phone:items-start max-phone:text-left max-phone:px-0 max-phone:max-w-full sm:items-center sm:text-center">
+          <p className="text-fluid text-center max-phone:text-left">
             Who We Are
           </p>
-          <Heading className="mx-auto max-w-[860px] text-center max-tablet:max-w-full">
+          <h2 className="mx-auto max-w-[860px] text-center text-[clamp(28px,2.6vw,46px)] font-light leading-[1.12] tracking-[-0.02em] uppercase text-[#1a1a1a] max-phone:mx-0 max-phone:text-left">
             Redefining Building Materials
             <br className="hidden sm:inline" />
             {" "}Through Sustainable Innovation
-          </Heading>
+          </h2>
         </div>
 
         {/* Editorial Description Block (900-1050px, Centered Container, Left-Aligned Text) */}

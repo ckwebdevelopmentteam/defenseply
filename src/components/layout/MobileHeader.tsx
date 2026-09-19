@@ -9,7 +9,7 @@ import { useNavigationState } from "../sections/NavigationState";
 import { siteNavigation } from "@/data/site";
 import { cn } from "@/lib/cn";
 
-export function MobileHeader({ solid }: { solid: boolean }) {
+export function MobileHeader({ solid, darkHero = false }: { solid: boolean; darkHero?: boolean }) {
   const { mobileOpen: open, setMobileOpen: setOpen, visible } = useNavigationState();
   const pathname = usePathname();
 
@@ -38,12 +38,14 @@ export function MobileHeader({ solid }: { solid: boolean }) {
         data-testid="mobile-navbar"
         className={cn(
           "pointer-events-auto flex shrink-0 items-center justify-between px-4 sm:px-6 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-          "h-[var(--mobile-nav-height)] text-[#163326]",
+          "h-[var(--mobile-nav-height)]",
           open
-            ? "bg-[#FAF9F5] border-b border-[#E8E5DC]"
+            ? "bg-[#FAF9F5] text-[#163326] border-b border-[#E8E5DC]"
             : solid
-              ? "bg-[#FAF9F5]/95 backdrop-blur-md border-b border-[#E8E5DC] shadow-[0_2px_10px_-2px_rgba(0,0,0,0.05)]"
-              : "bg-transparent border-b border-transparent shadow-none",
+              ? "bg-[#FAF9F5]/95 text-[#163326] backdrop-blur-md border-b border-[#E8E5DC] shadow-[0_2px_10px_-2px_rgba(0,0,0,0.05)]"
+              : darkHero
+                ? "bg-transparent text-white border-b border-transparent shadow-none"
+                : "bg-transparent text-[#163326] border-b border-transparent shadow-none",
           !visible && !open ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100",
         )}
       >
@@ -52,17 +54,25 @@ export function MobileHeader({ solid }: { solid: boolean }) {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-navigation"
-          className="p-2 text-[#163326] transition-transform active:scale-95"
+          className={cn(
+            "p-2 transition-transform active:scale-95",
+            darkHero && !open ? "text-white drop-shadow-sm" : "text-[#163326]",
+          )}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
 
-        <BrandLogo mobile />
+        <BrandLogo solid={!darkHero || open} mobile />
 
         <Link
           href="/contact-us"
           onClick={() => setOpen(false)}
-          className="rounded-full bg-[#173326] px-3.5 py-1.5 text-[11px] font-medium text-white shadow-sm transition-all hover:bg-[#0f241a] active:scale-95"
+          className={cn(
+            "rounded-full px-3.5 py-1.5 text-[11px] font-medium shadow-sm transition-all active:scale-95",
+            darkHero && !open
+              ? "bg-white text-[#163326] hover:bg-white/90 shadow-md"
+              : "bg-[#173326] text-white hover:bg-[#0f241a]",
+          )}
         >
           Contact
         </Link>

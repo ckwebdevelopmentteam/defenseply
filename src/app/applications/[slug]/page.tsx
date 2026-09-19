@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { getApplication, getApplications } from "@/data/applications";
 import { products } from "@/data/products";
 import { ApplicationHero } from "@/components/application/ApplicationHero";
-import { ApplicationNavigation } from "@/components/application/ApplicationNavigation";
 import { ApplicationStory } from "@/components/application/ApplicationStory";
 import { ApplicationGallery } from "@/components/application/ApplicationGallery";
 import { ApplicationMaterials } from "@/components/application/ApplicationMaterials";
@@ -30,12 +29,8 @@ export default async function ApplicationPage({ params }: Props) {
   );
   return (
     <>
-      <main id="main-content" className="overflow-hidden bg-white text-ink">
+      <main id="main-content" className="overflow-x-clip bg-white text-ink">
         <ApplicationHero application={application} />
-        <ApplicationNavigation
-          categories={getApplications()}
-          active={application.slug}
-        />
         <ApplicationStory application={application} />
         <ApplicationGallery application={application} />
         <ApplicationMaterials products={materials} />

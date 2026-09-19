@@ -31,7 +31,8 @@ export function DefenseplyMonogram({ className }: { className?: string }) {
 }
 
 export function BrandLogo({
-  compact = false,
+  solid = true,
+  compact = true,
   mobile = false,
   className,
 }: {
@@ -59,6 +60,7 @@ export function BrandLogo({
             : compact
               ? "h-12 lg:h-14"
               : "h-14 sm:h-16 lg:h-[72px] xl:h-[76px]",
+          !solid && "brightness-0 invert drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]",
         )}
       />
     </Link>

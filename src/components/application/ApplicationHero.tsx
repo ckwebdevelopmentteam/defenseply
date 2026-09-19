@@ -11,7 +11,7 @@ export function ApplicationHero({ application }: { application: Application }) {
       >
         <Link href="/">Home</Link>
         <span aria-hidden="true">/</span>
-        <Link href="/#applications">Applications</Link>
+        <Link href="/applications">Applications</Link>
         <span aria-hidden="true">/</span>
         <span aria-current="page">{application.title}</span>
       </nav>

@@ -13,6 +13,8 @@ export function AboutHero() {
         className="absolute inset-0 size-full object-cover opacity-60"
         loading="eager"
       />
+      {/* Top vignette gradient for transparent header contrast */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-40 bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
       {/* Gradient overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#00000014_0%,#00000080_55%,#000000cc_100%)]" />
 

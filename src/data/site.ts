@@ -14,7 +14,7 @@ export const siteNavigation: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Products", href: "/products" },
-  { name: "Applications", href: "/#applications" },
+  { name: "Applications", href: "/applications" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact Us", href: "/contact-us" },
 ];

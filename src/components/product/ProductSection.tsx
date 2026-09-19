@@ -13,7 +13,7 @@ export function ProductSection({
         className,
       )}
     >
-      <div className="mx-auto max-w-[1440px]">{children}</div>
+      <div className="mx-auto max-w-[1600px]">{children}</div>
     </section>
   );
 }
