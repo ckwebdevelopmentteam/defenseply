@@ -18,8 +18,8 @@ export default function Home() {
         <div className="mx-auto w-full px-[38px] max-md:px-5 max-phone:px-5">
           <article>
             <About />
-            <Applications />
             <Products />
+            <Applications />
             <InspirationGallery />
             <BlogSection />
             <Testimonials />
