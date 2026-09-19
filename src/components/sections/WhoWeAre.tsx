@@ -29,12 +29,12 @@ export function WhoWeAre() {
       id="who-we-are"
       data-section="who-we-are"
       aria-label="Who We Are - DEFENSEPLY INTERNATIONAL LLP"
-      className="relative w-full bg-[#F4F2EB] border-b border-[#E0DBD0] overflow-hidden"
+      className="relative w-full bg-[#F5F3EC] border-b border-[#E0DBD0] overflow-hidden"
     >
       {/* Container with standard homepage margins */}
       <div className="mx-auto w-full px-[38px] max-md:px-5 max-phone:px-5 py-12 sm:py-16 lg:py-20">
-        {/* Main 3-Column Layout: Left Narrative | Center Feature Image | Right 3-Card Stack */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.48fr_1fr_0.76fr] gap-5 xl:gap-6 items-stretch">
+        {/* Main 3-Column Layout: Left Narrative | Center Factory Image | Right 3-Card Stack */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.28fr_1.18fr_0.64fr] gap-3.5 xl:gap-4 items-stretch">
           {/* Left Column: Narrative, Metrics, CTA & Commitment */}
           <div className="flex flex-col justify-between pr-0 lg:pr-2 xl:pr-4">
             <div>
@@ -98,7 +98,7 @@ export function WhoWeAre() {
                   href="/about"
                   className="group inline-flex items-center gap-4 bg-[#16331D] hover:bg-[#1e4527] text-white px-6 py-3 sm:px-7 sm:py-3.5 text-[12.5px] font-medium tracking-[0.08em] uppercase transition-all duration-300 shadow-[0_2px_8px_rgba(22,51,29,0.18)] hover:shadow-[0_4px_16px_rgba(22,51,29,0.28)] hover:-translate-y-0.5"
                 >
-                  <span>Discover DEFENSEPLY</span>
+                  <span>DISCOVER DEFENSEPLY</span>
                   <span className="inline-flex items-center transition-transform duration-300 group-hover:translate-x-1.5 text-sm">
                     →
                   </span>
@@ -120,83 +120,73 @@ export function WhoWeAre() {
             </div>
           </div>
 
-          {/* Center Column: Tall Architectural Feature Facade Image */}
-          <div className="flex w-full min-h-[360px] sm:min-h-[460px] lg:min-h-[520px]">
+          {/* Center Column: Defenseply Factory Facility Image */}
+          <div className="flex w-full min-h-[360px] sm:min-h-[440px] lg:min-h-[480px]">
             <div className="relative w-full h-full overflow-hidden bg-[#E2DED5] group">
               <Image
-                src="/assets/who-we-are/feature-facade-2x.webp"
-                alt="DEFENSEPLY Sustainable Architecture with timber slats, glass doors and inscribed concrete facade"
+                src="/assets/who-we-are/factory-facade-2x.webp"
+                alt="DEFENSEPLY Modern WPC & PVC Manufacturing Facility and Factory"
                 fill
-                sizes="(max-width: 1024px) 100vw, 35vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 priority
               />
             </div>
           </div>
 
-          {/* Right Column: 3 Stacked Visual Cards with Crisp Typography */}
-          <div className="flex flex-col gap-3 justify-between w-full h-full min-h-[460px] sm:min-h-[480px] lg:min-h-[520px]">
+          {/* Right Column: 3 Stacked Visual Cards matching design */}
+          <div className="flex flex-col gap-2.5 sm:gap-3 justify-between w-full h-full min-h-[440px] sm:min-h-[460px] lg:min-h-[480px]">
             {/* Card 1: Engineered For Real Spaces */}
-            <div className="relative w-full flex-1 min-h-[140px] sm:min-h-[155px] overflow-hidden bg-[#242220] group">
+            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden bg-[#242220] group">
               <Image
                 src="/assets/who-we-are/card-engineered-clean-hd.webp"
                 alt="DEFENSEPLY Engineered Composite Planks and Materials"
                 fill
-                sizes="(max-width: 1024px) 100vw, 25vw"
+                sizes="(max-width: 1024px) 100vw, 24vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               {/* Soft Gradient for text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute left-4 sm:left-5 bottom-4 sm:bottom-4 z-10">
-                <p className="text-[11px] sm:text-[11.5px] font-semibold tracking-[0.18em] uppercase text-white leading-tight [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute left-3.5 sm:left-4 bottom-3 sm:bottom-3.5 z-10">
+                <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-white leading-tight [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
                   ENGINEERED
                   <br />
                   FOR REAL SPACES
                 </p>
-                <span className="block mt-2 h-[1px] w-6 sm:w-7 bg-white/80" />
+                <span className="block mt-1.5 h-[1px] w-6 bg-white/90" />
               </div>
             </div>
 
             {/* Card 2: Performance Meets Design */}
-            <div className="relative w-full flex-1 min-h-[140px] sm:min-h-[155px] overflow-hidden bg-[#242220] group">
+            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden bg-[#242220] group">
               <Image
                 src="/assets/who-we-are/card-performance-clean.webp"
                 alt="DEFENSEPLY Performance Meets Design - Modern Architectural Wood Paneling"
                 fill
-                sizes="(max-width: 1024px) 100vw, 25vw"
+                sizes="(max-width: 1024px) 100vw, 24vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               {/* Soft Gradient for text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute left-4 sm:left-5 bottom-4 sm:bottom-4 z-10">
-                <p className="text-[11px] sm:text-[11.5px] font-semibold tracking-[0.18em] uppercase text-white leading-tight [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute left-3.5 sm:left-4 bottom-3 sm:bottom-3.5 z-10">
+                <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-white leading-tight [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
                   PERFORMANCE
                   <br />
                   MEETS DESIGN
                 </p>
-                <span className="block mt-2 h-[1px] w-6 sm:w-7 bg-white/80" />
+                <span className="block mt-1.5 h-[1px] w-6 bg-white/90" />
               </div>
             </div>
 
-            {/* Card 3: Quote Card with Clean Woodgrain and Crisp Serif Typography */}
-            <div className="relative w-full flex-1 min-h-[140px] sm:min-h-[155px] overflow-hidden bg-[#EDEAE3] p-5 sm:p-6 flex flex-col justify-center group">
+            {/* Card 3: Modern Quote Card with Plant and Typography */}
+            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden bg-[#EDEAE3] group">
               <Image
-                src="/assets/who-we-are/card-quote-clean-bg.webp"
-                alt="DEFENSEPLY architectural wood grain"
+                src="/assets/who-we-are/card-quote-modern-2x.webp"
+                alt="Innovative materials for modern living. — DEFENSEPLY"
                 fill
-                sizes="(max-width: 1024px) 100vw, 25vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 24vw"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              <div className="relative z-10 flex flex-col justify-center pl-1">
-                <blockquote className="font-serif text-[clamp(17px,1.45vw,21px)] text-[#1C1A17] font-normal leading-[1.3] tracking-[-0.01em] select-none">
-                  “Innovative materials
-                  <br />
-                  for modern living.”
-                </blockquote>
-                <cite className="block not-italic text-[10px] sm:text-[10.5px] font-medium tracking-[0.22em] uppercase text-[#635E54] mt-3 sm:mt-3.5">
-                  — DEFENSEPLY
-                </cite>
-              </div>
             </div>
           </div>
         </div>
