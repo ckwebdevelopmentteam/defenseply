@@ -19,11 +19,11 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
     <section
       id="home"
       data-section="hero"
-      className="relative w-full pt-[76px] sm:pt-[84px] lg:pt-[90px]"
+      className="relative w-full pt-[var(--mobile-nav-height,48px)] desktop:pt-[76px] bg-black"
       aria-label="One of Kerala's biggest plywood manufacturing companies"
     >
       {/* Video Container cleanly fitted under the navbar, extending fully to viewport bottom */}
-      <div className="relative flex w-full h-[calc(100vh-76px)] sm:h-[calc(100vh-84px)] lg:h-[calc(100vh-90px)] min-h-[520px] items-end overflow-hidden">
+      <div className="relative flex w-full h-[calc(100vh-var(--mobile-nav-height,48px))] desktop:h-[calc(100vh-76px)] min-h-[520px] items-end overflow-hidden">
         {/* Background Manufacturing Facility Video (plays up to 8s) */}
         <div className="absolute inset-0 z-[1] overflow-hidden">
           <video

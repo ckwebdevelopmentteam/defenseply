@@ -31,7 +31,7 @@ export function DefenseplyMonogram({ className }: { className?: string }) {
 }
 
 export function BrandLogo({
-  compact = false,
+  compact = true,
   mobile = false,
   className,
 }: {

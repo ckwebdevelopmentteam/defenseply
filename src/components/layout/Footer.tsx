@@ -11,20 +11,20 @@ export function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="flex w-full flex-col justify-end overflow-hidden bg-black px-4 pt-20 sm:px-6 lg:px-8"
+      className="flex w-full flex-col justify-end overflow-hidden bg-black px-[38px] pt-16 sm:pt-20 max-[768px]:px-6 max-phone:px-4"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="w-full">
         <div className="flex flex-wrap justify-between gap-y-12 lg:gap-x-8">
           <div className="flex w-full flex-col items-start text-left md:w-[45%] lg:w-[35%]">
-            <Link href="/" aria-label="DefensePly home" className="hidden md:block">
+            <Link href="/" aria-label="DefensePly home" className="block">
               <img
-                className="h-auto w-[130px] invert brightness-200"
+                className="h-auto w-[116px] sm:w-[130px] invert brightness-200"
                 src="/assets/defenseply-logo-dark.png"
                 alt="DefensePly"
               />
             </Link>
-            <div className="mt-8 h-0.5 w-full max-w-52 bg-linear-to-r from-[#24212D] to-[#24212D]/0"></div>
-            <p className="mt-6 max-w-[350px] text-sm leading-relaxed text-white/60">
+            <div className="mt-6 sm:mt-8 h-0.5 w-full max-w-52 bg-linear-to-r from-[#24212D] to-[#24212D]/0"></div>
+            <p className="mt-5 sm:mt-6 max-w-[350px] text-sm leading-relaxed text-white/60">
               Reliable WPC and PVC solutions for spaces built with purpose.
             </p>
           </div>
@@ -97,10 +97,27 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 flex w-full justify-center md:mt-12 md:mb-[-0.5%]">
-          <h1 className="pointer-events-none select-none text-center text-[clamp(4.8rem,30vw,20rem)] font-extrabold leading-[0.70] tracking-[-0.1em] text-zinc-900">
-            DEFENSEPLY
-          </h1>
+        <div className="mt-8 flex w-full justify-center overflow-hidden sm:mt-12 md:mt-16 md:mb-[-0.5%]">
+          <h2 className="sr-only">DefensePly</h2>
+          <svg
+            viewBox="0 0 1000 120"
+            className="w-full h-[52px] min-[450px]:h-[64px] sm:h-auto block select-none pointer-events-none text-zinc-900"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <text
+              x="0"
+              y="105"
+              fill="currentColor"
+              fontWeight="900"
+              fontFamily="var(--font-sans), system-ui, -apple-system, sans-serif"
+              fontSize="135"
+              textLength="1000"
+              lengthAdjust="spacingAndGlyphs"
+            >
+              DEFENSEPLY
+            </text>
+          </svg>
         </div>
       </div>
     </motion.footer>
