@@ -19,11 +19,11 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
     <section
       id="home"
       data-section="hero"
-      className="relative w-full pt-[var(--mobile-nav-height,48px)] desktop:pt-[76px] bg-black"
+      className="relative flex h-screen min-h-[560px] w-full items-end overflow-hidden bg-black"
       aria-label="One of Kerala's biggest plywood manufacturing companies"
     >
-      {/* Video Container cleanly fitted under the navbar, extending fully to viewport bottom */}
-      <div className="relative flex w-full h-[calc(100vh-var(--mobile-nav-height,48px))] desktop:h-[calc(100vh-76px)] min-h-[520px] items-end overflow-hidden">
+      {/* Video Container cleanly extending to full viewport underneath transparent header */}
+      <div className="relative flex h-full w-full items-end overflow-hidden">
         {/* Background Manufacturing Facility Video (plays up to 8s) */}
         <div className="absolute inset-0 z-[1] overflow-hidden">
           <video
@@ -42,6 +42,8 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
               type="video/mp4"
             />
           </video>
+          {/* Subtle top vignette gradient for header legibility over hero content */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-40 bg-gradient-to-b from-black/75 via-black/35 to-transparent" />
           {/* Cinematic Overlays to blend smoothly and highlight bottom corner content */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />

@@ -24,21 +24,8 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
     const update = () => {
       const currentScrollY = window.scrollY;
 
-      setScrolled(currentScrollY > 40);
-
-      // Keep navbar visible near the top of the page
-      if (currentScrollY <= 60) {
-        setVisible(true);
-      } else {
-        const diff = currentScrollY - lastScrollY;
-        if (diff > 8) {
-          // Scrolling down - hide navbar slowly
-          setVisible(false);
-        } else if (diff < -8) {
-          // Scrolling up - show navbar
-          setVisible(true);
-        }
-      }
+      setScrolled(currentScrollY > 30);
+      setVisible(true);
 
       lastScrollY = Math.max(0, currentScrollY);
       ticking = false;

@@ -13,14 +13,8 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
   const { scrolled, visible } = useNavigationState();
   const pathname = usePathname();
 
-  const solid = Boolean(
-    forceSolid ||
-    scrolled ||
-    pathname?.startsWith("/contact-us") ||
-    pathname?.startsWith("/products") ||
-    pathname?.startsWith("/applications") ||
-    pathname?.startsWith("/gallery"),
-  );
+  const isTransparentPage = pathname === "/" || pathname?.startsWith("/about");
+  const solid = Boolean(forceSolid || scrolled || !isTransparentPage);
 
   return (
     <header id="core-main-menu">
@@ -28,15 +22,14 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
         className={cn(
           "fixed inset-x-0 top-0 z-[2147483640] flex h-[76px] justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] max-desktop:hidden",
           visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none",
-          "bg-[#FAF9F5]/95 backdrop-blur-md border-b border-[#E8E5DC]",
-          scrolled
-            ? "shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)]"
-            : "shadow-none",
+          solid
+            ? "bg-[#FAF9F5]/95 backdrop-blur-md border-b border-[#E8E5DC] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)]"
+            : "bg-transparent border-b border-transparent",
         )}
       >
         <div className="flex h-full w-full max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-12">
           {/* Brand Logo with DP Monogram */}
-          <BrandLogo compact />
+          <BrandLogo solid={solid} compact />
 
           {/* Center Navigation Links */}
           <nav aria-label="Main navigation" className="flex items-center">
@@ -56,16 +49,25 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
                       href={item.href}
                       className={cn(
                         "relative flex items-center text-[13.5px] lg:text-[14px] transition-colors py-1",
-                        isActive
-                          ? "font-semibold text-[#163326]"
-                          : "font-normal text-[#435249] hover:text-[#163326]",
+                        solid
+                          ? isActive
+                            ? "font-semibold text-[#163326]"
+                            : "font-normal text-[#435249] hover:text-[#163326]"
+                          : isActive
+                            ? "font-semibold text-white drop-shadow-sm"
+                            : "font-normal text-white/80 hover:text-white drop-shadow-sm",
                       )}
                     >
                       <span>{item.name}</span>
                       {/* Active indicator bar */}
                       {isActive && (
                         <span
-                          className="absolute -bottom-1.5 left-0 right-0 h-[2px] bg-[#163326] rounded-full"
+                          className={cn(
+                            "absolute -bottom-1.5 left-0 right-0 h-[2px] rounded-full transition-colors",
+                            solid
+                              ? "bg-[#163326]"
+                              : "bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)]",
+                          )}
                           aria-hidden="true"
                         />
                       )}
@@ -80,7 +82,12 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
           <div className="flex items-center">
             <Link
               href="/contact-us"
-              className="group/btn inline-flex items-center gap-2.5 rounded-full bg-[#173326] px-5 py-2 lg:px-6 lg:py-2.5 text-[13px] lg:text-[13.5px] font-medium text-white shadow-sm transition-all duration-200 hover:bg-[#0f241a] hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
+              className={cn(
+                "group/btn inline-flex items-center gap-2.5 rounded-full px-5 py-2 lg:px-6 lg:py-2.5 text-[13px] lg:text-[13.5px] font-medium shadow-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]",
+                solid
+                  ? "bg-[#173326] text-white hover:bg-[#0f241a] hover:shadow-md"
+                  : "bg-white text-[#173326] hover:bg-white/90 hover:shadow-md",
+              )}
             >
               <span>Get in Touch</span>
               <ArrowRight
