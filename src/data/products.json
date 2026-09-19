@@ -69,22 +69,22 @@
       {
         "title": "Modular Kitchens & Vanities",
         "description": "Zero water damage and termite immunity for under-sink cabinets, carcases, and wet areas.",
-        "image": "/assets/Spaces_Kitchens_2.jpg"
+        "image": "/assets/applications/kitchen/base-cabinets.webp"
       },
       {
         "title": "Wardrobes & Bedroom Storage",
         "description": "Smooth, stable surfaces ideal for PU painting, lamination, and long-lasting cabinet doors.",
-        "image": "/assets/00-Furniture-Hero.avif"
+        "image": "/assets/applications/wardrobe/full-height-wardrobes.webp"
       },
       {
         "title": "Partitions & False Ceilings",
         "description": "Lightweight architectural ceilings and room dividers with high acoustic and thermal insulation.",
-        "image": "/assets/Spaces_Other_IneriorsNew.jpg"
+        "image": "/assets/applications/interiors/living-room-partitions.webp"
       },
       {
         "title": "Advertising & Signage",
         "description": "Ultra-flat substrate for CNC letter carving, screen printing, and commercial exhibition booths.",
-        "image": "/assets/Applications.jpg"
+        "image": "/assets/applications/creative/cnc-screens.webp"
       }
     ],
     "highlights": [
@@ -187,22 +187,22 @@
       {
         "title": "CNC Designer Wall Panels",
         "description": "Through-color core enables intricate 2D & 3D geometric openwork and jali screens.",
-        "image": "/assets/Applications.jpg"
+        "image": "/assets/applications/creative/designer-panels.webp"
       },
       {
         "title": "Contemporary Commercial Fixtures",
         "description": "Retail display shelving, point-of-sale kiosks, and branded architectural displays.",
-        "image": "/assets/cocinasEclos.jpg"
+        "image": "/assets/applications/commercial/retail-fixtures.webp"
       },
       {
         "title": "Accent Wardrobes & Children's Rooms",
         "description": "Vibrant, scratch-resistant cabinet doors and study desks that wipe clean effortlessly.",
-        "image": "/assets/00-Furniture-Hero.avif"
+        "image": "/assets/applications/wardrobe/sliding-shutters.webp"
       },
       {
         "title": "False Ceilings & Acoustic Baffles",
         "description": "Eye-catching colored suspended ceiling baffles and decorative perimeter lighting troughs.",
-        "image": "/assets/Spaces_Other_IneriorsNew.jpg"
+        "image": "/assets/applications/interiors/ceiling-details.webp"
       }
     ],
     "highlights": [
@@ -300,22 +300,22 @@
       {
         "title": "Exterior Wall Claddings & Louvers",
         "description": "Withstands tropical monsoons, direct UV rays, and thermal cycles without warping.",
-        "image": "/assets/Spaces_Outdoor_crop.jpg"
+        "image": "/assets/york-paramedic-station.jpg"
       },
       {
         "title": "Outdoor Furniture & Pool Decking",
         "description": "Splinter-free, slip-resistant, barefoot-friendly surfaces for villas and resorts.",
-        "image": "/assets/fachadas.jpg"
+        "image": "/assets/products/wpc-composite-boards-inspection.webp"
       },
       {
         "title": "Heavy Load Kitchen Cabinets",
         "description": "Exceptional screw-holding for heavy granite and quartz countertops without sagging.",
-        "image": "/assets/Spaces_Kitchens_2.jpg"
+        "image": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg"
       },
       {
         "title": "Bathroom & Wet-Area Partitions",
         "description": "Permanent water immersion resistance for shower dividers and washroom cubicles.",
-        "image": "/assets/Spaces_BathroomNew.jpg"
+        "image": "/assets/applications/interiors/living-room-partitions.webp"
       }
     ],
     "highlights": [
@@ -413,22 +413,22 @@
       {
         "title": "Residential Luxury Villas",
         "description": "Elegant frames that never warp, swell, or allow door jamming during monsoon seasons.",
-        "image": "/assets/hotel-hyll-cotswolds.avif"
+        "image": "/assets/products/wpc-door-window-frames-collection.webp"
       },
       {
         "title": "Hotels & Hospitality Projects",
         "description": "High-traffic durability with premium acoustic dampening and fire-retardant safety.",
-        "image": "/assets/we-talk-design.jpg"
+        "image": "/assets/applications/commercial/brochure-commercial-office.webp"
       },
       {
         "title": "Hospitals & Commercial Buildings",
         "description": "Hygienic, anti-bacterial, washable frames that withstand rigorous disinfection protocols.",
-        "image": "/assets/Applications.jpg"
+        "image": "/assets/applications/commercial/retail-fixtures.webp"
       },
       {
         "title": "Bathroom & Wet-Zone Openings",
         "description": "Direct contact with wet floors without any discoloration, rot, or swelling.",
-        "image": "/assets/Spaces_BathroomNew.jpg"
+        "image": "/assets/products/wpcdoorframe2.webp"
       }
     ],
     "highlights": [
@@ -526,22 +526,22 @@
       {
         "title": "Panoramic Villa Windows",
         "description": "Large glass openings framing scenic views without thermal warping or seal failure.",
-        "image": "/assets/hotel-hyll-cotswolds.avif"
+        "image": "/assets/products/wpcwindowframesdf.webp"
       },
       {
         "title": "Coastal & High-Humidity Homes",
         "description": "Zero corrosion, zero fungal discoloration in salt-laden coastal atmospheres.",
-        "image": "/assets/Spaces_Outdoor_crop.jpg"
+        "image": "/assets/products/wpcwindowframesdf2.webp"
       },
       {
         "title": "Commercial Office Facades",
         "description": "Sleek architectural window enclosures that reduce outside traffic noise by up to 35 dB.",
-        "image": "/assets/we-talk-design.jpg"
+        "image": "/assets/applications/commercial/hero-desktop.webp"
       },
       {
         "title": "Modern Minimalist Apartments",
         "description": "Slim sightlines and clean aesthetics paired with hassle-free wipe-down cleaning.",
-        "image": "/assets/Spaces_Other_IneriorsNew.jpg"
+        "image": "/assets/products/wpcwindowframes_hover.webp"
       }
     ],
     "highlights": [
@@ -640,22 +640,22 @@
       {
         "title": "Bathrooms & Wet Rooms",
         "description": "Zero damage from continuous steam, hot showers, and direct water contact.",
-        "image": "/assets/Spaces_BathroomNew.jpg"
+        "image": "/assets/products/wpc-designer-doors-collection.webp"
       },
       {
         "title": "Hotel Guest Rooms & Corridors",
         "description": "Superior acoustic privacy, impact resistance, and elegant luxury finishes.",
-        "image": "/assets/hotel-hyll-cotswolds.avif"
+        "image": "/assets/products/wpcdoors(main).webp"
       },
       {
         "title": "Main Entrance & Bedroom Doors",
         "description": "Solid, heavy architectural presence with premium mortise lock compatibility.",
-        "image": "/assets/we-talk-design.jpg"
+        "image": "/assets/products/wpcdoors1.jpg"
       },
       {
         "title": "Corporate Offices & Boardrooms",
         "description": "Minimalist flush designs with sleek modern hardware and hidden hinges.",
-        "image": "/assets/Applications.jpg"
+        "image": "/assets/applications/commercial/office-furniture.webp"
       }
     ],
     "highlights": [
@@ -752,22 +752,22 @@
       {
         "title": "Modular Kitchen Carcases",
         "description": "Heavy-duty cabinets that support heavy granite, quartz, and heavy cookware effortlessly.",
-        "image": "/assets/Spaces_Kitchens_2.jpg"
+        "image": "/assets/applications/kitchen/base-cabinets.webp"
       },
       {
         "title": "Floor-to-Ceiling Wardrobes",
         "description": "Extra vertical stiffness prevents tall door panels from warping over time.",
-        "image": "/assets/00-Furniture-Hero.avif"
+        "image": "/assets/applications/wardrobe/full-height-wardrobes.webp"
       },
       {
         "title": "Commercial Partition Walls",
         "description": "Impact-resistant divider panels that withstand busy office and retail environments.",
-        "image": "/assets/we-talk-design.jpg"
+        "image": "/assets/applications/interiors/living-room-partitions.webp"
       },
       {
         "title": "Educational & Hospital Furniture",
         "description": "Toxin-free, nonflammable casework safe for schools, laboratories, and clinics.",
-        "image": "/assets/Applications.jpg"
+        "image": "/assets/applications/commercial/retail-fixtures.webp"
       }
     ],
     "highlights": [
@@ -864,22 +864,22 @@
       {
         "title": "Structural Furniture Framework",
         "description": "Bed frames, sofa structures, and heavy cabinetry requiring high screw grip.",
-        "image": "/assets/00-Furniture-Hero.avif"
+        "image": "/assets/products/3-layer-wpc-board-structure.webp"
       },
       {
         "title": "Heavy Modular Kitchen Counters",
         "description": "Under-counter casework supporting heavy natural stone tops and built-in hobs.",
-        "image": "/assets/Spaces_Kitchens_2.jpg"
+        "image": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg"
       },
       {
         "title": "Architectural Wall Paneling",
         "description": "Large-format wall claddings for auditoriums, boardrooms, and luxury living rooms.",
-        "image": "/assets/we-talk-design.jpg"
+        "image": "/assets/applications/interiors/brochure-interiors-lounge.webp"
       },
       {
         "title": "Commercial Store Fixtures",
         "description": "Heavy display racking and merchandise shelving designed for daily commercial use.",
-        "image": "/assets/Applications.jpg"
+        "image": "/assets/applications/commercial/retail-fixtures.webp"
       }
     ],
     "highlights": [
@@ -979,22 +979,22 @@
       {
         "title": "Designer Wardrobe Shutters",
         "description": "Vibrant full-height wardrobe doors in curated colors that never peel or scratch.",
-        "image": "/assets/00-Furniture-Hero.avif"
+        "image": "/assets/applications/wardrobe/sliding-shutters.webp"
       },
       {
         "title": "Accent Kitchen Island Cabinets",
         "description": "Contrasting two-tone kitchen cabinetry with moisture-proof factory finish.",
-        "image": "/assets/cocinasEclos.jpg"
+        "image": "/assets/applications/kitchen/breakfast-units.webp"
       },
       {
         "title": "Decorative Wall Louvers & Panels",
         "description": "Striking fluted panels and geometric wall accents in modern residential interiors.",
-        "image": "/assets/Spaces_Other_IneriorsNew.jpg"
+        "image": "/assets/applications/creative/designer-panels.webp"
       },
       {
         "title": "Retail Boutique Displays",
         "description": "High-finish commercial display tables and backdrops ready on day one.",
-        "image": "/assets/Applications.jpg"
+        "image": "/assets/applications/commercial/retail-fixtures.webp"
       }
     ],
     "highlights": [
@@ -1091,22 +1091,22 @@
       {
         "title": "Outdoor Architectural Furnishing",
         "description": "Garden furniture, balcony storage, and semi-open patio cabinetry resistant to sun and rain.",
-        "image": "/assets/Spaces_Outdoor_crop.jpg"
+        "image": "/assets/products/wpc-composite-boards-inspection.webp"
       },
       {
         "title": "Luxury Modular Kitchens",
         "description": "Hard glossy surfaces resist cooking oil, turmeric stains, heat, and moisture.",
-        "image": "/assets/Spaces_Kitchens_2.jpg"
+        "image": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp"
       },
       {
         "title": "Commercial Retail & Hospitality",
         "description": "High-traffic checkout counters, reception desks, and hotel casework.",
-        "image": "/assets/we-talk-design.jpg"
+        "image": "/assets/applications/commercial/reception-signage.webp"
       },
       {
         "title": "Wardrobes & High-End Casework",
         "description": "Smooth hard surface that glides smoothly and maintains flawless finish for decades.",
-        "image": "/assets/00-Furniture-Hero.avif"
+        "image": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp"
       }
     ],
     "highlights": [

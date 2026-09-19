@@ -13,7 +13,7 @@ export function ProductOverview({ product }: { product: ProductDetail }) {
       className="w-full px-[5%] pb-[clamp(40px,4.5vw,68px)] max-sm:px-[4%] max-sm:pb-8"
       aria-label="Product Overview"
     >
-      <div className="mx-auto max-w-[1440px] grid grid-cols-[1.15fr_1fr] gap-[50px] items-start max-lg:grid-cols-1 max-lg:gap-8 max-sm:gap-5">
+      <div className="mx-auto max-w-[1600px] grid grid-cols-[1.15fr_1fr] gap-[50px] items-start max-lg:grid-cols-1 max-lg:gap-8 max-sm:gap-5">
       {/* Gallery Column */}
       <ProductGallery
         key={product.slug}
