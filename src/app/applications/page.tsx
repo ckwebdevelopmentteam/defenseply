@@ -23,8 +23,7 @@ function getOverviewHero(): { src: string; avif?: string } {
   if (custom) return { src: custom };
 
   return {
-    src: "/assets/piece-of-rest-by-james-kaoru.jpg",
-    avif: "/assets/piece-of-rest-by-james-kaoru.avif",
+    src: "/assets/applications/interiors/defenseply-eco-architecture-living.webp",
   };
 }
 
@@ -35,25 +34,28 @@ export default function ApplicationsIndexPage() {
   return (
     <main id="main-content" className="overflow-hidden bg-white text-ink">
       {/* Breadcrumb Navigation */}
-      <div className="border-b border-neutral-200/70 bg-[#faf9f6]">
-        <nav
-          aria-label="Breadcrumb"
-          className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-2 px-6 py-4 text-xs text-neutral-500 pt-[115px] max-desktop:pt-[140px] max-phone:pt-[120px]"
-        >
-          <Link href="/" className="hover:text-ink transition-colors">
-            Home
-          </Link>
-          <span aria-hidden="true" className="text-neutral-300">
-            /
-          </span>
-          <span aria-current="page" className="font-medium text-neutral-900">
-            Applications
-          </span>
-        </nav>
+      <div className="w-full pt-[120px] pb-4 px-[5%] max-desktop:pt-[130px] max-phone:pt-[106px] max-sm:pb-3 max-sm:px-[4%] border-b border-neutral-200/70 bg-[#faf9f6]">
+        <div className="mx-auto max-w-[1600px]">
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center gap-2 text-xs tracking-[0.8px] uppercase text-[#767472] flex-wrap max-sm:text-[10px] max-sm:gap-1.5"
+          >
+            <Link
+              href="/"
+              className="text-[#767472] no-underline transition-colors duration-200 hover:text-[#1a1a1a]"
+            >
+              Home
+            </Link>
+            <span className="opacity-40 text-[11px]">/</span>
+            <span className="text-[#1a1a1a] font-medium" aria-current="page">
+              Applications
+            </span>
+          </nav>
+        </div>
       </div>
 
       {/* Page Header / Hero Overview with Architectural Background */}
-      <section className="relative isolate overflow-hidden border-b border-neutral-800 bg-neutral-950 py-20 md:py-28 text-white">
+      <section className="relative isolate overflow-hidden border-b border-neutral-800 bg-neutral-950 py-20 md:py-28 text-white w-full px-[5%] max-sm:px-[4%]">
         {/* Background Image with optimized avif/jpg delivery */}
         <picture className="absolute inset-0 size-full -z-20">
           {overviewHero.avif && (
@@ -77,7 +79,7 @@ export default function ApplicationsIndexPage() {
           aria-hidden="true"
         />
 
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+        <div className="mx-auto max-w-[1600px]">
           <div className="max-w-3xl">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#55ba6a]">
               Defenseply Applications Directory
@@ -111,8 +113,8 @@ export default function ApplicationsIndexPage() {
       </section>
 
       {/* Parent Applications Listing */}
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10 space-y-24 md:space-y-36">
+      <section className="w-full px-[5%] max-sm:px-[4%] py-16 md:py-24">
+        <div className="mx-auto max-w-[1600px] space-y-24 md:space-y-32">
           {applications.map((app, index) => {
             const isReversed = index % 2 === 1;
 
@@ -125,17 +127,17 @@ export default function ApplicationsIndexPage() {
               <article
                 key={app.slug}
                 id={app.slug}
-                className="scroll-mt-32 grid gap-10 lg:gap-14 lg:grid-cols-2 items-stretch"
+                className="scroll-mt-32 grid gap-8 lg:gap-12 xl:gap-16 lg:grid-cols-12 items-stretch"
               >
                 {/* Visual Banner Column */}
                 <div
-                  className={`flex flex-col ${
+                  className={`flex flex-col lg:col-span-7 ${
                     isReversed ? "lg:order-2" : "lg:order-1"
                   }`}
                 >
                   <Link
                     href={`/applications/${app.slug}`}
-                    className="group relative block w-full h-full min-h-[380px] md:min-h-[440px] aspect-[16/10] lg:aspect-auto overflow-hidden bg-neutral-900 shadow-xl"
+                    className="group relative block w-full h-full min-h-[340px] md:min-h-[400px] aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-neutral-900 shadow-xl"
                   >
                     {/* Hero Banner Image */}
                     <ApplicationImage
@@ -143,7 +145,7 @@ export default function ApplicationsIndexPage() {
                       mobileSrc={app.heroMobile}
                       alt={app.heroAlt}
                       fill
-                      className="transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                      className="transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     />
 
                     {/* Gradient Overlay */}
@@ -169,16 +171,16 @@ export default function ApplicationsIndexPage() {
 
                 {/* Content & Information Column */}
                 <div
-                  className={`flex flex-col justify-between py-1 lg:py-2 ${
+                  className={`flex flex-col justify-between py-1 ${
                     isReversed ? "lg:order-1" : "lg:order-2"
-                  }`}
+                  } lg:col-span-5`}
                 >
                   <div>
-                    <h2 className="text-3xl md:text-4xl font-light tracking-tight text-neutral-900">
+                    <h2 className="text-4xl sm:text-5xl lg:text-[clamp(42px,3.8vw,62px)] font-extralight uppercase tracking-[0.03em] text-neutral-900 leading-[1.04]">
                       {app.title}
                     </h2>
 
-                    <p className="mt-2 text-base md:text-lg text-neutral-800 font-normal">
+                    <p className="mt-3 text-base md:text-lg text-neutral-800 font-normal">
                       {app.headline}
                     </p>
 
@@ -206,7 +208,7 @@ export default function ApplicationsIndexPage() {
                   </div>
 
                   {/* Bottom Action Area with Recommended Materials just above the Button */}
-                  <div className="pt-6">
+                  <div className="pt-8 lg:pt-6">
                     {/* Compatible Materials */}
                     {compatibleProducts.length > 0 && (
                       <div className="mb-4">
@@ -243,32 +245,34 @@ export default function ApplicationsIndexPage() {
       </section>
 
       {/* Consultation & Material Specification Section */}
-      <section className="border-t border-neutral-200 bg-[#f7f6f2] py-20">
-        <div className="mx-auto max-w-[1200px] px-6 lg:px-10 text-center">
-          <p className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#1c3f21] font-semibold">
-            Custom Projects & Guidance
-          </p>
-          <h2 className="mx-auto max-w-2xl text-3xl md:text-4xl font-light tracking-tight text-neutral-900">
-            Have a custom application or fabrication requirement?
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm md:text-base leading-relaxed text-neutral-600 font-light">
-            Our material specialists can recommend the optimal board density, thickness,
-            screwholding parameters, and CNC routing configurations for your specific project.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact-us"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-[#1c3f21]"
-            >
-              <span>Speak with a Material Specialist</span>
-              <ArrowRight className="size-4" />
-            </Link>
-            <Link
-              href="/#products"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-white text-neutral-900 border border-neutral-300 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-100"
-            >
-              <span>Explore Products</span>
-            </Link>
+      <section className="border-t border-neutral-200 bg-[#f7f6f2] py-20 w-full px-[5%] max-sm:px-[4%]">
+        <div className="mx-auto max-w-[1600px] text-center">
+          <div className="mx-auto max-w-3xl">
+            <p className="mb-3 text-[11px] uppercase tracking-[0.22em] text-[#1c3f21] font-semibold">
+              Custom Projects & Guidance
+            </p>
+            <h2 className="text-3xl md:text-4xl font-light tracking-tight text-neutral-900">
+              Have a custom application or fabrication requirement?
+            </h2>
+            <p className="mt-4 text-sm md:text-base leading-relaxed text-neutral-600 font-light">
+              Our material specialists can recommend the optimal board density, thickness,
+              screwholding parameters, and CNC routing configurations for your specific project.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center gap-2 px-7 py-4 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-[#1c3f21]"
+              >
+                <span>Speak with a Material Specialist</span>
+                <ArrowRight className="size-4" />
+              </Link>
+              <Link
+                href="/#products"
+                className="inline-flex items-center gap-2 px-7 py-4 bg-white text-neutral-900 border border-neutral-300 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-100"
+              >
+                <span>Explore Products</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
