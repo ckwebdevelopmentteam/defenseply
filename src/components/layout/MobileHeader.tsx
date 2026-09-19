@@ -38,7 +38,12 @@ export function MobileHeader({ solid }: { solid: boolean }) {
         data-testid="mobile-navbar"
         className={cn(
           "pointer-events-auto flex shrink-0 items-center justify-between px-4 sm:px-6 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-          "h-[var(--mobile-nav-height)] bg-[#FAF9F5] text-[#163326] border-b border-[#E8E5DC] shadow-[0_2px_10px_-2px_rgba(0,0,0,0.05)]",
+          "h-[var(--mobile-nav-height)] text-[#163326]",
+          open
+            ? "bg-[#FAF9F5] border-b border-[#E8E5DC]"
+            : solid
+              ? "bg-[#FAF9F5]/95 backdrop-blur-md border-b border-[#E8E5DC] shadow-[0_2px_10px_-2px_rgba(0,0,0,0.05)]"
+              : "bg-transparent border-b border-transparent shadow-none",
           !visible && !open ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100",
         )}
       >

@@ -13,13 +13,10 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
   const { scrolled, visible } = useNavigationState();
   const pathname = usePathname();
 
+  const isHeroPage = pathname === "/";
   const solid = Boolean(
     forceSolid ||
-    scrolled ||
-    pathname?.startsWith("/contact-us") ||
-    pathname?.startsWith("/products") ||
-    pathname?.startsWith("/applications") ||
-    pathname?.startsWith("/gallery"),
+    (isHeroPage ? scrolled : true)
   );
 
   return (
@@ -28,9 +25,11 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
         className={cn(
           "fixed inset-x-0 top-0 z-[2147483640] flex justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] max-desktop:hidden",
           visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none",
-          scrolled
-            ? "py-2.5 bg-[#FAF9F5]/95 backdrop-blur-md shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] border-b border-[#E8E5DC]"
-            : "py-4 sm:py-5 bg-[#FAF9F5] border-b border-transparent",
+          solid
+            ? (scrolled
+                ? "py-2.5 bg-[#FAF9F5]/95 backdrop-blur-md shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] border-b border-[#E8E5DC]"
+                : "py-4 sm:py-5 bg-[#FAF9F5] border-b border-[#E8E5DC]")
+            : "py-4 sm:py-5 bg-transparent border-b border-transparent shadow-none",
         )}
       >
         <div className="flex w-full max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-12">
