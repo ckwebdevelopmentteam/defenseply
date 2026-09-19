@@ -26,16 +26,17 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
     <header id="core-main-menu">
       <div
         className={cn(
-          "fixed inset-x-0 top-0 z-[2147483640] flex justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] max-desktop:hidden",
+          "fixed inset-x-0 top-0 z-[2147483640] flex h-[76px] justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] max-desktop:hidden",
           visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none",
+          "bg-[#FAF9F5]/95 backdrop-blur-md border-b border-[#E8E5DC]",
           scrolled
-            ? "py-2.5 bg-[#FAF9F5]/95 backdrop-blur-md shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] border-b border-[#E8E5DC]"
-            : "py-4 sm:py-5 bg-[#FAF9F5] border-b border-transparent",
+            ? "shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)]"
+            : "shadow-none",
         )}
       >
-        <div className="flex w-full max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-12">
+        <div className="flex h-full w-full max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-12">
           {/* Brand Logo with DP Monogram */}
-          <BrandLogo compact={scrolled} />
+          <BrandLogo compact />
 
           {/* Center Navigation Links */}
           <nav aria-label="Main navigation" className="flex items-center">
