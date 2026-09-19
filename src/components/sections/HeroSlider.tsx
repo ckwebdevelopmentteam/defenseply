@@ -85,7 +85,7 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
 
         {/* Subtle scroll cue */}
         <a
-          href="#about"
+          href="#who-we-are"
           className="absolute bottom-3 left-1/2 z-[9] -translate-x-1/2 max-tablet:hidden opacity-60 transition-opacity hover:opacity-100"
           aria-label="Scroll down"
         >

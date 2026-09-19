@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { About } from "@/components/sections/About";
 import { Applications } from "@/components/sections/Applications";
 import { Products } from "@/components/sections/Products";
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <main id="main-content" className="overflow-x-clip">
         <Hero />
+        <WhoWeAre />
         <div className="mx-auto w-full px-[38px] max-md:px-5 max-phone:px-5">
           <article>
             <About />
