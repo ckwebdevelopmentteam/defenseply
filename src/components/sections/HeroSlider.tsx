@@ -1,154 +1,95 @@
 "use client";
 
-import Image from "next/image";
+import { useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Leaf, Users, Factory, MapPin, Mouse } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { HeroScene } from "@/data/hero";
 
 export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current && videoRef.current.currentTime >= 8) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(() => {});
+    }
+  };
+
   return (
     <section
       id="home"
       data-section="hero"
-      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden"
-      aria-label="A Stronger Tomorrow from Kerala - DefensePly"
+      className="relative w-full pt-[var(--mobile-nav-height,48px)] desktop:pt-[76px] bg-black"
+      aria-label="One of Kerala's biggest plywood manufacturing companies"
     >
-      {/* Background Graphic Pattern Image */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <Image
-          src="/hero-background.jpg"
-          alt="DefensePly Background Pattern"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-      </div>
+      {/* Video Container cleanly fitted under the navbar, extending fully to viewport bottom */}
+      <div className="relative flex w-full h-[calc(100vh-var(--mobile-nav-height,48px))] desktop:h-[calc(100vh-76px)] min-h-[520px] items-end overflow-hidden">
+        {/* Background Manufacturing Facility Video (plays up to 8s) */}
+        <div className="absolute inset-0 z-[1] overflow-hidden">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            onTimeUpdate={handleTimeUpdate}
+            className="h-full w-full object-cover"
+          >
+            <source src="/assets/hero-facility.mp4#t=0,8" type="video/mp4" />
+            <source
+              src="/Plywood_manufacturing_facility_p._1080p_20260917175126.mp4#t=0,8"
+              type="video/mp4"
+            />
+          </video>
+          {/* Cinematic Overlays to blend smoothly and highlight bottom corner content */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
+        </div>
 
-      {/* Main Hero Row: Content on Left, Visual Graphic on Right */}
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12 pt-28 sm:pt-32 lg:pt-36 pb-8 sm:pb-10 flex-1 flex items-center">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 w-full">
-          {/* Left Column: Heading, Subtext & Action CTAs */}
-          <div className="w-full lg:max-w-[48%] xl:max-w-[46%] flex flex-col items-start gap-4 sm:gap-5">
-            {/* Tagline / Subtitle */}
-            <span className="text-[11px] sm:text-[12px] font-semibold tracking-[0.24em] text-[#435249] uppercase">
-              BUILT ON NATURE. DRIVEN BY PEOPLE.
-            </span>
-
-            {/* Serif Editorial Headline */}
-            <h1 className="font-serif text-[clamp(34px,4.3vw,62px)] font-normal text-[#161d19] leading-[1.08] tracking-[-0.015em]">
-              A Stronger Tomorrow <span className="text-[#163326]">from Kerala.</span>
+        {/* Content Area - Placed at corner side below */}
+        <div className="relative z-[3] w-full px-6 sm:px-10 lg:px-14 pb-10 sm:pb-14 lg:pb-16 pt-10">
+          <div className="flex max-w-2xl flex-col items-start gap-3.5 sm:gap-4.5">
+            {/* Non-bold, Well-proportioned Headline */}
+            <h1 className="text-[clamp(28px,3.4vw,48px)] font-normal text-white leading-[1.18] tracking-normal">
+              One of the biggest plywood manufacturing companies in Kerala
             </h1>
 
-            {/* Description Paragraph */}
-            <p className="max-w-xl text-[clamp(14px,1.05vw,16.5px)] font-normal leading-relaxed text-[#435249]">
-              Decades of industrial expertise and calibrated precision manufacturing, delivering high-grade plywood, blockboards, and veneers across Kerala and beyond.
+            {/* Description */}
+            <p className="max-w-xl text-[clamp(15px,1.08vw,18px)] font-light leading-relaxed text-white/85">
+              Decades of industrial expertise and calibrated precision manufacturing, delivering high-grade plywood, blockboards, and veneers across Kerala.
             </p>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-2 sm:pt-3">
+            {/* Action CTAs */}
+            <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <Link
                 href="#products"
-                className="inline-flex items-center gap-2.5 rounded-full bg-[#163326] px-6 sm:px-7 py-3 sm:py-3.5 text-sm font-medium text-white shadow-[0_4px_14px_rgba(22,51,38,0.25)] transition-all duration-200 hover:bg-[#0f241a] hover:shadow-[0_6px_20px_rgba(22,51,38,0.32)] hover:scale-[1.01] active:scale-[0.98]"
+                className="inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 text-sm font-medium text-[#163326] shadow-md transition-all duration-200 hover:bg-white/90 hover:scale-[1.01] active:scale-[0.98]"
               >
-                <span>Explore Our Journey</span>
+                <span>Explore Products</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
 
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 rounded-full border border-[#163326]/30 bg-white/90 px-6 sm:px-7 py-3 sm:py-3.5 text-sm font-medium text-[#163326] shadow-sm backdrop-blur-sm transition-all duration-200 hover:bg-white hover:border-[#163326]/60 active:scale-[0.98]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/10 px-6 py-3 text-sm font-normal text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 active:scale-[0.98]"
               >
                 <span>Contact Us</span>
               </Link>
             </div>
           </div>
-
-          {/* Right Column: Composite Visual (Factory, Engineer, Kerala Map & Sustainable Forestry) */}
-          <div className="w-full lg:max-w-[52%] xl:max-w-[54%] flex justify-center lg:justify-end items-center relative">
-            <div className="relative w-full max-w-[660px] aspect-[614/565] transition-transform duration-500 hover:scale-[1.01]">
-              <Image
-                src="/hero-right-image.png"
-                alt="DefensePly Kerala Manufacturing Facility & Sustainable Craftsmanship"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 54vw"
-                className="object-contain object-center lg:object-right"
-              />
-            </div>
-          </div>
         </div>
-      </div>
 
-      {/* Bottom Metrics / Stats Bar */}
-      <div className="relative z-10 w-full border-t border-[#E5E1D5]/80 bg-[#FAF9F5]/85 backdrop-blur-md">
-        <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-12 py-4 sm:py-5">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
-            {/* 4 Core Milestones */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-10 flex-1">
-              {/* Stat 1 */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#163326]/6 text-[#163326]">
-                  <Leaf className="h-5 w-5 stroke-[1.8]" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[17px] font-bold text-[#163326] leading-tight">20+</span>
-                  <span className="text-[12px] text-[#55645b] leading-tight">Years of Expertise</span>
-                </div>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#163326]/6 text-[#163326]">
-                  <Users className="h-5 w-5 stroke-[1.8]" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[17px] font-bold text-[#163326] leading-tight">500+</span>
-                  <span className="text-[12px] text-[#55645b] leading-tight">Team Members</span>
-                </div>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#163326]/6 text-[#163326]">
-                  <Factory className="h-5 w-5 stroke-[1.8]" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[17px] font-bold text-[#163326] leading-tight">Modern</span>
-                  <span className="text-[12px] text-[#55645b] leading-tight">Manufacturing Facilities</span>
-                </div>
-              </div>
-
-              {/* Stat 4 */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#163326]/6 text-[#163326]">
-                  <MapPin className="h-5 w-5 stroke-[1.8]" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[17px] font-bold text-[#163326] leading-tight">Wide</span>
-                  <span className="text-[12px] text-[#55645b] leading-tight">Distribution Network</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Tagline Slogan & Line */}
-            <div className="hidden xl:flex items-center gap-4 pl-6 border-l border-[#E5E1D5]">
-              <div className="flex flex-col text-right">
-                <span className="text-[11.5px] font-bold tracking-[0.16em] text-[#163326] uppercase">HIGHER STANDARDS.</span>
-                <span className="text-[11.5px] font-bold tracking-[0.16em] text-[#163326]/75 uppercase">A GREENER TOMORROW.</span>
-              </div>
-              <div className="h-0.5 w-7 bg-[#163326]" />
-            </div>
-          </div>
-
-          {/* Scroll Cue */}
-          <div className="mt-3 pt-2.5 border-t border-[#E5E1D5]/60 flex items-center justify-between text-[#55645b] text-[11px]">
-            <a href="#who-we-are" className="inline-flex items-center gap-2 hover:text-[#163326] transition-colors">
-              <Mouse className="h-3.5 w-3.5" />
-              <span className="tracking-[0.18em] uppercase font-medium">Scroll to discover</span>
-            </a>
-          </div>
-        </div>
+        {/* Subtle scroll cue */}
+        <a
+          href="#who-we-are"
+          className="absolute bottom-3 left-1/2 z-[9] -translate-x-1/2 max-tablet:hidden opacity-60 transition-opacity hover:opacity-100"
+          aria-label="Scroll down"
+        >
+          <span className="relative inline-block h-7 w-4.5 rounded-[40px] border border-white/50">
+            <span className="absolute top-1.5 left-[7px] h-1.5 w-0.5 animate-scroll-cue rounded-full bg-white" />
+          </span>
+        </a>
       </div>
     </section>
   );
