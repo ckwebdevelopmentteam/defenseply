@@ -18,7 +18,8 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
     scrolled ||
     pathname?.startsWith("/contact-us") ||
     pathname?.startsWith("/products") ||
-    pathname?.startsWith("/applications"),
+    pathname?.startsWith("/applications") ||
+    pathname?.startsWith("/gallery"),
   );
 
   return (

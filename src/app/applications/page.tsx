@@ -23,8 +23,7 @@ function getOverviewHero(): { src: string; avif?: string } {
   if (custom) return { src: custom };
 
   return {
-    src: "/assets/piece-of-rest-by-james-kaoru.jpg",
-    avif: "/assets/piece-of-rest-by-james-kaoru.avif",
+    src: "/assets/applications/interiors/defenseply-eco-architecture-living.webp",
   };
 }
 

@@ -27,18 +27,18 @@
   "gallery": [
     {
       "position": "left",
-      "image": "/assets/cosentino-city-barcelona.avif",
-      "alt": "DEFENSEPLY WPC architectural installation"
+      "image": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp",
+      "alt": "DefensePly Full-Height WPC Wardrobe Systems"
     },
     {
       "position": "center",
-      "image": "/assets/proyecto-barquillo.avif",
-      "alt": "Sustainable composite interior application"
+      "image": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "alt": "Sustainable composite modular kitchen cabinetry"
     },
     {
       "position": "right",
-      "image": "/assets/battersea-residential.avif",
-      "alt": "High-performance composite fixtures"
+      "image": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "alt": "Architectural CNC cut decorative composite panels"
     }
   ],
   "galleryDescription": "Empowering architects, contractors, interior designers, and homeowners with reliable supply chains, seamless customization, and sustainable WPC and PVC composite solutions.",

@@ -57,7 +57,7 @@ export function ArticleCard({
         </div>
 
         {/* Slide-in frosted bottom bar from prompt with animated arrow */}
-        <div className="absolute w-full px-5 py-4 z-[2] bottom-0 overflow-hidden translate-y-full bg-black/60 backdrop-blur-lg group-hover:translate-y-0 max-[1025px]:translate-y-0 duration-300 ease-out text-white">
+        <div className="absolute w-full px-5 py-4 z-[2] bottom-0 overflow-hidden translate-y-full bg-[#1c3f21] backdrop-blur-lg group-hover:translate-y-0 max-[1025px]:translate-y-0 duration-300 ease-out text-white">
           <div className="flex w-full justify-between items-end gap-3">
             <div className="flex flex-col min-w-0">
               {subtitle && (
@@ -95,3 +95,4 @@ export function ArticleCard({
     </div>
   );
 }
+
