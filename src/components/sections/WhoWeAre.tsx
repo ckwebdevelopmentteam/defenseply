@@ -124,7 +124,7 @@ export function WhoWeAre() {
           <div className="flex w-full min-h-[360px] sm:min-h-[440px] lg:min-h-[480px]">
             <div className="relative w-full h-full overflow-hidden bg-[#E2DED5] group">
               <Image
-                src="/assets/who-we-are/factory-facade-2x.webp"
+                src="/811bae52-f843-43a1-9dab-0a2b815dda3a.png"
                 alt="DEFENSEPLY Modern WPC & PVC Manufacturing Facility and Factory"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"

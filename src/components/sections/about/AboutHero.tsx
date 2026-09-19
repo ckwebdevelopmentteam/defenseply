@@ -6,13 +6,15 @@ export function AboutHero() {
       className="relative flex h-screen w-full flex-col justify-end overflow-hidden bg-[#111]"
     >
       {/* Background image */}
-      <img
-        src="/assets/Casa-Navacerrada-LGC-2.jpg"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 size-full object-cover opacity-60"
-        loading="eager"
-      />
+      <picture className="absolute inset-0 size-full">
+        <source srcSet="/assets/about/about-hero-facility.webp" type="image/webp" />
+        <img
+          src="/811bae52-f843-43a1-9dab-0a2b815dda3a.png"
+          alt="DEFENSEPLY Advanced WPC & PVC Manufacturing Facility"
+          className="size-full object-cover opacity-70 object-center"
+          loading="eager"
+        />
+      </picture>
       {/* Top vignette gradient for transparent header contrast */}
       <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-40 bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
       {/* Gradient overlay */}
