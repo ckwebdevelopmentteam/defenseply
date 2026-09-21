@@ -135,7 +135,7 @@ export function About({ data = content }: { data?: typeof content }) {
               <div
                 key={photo.position}
                 className={cn(
-                  "absolute h-[150px] w-30 overflow-hidden rounded-[14px] border-[3px] border-white bg-white shadow-[0_12px_28px_#00000024] transition-[transform,box-shadow] duration-400 ease-[cubic-bezier(.16,1,.3,1)]",
+                  "absolute h-[150px] w-30 overflow-hidden rounded-none border-[3px] border-white bg-white shadow-[0_12px_28px_#00000024] transition-[transform,box-shadow] duration-400 ease-[cubic-bezier(.16,1,.3,1)]",
                   photoPositions[photo.position as keyof typeof photoPositions],
                 )}
               >

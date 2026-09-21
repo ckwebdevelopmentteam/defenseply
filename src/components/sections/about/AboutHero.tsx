@@ -3,7 +3,7 @@ export function AboutHero() {
     <section
       id="about-hero"
       aria-label="About DEFENSEPLY INTERNATIONAL LLP"
-      className="relative flex h-screen w-full flex-col justify-end overflow-hidden bg-[#111]"
+      className="relative flex h-[80vh] w-full flex-col justify-end overflow-hidden bg-[#111]"
     >
       {/* Background image */}
       <picture className="absolute inset-0 size-full">

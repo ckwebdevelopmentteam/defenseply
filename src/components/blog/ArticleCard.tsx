@@ -14,7 +14,7 @@ export function ArticleCard({
     <div
       role="button"
       tabIndex={0}
-      className="w-full overflow-hidden rounded-[4px] border border-black/10 bg-[#f9f9f7] shadow-xs transition-[box-shadow,transform] duration-300 hover:shadow-lg max-md:w-[82vw] max-md:shrink-0 max-[1025px]:w-[50vw] max-[1025px]:shrink-0"
+      className="w-full overflow-hidden rounded-none border border-black/10 bg-[#f9f9f7] shadow-xs transition-[box-shadow,transform] duration-300 hover:shadow-lg max-md:w-[82vw] max-md:shrink-0 max-[1025px]:w-[50vw] max-[1025px]:shrink-0"
       onClick={() => onOpen(article)}
       onKeyDown={(event) => {
         if (event.key === "Enter" || event.key === " ") {
