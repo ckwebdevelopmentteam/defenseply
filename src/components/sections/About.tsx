@@ -22,7 +22,7 @@ function AboutCard({ className, ...props }: ComponentProps<"article">) {
     <article
       {...props}
       className={cn(
-        "relative flex flex-col overflow-hidden rounded-none border border-black/6 bg-[#f7f8f9] transition-[transform,box-shadow] duration-350 hover:shadow-[0_16px_36px_#0000000f]",
+        "relative flex flex-col overflow-hidden rounded-[4px] border border-black/6 bg-[#f7f8f9] transition-[transform,box-shadow] duration-350 hover:shadow-[0_16px_36px_#0000000f]",
         className,
       )}
     />
@@ -135,7 +135,7 @@ export function About({ data = content }: { data?: typeof content }) {
               <div
                 key={photo.position}
                 className={cn(
-                  "absolute h-[150px] w-30 overflow-hidden rounded-none border-[3px] border-white bg-white shadow-[0_12px_28px_#00000024] transition-[transform,box-shadow] duration-400 ease-[cubic-bezier(.16,1,.3,1)]",
+                  "absolute h-[150px] w-30 overflow-hidden rounded-[4px] border-[3px] border-white bg-white shadow-[0_12px_28px_#00000024] transition-[transform,box-shadow] duration-400 ease-[cubic-bezier(.16,1,.3,1)]",
                   photoPositions[photo.position as keyof typeof photoPositions],
                 )}
               >

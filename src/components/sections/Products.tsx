@@ -114,12 +114,12 @@ export function Products({
 
           return (
             <div
-              className="keen-slider__slide group relative flex h-[480px] max-desktop:h-[420px] max-phone:h-[380px] flex-col overflow-hidden rounded-none bg-[#222]"
+              className="keen-slider__slide group relative flex h-[480px] max-desktop:h-[420px] max-phone:h-[380px] flex-col overflow-hidden rounded-[4px] bg-[#222]"
               key={item.title}
             >
               <a
                 href={item.href}
-                className="relative block size-full overflow-hidden rounded-none no-underline"
+                className="relative block size-full overflow-hidden rounded-[4px] no-underline"
               >
                 {/* Base Image */}
                 <img

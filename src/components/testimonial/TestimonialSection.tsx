@@ -61,7 +61,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
       ) : (
         <div
           className={cn(
-            "w-full flex flex-col overflow-hidden rounded-none border border-black/10 bg-[#fafaf8] p-8 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transform-gpu transition-all duration-300 max-phone:p-6 cursor-pointer",
+            "w-full flex flex-col overflow-hidden rounded-[4px] border border-black/10 bg-[#fafaf8] p-8 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transform-gpu transition-all duration-300 max-phone:p-6 cursor-pointer",
           )}
         >
           <p className="text-[#333] font-sans text-[16px] max-phone:text-[15px] leading-[1.65] font-normal">

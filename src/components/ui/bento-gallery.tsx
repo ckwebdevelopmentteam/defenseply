@@ -85,7 +85,7 @@ const ImageModal = ({
         <img
           src={item.url}
           alt={item.title}
-          className="h-auto max-h-[80vh] w-full rounded-none object-contain shadow-2xl"
+          className="h-auto max-h-[80vh] w-full rounded-[4px] object-contain shadow-2xl"
         />
         <div className="mt-4 text-center text-white">
           <h3 className="text-lg font-semibold tracking-wide font-sans">{item.title}</h3>
@@ -221,7 +221,7 @@ export const InteractiveImageBentoGallery: React.FC<
                 key={item.id}
                 variants={itemVariants}
                 className={cn(
-                  "group relative flex h-full w-full cursor-pointer items-end overflow-hidden rounded-none border border-black/8 bg-card p-5 shadow-sm transition-all duration-300 ease-in-out hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background select-none",
+                  "group relative flex h-full w-full cursor-pointer items-end overflow-hidden rounded-[4px] border border-black/8 bg-card p-5 shadow-sm transition-all duration-300 ease-in-out hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background select-none",
                   item.span,
                 )}
                 whileHover={{ scale: 1.015 }}

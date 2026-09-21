@@ -96,7 +96,7 @@ export function WhoWeAre() {
               <div className="mb-6 sm:mb-8">
                 <Link
                   href="/about"
-                  className="group inline-flex items-center gap-4 bg-[#16331D] hover:bg-[#1e4527] text-white px-6 py-3 sm:px-7 sm:py-3.5 text-[12.5px] font-medium tracking-[0.08em] uppercase transition-all duration-300 shadow-[0_2px_8px_rgba(22,51,29,0.18)] hover:shadow-[0_4px_16px_rgba(22,51,29,0.28)] hover:-translate-y-0.5"
+                  className="group inline-flex items-center gap-4 rounded-[4px] bg-[#16331D] hover:bg-[#1e4527] text-white px-6 py-3 sm:px-7 sm:py-3.5 text-[12.5px] font-medium tracking-[0.08em] uppercase transition-all duration-300 shadow-[0_2px_8px_rgba(22,51,29,0.18)] hover:shadow-[0_4px_16px_rgba(22,51,29,0.28)] hover:-translate-y-0.5"
                 >
                   <span>DISCOVER DEFENSEPLY</span>
                   <span className="inline-flex items-center transition-transform duration-300 group-hover:translate-x-1.5 text-sm">
@@ -122,7 +122,7 @@ export function WhoWeAre() {
 
           {/* Center Column: Defenseply Factory Facility Image */}
           <div className="flex w-full min-h-[360px] sm:min-h-[440px] lg:min-h-[480px]">
-            <div className="relative w-full h-full overflow-hidden bg-[#E2DED5] group">
+            <div className="relative w-full h-full overflow-hidden rounded-[4px] bg-[#E2DED5] group">
               <Image
                 src="/811bae52-f843-43a1-9dab-0a2b815dda3a.png"
                 alt="DEFENSEPLY Modern WPC & PVC Manufacturing Facility and Factory"
@@ -137,7 +137,7 @@ export function WhoWeAre() {
           {/* Right Column: 3 Stacked Visual Cards matching design */}
           <div className="flex flex-col gap-2.5 sm:gap-3 justify-between w-full h-full min-h-[440px] sm:min-h-[460px] lg:min-h-[480px]">
             {/* Card 1: Engineered For Real Spaces */}
-            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden bg-[#242220] group">
+            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden rounded-[4px] bg-[#242220] group">
               <Image
                 src="/assets/who-we-are/card-engineered-clean-hd.webp"
                 alt="DEFENSEPLY Engineered Composite Planks and Materials"
@@ -158,7 +158,7 @@ export function WhoWeAre() {
             </div>
 
             {/* Card 2: Performance Meets Design */}
-            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden bg-[#242220] group">
+            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden rounded-[4px] bg-[#242220] group">
               <Image
                 src="/assets/who-we-are/card-performance-clean.webp"
                 alt="DEFENSEPLY Performance Meets Design - Modern Architectural Wood Paneling"
@@ -179,7 +179,7 @@ export function WhoWeAre() {
             </div>
 
             {/* Card 3: Modern Quote Card with Plant and Typography */}
-            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden bg-[#EDEAE3] group">
+            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden rounded-[4px] bg-[#EDEAE3] group">
               <Image
                 src="/assets/who-we-are/card-quote-modern-2x.webp"
                 alt="Innovative materials for modern living. — DEFENSEPLY"

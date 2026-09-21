@@ -13,7 +13,7 @@ export function ApplicationCard({
   return (
     <Link
       href={`/applications/${category.slug}`}
-      className="keen-slider__slide group relative flex aspect-[4/5] flex-col overflow-hidden rounded-none bg-stone shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1c3f21]"
+      className="keen-slider__slide group relative flex aspect-[4/5] flex-col overflow-hidden rounded-[4px] bg-stone shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1c3f21]"
     >
       {/* Full-Height Background Image */}
       <ApplicationImage

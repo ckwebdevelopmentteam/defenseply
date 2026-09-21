@@ -35,7 +35,7 @@ export function ActionLink({
       href={href}
       {...props}
       className={cn(
-        "group inline-flex items-center gap-2.5 border px-[23px] py-[11px] text-fluid-xs leading-normal transition-colors",
+        "group inline-flex items-center gap-2.5 rounded-[4px] border px-[23px] py-[11px] text-fluid-xs leading-normal transition-colors",
         variants[variant],
         className,
       )}

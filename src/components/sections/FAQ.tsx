@@ -33,7 +33,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
           </div>
 
           {/* Quick Technical Help Box */}
-          <div className="overflow-hidden rounded-none border border-black/8 bg-[#fafaf8] p-7 max-phone:hidden max-md:hidden">
+          <div className="overflow-hidden rounded-[4px] border border-black/8 bg-[#fafaf8] p-7 max-phone:hidden max-md:hidden">
             <h4 className="mb-2 text-[15px] font-medium uppercase tracking-[0.5px] text-[#1a1a1a]">
               Have a Custom Architectural Spec?
             </h4>
@@ -45,7 +45,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
             <div className="flex flex-wrap gap-3">
               <a
                 href="/contact-us#project-form"
-                className="inline-flex items-center justify-center gap-2 rounded-none bg-[#1c3f21] px-5 py-3 text-[12px] font-medium tracking-[1px] uppercase text-white transition-colors hover:bg-[#15321a]"
+                className="inline-flex items-center justify-center gap-2 rounded-[4px] bg-[#1c3f21] px-5 py-3 text-[12px] font-medium tracking-[1px] uppercase text-white transition-colors hover:bg-[#15321a]"
               >
                 Inquire Directly <ArrowRight size={14} />
               </a>
@@ -53,7 +53,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
                 href="https://wa.me/919605170000?text=Hi%20Defenseply%20team,%20I%20have%20a%20technical%20question%20about%20your%20boards"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-none border border-[#25d366] bg-transparent px-4 py-3 text-[12px] font-medium tracking-[0.8px] uppercase text-[#15803d] transition-colors hover:bg-[#25d366] hover:text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-[4px] border border-[#25d366] bg-transparent px-4 py-3 text-[12px] font-medium tracking-[0.8px] uppercase text-[#15803d] transition-colors hover:bg-[#25d366] hover:text-white"
               >
                 <MessageCircle size={15} /> WhatsApp
               </a>

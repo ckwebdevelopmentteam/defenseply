@@ -66,7 +66,7 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <Link
                 href="#products"
-                className="inline-flex items-center gap-2.5  bg-white px-6 py-3 text-sm font-medium text-[#163326] shadow-md transition-all duration-200 hover:bg-white/90 hover:scale-[1.01] active:scale-[0.98]"
+                className="inline-flex items-center gap-2.5 rounded-[4px] bg-white px-6 py-3 text-sm font-medium text-[#163326] shadow-md transition-all duration-200 hover:bg-white/90 hover:scale-[1.01] active:scale-[0.98]"
               >
                 <span>Explore Products</span>
                 <ArrowRight className="h-4 w-4" />
@@ -74,7 +74,7 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
 
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 border border-white/35 bg-white/10 px-6 py-3 text-sm font-normal text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 active:scale-[0.98]"
+                className="inline-flex items-center gap-2 rounded-[4px] border border-white/35 bg-white/10 px-6 py-3 text-sm font-normal text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 active:scale-[0.98]"
               >
                 <span>Contact Us</span>
               </Link>
