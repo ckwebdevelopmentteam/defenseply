@@ -29,7 +29,7 @@ export default function ProductsPage() {
     <>
       <main id="main-content" className="overflow-hidden bg-white text-ink">
         {/* Page Header / Hero Overview with Architectural Background Pattern */}
-        <section className="relative isolate overflow-hidden border-b border-[#E5E2D8] bg-[#FAF9F5] pt-28 pb-20 md:pt-36 md:pb-28 max-desktop:pt-[130px] max-phone:pt-[110px] text-[#161d19] w-full px-[5%] max-sm:px-[4%]">
+        <section className="relative isolate flex h-[80vh] min-h-[520px] sm:min-h-[580px] w-full flex-col justify-end overflow-hidden border-b border-[#E5E2D8] bg-[#FAF9F5] pt-28 pb-14 md:pb-20 text-[#161d19] px-[5%] max-sm:px-[4%]">
           {/* Background Graphic Pattern Image */}
           <div className="absolute inset-0 -z-20 overflow-hidden pointer-events-none">
             <Image
@@ -42,7 +42,7 @@ export default function ProductsPage() {
             />
           </div>
 
-          <div className="mx-auto max-w-[1600px]">
+          <div className="mx-auto w-full max-w-[1600px]">
             <div className="max-w-3xl">
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#163326]">
                 Defenseply Architectural Composites Catalog
@@ -57,17 +57,25 @@ export default function ProductsPage() {
                 and exterior environments.
               </p>
             </div>
+          </div>
+        </section>
 
-            {/* Quick-Jump Anchor Bar */}
-            <div className="mt-12 flex flex-wrap items-center gap-2.5 pt-6 border-t border-[#E5E1D5]">
-              <span className="text-xs uppercase tracking-widest text-[#718076] font-mono mr-2">
-                Browse:
-              </span>
+        {/* Quick-Jump Browse Anchor Bar — 2nd Section */}
+        <section
+          id="browse"
+          aria-label="Browse Defenseply Products"
+          className="w-full px-[5%] max-sm:px-[4%] py-5 md:py-6"
+        >
+          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-2.5">
+            <span className="text-xs uppercase tracking-widest text-[#718076] font-mono mr-2 shrink-0">
+              Browse:
+            </span>
+            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
               {products.map((p) => (
                 <a
                   key={p.slug}
                   href={`#${p.slug}`}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-[#163326] bg-white/85 hover:bg-[#163326] hover:text-white transition-all duration-200 border border-[#DCD7CE] shadow-xs backdrop-blur-xs"
+                  className="inline-flex items-center gap-1.5 rounded-[4px] px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-[#163326] bg-white hover:bg-[#163326] hover:text-white transition-all duration-200 border border-[#DCD7CE] shadow-xs"
                 >
                   {p.title}
                 </a>
