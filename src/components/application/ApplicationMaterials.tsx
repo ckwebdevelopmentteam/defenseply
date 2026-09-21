@@ -44,10 +44,10 @@ export function ApplicationMaterials({
             <Link
               key={product.slug}
               href={`/products/${product.slug}`}
-              className="group flex flex-col justify-between rounded-xs border border-line/60 bg-white p-4 transition-all duration-300 hover:border-ink/40 hover:shadow-sm"
+              className="group flex flex-col justify-between rounded-[4px] border border-line/60 bg-white p-4 transition-all duration-300 hover:border-ink/40 hover:shadow-sm"
             >
               <div>
-                <div className="overflow-hidden rounded-xs bg-stone">
+                <div className="overflow-hidden rounded-[4px] bg-stone">
                   <img
                     src={product.card.image}
                     alt={product.title}

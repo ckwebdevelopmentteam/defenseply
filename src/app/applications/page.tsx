@@ -34,7 +34,7 @@ export default function ApplicationsIndexPage() {
   return (
     <main id="main-content" className="overflow-hidden bg-white text-ink">
       {/* Page Header / Hero Overview with Architectural Background */}
-      <section className="relative isolate overflow-hidden border-b border-neutral-800 bg-neutral-950 pt-28 pb-20 md:pt-36 md:pb-28 max-desktop:pt-[130px] max-phone:pt-[110px] text-white w-full px-[5%] max-sm:px-[4%]">
+      <section className="relative isolate flex flex-col justify-end h-[80vh] min-h-[520px] overflow-hidden border-b border-neutral-800 bg-neutral-950 pt-28 pb-12 sm:pb-16 max-desktop:pt-[130px] max-phone:pt-[110px] text-white w-full px-[5%] max-sm:px-[4%]">
         {/* Background Image with optimized avif/jpg delivery */}
         <picture className="absolute inset-0 size-full -z-20">
           {overviewHero.avif && (
@@ -58,7 +58,7 @@ export default function ApplicationsIndexPage() {
           aria-hidden="true"
         />
 
-        <div className="mx-auto max-w-[1600px]">
+        <div className="mx-auto max-w-[1600px] w-full">
           <div className="max-w-3xl">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#55ba6a]">
               Defenseply Applications Directory
@@ -82,7 +82,7 @@ export default function ApplicationsIndexPage() {
               <a
                 key={app.slug}
                 href={`#${app.slug}`}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-white/90 bg-white/10 hover:bg-white hover:text-neutral-950 transition-colors duration-200 border border-white/20 backdrop-blur-xs"
+                className="inline-flex items-center gap-1.5 rounded-[4px] px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-white/90 bg-white/10 hover:bg-white hover:text-neutral-950 transition-colors duration-200 border border-white/20 backdrop-blur-xs"
               >
                 {app.title}
               </a>
@@ -116,7 +116,7 @@ export default function ApplicationsIndexPage() {
                 >
                   <Link
                     href={`/applications/${app.slug}`}
-                    className="group relative block w-full h-full min-h-[340px] md:min-h-[400px] aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-neutral-900 shadow-xl"
+                    className="group relative block w-full h-full min-h-[340px] md:min-h-[400px] aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-[4px] bg-neutral-900 shadow-xl"
                   >
                     {/* Hero Banner Image */}
                     <ApplicationImage
@@ -176,7 +176,7 @@ export default function ApplicationsIndexPage() {
                         {app.gallery.map((item) => (
                           <span
                             key={item.id}
-                            className="inline-flex items-center gap-1.5 px-3 py-1 text-xs text-neutral-700 bg-neutral-100 border border-neutral-200/80 font-light"
+                            className="inline-flex items-center gap-1.5 rounded-[4px] px-3 py-1 text-xs text-neutral-700 bg-neutral-100 border border-neutral-200/80 font-light"
                           >
                             <span className="size-1.5 rounded-full bg-[#1c3f21]" />
                             {item.title}
@@ -210,7 +210,7 @@ export default function ApplicationsIndexPage() {
 
                     <Link
                       href={`/applications/${app.slug}`}
-                      className="group inline-flex items-center justify-between gap-4 px-6 py-3.5 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-all duration-300 hover:bg-[#1c3f21]"
+                      className="group inline-flex items-center justify-between gap-4 rounded-[4px] px-6 py-3.5 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-all duration-300 hover:bg-[#1c3f21]"
                     >
                       <span>View {app.title} Application</span>
                       <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -240,14 +240,14 @@ export default function ApplicationsIndexPage() {
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 px-7 py-4 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-[#1c3f21]"
+                className="inline-flex items-center gap-2 rounded-[4px] px-7 py-4 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-[#1c3f21]"
               >
                 <span>Speak with a Material Specialist</span>
                 <ArrowRight className="size-4" />
               </Link>
               <Link
                 href="/#products"
-                className="inline-flex items-center gap-2 px-7 py-4 bg-white text-neutral-900 border border-neutral-300 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-100"
+                className="inline-flex items-center gap-2 rounded-[4px] px-7 py-4 bg-white text-neutral-900 border border-neutral-300 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-100"
               >
                 <span>Explore Products</span>
               </Link>

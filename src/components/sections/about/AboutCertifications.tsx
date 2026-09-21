@@ -35,7 +35,7 @@ export function AboutCertifications() {
           {certifications.map((cert) => (
             <div
               key={cert}
-              className="flex min-h-[100px] items-center justify-center border border-black/8 bg-[#f7f8f9] px-4 py-6 text-center text-[12px] font-medium uppercase tracking-[.12em] text-[#1a1a1a] transition-[box-shadow] duration-300 hover:shadow-[0_8px_24px_#0000000c] max-[520px]:min-h-[80px]"
+              className="flex min-h-[100px] items-center justify-center rounded-[4px] border border-black/8 bg-[#f7f8f9] px-4 py-6 text-center text-[12px] font-medium uppercase tracking-[.12em] text-[#1a1a1a] transition-[box-shadow] duration-300 hover:shadow-[0_8px_24px_#0000000c] max-[520px]:min-h-[80px]"
             >
               {cert}
             </div>

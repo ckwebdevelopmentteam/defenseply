@@ -95,7 +95,7 @@ export function AboutWho() {
           {facts.map((fact) => (
             <div
               key={fact.label}
-              className="group relative flex min-h-[260px] flex-col justify-between overflow-hidden border border-black/10 bg-[#181818] p-7 lg:min-h-[285px] lg:p-8 max-[520px]:min-h-[190px] max-[520px]:p-5 transition-colors duration-300 hover:border-[#1c3f21]/60"
+              className="group relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-[4px] border border-black/10 bg-[#181818] p-7 lg:min-h-[285px] lg:p-8 max-[520px]:min-h-[190px] max-[520px]:p-5 transition-colors duration-300 hover:border-[#1c3f21]/60"
             >
               {/* Normalized background architectural image */}
               <img

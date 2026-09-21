@@ -250,7 +250,7 @@ export function MissionPrinciples({
                     maxWidth: `${maxImageWidth}px`,
                     maxHeight: `${availableImageHeight}px`,
                   }}
-                  className="aspect-[3/2] w-full overflow-hidden bg-[#E8E6DF] relative"
+                  className="aspect-[3/2] w-full overflow-hidden rounded-[4px] bg-[#E8E6DF] relative"
                 >
                   {items.map((item, idx) => {
                     const isCurrent = idx === activeIndex;
@@ -380,7 +380,7 @@ export function MissionPrinciples({
             >
               <div className="w-full flex flex-col md:grid md:grid-cols-[42%_1fr] md:gap-[32px] md:items-start">
                 {/* Tablet Image (4:5 ratio) */}
-                <div className="hidden md:block w-full aspect-[4/5] overflow-hidden bg-[#E8E6DF]">
+                <div className="hidden md:block w-full aspect-[4/5] overflow-hidden rounded-[4px] bg-[#E8E6DF]">
                   {item.imageSrc ? (
                     <img
                       src={item.imageSrc}
@@ -415,7 +415,7 @@ export function MissionPrinciples({
                   </div>
 
                   {/* Mobile Image (4:3 ratio) */}
-                  <div className="md:hidden mt-[20px] w-full aspect-[4/3] overflow-hidden bg-[#E8E6DF]">
+                  <div className="md:hidden mt-[20px] w-full aspect-[4/3] overflow-hidden rounded-[4px] bg-[#E8E6DF]">
                     {item.imageSrc ? (
                       <img
                         src={item.imageSrc}

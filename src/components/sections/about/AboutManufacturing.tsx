@@ -32,7 +32,7 @@ export function AboutManufacturing() {
         </div>
 
         {/* Stats grid */}
-        <div className="grid grid-cols-4 gap-px bg-white/10 border border-white/10 max-[1024px]:grid-cols-2 max-[520px]:grid-cols-1">
+        <div className="grid grid-cols-4 gap-px bg-white/10 border border-white/10 overflow-hidden rounded-[4px] max-[1024px]:grid-cols-2 max-[520px]:grid-cols-1">
           {infraStats.map((stat) => (
             <div
               key={stat.label}

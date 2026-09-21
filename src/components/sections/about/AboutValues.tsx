@@ -44,7 +44,7 @@ export function AboutValues() {
           {values.map((value, i) => (
             <article
               key={value.title}
-              className="relative flex flex-col overflow-hidden border border-black/6 bg-[#f7f8f9] px-7 py-8 transition-[transform,box-shadow] duration-350 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_#0000000f] max-[768px]:px-6 max-[768px]:py-7"
+              className="relative flex flex-col overflow-hidden rounded-[4px] border border-black/6 bg-[#f7f8f9] px-7 py-8 transition-[transform,box-shadow] duration-350 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_#0000000f] max-[768px]:px-6 max-[768px]:py-7"
             >
               {/* Number accent */}
               <span className="mb-6 block text-[10px] font-medium tracking-[.2em] uppercase text-[#979793]">

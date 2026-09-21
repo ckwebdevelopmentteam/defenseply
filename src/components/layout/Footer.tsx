@@ -67,7 +67,7 @@ export function Footer() {
             </p>
             <Link
               href="/contact-us"
-              className="mt-6 flex h-10 w-36 items-center justify-center bg-[#1c3f21] text-sm text-white font-medium transition hover:bg-[#15321a] active:scale-95 focus:outline-none"
+              className="mt-6 flex h-10 w-36 rounded-[4px] items-center justify-center bg-[#1c3f21] text-sm text-white font-medium transition hover:bg-[#15321a] active:scale-95 focus:outline-none"
             >
               Contact Us
             </Link>

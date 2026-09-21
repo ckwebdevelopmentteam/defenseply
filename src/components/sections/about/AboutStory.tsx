@@ -49,7 +49,7 @@ export function AboutStory() {
         {/* Two-Column Editorial Layout: Image / Facility Visual + Structured Narrative */}
         <div className="grid grid-cols-[1.08fr_1fr] items-stretch gap-12 lg:gap-16 max-[960px]:grid-cols-1 max-[960px]:gap-10">
           {/* Left: Architectural Media Feature with Integrated Metadata */}
-          <div className="group relative flex min-h-[380px] sm:min-h-[440px] lg:min-h-[500px] w-full flex-col justify-between overflow-hidden border border-black/10 bg-[#181818]">
+          <div className="group relative flex min-h-[380px] sm:min-h-[440px] lg:min-h-[500px] w-full flex-col justify-between overflow-hidden rounded-[4px] border border-black/10 bg-[#181818]">
             <img
               src="/assets/york-paramedic-station.jpg"
               alt="DefensePly 2-acre industrial facility infrastructure and national highway connectivity"
@@ -60,7 +60,7 @@ export function AboutStory() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/30" />
 
             {/* Top Metadata Badge */}
-            <div className="relative z-10 m-5 flex items-center gap-2 self-start border border-white/15 bg-black/40 px-3 py-1.5 backdrop-blur-md max-[520px]:m-3.5">
+            <div className="relative z-10 m-5 flex items-center gap-2 self-start rounded-[4px] border border-white/15 bg-black/40 px-3 py-1.5 backdrop-blur-md max-[520px]:m-3.5">
               <span className="size-1.5 rounded-full bg-[#d9c34a]" aria-hidden="true" />
               <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-white/90">
                 Facility Infrastructure
@@ -128,7 +128,7 @@ export function AboutStory() {
             </div>
 
             {/* Highlighted Statement Callout */}
-            <div className="mt-6 border-l-2 border-[#1c3f21] bg-black/[0.025] py-3.5 pl-5 pr-4">
+            <div className="mt-6 rounded-r-[4px] border-l-2 border-[#1c3f21] bg-black/[0.025] py-3.5 pl-5 pr-4">
               <p className="text-[13.5px] leading-[1.68] font-light text-[#444440] italic">
                 &ldquo;Engineered for durability and seamless nationwide accessibility, our facility stands at the forefront of India&apos;s composite building revolution.&rdquo;
               </p>

@@ -119,7 +119,7 @@ export default function ProductsPage() {
                   >
                     <Link
                       href={`/products/${product.slug}`}
-                      className="group relative block w-full h-full min-h-[340px] md:min-h-[400px] aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-neutral-900 shadow-xl"
+                      className="group relative block w-full h-full min-h-[340px] md:min-h-[400px] aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-[4px] bg-neutral-900 shadow-xl"
                     >
                       {/* Hero Banner Image */}
                       <img
@@ -179,7 +179,7 @@ export default function ProductsPage() {
                             {product.badges.map((badge) => (
                               <span
                                 key={badge}
-                                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs text-neutral-700 bg-neutral-100 border border-neutral-200/80 font-light"
+                                className="inline-flex items-center gap-1.5 rounded-[4px] px-3 py-1 text-xs text-neutral-700 bg-neutral-100 border border-neutral-200/80 font-light"
                               >
                                 <span className="size-1.5 rounded-full bg-[#1c3f21]" />
                                 {badge}
@@ -244,7 +244,7 @@ export default function ProductsPage() {
 
                       <Link
                         href={`/products/${product.slug}`}
-                        className="group inline-flex items-center justify-between gap-4 px-6 py-3.5 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-all duration-300 hover:bg-[#1c3f21]"
+                        className="group inline-flex items-center justify-between gap-4 rounded-[4px] px-6 py-3.5 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-all duration-300 hover:bg-[#1c3f21]"
                       >
                         <span>View {product.title} Specifications</span>
                         <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -275,14 +275,14 @@ export default function ProductsPage() {
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 px-7 py-4 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-[#1c3f21]"
+                  className="inline-flex items-center gap-2 rounded-[4px] px-7 py-4 bg-neutral-900 text-white text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-[#1c3f21]"
                 >
                   <span>Speak with a Material Specialist</span>
                   <ArrowRight className="size-4" />
                 </Link>
                 <Link
                   href="/applications"
-                  className="inline-flex items-center gap-2 px-7 py-4 bg-white text-neutral-900 border border-neutral-300 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-100"
+                  className="inline-flex items-center gap-2 rounded-[4px] px-7 py-4 bg-white text-neutral-900 border border-neutral-300 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-100"
                 >
                   <span>Explore Architectural Applications</span>
                 </Link>

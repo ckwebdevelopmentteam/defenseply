@@ -40,7 +40,7 @@ export function AboutLeadership() {
           The Team Behind DefensePly
         </h2>
 
-        <div className="grid grid-cols-4 gap-px bg-black/8 border border-black/8 max-[1024px]:grid-cols-2 max-[520px]:grid-cols-1">
+        <div className="grid grid-cols-4 gap-px bg-black/8 border border-black/8 overflow-hidden rounded-[4px] max-[1024px]:grid-cols-2 max-[520px]:grid-cols-1">
           {leaders.map((person) => (
             <article
               key={person.name}
