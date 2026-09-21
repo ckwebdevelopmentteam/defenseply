@@ -53,7 +53,7 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
         <div className="relative z-[3] w-full px-6 sm:px-10 lg:px-14 pb-7 sm:pb-9 lg:pb-10 pt-20">
           <div className="flex max-w-2xl flex-col items-start gap-3.5 sm:gap-4.5">
             {/* Non-bold, Well-proportioned Headline */}
-            <h1 className="text-[clamp(28px,3.4vw,48px)] font-normal text-white leading-[1.18] tracking-normal">
+            <h1 className="text-[clamp(28px,3.4vw,48px)] uppercase font-normal text-white leading-[1.18] tracking-normal">
               One of the biggest plywood manufacturing companies in Kerala
             </h1>
 
