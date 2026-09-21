@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Link from "next/link";
 import {
   Search,
   X,
@@ -80,26 +79,9 @@ export function ProductsCatalogClient({ products }: ProductsCatalogClientProps) 
 
   return (
     <div className="min-h-screen bg-[#FAF9F5] text-[#1a1a1a]">
-      {/* Top Banner / Breadcrumbs */}
+      {/* Top Banner */}
       <div className="pt-28 sm:pt-32 pb-6 px-4 sm:px-8 lg:px-12 border-b border-[#E8E5DC] bg-[#FAF9F5]">
         <div className="mx-auto max-w-[1440px]">
-          {/* Breadcrumb Navigation */}
-          <nav
-            aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-xs tracking-[0.8px] uppercase text-[#767472] flex-wrap mb-6"
-          >
-            <Link
-              href="/"
-              className="text-[#767472] no-underline transition-colors duration-200 hover:text-[#1a1a1a]"
-            >
-              Home
-            </Link>
-            <span className="opacity-40 text-[11px]">/</span>
-            <span className="text-[#1a1a1a] font-semibold" aria-current="page">
-              Products
-            </span>
-          </nav>
-
           {/* Page Heading & Intro */}
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#163326]/10 px-3 py-1 text-xs font-semibold text-[#163326] tracking-wider uppercase mb-3">

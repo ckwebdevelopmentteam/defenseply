@@ -28,29 +28,8 @@ export default function ProductsPage() {
   return (
     <>
       <main id="main-content" className="overflow-hidden bg-white text-ink">
-        {/* Breadcrumb Navigation */}
-        <div className="w-full pt-[120px] pb-4 px-[5%] max-desktop:pt-[130px] max-phone:pt-[106px] max-sm:pb-3 max-sm:px-[4%] border-b border-neutral-200/70 bg-[#faf9f6]">
-          <div className="mx-auto max-w-[1600px]">
-            <nav
-              aria-label="Breadcrumb"
-              className="flex items-center gap-2 text-xs tracking-[0.8px] uppercase text-[#767472] flex-wrap max-sm:text-[10px] max-sm:gap-1.5"
-            >
-              <Link
-                href="/"
-                className="text-[#767472] no-underline transition-colors duration-200 hover:text-[#1a1a1a]"
-              >
-                Home
-              </Link>
-              <span className="opacity-40 text-[11px]">/</span>
-              <span className="text-[#1a1a1a] font-medium" aria-current="page">
-                Products
-              </span>
-            </nav>
-          </div>
-        </div>
-
         {/* Page Header / Hero Overview with Architectural Background Pattern */}
-        <section className="relative isolate overflow-hidden border-b border-[#E5E2D8] bg-[#FAF9F5] py-20 md:py-28 text-[#161d19] w-full px-[5%] max-sm:px-[4%]">
+        <section className="relative isolate overflow-hidden border-b border-[#E5E2D8] bg-[#FAF9F5] pt-28 pb-20 md:pt-36 md:pb-28 max-desktop:pt-[130px] max-phone:pt-[110px] text-[#161d19] w-full px-[5%] max-sm:px-[4%]">
           {/* Background Graphic Pattern Image */}
           <div className="absolute inset-0 -z-20 overflow-hidden pointer-events-none">
             <Image
