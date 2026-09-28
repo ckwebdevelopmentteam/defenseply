@@ -84,7 +84,7 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
             <Link
               href="/contact-us"
               className={cn(
-                "group/btn inline-flex items-center gap-2.5 rounded-full px-5 py-2 lg:px-6 lg:py-2.5 text-[13px] lg:text-[13.5px] font-medium shadow-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]",
+                "group/btn inline-flex items-center gap-2.5 rounded-[4px] px-5 py-2 lg:px-6 lg:py-2.5 text-[13px] lg:text-[13.5px] font-medium shadow-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]",
                 isDarkHero
                   ? "bg-white text-[#173326] hover:bg-white/90 hover:shadow-md"
                   : "bg-[#173326] text-white hover:bg-[#0f241a] hover:shadow-md",

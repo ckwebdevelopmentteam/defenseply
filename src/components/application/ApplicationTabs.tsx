@@ -171,7 +171,7 @@ export function ApplicationTabs({ categories }: { categories: Application[] }) {
           <div className="relative mb-6 flex items-center justify-center">
             {/* Centered Tabs */}
             <div
-              className="thin-scrollbar flex items-center overflow-x-auto max-w-full px-1 py-1"
+              className="thin-scrollbar flex max-w-full items-center overflow-x-auto scroll-smooth px-1 py-1 touch-pan-x"
               role="tablist"
               aria-label="Application categories"
             >
@@ -258,7 +258,7 @@ export function ApplicationTabs({ categories }: { categories: Application[] }) {
             </div>
 
             {/* Right: Products-style Simple Arrow Navigation */}
-            <div className="absolute right-0 flex shrink-0 items-center gap-2 pl-3">
+            <div className="absolute right-0 flex shrink-0 items-center gap-2 pl-3 max-phone:hidden">
               <Arrow
                 direction="left"
                 aria-label="Previous applications"
@@ -282,7 +282,7 @@ export function ApplicationTabs({ categories }: { categories: Application[] }) {
             id="applications-panel"
             aria-labelledby={`applications-tab-${active.slug}`}
             tabIndex={0}
-            className="relative w-full"
+            className="relative hidden w-full phone:block"
           >
             {slider}
           </div>
@@ -296,7 +296,23 @@ export function ApplicationTabs({ categories }: { categories: Application[] }) {
           />
         ))}
       </Carousel>
+
+      {/* Use the same native snap scrolling as the gallery on phones. */}
+      <div
+        role="tabpanel"
+        aria-labelledby={`applications-tab-${active.slug}`}
+        tabIndex={0}
+        className="flex gap-3.5 overflow-x-auto snap-x snap-mandatory px-5 pb-6 pt-1 scroll-smooth thin-scrollbar phone:hidden"
+      >
+        {active.gallery.map((image) => (
+          <div
+            key={image.id}
+            className="w-[84vw] max-w-[340px] shrink-0 snap-center"
+          >
+            <ApplicationCard category={active} image={image} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
-
