@@ -3,10 +3,10 @@ import collections from "@/data/collections.json";
 import { Carousel, Progress } from "@/components/ui/Carousel";
 export function NewCollections() {
   return (
-    <section className="core-slider-novedades" aria-label="New collections">
+    <section className="core-slider-novedades" aria-label="Our Products">
       <div className="header">
         <div className="d-flex">
-          <p className="font-body-base text-uppercase font-normal">New</p>
+          <p className="font-body-base text-uppercase font-normal">Our Products</p>
           <svg
             width="25"
             height="24"
@@ -38,6 +38,14 @@ export function NewCollections() {
                 alt={c.title}
                 loading="lazy"
               />
+              {"hoverImage" in c && c.hoverImage && (
+                <img
+                  className="core-slider-novedades__slide__image-hover"
+                  src={c.hoverImage}
+                  alt={c.title}
+                  loading="lazy"
+                />
+              )}
               <div className="core-slider-novedades__slide__card-body">
                 <div className="core-slider-novedades__slide__card-body_top">
                   <div className="core-slider-novedades__slide__card-body__logo">

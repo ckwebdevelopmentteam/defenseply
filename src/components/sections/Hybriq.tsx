@@ -1,43 +1,28 @@
-/* Original visual structure, implemented as editable React markup. */
+import { Heading } from "@/components/ui/Heading";
+import { ActionLink } from "@/components/ui/ActionLink";
 export function Hybriq() {
   return (
     <section
-      className="bg-section section-hybriq p-60"
-      id="section-hybriq-599552f9-f1a6-405a-8e55-94e40639832a"
+      data-section="hybriq"
+      className="-mx-[38px] mb-20 flex bg-stone py-16 max-tablet:flex-col max-tablet:gap-12 max-tablet:p-8 max-phone:mb-12 max-phone:py-12"
     >
-      <div className="section-hybriq__col section-hybriq__col-title">
-        <h2 className="font-40 font-family-diagramm font-light uppercase">
-          {
-            "Silestone. The first mineral surface with low silica content. With exclusive Hybriq+ technology."
-          }
-        </h2>
-        <a
-          title="Learn more about Hybriq+"
-          href="#contact"
-          className="btn btn-borde-negro-azul btn- font-14"
-        >
-          {"Learn more about Hybriq+"}
-          <span className="arrow-link"></span>
-        </a>
+      <div className="flex w-full flex-[1_0_50%] flex-col items-start justify-between overflow-hidden px-[38px] max-tablet:gap-8 max-tablet:px-0">
+        <Heading className="max-w-[90%] max-tablet:max-w-full">
+          Silestone. The first mineral surface with low silica content. With
+          exclusive Hybriq+ technology.
+        </Heading>
+        <ActionLink href="#contact">Learn more about Hybriq+</ActionLink>
       </div>
-      <div className="section-hybriq__col section-hybriq__col-slider">
-        <div className="core-slider">
-          <div className="core-slider__slide number-slide-0">
-            <img
-              className="core-slider__slide__image"
-              src="/assets/hybriq.jpg"
-              alt=""
-              loading="lazy"
-            />
-            <div className="core-slider__slide__filter"></div>
-            <div className="core-slider__slide__card-body">
-              <div className="core-slider__slide__card-body__block"></div>
-              <div className="core-slider__slide__card-body__block">
-                <div className="core-slider__slide__card-body__arrow"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="relative aspect-[4/3] w-full flex-[1_0_50%] overflow-hidden">
+        <img
+          className="absolute inset-0 size-full object-cover"
+          src="/assets/hybriq.jpg"
+          alt=""
+          loading="lazy"
+          width={743}
+          height={531}
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_50%,#0006)]" />
       </div>
     </section>
   );

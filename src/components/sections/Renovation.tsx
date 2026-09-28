@@ -1,37 +1,35 @@
-/* Original visual structure, implemented as editable React markup. */
+import { Heading } from "@/components/ui/Heading";
+import { ActionLink } from "@/components/ui/ActionLink";
 export function Renovation() {
   return (
-    <div className="core-cta">
-      <div className="core-cta__text-col cta-text bg-gris-claro">
-        <div className="core-cta__text-col__top">
-          <h2 className="font-40 font-light">
-            {"DO YOU HAVE A RENOVATION? WE CAN HELP YOU"}
-          </h2>
-        </div>
-        <div className="core-cta__text-col__bottom">
-          <p className="core-cta__text-col__bottom__text font-16">
-            {
-              "Our extensive network of collaborators allows us to offer you advice for any renovation across five continents."
-            }
+    <section
+      data-section="renovation"
+      className="mb-20 flex min-h-[525px] max-tablet:flex-col-reverse max-phone:page-bleed max-phone:mb-12"
+    >
+      <div className="flex flex-[1_1_50%] flex-col justify-between gap-[198px] bg-stone py-12 pl-[38px] pr-10 max-phone:gap-10 max-phone:px-6">
+        <Heading className="max-w-[80%] max-phone:max-w-full">
+          DO YOU HAVE A RENOVATION? WE CAN HELP YOU
+        </Heading>
+        <div>
+          <p className="max-w-[50%] text-fluid max-phone:hidden">
+            Our extensive network of collaborators allows us to offer you advice
+            for any renovation across five continents.
           </p>
-          <a
-            title="Where to buy"
-            href="#contact"
-            className="btn btn-negro-azul btn- font-14 mt-32"
-          >
-            {"Where to buy"}
-            <span className="arrow-link"></span>
-          </a>
+          <ActionLink href="#contact" variant="dark" className="mt-8">
+            Where to buy
+          </ActionLink>
         </div>
       </div>
-      <div className="core-cta__image-col cta-image">
+      <div className="relative flex-[1_1_50%]">
         <img
-          className="core-cta__image-col__image"
+          className="absolute inset-0 size-full object-cover max-tablet:relative max-tablet:h-auto"
           src="/assets/Casa-Navacerrada-LGC-2.jpg"
           alt=""
           loading="lazy"
+          width={2000}
+          height={1333}
         />
       </div>
-    </div>
+    </section>
   );
 }

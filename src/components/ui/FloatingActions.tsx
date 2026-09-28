@@ -1,48 +1,31 @@
 "use client";
-import { useState } from "react";
-import { ChevronRight, X } from "lucide-react";
-export function FloatingActions() {
-  const [chat, setChat] = useState(false);
+
+import { useNavigationState } from "@/components/sections/NavigationState";
+import { cn } from "@/lib/cn";
+
+export function FloatingActions({
+  quoteHref = "#contact",
+}: { quoteHref?: string } = {}) {
+  const { mobileOpen, visible } = useNavigationState();
+
   return (
-    <>
-      <a
-        className="quote-tab"
-        href="#contact"
-      >
-        Request a quote <ChevronRight size={24} />
-      </a>
-      <div className="chat-widget">
-        {chat ? (
-          <section className="chat-panel" aria-label="Cosentino help">
-            <header>
-              Cosentino{" "}
-              <button aria-label="Close help" onClick={() => setChat(false)}>
-                <X size={19} />
-              </button>
-            </header>
-            <p>How can we help you?</p>
-            <a href="#contact">Contact us</a>
-            <a href="#product">
-              Find a showroom
-            </a>
-            <a href="#contact">
-              Request a quote
-            </a>
-          </section>
-        ) : (
-          <button className="chat-prompt" onClick={() => setChat(true)}>
-            Can we help you?
-          </button>
-        )}
-        <button
-          className="chat-launcher"
-          aria-label={chat ? "Close chat" : "Open chat"}
-          aria-expanded={chat}
-          onClick={() => setChat(!chat)}
-        >
-          {chat ? <X /> : <span className="chat-symbol">C</span>}
-        </button>
-      </div>
-    </>
+    <a
+      data-testid="quote-banner"
+      className={cn(
+        "fixed bottom-[15%] right-0 z-[900] flex h-16 w-[289px] items-center justify-center gap-2.5 rounded-l bg-[#1c3f21] px-[30px] py-[19px] text-base leading-[22px] font-medium text-white shadow-[0_4px_16px_rgba(28,63,33,0.35)] transition-all duration-300 hover:bg-[#15321a] hover:translate-x-[-4px] max-desktop:left-0 max-desktop:h-[36px] max-desktop:w-full max-desktop:rounded-none max-desktop:px-4 max-desktop:py-1 max-desktop:text-[13px] max-desktop:leading-tight max-desktop:hover:translate-x-0",
+        visible ? "max-desktop:top-[var(--mobile-nav-height)]" : "max-desktop:top-0",
+        mobileOpen && "max-desktop:hidden",
+      )}
+      href={quoteHref}
+    >
+      Request a quote{" "}
+      <img
+        src="/assets/Arrow_circle-Copy.avif"
+        alt=""
+        width="24"
+        height="24"
+        className="brightness-0 invert"
+      />
+    </a>
   );
 }

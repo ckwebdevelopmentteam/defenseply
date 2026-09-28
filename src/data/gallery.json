@@ -1,110 +1,354 @@
-[
-  {
-    "title": "Cosentino City Barcelona",
-    "image": "/assets/cosentino-city-barcelona.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Cosentino City Amsterdam",
-    "image": "/assets/cosentino-city-amsterdam.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "SQala Design - Sqala Interior Design",
-    "image": "/assets/sqala-design.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "FF Home by Dunarra Interior - Dunarra Interior",
-    "image": "/assets/ff-home-by-dunarra-interior.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Proyecto Barquillo - Mónica Diago",
-    "image": "/assets/proyecto-barquillo.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Hayley Peterson Residential - Hayley Peterson",
-    "image": "/assets/hayley-peterson-residential.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Hotel Hyll Cotswolds - Youth Studio",
-    "image": "/assets/hotel-hyll-cotswolds.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "LLAVANERES - RICARD MENA GARRIGA",
-    "image": "/assets/llavaneres.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Battersea Residential - Aflux Interiors",
-    "image": "/assets/battersea-residential.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Imperfection of Matter - Catarina Carneiro, Jota Barbosa Interiores",
-    "image": "/assets/imperfection-of-matter.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Rocco Place NSW - DSD Design",
-    "image": "/assets/rocco-place-nsw.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Facade NSW - Architecture / Design  KASA Design and Construct",
-    "image": "/assets/facade-nsw.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Doncaster House - Piran Boutique Builders and interior Design",
-    "image": "/assets/doncaster-house.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Montenegro - Monica Arango, Tracy Audi, Johnny Matta / C’est ici Design",
-    "image": "/assets/montenegro.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Kollutchen - AOME Architects / Eclectic Designs LLC",
-    "image": "/assets/kollutchen.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Piece of Rest by James Kaoru - James Kaoru Bury (James Bury Design Office Inc.)",
-    "image": "/assets/piece-of-rest-by-james-kaoru.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Laura Wontorra Home - Thomas Mang Studio GmbH",
-    "image": "/assets/laura-wontorra-home.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  },
-  {
-    "title": "Titirangi Originals - Rarebirds Interiors",
-    "image": "/assets/titirangi-originals.avif",
-    "fullImage": "#products",
-    "href": "#products"
-  }
-]
+{
+  "All Applications": [
+    {
+      "title": "DefensePly Full-Height Wardrobe System with Matte Finish",
+      "image": "/assets/applications/wardrobe/full-height-wardrobes.webp",
+      "fullImage": "/assets/applications/wardrobe/full-height-wardrobes.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Matte White WPC & PVC Boards \u00b7 Seamless Edge Profiles"
+    },
+    {
+      "title": "100% Waterproof WPC Kitchen Sink Carcass & Drawers",
+      "image": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
+      "fullImage": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
+      "category": "Modular Kitchens",
+      "spec": "Calibrated Waterproof WPC Boards \u00b7 Anti-Fungal \u00b7 Zero Swelling"
+    },
+    {
+      "title": "Parametric CNC Jali Partition Cut from PVC Foam Board",
+      "image": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "fullImage": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "High-Density PVC Foam Board \u00b7 Chip-Free 90\u00b0 Routing"
+    },
+    {
+      "title": "Modular Kitchen Cabinetry with Moisture-Resistant Shutters",
+      "image": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "fullImage": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "category": "Modular Kitchens",
+      "spec": "High Screw-Holding Composite Core \u00b7 Direct Paintable Finish"
+    },
+    {
+      "title": "Engineered WPC Door & Window Profiles Array",
+      "image": "/assets/products/wpc-door-window-frames-collection.webp",
+      "fullImage": "/assets/products/wpc-door-window-frames-collection.webp",
+      "category": "Doors & Frames",
+      "spec": "100% Waterproof \u00b7 High Screw Withdrawal \u00b7 Termite Impervious"
+    },
+    {
+      "title": "Solid WPC Architectural Doors with Woodgrain Embossing",
+      "image": "/assets/products/wpc-designer-doors-collection.webp",
+      "fullImage": "/assets/products/wpc-designer-doors-collection.webp",
+      "category": "Doors & Frames",
+      "spec": "Non-Warping Composite Core \u00b7 Paintable & Laminate-Ready"
+    },
+    {
+      "title": "Modular Walk-In Wardrobe System with Heavy-Duty Carcass",
+      "image": "/assets/applications/wardrobe/brochure-wardrobe-organizer.webp",
+      "fullImage": "/assets/applications/wardrobe/brochure-wardrobe-organizer.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Calibrated Board Matrix \u00b7 High Load-Bearing Shelves"
+    },
+    {
+      "title": "Integrated Fluted Headboard & Bedroom Wall Paneling",
+      "image": "/assets/applications/bedroom/brochure-bedroom-headboard-panel.webp",
+      "fullImage": "/assets/applications/bedroom/brochure-bedroom-headboard-panel.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "WPC Fluted Paneling \u00b7 Natural Timber Texture \u00b7 Acoustic Damping"
+    },
+    {
+      "title": "Vibrant Pre-Coloured PVC Boards with High-Finish Crust",
+      "image": "/assets/products/pvc-colour-boards-fan-stack.webp",
+      "fullImage": "/assets/products/pvc-colour-boards-fan-stack.webp",
+      "category": "Composite Board Systems",
+      "spec": "Zero Lead Time \u00b7 Pre-Finished Colours \u00b7 No Painting Needed"
+    },
+    {
+      "title": "DefensePly 3-Layer WPC Board Structural Core",
+      "image": "/assets/products/3-layer-wpc-board-structure.webp",
+      "fullImage": "/assets/products/3-layer-wpc-board-structure.webp",
+      "category": "Composite Board Systems",
+      "spec": "Extra Wood Powder Core \u00b7 Enhanced Impact Resistance"
+    },
+    {
+      "title": "Commercial Office Workstation Pods & Privacy Dividers",
+      "image": "/assets/applications/commercial/brochure-commercial-office.webp",
+      "fullImage": "/assets/applications/commercial/brochure-commercial-office.webp",
+      "category": "Commercial & Office",
+      "spec": "Rigid PVC/WPC Partitions \u00b7 Flame-Retardant \u00b7 Clean Wireways"
+    },
+    {
+      "title": "Contemporary Architectural Lounge with Composite Paneling",
+      "image": "/assets/applications/interiors/brochure-interiors-lounge.webp",
+      "fullImage": "/assets/applications/interiors/brochure-interiors-lounge.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "Eco-Friendly Composite Substrates \u00b7 Zero Formaldehyde"
+    },
+    {
+      "title": "Living Room CNC Partition Lattice with Walnut Finish",
+      "image": "/assets/applications/creative/cnc-screens.webp",
+      "fullImage": "/assets/applications/creative/cnc-screens.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "Parametric Jali Design \u00b7 Ultra-Clean Router Edges"
+    },
+    {
+      "title": "Luxury Walk-in Dressing Wardrobe with Built-in Drawers",
+      "image": "/assets/applications/wardrobe/walk-in-closets.webp",
+      "fullImage": "/assets/applications/wardrobe/walk-in-closets.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "High-Density WPC Carcase \u00b7 Zero Moisture Absorption"
+    },
+    {
+      "title": "Architectural 3D Wall Relief Panels in Commercial Atrium",
+      "image": "/assets/applications/creative/relief-panels.webp",
+      "fullImage": "/assets/applications/creative/relief-panels.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "Precision CNC Milling \u00b7 UV-Resistant Surface Crust"
+    },
+    {
+      "title": "Modern Kitchen Island with High-Gloss Composite Shutters",
+      "image": "/assets/applications/interiors/modular-kitchens.webp",
+      "fullImage": "/assets/applications/interiors/modular-kitchens.webp",
+      "category": "Modular Kitchens",
+      "spec": "100% Termite & Borer Proof \u00b7 High Screw Holding"
+    },
+    {
+      "title": "Commercial Reception Counter & 3D Brand Signage",
+      "image": "/assets/applications/commercial/reception-signage.webp",
+      "fullImage": "/assets/applications/commercial/reception-signage.webp",
+      "category": "Commercial & Office",
+      "spec": "Direct Paintable PVC Board \u00b7 Crisp CNC Lettering"
+    },
+    {
+      "title": "Moisture-Impervious WPC Door Frame with Hardwood Grain",
+      "image": "/assets/products/wpcdoorframedfdf2.jpg",
+      "fullImage": "/assets/products/wpcdoorframedfdf2.jpg",
+      "category": "Doors & Frames",
+      "spec": "High Screw Holding \u00b7 Zero Core Warping \u00b7 Pre-Mitred Joints"
+    },
+    {
+      "title": "DefensePly 3-Layer Multi Board with Glossy Co-Extrusion Layer",
+      "image": "/assets/products/3-layer-multi-board-glossy.webp",
+      "fullImage": "/assets/products/3-layer-multi-board-glossy.webp",
+      "category": "Composite Board Systems",
+      "spec": "UV-Resistant Co-Extrusion \u00b7 Extreme Durability \u00b7 Indoor/Outdoor"
+    },
+    {
+      "title": "High-Density WPC Board Quality Testing & Core Calibration",
+      "image": "/assets/products/wpc-composite-boards-inspection.webp",
+      "fullImage": "/assets/products/wpc-composite-boards-inspection.webp",
+      "category": "Composite Board Systems",
+      "spec": "Calibrated Thickness Tolerance \u00b7 Zero Core Voids"
+    },
+    {
+      "title": "Full-Height Wardrobe Sliding Shutters with Smooth Tracks",
+      "image": "/assets/applications/wardrobe/sliding-shutters.webp",
+      "fullImage": "/assets/applications/wardrobe/sliding-shutters.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Lightweight PVC Foam Core \u00b7 Stable Dimensional Profile"
+    },
+    {
+      "title": "Suspended Board Ceiling with Integrated Indirect Lighting",
+      "image": "/assets/applications/interiors/ceiling-details.webp",
+      "fullImage": "/assets/applications/interiors/ceiling-details.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "Lightweight Moisture-Proof Ceiling Substrate"
+    },
+    {
+      "title": "Boutique Retail Display Fixtures & Modular Shelving",
+      "image": "/assets/applications/commercial/retail-fixtures.webp",
+      "fullImage": "/assets/applications/commercial/retail-fixtures.webp",
+      "category": "Commercial & Office",
+      "spec": "High Impact Resistant Composite \u00b7 Easy Assembly"
+    },
+    {
+      "title": "Ultra-Smooth White PVC Foam Board Panel Stack",
+      "image": "/assets/products/pvcfoamboard(main).jpg",
+      "fullImage": "/assets/products/pvcfoamboard(main).jpg",
+      "category": "Composite Board Systems",
+      "spec": "Direct UV Printable \u00b7 Water & Termite Resistant"
+    }
+  ],
+  "Modular Kitchens": [
+    {
+      "title": "100% Waterproof WPC Kitchen Sink Carcass & Drawers",
+      "image": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
+      "fullImage": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
+      "category": "Modular Kitchens",
+      "spec": "Calibrated Waterproof WPC Boards \u00b7 Anti-Fungal \u00b7 Zero Swelling"
+    },
+    {
+      "title": "Modular Kitchen Cabinetry with Moisture-Resistant Shutters",
+      "image": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "fullImage": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
+      "category": "Modular Kitchens",
+      "spec": "High Screw-Holding Composite Core \u00b7 Direct Paintable Finish"
+    },
+    {
+      "title": "Modern Kitchen Island with High-Gloss Composite Shutters",
+      "image": "/assets/applications/interiors/modular-kitchens.webp",
+      "fullImage": "/assets/applications/interiors/modular-kitchens.webp",
+      "category": "Modular Kitchens",
+      "spec": "100% Termite & Borer Proof \u00b7 High Screw Holding"
+    }
+  ],
+  "Wardrobes & Closets": [
+    {
+      "title": "DefensePly Full-Height Wardrobe System with Matte Finish",
+      "image": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp",
+      "fullImage": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Matte White WPC & PVC Boards \u00b7 Seamless Edge Profiles"
+    },
+    {
+      "title": "Modular Walk-In Wardrobe System with Heavy-Duty Carcass",
+      "image": "/assets/applications/wardrobe/brochure-wardrobe-organizer.webp",
+      "fullImage": "/assets/applications/wardrobe/brochure-wardrobe-organizer.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Calibrated Board Matrix \u00b7 High Load-Bearing Shelves"
+    },
+    {
+      "title": "Luxury Walk-in Dressing Wardrobe with Built-in Drawers",
+      "image": "/assets/applications/wardrobe/walk-in-closets.webp",
+      "fullImage": "/assets/applications/wardrobe/walk-in-closets.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "High-Density WPC Carcase \u00b7 Zero Moisture Absorption"
+    },
+    {
+      "title": "Full-Height Wardrobe Sliding Shutters with Smooth Tracks",
+      "image": "/assets/applications/wardrobe/sliding-shutters.webp",
+      "fullImage": "/assets/applications/wardrobe/sliding-shutters.webp",
+      "category": "Wardrobes & Closets",
+      "spec": "Lightweight PVC Foam Core \u00b7 Stable Dimensional Profile"
+    }
+  ],
+  "Creative CNC & Jali": [
+    {
+      "title": "Parametric CNC Jali Partition Cut from PVC Foam Board",
+      "image": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "fullImage": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "High-Density PVC Foam Board \u00b7 Chip-Free 90\u00b0 Routing"
+    },
+    {
+      "title": "Living Room CNC Partition Lattice with Walnut Finish",
+      "image": "/assets/applications/creative/cnc-screens.webp",
+      "fullImage": "/assets/applications/creative/cnc-screens.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "Parametric Jali Design \u00b7 Ultra-Clean Router Edges"
+    },
+    {
+      "title": "Architectural 3D Wall Relief Panels in Commercial Atrium",
+      "image": "/assets/applications/creative/relief-panels.webp",
+      "fullImage": "/assets/applications/creative/relief-panels.webp",
+      "category": "Creative CNC & Jali",
+      "spec": "Precision CNC Milling \u00b7 UV-Resistant Surface Crust"
+    }
+  ],
+  "Doors & Frames": [
+    {
+      "title": "Engineered WPC Door & Window Profiles Array",
+      "image": "/assets/products/wpc-door-window-frames-collection.webp",
+      "fullImage": "/assets/products/wpc-door-window-frames-collection.webp",
+      "category": "Doors & Frames",
+      "spec": "100% Waterproof \u00b7 High Screw Withdrawal \u00b7 Termite Impervious"
+    },
+    {
+      "title": "Solid WPC Architectural Doors with Woodgrain Embossing",
+      "image": "/assets/products/wpc-designer-doors-collection.webp",
+      "fullImage": "/assets/products/wpc-designer-doors-collection.webp",
+      "category": "Doors & Frames",
+      "spec": "Non-Warping Composite Core \u00b7 Paintable & Laminate-Ready"
+    },
+    {
+      "title": "Moisture-Impervious WPC Door Frame with Hardwood Grain",
+      "image": "/assets/products/wpcdoorframedfdf2.jpg",
+      "fullImage": "/assets/products/wpcdoorframedfdf2.jpg",
+      "category": "Doors & Frames",
+      "spec": "High Screw Holding \u00b7 Zero Core Warping \u00b7 Pre-Mitred Joints"
+    }
+  ],
+  "Commercial & Office": [
+    {
+      "title": "Commercial Office Workstation Pods & Privacy Dividers",
+      "image": "/assets/applications/commercial/brochure-commercial-office.webp",
+      "fullImage": "/assets/applications/commercial/brochure-commercial-office.webp",
+      "category": "Commercial & Office",
+      "spec": "Rigid PVC/WPC Partitions \u00b7 Flame-Retardant \u00b7 Clean Wireways"
+    },
+    {
+      "title": "Commercial Reception Counter & 3D Brand Signage",
+      "image": "/assets/applications/commercial/reception-signage.webp",
+      "fullImage": "/assets/applications/commercial/reception-signage.webp",
+      "category": "Commercial & Office",
+      "spec": "Direct Paintable PVC Board \u00b7 Crisp CNC Lettering"
+    },
+    {
+      "title": "Boutique Retail Display Fixtures & Modular Shelving",
+      "image": "/assets/applications/commercial/retail-fixtures.webp",
+      "fullImage": "/assets/applications/commercial/retail-fixtures.webp",
+      "category": "Commercial & Office",
+      "spec": "High Impact Resistant Composite \u00b7 Easy Assembly"
+    }
+  ],
+  "Bedroom & Paneling": [
+    {
+      "title": "Integrated Fluted Headboard & Bedroom Wall Paneling",
+      "image": "/assets/applications/bedroom/brochure-bedroom-headboard-panel.webp",
+      "fullImage": "/assets/applications/bedroom/brochure-bedroom-headboard-panel.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "WPC Fluted Paneling \u00b7 Natural Timber Texture \u00b7 Acoustic Damping"
+    },
+    {
+      "title": "Contemporary Architectural Lounge with Composite Paneling",
+      "image": "/assets/applications/interiors/brochure-interiors-lounge.webp",
+      "fullImage": "/assets/applications/interiors/brochure-interiors-lounge.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "Eco-Friendly Composite Substrates \u00b7 Zero Formaldehyde"
+    },
+    {
+      "title": "Suspended Board Ceiling with Integrated Indirect Lighting",
+      "image": "/assets/applications/interiors/ceiling-details.webp",
+      "fullImage": "/assets/applications/interiors/ceiling-details.webp",
+      "category": "Bedroom & Paneling",
+      "spec": "Lightweight Moisture-Proof Ceiling Substrate"
+    }
+  ],
+  "Composite Board Systems": [
+    {
+      "title": "Vibrant Pre-Coloured PVC Boards with High-Finish Crust",
+      "image": "/assets/products/pvc-colour-boards-fan-stack.webp",
+      "fullImage": "/assets/products/pvc-colour-boards-fan-stack.webp",
+      "category": "Composite Board Systems",
+      "spec": "Zero Lead Time \u00b7 Pre-Finished Colours \u00b7 No Painting Needed"
+    },
+    {
+      "title": "DefensePly 3-Layer WPC Board Structural Core",
+      "image": "/assets/products/3-layer-wpc-board-structure.webp",
+      "fullImage": "/assets/products/3-layer-wpc-board-structure.webp",
+      "category": "Composite Board Systems",
+      "spec": "Extra Wood Powder Core \u00b7 Enhanced Impact Resistance"
+    },
+    {
+      "title": "DefensePly 3-Layer Multi Board with Glossy Co-Extrusion Layer",
+      "image": "/assets/products/3-layer-multi-board-glossy.webp",
+      "fullImage": "/assets/products/3-layer-multi-board-glossy.webp",
+      "category": "Composite Board Systems",
+      "spec": "UV-Resistant Co-Extrusion \u00b7 Extreme Durability \u00b7 Indoor/Outdoor"
+    },
+    {
+      "title": "High-Density WPC Board Quality Testing & Core Calibration",
+      "image": "/assets/products/wpc-composite-boards-inspection.webp",
+      "fullImage": "/assets/products/wpc-composite-boards-inspection.webp",
+      "category": "Composite Board Systems",
+      "spec": "Calibrated Thickness Tolerance \u00b7 Zero Core Voids"
+    },
+    {
+      "title": "Ultra-Smooth White PVC Foam Board Panel Stack",
+      "image": "/assets/products/pvcfoamboard(main).jpg",
+      "fullImage": "/assets/products/pvcfoamboard(main).jpg",
+      "category": "Composite Board Systems",
+      "spec": "Direct UV Printable \u00b7 Water & Termite Resistant"
+    }
+  ]
+}

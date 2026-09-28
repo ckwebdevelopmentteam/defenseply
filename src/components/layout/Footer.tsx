@@ -1,594 +1,125 @@
-/* Original visual structure, implemented as editable React markup. */
+"use client";
+
+import Link from "next/link";
+import { footerGroups, socialLinks } from "@/data/site";
+import { motion } from "framer-motion";
+
 export function Footer() {
   return (
-    <footer id="site-footer" className="pt-l">
-      <div className="site-info container">
-        <div className="row">
-          <div className="col-12 text-center text-md-left footer-logo">
-            <img
-              className="mb-0 align-baseline"
-              src="/assets/defenseply-logo.png"
-              alt="Defenseply"
-              loading="lazy"
-              style={{ height: "90px", width: "auto", objectFit: "contain" }}
-            />
+    <motion.footer
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="flex w-full flex-col justify-end overflow-hidden bg-black px-[38px] pt-16 sm:pt-20 max-[768px]:px-6 max-phone:px-4"
+    >
+      <div className="w-full">
+        <div className="flex flex-wrap justify-between gap-y-12 lg:gap-x-8">
+          <div className="flex w-full flex-col items-start text-left md:w-[45%] lg:w-[35%]">
+            <Link href="/" aria-label="DefensePly home" className="block">
+              <img
+                className="h-auto w-[116px] sm:w-[130px] invert brightness-200"
+                src="/assets/defenseply-logo-dark.png"
+                alt="DefensePly"
+              />
+            </Link>
+            <div className="mt-6 sm:mt-8 h-0.5 w-full max-w-52 bg-linear-to-r from-[#24212D] to-[#24212D]/0"></div>
+            <p className="mt-5 sm:mt-6 max-w-[350px] text-sm leading-relaxed text-white/60">
+              Reliable WPC and PVC solutions for spaces built with purpose.
+            </p>
+          </div>
+
+          <div className="flex w-[45%] flex-col items-start text-left md:w-[45%] lg:w-[15%]">
+            <h3 className="text-sm font-medium text-white">Important Links</h3>
+            <div className="mt-6 flex flex-col gap-2">
+              {footerGroups[0]?.links.map(({ name, href }) => (
+                <Link
+                  key={name}
+                  href={href}
+                  className="text-sm text-white/60 transition-colors hover:text-white"
+                >
+                  {name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex w-[45%] flex-col items-start text-left md:w-[45%] lg:w-[15%]">
+            <h3 className="text-sm font-medium text-white">Social Links</h3>
+            <div className="mt-6 flex flex-col gap-2">
+              {socialLinks.map((item) => (
+                <Link
+                  key={item.name}
+                  href="/#contact"
+                  className="text-sm text-white/60 transition-colors hover:text-white capitalize"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-4 flex w-full flex-col items-start text-left md:mt-0 md:w-[45%] lg:w-[25%]">
+            <h3 className="text-sm font-medium text-white">Start a Conversation</h3>
+            <p className="mt-4 text-xs leading-relaxed text-white/60">
+              <strong className="font-semibold text-white">Building the Future of Sustainable Architecture</strong><br /><br />
+              Partner with India&apos;s emerging leader in WPC and PVC composite materials. Reach out to discuss your project, product requirements, or dealership opportunities.
+            </p>
+            <Link
+              href="/contact-us"
+              className="mt-6 flex h-10 w-36 rounded-[4px] items-center justify-center bg-[#1c3f21] text-sm text-white font-medium transition hover:bg-[#15321a] active:scale-95 focus:outline-none"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
-        <div className="row mt-xxl" id="columnas-footer">
-          <div className="col-12 col-sm-6 col-lg-3">
-            <p
-              className="footer-menu-title"
-              id="titulo-menu-1"
-              aria-expanded="false"
-              aria-controls="collapse-menu-1"
+
+        <div className="mb-4 mt-16 h-0.5 w-full bg-linear-to-r from-[#24212D]/0 via-[#24212D] to-[#24212D]/0"></div>
+
+        <div className="relative z-10 flex flex-wrap items-center justify-between gap-x-2 gap-y-4 sm:flex-row">
+          <p className="text-xs text-white/60">
+            © {new Date().getFullYear()} DefensePly. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6 text-right">
+            <Link
+              href="#"
+              className="text-xs text-white/60 transition-colors hover:text-white"
             >
-              <span className="icon float-right d-inline d-sm-none">{"+"}</span>
-              {"Corporate"}
-            </p>
-            <div
-              id="collapse-menu-1"
-              className="collapse dont-collapse-sm mb-l"
-              aria-labelledby="titulo-menu-1"
+              Terms & Conditions
+            </Link>
+            <div className="h-4 w-px bg-white/20"></div>
+            <Link
+              href="#"
+              className="text-xs text-white/60 transition-colors hover:text-white"
             >
-              <div className="menu-company-container">
-                <ul id="menu-company" className="menu">
-                  <li
-                    id="menu-item-92290"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-92290"
-                  >
-                    <a href="#about">
-                      {"About us"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-31221"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-31221"
-                  >
-                    <a href="#about">
-                      {"R&D and Innovation"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-31220"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-31220"
-                  >
-                    <a href="#about">
-                      {"Safety at Cosentino"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-15335"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-15335"
-                  >
-                    <a
-                      target="_blank"
-                      href="#about"
-                      rel="nofollow noopener"
-                    >
-                      {"Cosentino Safety Space"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-31222"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-31222"
-                  >
-                    <a
-                      href="#about"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      {"Sustainability Report 2023"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-34129"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-34129"
-                  >
-                    <a
-                      href="#about"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      {"EINF 2025"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-127938"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-127938"
-                  >
-                    <a
-                      target="_blank"
-                      href="#about"
-                    >
-                      {"CT Quarry"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-15339"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-15339"
-                  >
-                    <a
-                      target="_blank"
-                      href="https://silestoneinstitute.com/en/"
-                      rel="nofollow noopener"
-                    >
-                      {"Silestone Institute"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-15340"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-15340"
-                  >
-                    <a
-                      target="_blank"
-                      href="https://fundacioneduardajusto.es/"
-                      rel="nofollow noopener"
-                    >
-                      {"Eduarda Justo Foundation"}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-lg-3">
-            <p
-              className="footer-menu-title"
-              id="titulo-menu-2"
-              aria-expanded="false"
-              aria-controls="collapse-menu-2"
-            >
-              <span className="icon float-right d-inline d-sm-none">{"+"}</span>
-              {"Customer Support"}
-            </p>
-            <div
-              id="collapse-menu-2"
-              className="collapse dont-collapse-sm mb-l"
-              aria-labelledby="titulo-menu-2"
-            >
-              <div className="menu-customer_support-container">
-                <ul id="menu-customer_support" className="menu">
-                  <li
-                    id="menu-item-129111"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-129111"
-                  >
-                    <a href="#contact">
-                      {"Contact"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-112000"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-112000"
-                  >
-                    <a href="#contact">
-                      {"Warranty | Silestone"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-19913"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19913"
-                  >
-                    <a href="#contact">
-                      {"Warranty | Dekton"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-132010"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-132010"
-                  >
-                    <a href="#contact">
-                      {"Warranty | Eclos"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-19915"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19915"
-                  >
-                    <a href="#contact">
-                      {"Warranty | Sensa"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-32321"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-32321"
-                  >
-                    <a href="#contact">
-                      {"General Conditions of Sale"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-68169"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-68169"
-                  >
-                    <a href="#contact">
-                      {"Ethics & Compliance"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-84004"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-84004"
-                  >
-                    <a href="#contact">
-                      {"Ethics Channel"}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <p
-              className="footer-menu-title"
-              id="titulo-menu-5"
-              aria-expanded="false"
-              aria-controls="collapse-menu-5"
-            >
-              <span className="icon float-right d-inline d-sm-none">{"+"}</span>
-              {"Service Provider"}
-            </p>
-            <div
-              id="collapse-menu-5"
-              className="collapse dont-collapse-sm mb-l"
-              aria-labelledby="titulo-menu-5"
-            >
-              <div className="menu-suppliers-container">
-                <ul id="menu-suppliers" className="menu">
-                  <li
-                    id="menu-item-70587"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-70587"
-                  >
-                    <a
-                      target="_blank"
-                      href="#contact"
-                      rel="nofollow noopener"
-                    >
-                      {"Supplier Portal"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-70596"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-70596"
-                  >
-                    <a
-                      target="_blank"
-                      href="#contact"
-                      rel="nofollow noopener"
-                    >
-                      {"General Purchase Conditions"}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-lg-3">
-            <p
-              className="footer-menu-title"
-              id="titulo-menu-3"
-              aria-expanded="false"
-              aria-controls="collapse-menu-3"
-            >
-              <span className="icon float-right d-inline d-sm-none">{"+"}</span>
-              {"Professional Area"}
-            </p>
-            <div
-              id="collapse-menu-3"
-              className="collapse dont-collapse-sm mb-l"
-              aria-labelledby="titulo-menu-3"
-            >
-              <div className="menu-area_profesional-container">
-                <ul id="menu-area_profesional" className="menu">
-                  <li
-                    id="menu-item-83313"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83313"
-                  >
-                    <a href="#contact">
-                      {"Designers – CTOP"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-83310"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83310"
-                  >
-                    <a href="#contact">
-                      {"Architects"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-83314"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83314"
-                  >
-                    <a href="#contact">
-                      {"Fabricators"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-83311"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83311"
-                  >
-                    <a href="#contact">
-                      {"Kitchen & bath studios"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-83312"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-83312"
-                  >
-                    <a href="#contact">
-                      {"Installers reformers"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-31719"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-31719"
-                  >
-                    <a href="#contact">
-                      {"Cosentino Center"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-60333"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-60333"
-                  >
-                    <a href="#contact">
-                      {"Cosentino City"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-57649"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-57649"
-                  >
-                    <a
-                      href="#contact"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      {"Service Provider"}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <p
-              className="footer-menu-title mt-l"
-              id="titulo-menu-4"
-              aria-expanded="false"
-              aria-controls="collapse-menu-4"
-            >
-              <span className="icon float-right d-inline d-sm-none">{"+"}</span>
-              {"Resources"}
-            </p>
-            <div
-              id="collapse-menu-4"
-              className="collapse dont-collapse-sm mb-l"
-              aria-labelledby="titulo-menu-4"
-            >
-              <div className="menu-recursos-container">
-                <ul id="menu-recursos" className="menu">
-                  <li
-                    id="menu-item-17999"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-17999"
-                  >
-                    <a href="#gallery">
-                      {"C Magazine"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-18000"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-18000"
-                  >
-                    <a href="#gallery">
-                      {"C-Top Magazine"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-68272"
-                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-68272"
-                  >
-                    <a href="#contact">
-                      {"Technical documentation"}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-lg-3">
-            <p
-              className="footer-menu-title"
-              id="titulo-menu-7"
-              aria-expanded="false"
-              aria-controls="collapse-menu-7"
-            >
-              <span className="icon float-right d-inline d-sm-none">{"+"}</span>
-              {"Employment"}
-            </p>
-            <div
-              id="collapse-menu-7"
-              className="collapse dont-collapse-sm mb-l"
-              aria-labelledby="titulo-menu-7"
-            >
-              <div className="menu-employment-container">
-                <ul id="menu-employment" className="menu">
-                  <li
-                    id="menu-item-15357"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-15357"
-                  >
-                    <a
-                      target="_blank"
-                      href="#contact"
-                      rel="nofollow noopener"
-                    >
-                      {"Join Cosentino"}
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-129108"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-129108"
-                  >
-                    <a
-                      href="https://www.cigna.com/legal/compliance/machine-readable-files"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      {"Transparency in Coverage"}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <p
-              className="footer-menu-title"
-              id="titulo-menu-8"
-              aria-expanded="false"
-              aria-controls="collapse-menu-8"
-            >
-              <span className="icon float-right d-inline d-sm-none">{"+"}</span>
-              {"Press Room"}
-            </p>
-            <div
-              id="collapse-menu-8"
-              className="collapse dont-collapse-sm mb-l"
-              aria-labelledby="titulo-menu-8"
-            >
-              <div className="menu-press_room-container">
-                <ul id="menu-press_room" className="menu">
-                  <li
-                    id="menu-item-74920"
-                    className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-74920"
-                  >
-                    <a href="#gallery">{"News"}</a>
-                  </li>
-                  <li
-                    id="menu-item-100630"
-                    className="menu-item menu-item-type-custom menu-item-object-custom menu-item-100630"
-                  >
-                    <a href="#contact">
-                      {"Media Contact"}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="footer-menu-title mt-l">{"Follow us:"}</div>
-            <p className="social-networks">
-              <a
-                className="icon-rrss d-inline-block align-middle"
-                rel="nofollow"
-                target="_blank"
-                href="https://www.facebook.com/CosentinoInternational"
-              >
-                <img
-                  className="mb-0 align-baseline"
-                  src="/assets/facebook-icon.svg"
-                  alt=""
-                  loading="lazy"
-                width={32.0} height={32.0} />
-              </a>
-              <a
-                className="icon-rrss d-inline-block align-middle"
-                rel="nofollow"
-                target="_blank"
-                href="https://www.instagram.com/grupocosentino/"
-              >
-                <img
-                  className="mb-0 align-baseline"
-                  src="/assets/instagram-icon.svg"
-                  alt=""
-                  loading="lazy"
-                width={32.0} height={32.0} />
-              </a>
-              <a
-                className="icon-rrss d-inline-block align-middle"
-                rel="nofollow"
-                target="_blank"
-                href="https://www.pinterest.es/grupocosentino/"
-              >
-                <img
-                  className="mb-0 align-baseline"
-                  src="/assets/pinterest-icon.svg"
-                  alt=""
-                  loading="lazy"
-                width={32.0} height={32.0} />
-              </a>
-              <a
-                className="icon-rrss d-inline-block align-middle"
-                rel="nofollow"
-                target="_blank"
-                href="https://www.linkedin.com/company/cosentino/"
-              >
-                <img
-                  className="mb-0 align-baseline"
-                  src="/assets/linkedin-icon.svg"
-                  alt=""
-                  loading="lazy"
-                width={32.0} height={32.0} />
-              </a>
-              <a
-                className="icon-rrss d-inline-block align-middle"
-                rel="nofollow"
-                target="_blank"
-                href="https://twitter.com/grupocosentino"
-              >
-                <img
-                  className="mb-0 align-baseline"
-                  src="/assets/twitter-icon.svg"
-                  alt=""
-                  loading="lazy"
-                />
-              </a>
-              <a
-                className="icon-rrss d-inline-block align-middle"
-                rel="nofollow"
-                target="_blank"
-                href="https://www.youtube.com/user/CosentinoTV"
-              >
-                <img
-                  className="mb-0 align-baseline"
-                  src="/assets/youtube-icon.svg"
-                  alt=""
-                  loading="lazy"
-                width={32.0} height={32.0} />
-              </a>
-            </p>
+              Privacy Policy
+            </Link>
           </div>
         </div>
-        <div className="row sub-footer">
-          <div className="col-12">
-            <p>{"Cosentino Global, S.L.U. All rights reserved"}</p>
-          </div>
-          <div className="col-12 col-md-9">
-            <p>
-              <a
-                rel="nofollow"
-                href="#contact"
-                target="_blank"
-              >
-                {"Legal Notice"}
-              </a>
-              {" | "}
-              <a
-                rel="nofollow"
-                href="#contact"
-                target="_blank"
-              >
-                {"Privacy Policy"}
-              </a>
-              {" | "}
-              <a
-                rel="nofollow"
-                href="#contact"
-                target="_blank"
-              >
-                {"Cookie Policy"}
-              </a>
-            </p>
-          </div>
-          <div className="col-12 col-md-3">
-            <p>
-              <a href="#home">{"Sitemap"}</a>
-            </p>
-          </div>
+
+        <div className="mt-8 flex w-full justify-center overflow-hidden sm:mt-12 md:mt-16 md:mb-[-0.5%]">
+          <h2 className="sr-only">DefensePly</h2>
+          <svg
+            viewBox="0 0 1000 120"
+            className="w-full h-[52px] min-[450px]:h-[64px] sm:h-auto block select-none pointer-events-none text-zinc-900"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <text
+              x="0"
+              y="105"
+              fill="currentColor"
+              fontWeight="900"
+              fontFamily="var(--font-sans), system-ui, -apple-system, sans-serif"
+              fontSize="135"
+              textLength="1000"
+              lengthAdjust="spacingAndGlyphs"
+            >
+              DEFENSEPLY
+            </text>
+          </svg>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

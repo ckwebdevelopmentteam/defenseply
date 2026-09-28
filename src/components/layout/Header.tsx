@@ -1,227 +1,106 @@
 "use client";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronDown, Menu, X } from "lucide-react";
-import navigation from "@/data/navigation.json";
-const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Product", href: "#product" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact Us", href: "#contact" },
-];
-type MenuName = keyof typeof navigation;
-export function Header() {
-  const [scrolled, setScrolled] = useState(false),
-    [open, setOpen] = useState<MenuName | null>(null),
-    [mobile, setMobile] = useState(false);
-  const reduced = useReducedMotion();
-  useEffect(() => {
-    const update = () => setScrolled(window.scrollY > 40);
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    return () => window.removeEventListener("scroll", update);
-  }, []);
-  useEffect(() => {
-    if (!open && !mobile) return;
-    const key = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setOpen(null);
-        setMobile(false);
-      }
-    };
-    document.addEventListener("keydown", key);
-    return () => document.removeEventListener("keydown", key);
-  }, [open, mobile]);
-  const toggle = (name: MenuName) => setOpen(open === name ? null : name);
-  const logo = (
-    <a href="/" aria-label="Defenseply home" className="brand-logo">
-      <img
-        src="/assets/defenseply-logo.png"
-        alt="Defenseply"
-        className="brand-logo-img logo-light"
-      />
-      <img
-        src="/assets/defenseply-logo-dark.png"
-        alt="Defenseply"
-        className="brand-logo-img logo-dark"
-      />
-    </a>
-  );
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ArrowRight } from "lucide-react";
+import { MobileHeader } from "./MobileHeader";
+import { BrandLogo } from "./NavigationElements";
+import { useNavigationState } from "../sections/NavigationState";
+import { siteNavigation } from "@/data/site";
+import { cn } from "@/lib/cn";
+
+export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
+  const { scrolled, visible } = useNavigationState();
+  const pathname = usePathname();
+
+  const isTransparentPage = pathname === "/" || pathname?.startsWith("/about");
+  const isDarkHero = !scrolled && isTransparentPage;
+  const solid = Boolean(forceSolid || scrolled || !isTransparentPage);
+
   return (
-    <header id="core-main-menu" className="core-main-menu">
+    <header id="core-main-menu">
       <div
-        id="core-menu-desktop"
-        className={`core-menu-desktop ${open ? "is-open" : ""}`}
-        onClick={(e) => {
-          if (e.target === e.currentTarget) setOpen(null);
-        }}
+        className={cn(
+          "fixed inset-x-0 top-0 z-[2147483640] flex h-[76px] justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] max-desktop:hidden",
+          visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none",
+          solid
+            ? "bg-[#FAF9F5]/95 backdrop-blur-md border-b border-[#E8E5DC] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)]"
+            : "bg-transparent border-b border-transparent",
+        )}
       >
-        <div
-          className={`main-menu-container theme-regular ${scrolled ? "is-scrolled" : "is-at-top"}`}
-          style={{ padding: scrolled || open ? "10px 32px" : "18px 32px" }}
-        >
-          <div className="main-menu-wrapper">
-            <div className="row-side row-left">
-              <div className="menu-logo">{logo}</div>
-            </div>
-            <nav className="row-center" aria-label="Main navigation">
-              <ul className="menu-main">
-                {navItems.map((item) => (
-                  <li className="menu-item" key={item.name}>
-                    {item.name in navigation ? (
-                      <button
-                        aria-expanded={open === item.name}
-                        aria-controls="desktop-submenu"
-                        onClick={() => toggle(item.name as MenuName)}
-                      >
-                        {item.name}
-                        <ChevronDown
-                          size={17}
-                          strokeWidth={1}
-                          style={{
-                            transform:
-                              open === item.name ? "rotate(180deg)" : undefined,
-                          }}
+        <div className="flex h-full w-full max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-12">
+          {/* Brand Logo with DP Monogram */}
+          <BrandLogo solid={!isDarkHero} compact />
+
+          {/* Center Navigation Links */}
+          <nav aria-label="Main navigation" className="flex items-center">
+            <ul className="flex items-center gap-6 lg:gap-8">
+              {siteNavigation.map((item) => {
+                const isHome = item.href === "/";
+                const isActive = isHome
+                  ? pathname === "/"
+                  : pathname?.startsWith(item.href) &&
+                    item.href !== "/#products" &&
+                    item.href !== "/#applications" &&
+                    item.href !== "/#gallery";
+
+                return (
+                  <li key={item.name} className="relative">
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "relative flex items-center text-[13.5px] lg:text-[14px] transition-colors py-1",
+                        isDarkHero
+                          ? isActive
+                            ? "font-semibold text-white drop-shadow-sm"
+                            : "font-normal text-white/80 hover:text-white drop-shadow-sm"
+                          : isActive
+                            ? "font-semibold text-[#163326]"
+                            : "font-normal text-[#435249] hover:text-[#163326]",
+                      )}
+                    >
+                      <span>{item.name}</span>
+                      {/* Active indicator bar */}
+                      {isActive && (
+                        <span
+                          className={cn(
+                            "absolute -bottom-1.5 left-0 right-0 h-[2px] rounded-full transition-colors",
+                            isDarkHero
+                              ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+                              : "bg-[#163326]",
+                          )}
+                          aria-hidden="true"
                         />
-                      </button>
-                    ) : (
-                      <a href={item.href}>{item.name}</a>
-                    )}
+                      )}
+                    </Link>
                   </li>
-                ))}
-              </ul>
-            </nav>
-            <div className="row-side row-right">
-              <a
-                className="menu-btn is-primary"
-                href="#contact"
-              >
-                Where To Buy
-              </a>
-              <a
-                className="menu-btn is-secondary"
-                href="#contact"
-              >
-                Professional Area
-              </a>
-            </div>
+                );
+              })}
+            </ul>
+          </nav>
+
+          {/* Right Action: Get in Touch Button */}
+          <div className="flex items-center">
+            <Link
+              href="/contact-us"
+              className={cn(
+                "group/btn inline-flex items-center gap-2.5 rounded-full px-5 py-2 lg:px-6 lg:py-2.5 text-[13px] lg:text-[13.5px] font-medium shadow-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]",
+                isDarkHero
+                  ? "bg-white text-[#173326] hover:bg-white/90 hover:shadow-md"
+                  : "bg-[#173326] text-white hover:bg-[#0f241a] hover:shadow-md",
+              )}
+            >
+              <span>Get in Touch</span>
+              <ArrowRight
+                className="h-3.5 w-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5"
+                strokeWidth={2}
+                aria-hidden="true"
+              />
+            </Link>
           </div>
         </div>
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              id="desktop-submenu"
-              className="menu-submenu replica-submenu"
-              key={open}
-              initial={{ opacity: 0, y: -15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: reduced ? 0 : 0.22 }}
-            >
-              <div className="first-wrapper" style={{ transform: "none" }}>
-                <div className="first-submenu">
-                  {navigation[open].map((card) => (
-                    <div className="menu-card" key={card.title}>
-                      <a className="card-wrapper" href={card.href}>
-                        <div className="header-card">
-                          <div className="img-wrapper scale-hover">
-                            {card.image && (
-                              <img
-                                className="main-img"
-                                src={card.image}
-                                alt=""
-                              />
-                            )}
-                            {card.logo && (
-                              <img
-                                className="menu-brand-symbol"
-                                src={card.logo}
-                                alt=""
-                              />
-                            )}
-                          </div>
-                        </div>
-                        <div className="footer-card">
-                          <div className="main-text">
-                            <p>{card.title}</p>
-                            <ChevronDown size={15} />
-                          </div>
-                          <div className="hover-text">
-                            <p>{card.title}</p>
-                            <ChevronDown size={15} />
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
-      <div
-        className={`replica-mobile-header ${scrolled || mobile ? "solid" : ""}`}
-      >
-        <button
-          onClick={() => setMobile(!mobile)}
-          aria-label={mobile ? "Close menu" : "Open menu"}
-          aria-expanded={mobile}
-        >
-          {mobile ? <X /> : <Menu />}
-        </button>
-        {logo}
-        <span style={{ width: 24 }} aria-hidden="true" />
-      </div>
-      {mobile && (
-        <nav className="replica-mobile-nav" aria-label="Mobile navigation">
-          {navItems.map((item) => (
-            <div key={item.name}>
-              {item.name in navigation ? (
-                <>
-                  <button
-                    onClick={() => toggle(item.name as MenuName)}
-                    aria-expanded={open === item.name}
-                  >
-                    {item.name}
-                    <ChevronDown size={20} />
-                  </button>
-                  {open === item.name && (
-                    <div className="mobile-subitems">
-                      {navigation[open].map((c) => (
-                        <a
-                          href={c.href}
-                          key={c.title}
-                          onClick={() => setMobile(false)}
-                        >
-                          {c.title}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <a href={item.href} onClick={() => setMobile(false)}>
-                  {item.name}
-                </a>
-              )}
-            </div>
-          ))}
-          <a
-            href="#contact"
-            onClick={() => setMobile(false)}
-          >
-            Where To Buy
-          </a>
-          <a
-            href="#contact"
-            onClick={() => setMobile(false)}
-          >
-            Professional Area
-          </a>
-        </nav>
-      )}
+      <MobileHeader solid={solid} darkHero={isDarkHero} />
     </header>
   );
 }

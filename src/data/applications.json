@@ -1,0 +1,254 @@
+[
+  {
+    "slug": "interiors",
+    "title": "Interiors",
+    "headline": "Room for everyday living.",
+    "description": "Bring continuity to the rooms you live in, with boards for cabinetry, partitions and considered interior details.",
+    "storyTitle": "One material palette. Many possibilities.",
+    "story": "From a quiet living room to practical built-in storage, plan spaces around the way they are used. Explore finishes, proportions and details that connect one room to the next.",
+    "hero": "/assets/applications/interiors/hero-desktop.webp",
+    "heroMobile": "/assets/applications/interiors/hero-mobile.webp",
+    "heroAlt": "Interiors application inspiration for Defenseply boards",
+    "products": ["pvc-foam-boards", "wpc-boards", "pvc-colour-boards"],
+    "gallery": [
+      {
+        "id": "modular-kitchens",
+        "title": "Modular kitchens",
+        "caption": "Clean-lined cabinetry for everyday routines.",
+        "image": "/assets/applications/interiors/modular-kitchens.webp",
+        "alt": "A contemporary Kerala apartment kitchen."
+      },
+      {
+        "id": "living-room-partitions",
+        "title": "Living room partitions",
+        "caption": "Create definition while keeping rooms connected.",
+        "image": "/assets/applications/interiors/living-room-partitions.webp",
+        "alt": "An airy contemporary living room with a full-height CNC-routed WPC board room divider in a warm oak-look finish."
+      },
+      {
+        "id": "built-in-storage",
+        "title": "Built-in storage",
+        "caption": "A place for everything, made part of the room.",
+        "image": "/assets/applications/interiors/built-in-storage.webp",
+        "alt": "A reading corner with floor-to-ceiling PVC board built-in cupboards and open shelves."
+      },
+      {
+        "id": "ceiling-details",
+        "title": "Ceiling details",
+        "caption": "A considered finish above and around you.",
+        "image": "/assets/applications/interiors/ceiling-details.webp",
+        "alt": "A residential lounge with a carefully detailed suspended decorative board ceiling."
+      }
+    ]
+  },
+  {
+    "slug": "commercial",
+    "title": "Commercial",
+    "headline": "Spaces that work beautifully.",
+    "description": "Explore furniture, fixtures and display ideas for workplaces, retail environments and places that welcome people.",
+    "storyTitle": "Designed around people. Built around purpose.",
+    "story": "A reception desk, a display wall or a workspace can establish the character of an entire business. Bring a consistent finish to furniture and fit-outs, with material selection suited to the project.",
+    "hero": "/assets/applications/commercial/hero-desktop.webp",
+    "heroMobile": "/assets/applications/commercial/hero-mobile.webp",
+    "heroAlt": "Commercial application inspiration for Defenseply boards",
+    "products": ["pvc-foam-boards", "pvc-colour-boards", "wpc-boards"],
+    "gallery": [
+      {
+        "id": "office-furniture",
+        "title": "Office furniture",
+        "caption": "Thoughtful workspaces, from desks to storage.",
+        "image": "/assets/applications/commercial/office-furniture.webp",
+        "alt": "A refined modern office with matte-grey PVC board workstation storage."
+      },
+      {
+        "id": "retail-fixtures",
+        "title": "Retail fixtures",
+        "caption": "Display products in a setting of their own.",
+        "image": "/assets/applications/commercial/retail-fixtures.webp",
+        "alt": "A premium small retail store with taupe PVC board display shelving and a curved-looking faceted board sales counter."
+      },
+      {
+        "id": "exhibition-displays",
+        "title": "Exhibition displays",
+        "caption": "Flexible ideas for temporary spaces.",
+        "image": "/assets/applications/commercial/exhibition-displays.webp",
+        "alt": "A sophisticated modular exhibition booth made from flat CNC-cut PVC foam boards."
+      },
+      {
+        "id": "reception-signage",
+        "title": "Reception & signage",
+        "caption": "Make an impression from the first arrival.",
+        "image": "/assets/applications/commercial/reception-signage.webp",
+        "alt": "A contemporary office reception with layered matte PVC board wall panels."
+      }
+    ]
+  },
+  {
+    "slug": "creative",
+    "title": "Creative",
+    "headline": "Give your ideas a new dimension.",
+    "description": "Discover decorative panels, routed patterns and layered designs that turn a board into a distinctive interior feature.",
+    "storyTitle": "From a simple sheet to a signature detail.",
+    "story": "Explore rhythm, texture and light through patterned panels and custom fabrication. Discuss tooling, finish and board selection with your fabricator before specifying a design.",
+    "hero": "/assets/applications/creative/hero-desktop.webp",
+    "heroMobile": "/assets/applications/creative/hero-mobile.webp",
+    "heroAlt": "Creative application inspiration for Defenseply boards",
+    "products": ["pvc-foam-boards", "pvc-colour-boards", "wpc-boards"],
+    "gallery": [
+      {
+        "id": "cnc-screens",
+        "title": "CNC screens",
+        "caption": "Patterns that play with light and privacy.",
+        "image": "/assets/applications/creative/cnc-screens.webp",
+        "alt": "A precise CNC-routed WPC decorative screen in warm walnut-look finish."
+      },
+      {
+        "id": "relief-panels",
+        "title": "Relief panels",
+        "caption": "Add depth through routed surface details.",
+        "image": "/assets/applications/creative/relief-panels.webp",
+        "alt": "An elegant matte-ivory PVC board feature panel with shallow CNC-routed geometric relief."
+      },
+      {
+        "id": "layered-installations",
+        "title": "Layered installations",
+        "caption": "Simple shapes, composed into something more.",
+        "image": "/assets/applications/creative/layered-installations.webp",
+        "alt": "A sculptural wall installation of layered flat PVC colour boards in terracotta."
+      },
+      {
+        "id": "designer-panels",
+        "title": "Designer panels",
+        "caption": "A distinctive finish for a focal wall.",
+        "image": "/assets/applications/creative/designer-panels.webp",
+        "alt": "A contemporary lounge wall composed of custom flat WPC designer panels with subtle routed linear patterns."
+      }
+    ]
+  },
+  {
+    "slug": "wardrobe",
+    "title": "Wardrobe",
+    "headline": "Storage, thoughtfully composed.",
+    "description": "Create wardrobes and dressing spaces with room for both daily routines and personal style.",
+    "storyTitle": "Every detail has its place.",
+    "story": "Balance open display with concealed storage. Coordinate shutters, internal divisions and drawer fronts in a finish palette that belongs to your room.",
+    "hero": "/assets/applications/wardrobe/hero-desktop.webp",
+    "heroMobile": "/assets/applications/wardrobe/hero-mobile.webp",
+    "heroAlt": "Wardrobe application inspiration for Defenseply boards",
+    "products": ["pvc-foam-boards", "wpc-boards", "pvc-colour-boards"],
+    "gallery": [
+      {
+        "id": "full-height-wardrobes",
+        "title": "Full-height wardrobes",
+        "caption": "A calm, continuous wall of storage.",
+        "image": "/assets/applications/wardrobe/full-height-wardrobes.webp",
+        "alt": "A full-height wardrobe made with matte sand-coloured PVC board shutters."
+      },
+      {
+        "id": "walk-in-closets",
+        "title": "Walk-in closets",
+        "caption": "Open storage with a clear sense of order.",
+        "image": "/assets/applications/wardrobe/walk-in-closets.webp",
+        "alt": "A premium walk-in closet with oak-look finished WPC board cabinetry."
+      },
+      {
+        "id": "sliding-shutters",
+        "title": "Sliding shutters",
+        "caption": "Make the most of the space around you.",
+        "image": "/assets/applications/wardrobe/sliding-shutters.webp",
+        "alt": "A compact bedroom with wide matte sage PVC board sliding wardrobe shutters and visible realistic sliding tracks."
+      },
+      {
+        "id": "dressing-units",
+        "title": "Dressing units",
+        "caption": "Bring storage and preparation together.",
+        "image": "/assets/applications/wardrobe/dressing-units.webp",
+        "alt": "A built-in dressing unit in taupe PVC board with discreet drawers."
+      }
+    ]
+  },
+  {
+    "slug": "bedroom",
+    "title": "Bedroom",
+    "headline": "A quieter place to come home to.",
+    "description": "Bring harmony to bedrooms through coordinated wall details, storage and furniture finishes.",
+    "storyTitle": "A room made for slowing down.",
+    "story": "Layer soft textures with clean-lined furniture and considered board finishes. Create a coherent setting, from the headboard wall to the last bedside drawer.",
+    "hero": "/assets/applications/bedroom/hero-desktop.webp",
+    "heroMobile": "/assets/applications/bedroom/hero-mobile.webp",
+    "heroAlt": "Bedroom application inspiration for Defenseply boards",
+    "products": ["wpc-boards", "pvc-foam-boards", "pvc-colour-boards"],
+    "gallery": [
+      {
+        "id": "headboard-walls",
+        "title": "Headboard walls",
+        "caption": "Give the room a composed focal point.",
+        "image": "/assets/applications/bedroom/headboard-walls.webp",
+        "alt": "A serene bedroom with a broad headboard feature wall made from walnut-look finished WPC board panels."
+      },
+      {
+        "id": "bedside-furniture",
+        "title": "Bedside furniture",
+        "caption": "Keep everyday essentials close to hand.",
+        "image": "/assets/applications/bedroom/bedside-furniture.webp",
+        "alt": "A close architectural view of a matte ivory PVC board bedside cabinet with clean drawer joints and slim pulls."
+      },
+      {
+        "id": "study-corners",
+        "title": "Study corners",
+        "caption": "A comfortable corner for focused moments.",
+        "image": "/assets/applications/bedroom/study-corners.webp",
+        "alt": "A bedroom study nook with sage PVC board desktop and storage."
+      },
+      {
+        "id": "coordinated-storage",
+        "title": "Coordinated storage",
+        "caption": "Connect furniture through a shared finish.",
+        "image": "/assets/applications/bedroom/coordinated-storage.webp",
+        "alt": "A calm bedroom corner showing coordinated matte taupe board dresser."
+      }
+    ]
+  },
+  {
+    "slug": "kitchen",
+    "title": "Kitchen",
+    "headline": "Made around everyday life.",
+    "description": "Explore cabinetry, shutters and storage ideas that make the kitchen feel organised and welcoming.",
+    "storyTitle": "Good design starts behind the doors.",
+    "story": "Think beyond the surface: plan storage, access and the details of daily use. Choose boards and finishes for the intended cabinet application with guidance from your fabricator.",
+    "hero": "/assets/applications/kitchen/hero-desktop.webp",
+    "heroMobile": "/assets/applications/kitchen/hero-mobile.webp",
+    "heroAlt": "Kitchen application inspiration for Defenseply boards",
+    "products": ["pvc-foam-boards", "wpc-boards", "pvc-colour-boards"],
+    "gallery": [
+      {
+        "id": "base-cabinets",
+        "title": "Base cabinets",
+        "caption": "Practical storage beneath the working area.",
+        "image": "/assets/applications/kitchen/base-cabinets.webp",
+        "alt": "A contemporary kitchen with matte grey PVC board base cabinets."
+      },
+      {
+        "id": "wall-cabinets",
+        "title": "Wall cabinets",
+        "caption": "Keep the essentials within reach.",
+        "image": "/assets/applications/kitchen/wall-cabinets.webp",
+        "alt": "A bright kitchen with warm-white PVC board wall cabinets."
+      },
+      {
+        "id": "pantry-storage",
+        "title": "Pantry storage",
+        "caption": "Make room for the way you cook.",
+        "image": "/assets/applications/kitchen/pantry-storage.webp",
+        "alt": "A full-height kitchen pantry in muted sage PVC board with one open shutter showing organised shelves."
+      },
+      {
+        "id": "breakfast-units",
+        "title": "Breakfast units",
+        "caption": "A relaxed setting for everyday rituals.",
+        "image": "/assets/applications/kitchen/breakfast-units.webp",
+        "alt": "A compact breakfast corner with a supported WPC board storage bench and matte sand board cabinet fronts."
+      }
+    ]
+  }
+]
