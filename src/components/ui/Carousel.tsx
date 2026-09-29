@@ -97,7 +97,7 @@ export function Carousel({
       // A fresh DOM track makes Keen discard cached slide elements and widths.
       key={resetKey}
       ref={ref}
-      className={`keen-slider relative h-full overflow-visible! ${className}`}
+      className={`keen-slider relative h-full overflow-hidden ${className}`}
     >
       {children}
     </div>
