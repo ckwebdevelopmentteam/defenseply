@@ -4,7 +4,7 @@ export function ProductGreenPromise() {
   return (
     <ProductSection aria-label="Defenseply Green Promise">
       <div className="bg-[url('/assets/green-promise-bg.png')] bg-cover bg-center no-repeat rounded-lg py-[52px] px-12 grid grid-cols-[1fr_1.3fr] gap-12 items-center relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(to_right,rgba(10,50,30,0.38)_0%,rgba(10,50,30,0.10)_60%,rgba(10,50,30,0.05)_100%)] before:pointer-events-none before:z-0 max-[860px]:grid-cols-1 max-[860px]:gap-7 max-[860px]:py-9 max-[860px]:px-7 max-[860px]:bg-left max-sm:py-7 max-sm:px-[18px] max-sm:gap-[22px] max-sm:bg-left reveal-on-scroll">
-        <div className="relative z-[1]">
+        <div className="relative z-[2]">
           <span className="block text-[11px] tracking-[2.5px] uppercase text-white/75 mb-2 font-medium font-sans">
             Sustainable Eco-Architecture
           </span>
