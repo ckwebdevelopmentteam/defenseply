@@ -257,8 +257,8 @@ export function ApplicationTabs({ categories }: { categories: Application[] }) {
               })}
             </div>
 
-            {/* Right: Products-style Simple Arrow Navigation */}
-            <div className="absolute right-0 flex shrink-0 items-center gap-2 pl-3">
+            {/* Right: Products-style Simple Arrow Navigation (hidden on mobile) */}
+            <div className="absolute right-0 hidden md:flex shrink-0 items-center gap-2 pl-3">
               <Arrow
                 direction="left"
                 aria-label="Previous applications"
@@ -282,7 +282,7 @@ export function ApplicationTabs({ categories }: { categories: Application[] }) {
             id="applications-panel"
             aria-labelledby={`applications-tab-${active.slug}`}
             tabIndex={0}
-            className="relative w-full"
+            className="relative w-full overflow-hidden"
           >
             {slider}
           </div>

@@ -32,9 +32,10 @@ export function ApplicationImage({
           <img
             src={src ?? mobileSrc!}
             alt={alt}
+            draggable={false}
             loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : "auto"}
-            className="absolute inset-0 size-full object-cover"
+            className="absolute inset-0 size-full object-cover select-none pointer-events-none"
           />
         </picture>
       ) : (
