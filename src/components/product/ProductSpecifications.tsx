@@ -62,8 +62,8 @@ export function ProductSpecifications({ product }: { product: ProductDetail }) {
         Fits Into Your Vision
       </ProductSectionHeading>
 
-      <div className="bg-white border border-[#ebe8e2] rounded overflow-x-auto shadow-[0_4px_20px_rgba(0,0,0,0.02)] reveal-on-scroll">
-        <table className="w-full border-collapse text-left min-w-[320px]">
+      <div className="bg-white border border-[#ebe8e2] rounded overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] reveal-on-scroll">
+        <table className="w-full border-collapse text-left">
           <tbody>
             {rows
               .filter(
@@ -77,11 +77,11 @@ export function ProductSpecifications({ product }: { product: ProductDetail }) {
                 >
                   <th
                     scope="row"
-                    className="py-4 px-5 text-xs uppercase tracking-[1px] text-[#706b65] font-semibold w-[36%] align-top font-sans max-sm:py-3 max-sm:px-3.5 max-sm:text-[10px] max-sm:whitespace-nowrap"
+                    className="py-3.5 px-4 sm:py-4 sm:px-5 text-[11px] sm:text-xs uppercase tracking-[0.6px] sm:tracking-[1px] text-[#706b65] font-semibold w-[40%] sm:w-[34%] align-top font-sans leading-snug break-words"
                   >
                     {row.label}
                   </th>
-                  <td className="py-4 px-5 text-[14.5px] leading-[1.5] text-[#1a1a1a] align-top max-sm:py-3 max-sm:px-3.5 max-sm:text-[13px]">
+                  <td className="py-3.5 px-4 sm:py-4 sm:px-5 text-[13px] sm:text-[14.5px] leading-[1.5] text-[#1a1a1a] align-top break-words">
                     {row.value}
                   </td>
                 </tr>

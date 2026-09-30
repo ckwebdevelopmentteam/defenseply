@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { contactSubmit } from "./ContactUI";
@@ -9,9 +9,28 @@ const labelClass =
   "mb-[15px] block text-[11px] text-contact-ink max-[520px]:mb-[11px] max-[520px]:text-[10px]";
 export function ContactForm({ context }: { context?: string } = {}) {
   const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash;
+      if (
+        hash === "#quote-form" ||
+        hash === "#project-form" ||
+        hash === "#contact-form"
+      ) {
+        setTimeout(() => {
+          formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 150);
+      }
+    }
+  }, []);
+
   return (
     <form
-      className="bg-[#f8f7f4] px-[clamp(24px,6vw,92px)] py-[clamp(48px,6vw,86px)] max-[520px]:px-[22px] max-[520px]:py-[34px]"
+      ref={formRef}
+      id="quote-form"
+      className="scroll-mt-24 sm:scroll-mt-28 bg-[#f8f7f4] px-[clamp(24px,6vw,92px)] py-[clamp(48px,6vw,86px)] max-[520px]:px-[22px] max-[520px]:py-[34px]"
       onSubmit={(event) => {
         event.preventDefault();
         setSubmitted(true);
@@ -51,21 +70,21 @@ export function ContactForm({ context }: { context?: string } = {}) {
       </label>
       <fieldset className="mt-0.5 mb-[19px]">
         <legend className={labelClass}>I am a</legend>
-        <div className="flex flex-wrap gap-[18px] max-[520px]:gap-[11px]">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 sm:flex sm:flex-wrap sm:gap-[18px]">
           {["Homeowner", "Architect / Designer", "Contractor", "Dealer"].map(
             (role) => (
               <label
                 key={role}
-                className="flex items-center gap-[7px] whitespace-nowrap text-[11px] max-[520px]:text-[10px]"
+                className="flex items-center gap-[7px] text-[12px] max-[520px]:text-[11px] text-[#2b2b2a] cursor-pointer"
               >
                 <input
-                  className="accent-contact-ink"
+                  className="accent-contact-ink size-3.5"
                   name="role"
                   required
                   type="radio"
                   value={role}
                 />
-                {role}
+                <span className="whitespace-nowrap">{role}</span>
               </label>
             ),
           )}
