@@ -14,7 +14,7 @@ export function ProductGreenPromise() {
           <p className="text-[15px] leading-[1.65] text-white/90 m-0 max-sm:text-sm">
             Defenseply products are the guardians of tomorrow&apos;s greenery.
             By choosing composite boards and architectural profiles, you choose
-            a future of conscious luxury.
+            a future of conscious luxury .
           </p>
         </div>
         <div className="relative z-[1] grid grid-cols-2 gap-3 max-sm:grid-cols-2 max-sm:gap-2.5">
