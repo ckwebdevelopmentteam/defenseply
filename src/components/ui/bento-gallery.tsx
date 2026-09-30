@@ -174,14 +174,26 @@ export const InteractiveImageBentoGallery: React.FC<
               direction="left"
               aria-label="Previous gallery projects"
               className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
-              onClick={() => scrollBy(520)}
+              onClick={() =>
+                scrollBy(
+                  typeof window !== "undefined" && window.innerWidth < 768
+                    ? 300
+                    : 520,
+                )
+              }
               disabled={!canScrollLeft}
             />
             <Arrow
               direction="right"
               aria-label="Next gallery projects"
               className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
-              onClick={() => scrollBy(-520)}
+              onClick={() =>
+                scrollBy(
+                  typeof window !== "undefined" && window.innerWidth < 768
+                    ? -300
+                    : -520,
+                )
+              }
               disabled={!canScrollRight}
             />
           </div>
@@ -191,10 +203,10 @@ export const InteractiveImageBentoGallery: React.FC<
       {/* Draggable Bento Grid Container flush with standard left & right page margins */}
       <div
         ref={containerRef}
-        className="relative w-full cursor-grab active:cursor-grabbing overflow-hidden"
+        className="relative w-full cursor-grab active:cursor-grabbing overflow-hidden touch-pan-y"
       >
         <motion.div
-          className="w-max"
+          className="w-max touch-pan-y"
           style={{ x }}
           drag="x"
           dragConstraints={{ left: dragConstraint, right: 0 }}
@@ -214,7 +226,7 @@ export const InteractiveImageBentoGallery: React.FC<
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: "some", margin: "100px 0px" }}
           >
             {imageItems.map((item) => (
               <motion.div

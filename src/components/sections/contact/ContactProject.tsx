@@ -9,7 +9,7 @@ import {
 import { ContactForm } from "./ContactForm";
 export function ContactProject({ context }: { context?: string } = {}) {
   return (
-    <section className={cn(contactGrid, "bg-[#eae9e5]")} id="project-form">
+    <section className={cn(contactGrid, "bg-[#eae9e5]")} id="project-section">
       <div className={cn(contactCopy, "pt-[clamp(48px,7vw,94px)]")}>
         <ContactEyebrow>Get in touch</ContactEyebrow>
         <h2 className={contactHeading}>Tell us about your project.</h2>
