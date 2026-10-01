@@ -68,10 +68,10 @@ export function MobileHeader({ solid, darkHero = false }: { solid: boolean; dark
           href="/contact-us"
           onClick={() => setOpen(false)}
           className={cn(
-            "rounded-full px-3.5 py-1.5 text-[11px] font-medium shadow-sm transition-all active:scale-95",
+            "rounded-[4px] px-3.5 py-1.5 text-[11px] font-normal transition-all active:scale-95",
             darkHero && !open
-              ? "bg-white text-[#163326] hover:bg-white/90 shadow-md"
-              : "bg-[#173326] text-white hover:bg-[#0f241a]",
+              ? "border border-white/35 bg-white/10 text-white backdrop-blur-md hover:bg-white/20"
+              : "bg-[#173326] text-white hover:bg-[#0f241a] shadow-sm",
           )}
         >
           Contact
