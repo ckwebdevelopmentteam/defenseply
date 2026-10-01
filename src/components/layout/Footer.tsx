@@ -1,16 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import { footerGroups, socialLinks } from "@/data/site";
-import { motion } from "framer-motion";
 
 export function Footer() {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
+    <footer
       className="flex w-full flex-col justify-end overflow-hidden bg-black px-[38px] pt-16 sm:pt-20 max-[768px]:px-6 max-phone:px-4"
     >
       <div className="w-full">
@@ -120,6 +113,6 @@ export function Footer() {
           </svg>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }

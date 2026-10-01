@@ -148,7 +148,9 @@
     color: var(--color-ink);
     font-size: 16px;
     line-height: 1.5;
-    overflow-x: hidden;
+    /* `hidden` promotes the other axis to `auto`, creating a second body
+       scrollbar while the root document is already scrollable. */
+    overflow-x: clip;
     width: 100%;
   }
 
