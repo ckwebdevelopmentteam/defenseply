@@ -263,7 +263,7 @@ export default function ApplicationsIndexPage() {
                 <ArrowRight className="size-4" />
               </Link>
               <Link
-                href="/#products"
+                href="/products"
                 className="inline-flex items-center gap-2 rounded-[4px] px-7 py-4 bg-white text-neutral-900 border border-neutral-300 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-100"
               >
                 <span>Explore Products</span>

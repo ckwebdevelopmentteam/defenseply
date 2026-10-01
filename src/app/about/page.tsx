@@ -7,7 +7,6 @@ import { AboutValues } from "@/components/sections/about/AboutValues";
 import { AboutLeadership } from "@/components/sections/about/AboutLeadership";
 import { AboutManufacturing } from "@/components/sections/about/AboutManufacturing";
 import { AboutCertifications } from "@/components/sections/about/AboutCertifications";
-import { AboutCTA } from "@/components/sections/about/AboutCTA";
 
 export const metadata: Metadata = {
   title: "About Us | DEFENSEPLY INTERNATIONAL LLP",
@@ -29,7 +28,6 @@ export default function AboutPage() {
       <AboutLeadership />
       <AboutManufacturing />
       <AboutCertifications />
-      <AboutCTA />
     </main>
   );
 }

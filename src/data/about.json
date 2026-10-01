@@ -17,7 +17,7 @@
   ],
   "action": {
     "label": "Contact Us",
-    "href": "#contact"
+    "href": "/contact-us"
   },
   "hero": {
     "image": "/assets/about/about-hero-facility.webp",
