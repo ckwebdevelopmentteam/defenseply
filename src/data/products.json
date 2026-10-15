@@ -4,16 +4,16 @@
     "title": "PVC Foam Boards",
     "category": "Foam Polymer Solutions",
     "tagline": "Lightweight, durable, and ultra-smooth finish for modern architecture",
-    "description": "Defenseply PVC Foam Boards are engineered for superior structural integrity and aesthetic perfection. Built with premium cellular polymers, they deliver an ultra-smooth finish that is lightweight yet remarkably durable, impervious to moisture, termites, and fire.",
+    "description": "Defenseply PVC Foam Boards are engineered for dependable structural integrity and smooth aesthetic finish. Built with cellular polymers, they deliver a calibrated surface that is lightweight yet durable, highly resistant to moisture, termites, and surface wear.",
     "extendedDescription": [
-      "Engineered to replace traditional plywood and MDF, Defenseply PVC Foam Boards eliminate the common risks of swelling, delamination, and pest attacks. The uniform cell structure provides an impeccable surface for lamination, direct digital printing, or painting.",
-      "Whether specified for luxury modular kitchens, high-humidity bathroom vanities, or intricate wall claddings, these boards maintain dimensional stability in extreme ambient conditions without warping."
+      "Engineered to replace traditional plywood and MDF, Defenseply PVC Foam Boards eliminate the common risks of swelling, delamination, and pest attacks. The uniform cell structure provides an adaptable surface for lamination, direct digital printing, or painting.",
+      "Whether specified for modular kitchens, high-humidity bathroom vanities, or wall claddings, these boards maintain dimensional stability in humid conditions without warping."
     ],
     "badges": [
-      "100% Waterproof",
-      "Termite Proof",
-      "Fire Retardant",
-      "Zero Deforestation"
+      "Moisture Resistant",
+      "Termite Resistant",
+      "Flame Retardant",
+      "Timber Alternative"
     ],
     "gallery": [
       {
@@ -38,7 +38,7 @@
       "Resistant to water, termites, and fire",
       "Available in a variety of vibrant colours and custom dimensions",
       "Widely used across construction, commercial, and design industries",
-      "100% recyclable and eco-friendly composition"
+      "Lead-free recyclable polymer composition"
     ],
     "specs": {
       "thickness": "0.5 mm to 35 mm",
@@ -55,8 +55,8 @@
         "Grey",
         "Custom Shades"
       ],
-      "fireRating": "Self-extinguishing Class 1 (Fire retardant)",
-      "waterResistance": "100% Waterproof (Zero water absorption)",
+      "fireRating": "Self-extinguishing polymer formulation (Fire retardant)",
+      "waterResistance": "Moisture Resistant (Hydrophobic cellular core)",
       "screwHolding": "High screw withdrawal strength with solid cellular core"
     },
     "industryInsight": {
@@ -68,7 +68,7 @@
     "applications": [
       {
         "title": "Modular Kitchens & Vanities",
-        "description": "Zero water damage and termite immunity for under-sink cabinets, carcases, and wet areas.",
+        "description": "High moisture resistance and termite protection for under-sink cabinets, carcases, and wet areas.",
         "image": "/assets/applications/kitchen/base-cabinets.webp"
       },
       {
@@ -98,7 +98,7 @@
       },
       {
         "label": "Water Resistance",
-        "value": "100% Waterproof"
+        "value": "Moisture Resistant"
       },
       {
         "label": "Core Build",
@@ -173,8 +173,8 @@
         "Sun Yellow",
         "Crimson Red"
       ],
-      "fireRating": "Self-extinguishing Class 1",
-      "waterResistance": "100% Waterproof & Impermeable",
+      "fireRating": "Self-extinguishing polymer formulation",
+      "waterResistance": "Moisture Resistant (Hydrophobic cellular core)",
       "screwHolding": "Engineered high-density core for strong hardware retention"
     },
     "industryInsight": {
@@ -233,17 +233,17 @@
     "slug": "wpc-boards",
     "title": "WPC Boards",
     "category": "Wood Polymer Composites",
-    "tagline": "The best of wood and plastic combined: high screw holding, eco-friendly, and waterproof",
-    "description": "Defenseply WPC Boards fuse virgin polymers with fine natural wood fibers using precision German extrusion technology. The result is a high-density, eco-friendly composite that delivers the warmth and workability of timber with total immunity to moisture, rot, termites, and fungal decay.",
+    "tagline": "The best of wood and polymers combined: high screw holding, durable, and moisture-resistant",
+    "description": "Defenseply WPC Boards fuse virgin polymers with fine natural wood fibers using precision German extrusion technology. The result is a high-density, eco-friendly composite that delivers the warmth and workability of timber with exceptional resistance to moisture, rot, termites, and fungal degradation.",
     "extendedDescription": [
       "Manufactured at our dedicated 2-acre production facility along the Panvel\u2013Kochi\u2013Kanyakumari National Highway in KINFRA Industrial Park, Kuttippuram, Kerala. With an installed capacity of 110,400 boards annually, each board is precision-calibrated for thickness and density.",
       "Unlike ordinary composites, Defenseply WPC features extraordinary screw withdrawal strength, can be cut with standard carpentry tools, and takes paints, polishes, and laminates with supreme adhesion."
     ],
     "badges": [
       "Wood Polymer Composite",
-      "100% Recyclable",
-      "Zero Rot",
-      "Termite & Fungus Proof"
+      "Recyclable Composite",
+      "Rot Resistant",
+      "Termite & Fungus Resistant"
     ],
     "gallery": [
       {
@@ -265,9 +265,9 @@
     "traits": [
       "The best of wood and plastic combined into one high-performance composite",
       "Strong screw holding capacity, high tensile strength, paintable and polishable",
-      "Waterproof, termite-proof, borer-proof, and fungus-proof",
+      "Moisture-resistant, termite-resistant, borer-resistant, and fungus-resistant",
       "Ideal for outdoor furniture, exterior wall panels, interior cabinetry, & decking",
-      "Eco-friendly and 100% recyclable \u2014 saves trees with zero deforestation",
+      "Engineered timber-alternative composite reducing natural wood consumption",
       "Works with standard carpentry tools, saws, routers, and fasteners"
     ],
     "specs": {
@@ -287,7 +287,7 @@
         "Grey"
       ],
       "fireRating": "Self-extinguishing, low flame spread",
-      "waterResistance": "Zero swelling after 24-hour boiling water test",
+      "waterResistance": "High dimensional stability with minimal moisture absorption",
       "screwHolding": "Screw holding capacity exceeds 1800 N"
     },
     "industryInsight": {
@@ -314,8 +314,8 @@
       },
       {
         "title": "Bathroom & Wet-Area Partitions",
-        "description": "Permanent water immersion resistance for shower dividers and washroom cubicles.",
-        "image": "/assets/applications/interiors/living-room-partitions.webp"
+        "description": "High moisture resistance ideal for shower dividers and washroom cubicles.",
+        "image": "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg"
       }
     ],
     "highlights": [
@@ -329,11 +329,11 @@
       },
       {
         "label": "Recyclability",
-        "value": "100% Recyclable"
+        "value": "Recyclable Polymer"
       },
       {
-        "label": "Rot & Termite Immunity",
-        "value": "Lifetime Guarantee"
+        "label": "Biological Resistance",
+        "value": "Termite & Rot Resistant"
       }
     ],
     "card": {
@@ -349,14 +349,14 @@
     "tagline": "Tough, stylish, & built to last for generations without warping or rot",
     "description": "Defenseply WPC Door Frames are precision-engineered solid profiles that replace costly, high-maintenance timber jambs. With high material density and exceptional screw withdrawal strength, they provide a rock-solid foundation for any interior or exterior door.",
     "extendedDescription": [
-      "Natural wooden door frames are notorious for absorbing moisture, rotting near floor tiles, and falling victim to termites. Defenseply door frames are 100% waterproof, termite-proof, pest-proof, and virtually maintenance-free.",
+      "Natural wooden door frames are prone to absorbing moisture, rotting near floor tiles, and falling victim to termites. Defenseply door frames are highly moisture-resistant, termite-resistant, pest-resistant, and low maintenance.",
       "Produced at our KINFRA industrial facility with an annual capacity of 201,142 meters of WPC frames, each profile is ready for direct installation, accepts standard door hinges and locks, and features a smooth finish with the elegance of real wood."
     ],
     "badges": [
-      "100% Waterproof",
+      "Moisture Resistant",
       "High Screw Strength",
-      "Termite Proof",
-      "Maintenance Free"
+      "Termite Resistant",
+      "Low Maintenance"
     ],
     "gallery": [
       {
@@ -378,10 +378,10 @@
     "traits": [
       "Tough, stylish, & built to last for generations",
       "High density, high screw withdrawal strength for heavy architectural doors",
-      "100% waterproof, termite-proof, pest-proof & virtually maintenance-free",
+      "Highly moisture-resistant, termite-resistant, pest-resistant & low maintenance",
       "Smooth finish with the elegance of natural wood\u2014minus the drawbacks",
       "Perfect for all types of residential, commercial, hotel, and hospital projects",
-      "No seasonal expansion or contraction \u2014 doors always close smoothly"
+      "High dimensional stability against seasonal expansion or contraction"
     ],
     "specs": {
       "thickness": "Sizes: 3\u00d72 inch, 4\u00d72 inch, 4\u00d72.5 inch, 5\u00d72.5 inch, custom",
@@ -399,8 +399,8 @@
         "Ivory White",
         "Charcoal Grey"
       ],
-      "fireRating": "Class 1 fire retardant rating",
-      "waterResistance": "Impermeable to moisture and standing water",
+      "fireRating": "Self-extinguishing fire-retardant formulation",
+      "waterResistance": "High resistance to moisture and floor washdown",
       "screwHolding": "Exceeds 2200 N screw pull-out resistance"
     },
     "industryInsight": {
@@ -441,8 +441,8 @@
         "value": "Single & Double Rebate"
       },
       {
-        "label": "Pest & Termite Risk",
-        "value": "Zero (Lifetime)"
+        "label": "Biological Resistance",
+        "value": "Termite & Pest Resistant"
       },
       {
         "label": "Screw Withdrawal",
@@ -469,7 +469,7 @@
       "UV Stable",
       "Double-Glazing Compatible",
       "Acoustic Insulation",
-      "Zero Swelling"
+      "Swelling Resistant"
     ],
     "gallery": [
       {
@@ -489,9 +489,9 @@
       }
     ],
     "traits": [
-      "Tough, stylish, & built to last for generations without maintenance",
+      "Tough, stylish, & engineered for long service life with minimal maintenance",
       "High density, high screw withdrawal strength for heavy window sashes and stays",
-      "100% waterproof, termite-proof, pest-proof, and impervious to coastal humidity",
+      "Highly moisture-resistant, termite-resistant, pest-resistant, and resilient against coastal humidity",
       "Smooth finish with the elegance of natural wood\u2014minus the drawbacks",
       "Compatible with casement, sliding, and fixed architectural window systems",
       "High thermal and acoustic dampening for quieter, energy-efficient living"
@@ -512,8 +512,8 @@
         "Architectural White",
         "Dark Bronze"
       ],
-      "fireRating": "Class 1 fire retardant",
-      "waterResistance": "100% Waterproof, weather-sealed",
+      "fireRating": "Self-extinguishing fire retardant",
+      "waterResistance": "High weather and moisture resistance",
       "screwHolding": "Engineered for heavy-duty friction stays and multipoint locks"
     },
     "industryInsight": {
@@ -530,7 +530,7 @@
       },
       {
         "title": "Coastal & High-Humidity Homes",
-        "description": "Zero corrosion, zero fungal discoloration in salt-laden coastal atmospheres.",
+        "description": "High corrosion resistance and fungal resistance in salt-laden coastal atmospheres.",
         "image": "/assets/products/wpcwindowframesdf2.webp"
       },
       {
@@ -575,13 +575,13 @@
     "tagline": "Robust solid composite doors engineered for excellence in every environment",
     "description": "Defenseply WPC Doors represent the pinnacle of composite door engineering. Molded and extruded under immense hydraulic pressure, these solid-core doors will never warp, crack, splinter, or fade \u2014 even when exposed to direct water spray or fluctuating humidity.",
     "extendedDescription": [
-      "Natural flush doors often delaminate and sag under their own weight over time. Defenseply WPC doors are engineered with a monolithic composite matrix that guarantees lifelong dimensional stability.",
+      "Natural flush doors often delaminate and sag under their own weight over time. Defenseply WPC doors are engineered with a monolithic composite matrix that provides exceptional long-term dimensional stability.",
       "They can be easily routed with classic paneled designs, painted, PU polished, or laminated to match any architectural interior vision from minimalist contemporary to timeless classic."
     ],
     "badges": [
       "Monolithic Core",
       "No Warping or Cracking",
-      "Waterproof",
+      "Moisture Resistant",
       "Custom Polishable"
     ],
     "gallery": [
@@ -606,7 +606,7 @@
       "Robust monolithic structure\u2014absolutely no warping, cracking, or fading",
       "Easy to customize: paint, laminate, CNC route, or polish to perfection",
       "Ideal for homes, offices, hotels, hospitals, and premium commercial spaces",
-      "100% waterproof throughout the entire thickness\u2014perfect for bathrooms",
+      "Moisture-resistant throughout the entire core\u2014ideal for bathrooms and wet areas",
       "High density sound insulation and solid feel when closing"
     ],
     "specs": {
@@ -627,7 +627,7 @@
         "Slate Grey"
       ],
       "fireRating": "Flame retardant, self-extinguishing",
-      "waterResistance": "100% Waterproof (Boiling water proof tested)",
+      "waterResistance": "Moisture Resistant (Engineered composite core)",
       "screwHolding": "Reinforced hinge and lock-rail zones for heavy commercial hardware"
     },
     "industryInsight": {
@@ -639,7 +639,7 @@
     "applications": [
       {
         "title": "Bathrooms & Wet Rooms",
-        "description": "Zero damage from continuous steam, hot showers, and direct water contact.",
+        "description": "High resilience against continuous steam, humidity, and direct water contact.",
         "image": "/assets/products/wpc-designer-doors-collection.webp"
       },
       {
@@ -669,7 +669,7 @@
       },
       {
         "label": "Water Resistance",
-        "value": "100% Waterproof"
+        "value": "Moisture Resistant"
       },
       {
         "label": "Surface Options",
@@ -686,8 +686,8 @@
     "slug": "3-layer-boards",
     "title": "3 Layer Boards",
     "category": "Tri-Layer Engineered Boards",
-    "tagline": "Enhanced strength, impact resistance, and a glossy waterproof surface for modern construction",
-    "description": "Built with a robust three-layered structure, Defenseply 3 Layer Boards offer enhanced strength, impact resistance, and a glossy, waterproof surface\u2014perfect for modern construction needs. With a wood powder-rich core, it ensures higher screw-holding capacity, durability, and grip. Toxin-free, nonflammable, and chemical-resistant, it's the ideal choice for projects that demand performance, safety, and style.",
+    "tagline": "Enhanced strength, impact resistance, and a glossy moisture-resistant surface for modern construction",
+    "description": "Built with a robust three-layered structure, Defenseply 3 Layer Boards offer enhanced strength, impact resistance, and a glossy, moisture-resistant surface\u2014perfect for modern construction needs. With a wood powder-rich core, it ensures higher screw-holding capacity, durability, and grip. Lead-free, flame-retardant, and chemical-resistant, it's the ideal choice for projects that demand performance, safety, and style.",
     "extendedDescription": [
       "The tri-layer configuration sandwiches a dense, fiber-reinforced core between two ultra-hard, non-porous outer layers. This delivers a board with vastly superior flexural strength, rigidity, and surface hardness compared to conventional single-layer boards.",
       "The smooth glossy skin resists scratches, chemical cleaning agents, and heavy impacts, making it the premier choice for modular casework, kitchen counters, and load-bearing interior fitouts."
@@ -695,8 +695,8 @@
     "badges": [
       "3-Layer Structure",
       "Wood Powder Core",
-      "Nonflammable",
-      "Toxin Free"
+      "Flame Retardant",
+      "Lead Free"
     ],
     "gallery": [
       {
@@ -718,8 +718,8 @@
     "traits": [
       "Robust three-layered structure offering enhanced structural rigidity and impact resistance",
       "Wood powder-rich core ensures higher screw-holding capacity, durability, and grip",
-      "Glossy, waterproof surface engineered for modern construction demands",
-      "Toxin-free, nonflammable, and chemical-resistant for total safety",
+      "Glossy, moisture-resistant surface engineered for modern construction demands",
+      "Lead-free formulation, flame-retardant, and chemical-resistant",
       "Perfect for high-load furniture, kitchen carcases, and luxury wall panels",
       "Zero formaldehyde emissions \u2014 promotes healthy indoor air quality"
     ],
@@ -738,15 +738,15 @@
         "Ivory",
         "Grey"
       ],
-      "fireRating": "Class 1 Nonflammable, low smoke emission",
-      "waterResistance": "100% Waterproof, zero swelling",
+      "fireRating": "Self-extinguishing, low smoke emission",
+      "waterResistance": "High moisture resistance, dimensionally stable against swelling",
       "screwHolding": "Extra wood powder core delivers >2000 N grip strength"
     },
     "industryInsight": {
       "headline": "The Multi-Layer Engineering Revolution",
       "stat": "3x Impact Strength",
       "description": "Multi-layer co-extrusion boards offer up to 3 times greater surface impact resistance and flexural modulus than conventional single-layer PVC boards, meeting rigorous commercial building standards.",
-      "source": "Defenseply R&D Engineering Benchmarks"
+      "source": "Co-Extrusion Materials Benchmarks"
     },
     "applications": [
       {
@@ -766,7 +766,7 @@
       },
       {
         "title": "Educational & Hospital Furniture",
-        "description": "Toxin-free, nonflammable casework safe for schools, laboratories, and clinics.",
+        "description": "Lead-free, flame-retardant casework suitable for schools, commercial offices, and clinics.",
         "image": "/assets/applications/commercial/retail-fixtures.webp"
       }
     ],
@@ -781,7 +781,7 @@
       },
       {
         "label": "Safety Rating",
-        "value": "Toxin-Free & Nonflammable"
+        "value": "Lead-Free & Flame Retardant"
       },
       {
         "label": "Impact Strength",
@@ -798,16 +798,16 @@
     "slug": "3-layer-wpc-board",
     "title": "3 Layer WPC Board",
     "category": "Tri-Layer Engineered Boards",
-    "tagline": "Extra wood powder core engineered for high strength, structural utility, and nonflammable performance",
-    "description": "Defenseply 3 Layer WPC Board combines an enriched wood-powder composite core with dual exterior protective shields. Specially engineered for structural applications, it provides the ultimate combination of high screw-holding power, waterproof reliability, and fire resistance.",
+    "tagline": "Extra wood powder core engineered for high strength, structural utility, and flame-retardant performance",
+    "description": "Defenseply 3 Layer WPC Board combines an enriched wood-powder composite core with dual exterior protective shields. Specially engineered for structural applications, it provides the ultimate combination of high screw-holding power, moisture resistance, and fire-retardant performance.",
     "extendedDescription": [
       "Designed specifically for load-bearing architectural millwork, partitions, and heavy furniture framing. The high percentage of refined wood powder in the central core maximizes screw and fastener retention, making it feel and handle like solid hardwood.",
-      "The outer protective composite layers seal the core completely against water ingress, creating a board that is glossy, waterproof, toxin-free, and nonflammable."
+      "The outer protective composite layers seal the core completely against water ingress, creating a board that is glossy, moisture-resistant, lead-free, and flame-retardant."
     ],
     "badges": [
       "Enriched Wood Core",
       "Structural Grade",
-      "Waterproof",
+      "Moisture Resistant",
       "High Screw-Holding"
     ],
     "gallery": [
@@ -830,10 +830,10 @@
     "traits": [
       "Core: Extra wood powder formulation for maximum structural strength & screw-holding",
       "Use: Structural construction, modular millwork, and general architectural utility",
-      "Traits: 100% Waterproof, glossy finish, toxin-free, nonflammable",
+      "Traits: Moisture-resistant, smooth finish, lead-free formulation, flame-retardant",
       "Superior load-bearing capacity with minimal deflection under sustained weight",
       "Resistant to chemicals, household acids, and termite attack",
-      "100% recyclable, zero deforestation product"
+      "Recyclable polymer composite engineered to replace natural timber"
     ],
     "specs": {
       "thickness": "8 mm to 35 mm",
@@ -850,8 +850,8 @@
         "Natural Timber Tone",
         "Dark Walnut"
       ],
-      "fireRating": "Nonflammable, Class 1 fire-retardant",
-      "waterResistance": "100% Waterproof, zero moisture absorption",
+      "fireRating": "Self-extinguishing flame-retardant formulation",
+      "waterResistance": "High moisture resistance with minimal absorption",
       "screwHolding": "Exceptional screw-holding power (>2400 N withdrawal force)"
     },
     "industryInsight": {
@@ -896,8 +896,8 @@
         "value": "Max Structural Grip (>2400 N)"
       },
       {
-        "label": "Fire Resistance",
-        "value": "Nonflammable Class 1"
+        "label": "Fire Behavior",
+        "value": "Self-Extinguishing / Flame Retardant"
       }
     ],
     "card": {
@@ -913,14 +913,14 @@
     "tagline": "Pre-coloured architectural panels in vibrant designer shades with zero painting needed",
     "description": "Defenseply 3 Layer WPC Colour Boards combine the robust strength of a tri-layer composite structure with factory-infused designer colors. Engineered for premium interior and decorative applications, these vibrant panels require zero painting or laminating, offering unmatched installation speed and enduring beauty.",
     "extendedDescription": [
-      "Crafted with UV-resistant pigments fused into the outer protective skins, these boards provide velvety matte and glossy surfaces in a curated palette of contemporary tones. They are completely waterproof, vibrant, and toxin-free.",
+      "Crafted with UV-resistant pigments fused into the outer protective skins, these boards provide velvety matte and glossy surfaces in a curated palette of contemporary tones. They offer high moisture resistance, vibrant pigments, and lead-free formulation.",
       "Ideal for bespoke wardrobes, kitchen accent fronts, decorative ceiling beams, and retail millwork where flawless finish and rapid project turnaround are essential."
     ],
     "badges": [
       "Pre-Coloured",
       "No Painting Needed",
       "Multiple Vibrant Shades",
-      "Toxin Free"
+      "Lead Free"
     ],
     "gallery": [
       {
@@ -942,9 +942,9 @@
     "traits": [
       "Feature: Pre-coloured factory finish\u2014absolutely no painting or lamination needed",
       "Use: Interior & decorative architectural applications, luxury furniture, accent walls",
-      "Traits: 100% Waterproof, vibrant long-lasting pigments, toxin-free",
+      "Traits: High moisture resistance, vibrant UV-stable pigments, lead-free formulation",
       "Colours: Available in multiple vibrant, curated designer shades",
-      "Scratch-resistant, non-porous, and impervious to household stains and cleaning agents",
+      "Scratch-resistant, non-porous, and highly resistant to household stains and cleaning agents",
       "Precision-machinable with CNC routers, beam saws, and edgebanders"
     ],
     "specs": {
@@ -965,15 +965,15 @@
         "Coffee Brown",
         "Alpine White"
       ],
-      "fireRating": "Class 1 flame retardant",
-      "waterResistance": "100% Waterproof, zero swelling",
+      "fireRating": "Self-extinguishing flame retardant",
+      "waterResistance": "High moisture resistance, dimensionally stable against swelling",
       "screwHolding": "Engineered core for strong hinge and slide mounting"
     },
     "industryInsight": {
       "headline": "Eliminating Toxic Paint in Interiors",
-      "stat": "100% Zero-VOC",
-      "description": "Factory pre-coloured composite boards eliminate on-site painting, completely removing volatile organic compounds (VOCs) and paint fumes from living spaces while cutting handover times in half.",
-      "source": "Defenseply Green Building Report"
+      "stat": "Low-VOC",
+      "description": "Factory pre-coloured composite boards eliminate on-site painting, significantly reducing volatile organic compounds (VOCs) and on-site finishing fumes while cutting project turnaround times.",
+      "source": "Composite Materials Application Review"
     },
     "applications": [
       {
@@ -1008,7 +1008,7 @@
       },
       {
         "label": "Health & Safety",
-        "value": "100% Toxin-Free / Zero VOC"
+        "value": "Lead-Free / Low-VOC Formulation"
       },
       {
         "label": "Primary Use",
@@ -1026,10 +1026,10 @@
     "title": "3 Layer Multi Board",
     "category": "Tri-Layer Engineered Boards",
     "tagline": "Co-extrusion technology with hard glossy layers for premium indoor & outdoor furnishing",
-    "description": "Defenseply 3 Layer Multi Board utilizes state-of-the-art multi-layer co-extrusion technology to fuse ultra-hard glossy exterior shields with a resilient composite core. Engineered for both interior luxury furnishing and rugged outdoor installations, it delivers supreme UV stability, weatherproofing, and generational longevity.",
+    "description": "Defenseply 3 Layer Multi Board utilizes state-of-the-art multi-layer co-extrusion technology to fuse ultra-hard glossy exterior shields with a resilient composite core. Engineered for both interior luxury furnishing and rugged outdoor installations, it delivers high UV stability, weather resistance, and long-term durability.",
     "extendedDescription": [
-      "The advanced co-extruded outer layers provide high surface hardness and scratch resistance while remaining completely recyclable. It is specifically formulated to withstand the rigorous climatic demands of South India and the Middle East.",
-      "Widely chosen by premium interior contractors and developers across Kerala, Karnataka, Tamil Nadu, Andhra Pradesh, and exported to GCC markets including UAE, Qatar, Bahrain, and Saudi Arabia."
+      "The advanced co-extruded outer layers provide high surface hardness and scratch resistance while remaining completely recyclable. It is specifically formulated to withstand the rigorous climatic demands of South India and regional climates.",
+      "Widely chosen by interior contractors and developers across Kerala, Karnataka, Tamil Nadu, and Andhra Pradesh, serving residential, commercial, and institutional projects."
     ],
     "badges": [
       "Co-Extrusion Tech",
@@ -1057,10 +1057,10 @@
     "traits": [
       "Build: Cutting-edge co-extrusion technology with hard glossy protective layers",
       "Use: Premium furnishing, indoor cabinetry, and exterior architectural installations",
-      "Traits: High UV-resistance, recyclable, high durability, weather-proof",
-      "Target Market: South India (Kerala, Tamil Nadu, Andhra Pradesh, Karnataka) & Middle East (UAE, Qatar, Bahrain, Saudi Arabia)",
+      "Traits: High UV-resistance, recyclable, high durability, weather-resistant",
+      "Target Market: South India (Kerala, Tamil Nadu, Andhra Pradesh, Karnataka) & Regional Distribution",
       "High impact resistance against daily wear, dents, and surface abrasion",
-      "100% waterproof and termite-proof with zero seasonal swelling"
+      "High moisture and termite resistance with dimensional stability against seasonal swelling"
     ],
     "specs": {
       "thickness": "6 mm to 35 mm",
@@ -1077,14 +1077,14 @@
         "Slate Grey",
         "Natural Wood Finishes"
       ],
-      "fireRating": "Class 1 fire retardant",
-      "waterResistance": "100% Waterproof, suitable for direct outdoor weather exposure",
+      "fireRating": "Self-extinguishing flame retardant",
+      "waterResistance": "High moisture and weather resistance for indoor and semi-exterior installations",
       "screwHolding": "Engineered high-density composite core (>2200 N)"
     },
     "industryInsight": {
-      "headline": "Strategic South India & Middle East Reach",
-      "stat": "4 States + 4 GCC Countries",
-      "description": "High demand across Kerala, Tamil Nadu, Karnataka, and Andhra Pradesh, with current facility capacity focused on the domestic market before expanding export fulfillment to UAE, Qatar, Bahrain, and Saudi Arabia.",
+      "headline": "Strategic Regional Distribution Reach",
+      "stat": "South India Focus",
+      "description": "High demand across Kerala, Tamil Nadu, Karnataka, and Andhra Pradesh, with current facility capacity focused on regional trade distribution and architectural project fulfillment.",
       "source": "Defenseply Market Distribution Strategy"
     },
     "applications": [
@@ -1120,11 +1120,11 @@
       },
       {
         "label": "Weather Resistance",
-        "value": "UV & Monsoon Proof"
+        "value": "UV & Monsoon Resilient"
       },
       {
         "label": "Primary Markets",
-        "value": "South India & Middle East"
+        "value": "South India & Regional"
       }
     ],
     "card": {

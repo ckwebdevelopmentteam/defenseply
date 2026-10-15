@@ -13,7 +13,13 @@ export function Header({ solid: forceSolid }: { solid?: boolean } = {}) {
   const { scrolled, visible } = useNavigationState();
   const pathname = usePathname();
 
-  const isTransparentPage = pathname === "/" || pathname?.startsWith("/about");
+  const isTransparentPage =
+    pathname === "/" ||
+    pathname?.startsWith("/about") ||
+    pathname === "/products" ||
+    pathname === "/products/" ||
+    pathname === "/applications" ||
+    pathname === "/applications/";
   const isDarkHero = !scrolled && isTransparentPage;
   const solid = Boolean(forceSolid || scrolled || !isTransparentPage);
 

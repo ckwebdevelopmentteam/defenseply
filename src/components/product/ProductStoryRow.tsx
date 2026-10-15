@@ -57,7 +57,7 @@ export function ProductStoryRow({
             {/* Top Badges */}
             <div className="absolute top-3.5 left-3.5 flex items-center gap-2 pointer-events-none">
               <span className="rounded-full bg-white/95 backdrop-blur-xs border border-[#1c3f21]/30 px-3 py-1 text-[10.5px] font-bold tracking-wider text-[#163326] uppercase shadow-xs">
-                {product.badges?.[0] || "100% Waterproof"}
+                {product.badges?.[0] || "Moisture Resistant"}
               </span>
             </div>
 
@@ -145,13 +145,13 @@ export function ProductStoryRow({
               <div className="rounded-xl border border-[#EAE7DF] bg-[#FAF9F5] p-2.5 text-center">
                 <span className="text-[10px] uppercase tracking-wider text-[#777] block">Fire Rating</span>
                 <strong className="text-xs font-bold text-[#163326] truncate block mt-0.5">
-                  Class 1 Flame
+                  Flame Retardant
                 </strong>
               </div>
               <div className="rounded-xl border border-[#EAE7DF] bg-[#FAF9F5] p-2.5 text-center">
-                <span className="text-[10px] uppercase tracking-wider text-[#777] block">Water Proof</span>
+                <span className="text-[10px] uppercase tracking-wider text-[#777] block">Moisture Swell</span>
                 <strong className="text-xs font-bold text-[#163326] truncate block mt-0.5">
-                  Zero Swell
+                  Minimal Swell
                 </strong>
               </div>
             </div>
@@ -160,7 +160,7 @@ export function ProductStoryRow({
             <div className="mt-5 flex flex-wrap items-center gap-4 text-xs font-semibold text-[#163326] py-2 border-y border-[#ECEAE3]">
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="size-4 text-[#1c3f21]" />
-                <span>100% Waterproof</span>
+                <span>Moisture Resistant</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Star className="size-4 text-[#1c3f21] fill-[#1c3f21]" />

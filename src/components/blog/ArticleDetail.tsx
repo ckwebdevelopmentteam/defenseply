@@ -84,15 +84,15 @@ export function ArticleDetail({
         </h3>
         <ul className="text-sm text-[#333] space-y-2 list-disc pl-5">
           <li>
-            100% waterproof cellular composite structure with zero swelling
-            risk.
+            High moisture-resistant cellular composite structure with
+            dimensional stability against swelling.
           </li>
           <li>
             Calibrated high-density surface ready for CNC carving and PU
             coatings.
           </li>
           <li>
-            Class 1 fire retardancy certified and zero toxic formaldehyde
+            Self-extinguishing polymer formulation with zero formaldehyde
             emissions.
           </li>
         </ul>

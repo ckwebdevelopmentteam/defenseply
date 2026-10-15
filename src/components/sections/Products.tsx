@@ -5,16 +5,16 @@ import { productCards } from "@/data/products";
 import { Carousel, Arrow } from "@/components/ui/Carousel";
 
 const productTaglines: Record<string, string> = {
-  "pvc-foam-boards": "Lightweight. Durable. Versatile.",
-  "pvc-colour-boards": "Vibrant finishes for modern spaces.",
-  "wpc-boards": "The natural look. Greater performance.",
-  "wpc-door-frames": "Tough, stylish & built to last.",
-  "wpc-window-frames": "Architectural precision framing.",
-  "wpc-doors": "Robust solid composite doors.",
-  "3-layer-boards": "Enhanced strength & waterproof surface.",
-  "3-layer-wpc-board": "High strength & structural performance.",
-  "3-layer-wpc-colour-board": "Pre-coloured designer panels.",
-  "3-layer-multi-board": "Co-extrusion technology for interiors.",
+  "pvc-foam-boards": "Calibrated cellular core with smooth surface.",
+  "pvc-colour-boards": "Integral color finishes for modern spaces.",
+  "wpc-boards": "Wood-polymer composite with high structural stability.",
+  "wpc-door-frames": "Moisture-resistant architectural framing.",
+  "wpc-window-frames": "Precision extruded weather-resistant profiles.",
+  "wpc-doors": "Solid composite doors with termite resilience.",
+  "3-layer-boards": "Co-extruded composite with reinforced surface.",
+  "3-layer-wpc-board": "Triple-layer density for structural joinery.",
+  "3-layer-wpc-colour-board": "Pre-finished designer architectural panels.",
+  "3-layer-multi-board": "Multi-density composite core for cabinetry.",
 };
 
 export function Products({
@@ -54,7 +54,7 @@ export function Products({
           Our Products
         </h2>
         <p className="max-w-[700px] text-fluid font-light leading-[1.6] text-[#55534e] text-center mx-auto max-sm:text-[13.5px] max-sm:leading-[1.35] max-phone:text-[13px] max-phone:leading-[1.35] max-phone:max-w-[340px]">
-          Calibrated cellular composite boards, waterproof formulations, and precision-moulded architectural profiles engineered for demanding interior and structural environments.
+          Calibrated cellular composite boards, moisture-resistant formulations, and precision-moulded architectural profiles engineered for dimensional stability in demanding interior and commercial applications.
         </p>
       </div>
 

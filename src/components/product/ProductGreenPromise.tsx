@@ -19,13 +19,13 @@ export function ProductGreenPromise() {
         </div>
         <div className="relative z-[1] grid grid-cols-2 gap-3 max-sm:grid-cols-2 max-sm:gap-2.5">
           <div className="flex items-center gap-2.5 bg-white/[0.22] backdrop-blur-[10px] border border-white/[0.38] py-3.5 px-4 rounded-md text-[12.5px] font-medium text-white font-sans tracking-[0.6px] uppercase [&>svg]:text-white [&>svg]:shrink-0 [&>svg]:opacity-90 max-sm:py-[11px] max-sm:px-3 max-sm:text-[11.5px] max-sm:gap-2">
-            <TreePine size={18} /> Zero Deforestation
+            <TreePine size={18} /> Timber Alternative
           </div>
           <div className="flex items-center gap-2.5 bg-white/[0.22] backdrop-blur-[10px] border border-white/[0.38] py-3.5 px-4 rounded-md text-[12.5px] font-medium text-white font-sans tracking-[0.6px] uppercase [&>svg]:text-white [&>svg]:shrink-0 [&>svg]:opacity-90 max-sm:py-[11px] max-sm:px-3 max-sm:text-[11.5px] max-sm:gap-2">
             <Sparkles size={18} /> Lower Carbon Footprint
           </div>
           <div className="flex items-center gap-2.5 bg-white/[0.22] backdrop-blur-[10px] border border-white/[0.38] py-3.5 px-4 rounded-md text-[12.5px] font-medium text-white font-sans tracking-[0.6px] uppercase [&>svg]:text-white [&>svg]:shrink-0 [&>svg]:opacity-90 max-sm:py-[11px] max-sm:px-3 max-sm:text-[11.5px] max-sm:gap-2">
-            <Droplets size={18} /> 100% Recyclable
+            <Droplets size={18} /> Recyclable Polymer
           </div>
           <div className="flex items-center gap-2.5 bg-white/[0.22] backdrop-blur-[10px] border border-white/[0.38] py-3.5 px-4 rounded-md text-[12.5px] font-medium text-white font-sans tracking-[0.6px] uppercase [&>svg]:text-white [&>svg]:shrink-0 [&>svg]:opacity-90 max-sm:py-[11px] max-sm:px-3 max-sm:text-[11.5px] max-sm:gap-2">
             <ShieldCheck size={18} /> Sustainable Living

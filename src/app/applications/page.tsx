@@ -34,7 +34,7 @@ export default function ApplicationsIndexPage() {
   return (
     <main id="main-content" className="overflow-hidden bg-white text-ink">
       {/* Page Header / Hero Overview with Architectural Background */}
-      <section className="relative isolate flex flex-col justify-end h-[80vh] min-h-[520px] overflow-hidden border-b border-neutral-800 bg-neutral-950 pt-28 pb-12 sm:pb-16 max-desktop:pt-[130px] max-phone:pt-[110px] text-white w-full px-[5%] max-sm:px-[4%]">
+      <section className="relative isolate flex flex-col justify-end min-h-[580px] md:min-h-[660px] h-[78vh] overflow-hidden border-b border-neutral-800 bg-neutral-950 pt-[110px] pb-12 sm:pb-16 text-white w-full px-[5%] max-sm:px-[4%]">
         {/* Background Image with optimized avif/jpg delivery */}
         <picture className="absolute inset-0 size-full -z-20">
           {overviewHero.avif && (
@@ -47,6 +47,9 @@ export default function ApplicationsIndexPage() {
             loading="eager"
           />
         </picture>
+
+        {/* Top vignette gradient for transparent header contrast matching Home and About */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-40 bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
 
         {/* Cinematic Gradient Overlays */}
         <div
@@ -63,7 +66,7 @@ export default function ApplicationsIndexPage() {
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#55ba6a]">
               Defenseply Applications Directory
             </p>
-            <h1 className="text-4xl font-light tracking-tight text-white md:text-6xl lg:text-7xl leading-[1.05]">
+            <h1 className="text-[clamp(30px,3.6vw,52px)] font-light tracking-tight text-white leading-[1.12]">
               Engineered for the spaces you build and live in.
             </h1>
             <p className="mt-6 text-base md:text-lg leading-relaxed text-white/80 font-light">

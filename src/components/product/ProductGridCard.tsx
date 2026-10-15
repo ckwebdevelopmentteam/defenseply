@@ -49,7 +49,7 @@ export function ProductGridCard({ product, onEnquire }: ProductGridCardProps) {
     }
   };
 
-  const primaryBadge = product.badges?.[0] || "100% WATERPROOF";
+  const primaryBadge = product.badges?.[0] || "MOISTURE RESISTANT";
 
   return (
     <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E5E2D8] bg-white shadow-[0_2px_12px_-2px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_-6px_rgba(28,63,33,0.12)]">

@@ -16,7 +16,7 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
     <section
       data-section="faq"
       id="faq"
-      className="mt-44 mb-20 max-phone:mt-0 max-phone:mb-8 max-md:mt-0 max-md:mb-8"
+      className="mb-20 max-md:mb-16 max-phone:mb-12"
       aria-label="Frequently Asked Questions"
     >
       <div className="grid grid-cols-[1fr_1.4fr] items-start gap-14 max-desktop:grid-cols-1 max-desktop:gap-8 max-phone:gap-3">
@@ -38,9 +38,9 @@ export function FAQ({ items = faqData }: { items?: typeof faqData }) {
               Have a Custom Architectural Spec?
             </h4>
             <p className="mb-5 text-[13.5px] leading-[1.6] text-[#6d6b67]">
-              Our engineering and specification team at the Kuttippuram
-              manufacturing facility provides calibrated thickness samples and
-              technical data sheets.
+              Our technical team assists with material specifications, custom
+              thickness requirements, and product data sheets for qualified project
+              inquiries.
             </p>
             <div className="flex flex-wrap gap-3">
               <a

@@ -4,7 +4,7 @@ import { useNavigationState } from "@/components/sections/NavigationState";
 import { cn } from "@/lib/cn";
 
 export function FloatingActions({
-  quoteHref = "#contact",
+  quoteHref = "/contact-us#project-form",
 }: { quoteHref?: string } = {}) {
   const { mobileOpen, visible } = useNavigationState();
 

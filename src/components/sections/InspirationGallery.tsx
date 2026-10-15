@@ -8,14 +8,14 @@ const bentoGalleryItems: ImageItem[] = [
   {
     id: 1,
     title: "Architectural Lounge & Wall Paneling",
-    desc: "Pre-finished acoustic & moisture-impervious composite wall systems.",
+    desc: "Pre-finished acoustic & moisture-resistant composite wall systems.",
     url: "/assets/applications/interiors/brochure-interiors-lounge.webp",
     span: "md:col-span-2 md:row-span-2",
   },
   {
     id: 2,
-    title: "Waterproof Kitchen Carcass & Sink Cabinetry",
-    desc: "100% moisture-proof calibrated WPC sink cabinetry with zero swelling.",
+    title: "Moisture-Resistant Kitchen Carcass & Sink Cabinetry",
+    desc: "Calibrated WPC sink cabinetry engineered for dimensional stability in wet zones.",
     url: "/assets/applications/kitchen/waterproof-wpc-sink-carcass.jpg",
     span: "md:row-span-1",
   },
@@ -79,17 +79,17 @@ const bentoGalleryItems: ImageItem[] = [
 
 export function InspirationGallery() {
   return (
-    <section id="gallery" data-section="gallery" className="relative w-full mb-20 max-phone:mb-12 max-md:mb-12" aria-label="Inspiration Galleries">
+    <section id="gallery" data-section="gallery" className="relative w-full mb-20 max-md:mb-16 max-phone:mb-12" aria-label="Inspiration Galleries">
       <InteractiveImageBentoGallery
         imageItems={bentoGalleryItems}
         title="INSPIRATION GALLERIES"
         description={
           <>
             <span className="md:block">
-              A curated showcase of waterproof cabinetry, precision architectural joinery,
+              A curated architectural showcase demonstrating precision joinery, moisture-impervious cabinetry,
             </span>
             <span className="md:block">
-              and contemporary interior environments engineered with DefensePly composite boards.
+              and durable interior installations engineered with Defenseply cellular composite boards.
             </span>
           </>
         }

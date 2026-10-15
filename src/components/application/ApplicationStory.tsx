@@ -5,13 +5,13 @@ import { ActionLink } from "@/components/ui/ActionLink";
 const PERFORMANCE_PILLARS = [
   {
     icon: Droplets,
-    title: "100% Waterproof",
-    detail: "Zero swelling or delamination in high-humidity zones.",
+    title: "Moisture Resistant",
+    detail: "High dimensional stability against swelling or delamination.",
   },
   {
     icon: ShieldCheck,
-    title: "Termite & Borer Proof",
-    detail: "Inorganic composite core immune to pest and fungal decay.",
+    title: "Termite & Borer Resistant",
+    detail: "Inorganic composite core resistant to pest and fungal degradation.",
   },
   {
     icon: Layers,

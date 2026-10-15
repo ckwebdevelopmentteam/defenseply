@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { footerGroups, socialLinks } from "@/data/site";
 import { motion } from "framer-motion";
 
 export function Footer() {
+  const pathname = usePathname();
+
+  if (pathname === "/contact-us" || pathname?.startsWith("/contact-us")) {
+    return null;
+  }
   return (
     <motion.footer
       initial={{ opacity: 0, y: 50 }}
@@ -25,7 +31,7 @@ export function Footer() {
             </Link>
             <div className="mt-6 sm:mt-8 h-0.5 w-full max-w-52 bg-linear-to-r from-[#24212D] to-[#24212D]/0"></div>
             <p className="mt-5 sm:mt-6 max-w-[350px] text-sm leading-relaxed text-white/60">
-              Reliable WPC and PVC solutions for spaces built with purpose.
+              Advanced WPC and cellular PVC composite solutions engineered for sustainable modern architecture.
             </p>
           </div>
 
@@ -50,7 +56,7 @@ export function Footer() {
               {socialLinks.map((item) => (
                 <Link
                   key={item.name}
-                  href="/#contact"
+                  href="/contact-us"
                   className="text-sm text-white/60 transition-colors hover:text-white capitalize"
                 >
                   {item.name}
@@ -63,7 +69,7 @@ export function Footer() {
             <h3 className="text-sm font-medium text-white">Start a Conversation</h3>
             <p className="mt-4 text-xs leading-relaxed text-white/60">
               <strong className="font-semibold text-white">Building the Future of Sustainable Architecture</strong><br /><br />
-              Partner with India&apos;s emerging leader in WPC and PVC composite materials. Reach out to discuss your project, product requirements, or dealership opportunities.
+              Partner with Defenseply International LLP to explore high-performance composite boards, custom project specifications, and commercial supply partnerships.
             </p>
             <Link
               href="/contact-us"

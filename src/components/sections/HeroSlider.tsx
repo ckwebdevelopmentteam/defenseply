@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { HeroScene } from "@/data/hero";
 
-export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
+export function HeroSlider({ scenes: _scenes }: { scenes?: HeroScene[] } = {}) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleTimeUpdate = () => {
@@ -20,7 +20,7 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
       id="home"
       data-section="hero"
       className="relative flex h-[80vh] min-h-[480px] sm:min-h-[520px] w-full items-end overflow-hidden bg-black"
-      aria-label="One of Kerala's biggest plywood manufacturing companies"
+      aria-label="Defenseply International — WPC & PVC Composite Manufacturing"
     >
       {/* Video Container cleanly extending to 70% viewport underneath transparent header */}
       <div className="relative flex h-full w-full items-end overflow-hidden">
@@ -54,12 +54,12 @@ export function HeroSlider({ scenes }: { scenes?: HeroScene[] }) {
           <div className="flex max-w-2xl flex-col items-start gap-3.5 sm:gap-4.5">
             {/* Non-bold, Well-proportioned Headline */}
             <h1 className="text-[clamp(28px,3.4vw,48px)] uppercase font-normal text-white leading-[1.18] tracking-normal">
-              One of the biggest plywood manufacturing companies in Kerala
+              Engineered WPC & PVC Composite Materials
             </h1>
 
             {/* Description */}
             <p className="max-w-xl text-[clamp(15px,1.08vw,18px)] font-light leading-relaxed text-white/85">
-              Decades of industrial expertise and calibrated precision manufacturing, delivering high-grade plywood, blockboards, and veneers across Kerala.
+              Defenseply manufactures high-grade Wood Polymer Composite (WPC) and cellular PVC boards, doors, and architectural profiles—engineered for durability, moisture resistance, and precision fabrication in modern construction.
             </p>
 
             {/* Action CTAs */}

@@ -127,7 +127,7 @@ export function ProductShowcaseCard({
                     <Flame className="size-4 text-[#1c3f21]" />
                     <span>FIREWALL</span>
                   </div>
-                  <span className="mt-0.5 text-[11px] text-[#777]">Class 1 Retardant</span>
+                  <span className="mt-0.5 text-[11px] text-[#777]">Flame Retardant</span>
                 </div>
 
                 {/* Feature 4: Strength */}

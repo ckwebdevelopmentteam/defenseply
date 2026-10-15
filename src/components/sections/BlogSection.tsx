@@ -5,8 +5,8 @@ export function BlogSection({ items = articles }: { items?: typeof articles }) {
   return (
     <BlogDrawer
       articles={items}
-      title="Latest Blogs"
-      description="Perspectives on sustainable composite engineering, waterproof architecture, and contemporary fabrication methods."
+      title="Technical Insights & Articles"
+      description="Perspectives on polymer composite engineering, moisture-critical architectural considerations, and precision fabrication standards."
     />
   );
 }

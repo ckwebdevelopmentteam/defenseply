@@ -198,7 +198,7 @@ export function ProductStudioViewer({
             <div className="flex items-center justify-between text-xs pb-2 border-b border-[#E5E2D8]">
               <span className="text-[#666]">Fire Resistance</span>
               <strong className="text-[#163326] font-semibold">
-                {product.specs.fireRating || "Class 1 Self-extinguishing"}
+                {product.specs.fireRating || "Self-extinguishing"}
               </strong>
             </div>
 

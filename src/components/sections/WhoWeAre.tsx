@@ -15,7 +15,7 @@ const metrics: WhoWeAreMetric[] = [
   },
   {
     value: "Kuttippuram, Kerala",
-    label: "our location",
+    label: "manufacturing base",
   },
   {
     value: "AP Group",
@@ -56,16 +56,17 @@ export function WhoWeAre() {
               {/* Narrative Paragraphs */}
               <div className="space-y-4 text-[14.5px] sm:text-[15px] xl:text-[15.5px] leading-[1.68] text-[#3D3A34] max-w-2xl font-normal">
                 <p>
-                  DEFENSEPLY INTERNATIONAL LLP is a new WPC manufacturing
-                  venture backed by the AP Group, representing a strategic
-                  expansion into advanced composite building materials.
+                  DEFENSEPLY INTERNATIONAL LLP is an advanced composite
+                  manufacturing enterprise backed by the AP Group, representing
+                  a strategic expansion into high-performance architectural
+                  materials.
                 </p>
                 <p className="text-[#59554D]">
-                  We specialise in Wood Polymer Composite (WPC) and Polyvinyl
-                  Chloride (PVC) form boards, doors, and frames — engineered to
-                  deliver the timeless warmth and aesthetic appeal of natural
-                  wood, while eliminating traditional structural flaws such as
-                  water damage, termite degradation, and warping.
+                  We specialise in Wood Polymer Composite (WPC) and cellular
+                  Polyvinyl Chloride (PVC) foam boards, doors, and precision
+                  profiles—engineered to deliver dependable structural stability
+                  and natural wood aesthetics with high resistance to
+                  moisture, termites, and seasonal warping.
                 </p>
               </div>
             </div>

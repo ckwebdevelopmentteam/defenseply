@@ -28,32 +28,45 @@ export default function ProductsPage() {
   return (
     <>
       <main id="main-content" className="overflow-hidden bg-white text-ink">
-        {/* Page Header / Hero Overview with Architectural Background Pattern */}
-        <section className="relative isolate flex h-[80vh] min-h-[520px] sm:min-h-[580px] w-full flex-col justify-end overflow-hidden border-b border-[#E5E2D8] bg-[#FAF9F5] pt-28 pb-14 md:pb-20 text-[#161d19] px-[5%] max-sm:px-[4%]">
-          {/* Background Graphic Pattern Image */}
+        {/* Page Header / Hero Overview with Architectural Composite Boards Image */}
+        <section className="relative isolate flex min-h-[580px] md:min-h-[660px] h-[78vh] w-full flex-col justify-end overflow-hidden border-b border-neutral-800 bg-neutral-950 pt-[110px] pb-12 md:pb-16 text-white px-[5%] max-sm:px-[4%]">
+          {/* Background Image of Stacked Composite Boards */}
           <div className="absolute inset-0 -z-20 overflow-hidden pointer-events-none">
             <Image
-              src="/hero-background.jpg"
-              alt="DefensePly Background Pattern"
+              src="/assets/stacked_boards_bg.jpg"
+              alt="Defenseply Architectural Composite Boards"
               fill
               priority
               sizes="100vw"
-              className="object-cover object-center"
+              className="object-cover object-center opacity-60"
             />
           </div>
 
-          <div className="mx-auto w-full max-w-[1600px]">
+          {/* Top vignette gradient for transparent header contrast matching Home and About */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-40 bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
+
+          {/* Cinematic Gradient Overlays */}
+          <div
+            className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/40"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-black/85 via-transparent to-black/30"
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 mx-auto w-full max-w-[1600px]">
             <div className="max-w-3xl">
-              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#163326]">
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#55ba6a]">
                 Defenseply Architectural Composites Catalog
               </p>
-              <h1 className="text-4xl font-light tracking-tight text-[#161d19] md:text-6xl lg:text-7xl leading-[1.05]">
+              <h1 className="text-[clamp(30px,3.6vw,52px)] font-light tracking-tight text-white leading-[1.12]">
                 Engineered for enduring performance, crafted for architectural perfection.
               </h1>
-              <p className="mt-6 text-base md:text-lg leading-relaxed text-[#435249] font-normal">
+              <p className="mt-6 text-base md:text-lg leading-relaxed text-white/80 font-normal">
                 Explore the complete collection of Defenseply premium PVC foam boards, WPC boards,
-                multi-layer composites, and architectural doors. Engineered for 100% waterproof
-                resilience, zero pest degradation, and precision fabrication across demanding interior
+                multi-layer composites, and architectural doors. Engineered for high moisture
+                resilience, termite protection, and precision fabrication across demanding interior
                 and exterior environments.
               </p>
             </div>

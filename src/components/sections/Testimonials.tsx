@@ -14,7 +14,7 @@ export function Testimonials({
         id="testimonials"
         data-section="testimonials"
         title="What Our Clients Say"
-        description="Verified architectural evaluations from leading commercial developers, modular interior designers, and precision fabricators."
+        description="Industry perspectives on composite material performance, moisture resistance, and fabrication reliability."
         testimonials={items}
         className="bg-white"
       />

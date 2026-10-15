@@ -2,7 +2,7 @@ const values = [
   {
     title: "Sustainability",
     description:
-      "Committed to zero deforestation, lower carbon footprints, and fully recyclable product lifecycles.",
+      "Committed to preserving forest timber resources, lower carbon footprints, and recyclable composite product lifecycles.",
   },
   {
     title: "Precision & Quality",
