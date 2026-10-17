@@ -15,36 +15,36 @@ export const siteNavigation: NavItem[] = [
   { name: "About Us", href: "/about" },
   { name: "Products", href: "/products" },
   { name: "Applications", href: "/applications" },
-  { name: "Gallery", href: "/gallery" },
+  // { name: "Gallery", href: "/gallery" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 
 export const footerGroups = [
   {
-    title: "Company",
+    title: "Corporate",
     links: [
-      { name: "About", href: "/about" },
-      { name: "Products", href: "/products" },
-      { name: "Projects", href: "/gallery" },
-      { name: "Contact us", href: "/contact-us" },
+      { name: "Corporate Governance", href: "/about" },
+      { name: "Board of Directors", href: "/about" },
+      { name: "Sustainability & ESG", href: "/about" },
+      { name: "Careers & Human Capital", href: "/contact-us" },
     ],
   },
   {
-    title: "Help",
+    title: "Divisions & Media",
     links: [
-      { name: "Customer support", href: "/contact-us" },
-      { name: "Delivery details", href: "/contact-us" },
-      { name: "Terms & conditions", href: "/contact-us" },
-      { name: "Privacy policy", href: "/contact-us" },
+      { name: "Advanced Polymers SBU", href: "/products" },
+      { name: "Building Materials SBU", href: "/products" },
+      { name: "Global Supply Chain & Trade", href: "/contact-us" },
+      { name: "Media Center & Press Releases", href: "/#news" },
     ],
   },
   {
-    title: "Resources",
+    title: "Infrastructure",
     links: [
-      { name: "Material guide", href: "/products" },
-      { name: "Project inspiration", href: "/gallery" },
-      { name: "Design journal", href: "/gallery" },
-      { name: "Visit our showroom", href: "/contact-us" },
+      { name: "KINFRA Industrial Park Plant", href: "/about" },
+      { name: "Global Port Logistics Network", href: "/#infrastructure" },
+      { name: "Center of Excellence R&D", href: "/#innovation" },
+      { name: "Contact Corporate Headquarters", href: "/contact-us" },
     ],
   },
 ];

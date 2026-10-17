@@ -9,7 +9,7 @@ export function Testimonials({
   items = testimonialContent as Testimonial[],
 }: { items?: Testimonial[] } = {}) {
   return (
-    <div className="relative w-full bg-white">
+    <div className="relative w-full bg-white ">
       <TestimonialSection
         id="testimonials"
         data-section="testimonials"

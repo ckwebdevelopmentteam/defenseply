@@ -114,7 +114,7 @@ export function Products({
 
           return (
             <div
-              className="keen-slider__slide group relative flex h-[480px] max-desktop:h-[420px] max-phone:h-[380px] flex-col overflow-hidden rounded-[4px] bg-[#222]"
+              className="keen-slider__slide group relative flex h-[580px] lg:h-[600px] xl:h-[620px] max-desktop:h-[460px] max-phone:h-[380px] flex-col overflow-hidden rounded-[4px] bg-[#222]"
               key={item.title}
             >
               <a

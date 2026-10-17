@@ -35,6 +35,8 @@ function usePrefersReducedMotion() {
 export interface BlogDrawerProps {
   /** Editorial articles shown in the grid. */
   articles: BlogArticle[];
+  /** Optional small category/eyebrow text above the heading. */
+  eyebrow?: string;
   /** Optional badge pill text above title. */
   badge?: string;
   /** Heading above the grid. */
@@ -68,6 +70,7 @@ export interface BlogDrawerProps {
  */
 export default function BlogDrawer({
   articles,
+  eyebrow,
   badge,
   title = "Latest Blogs",
   description = "",
@@ -244,25 +247,30 @@ export default function BlogDrawer({
     <section
       id="blog"
       data-section="blog"
-      className={`relative w-full mb-20 max-md:mb-16 max-phone:mb-12 ${className}`}
+      className={`relative w-full mb-30 max-md:mb-16 max-phone:mb-12 ${className}`}
       style={sectionStyle}
       aria-label="Editorial Journal & Insights"
     >
       <div
         className={`w-full ${detailOpen ? "pointer-events-none" : "pointer-events-auto"}`}
       >
-        {/* Left-aligned Header matching Defenseply standard */}
-        <div className="flex flex-col items-start text-left mb-10 max-phone:mb-8">
+        {/* Centered Editorial Header matching theme */}
+        <div className="flex flex-col items-center text-center mb-12 sm:mb-14 max-phone:mb-8 max-w-[920px] mx-auto px-4">
+          {eyebrow && (
+            <p className="text-[11px] sm:text-[11.5px] font-mono tracking-[0.22em] uppercase text-[#9E7B5A] font-semibold mb-3 sm:mb-3.5 select-none">
+              {eyebrow}
+            </p>
+          )}
           {badge && (
-            <span className="mb-3 inline-block rounded-full border border-black/80 px-5 py-1 text-[11px] font-medium tracking-[2.5px] uppercase font-sans">
+            <span className="mb-3 inline-block rounded-full border border-black/80 px-5 py-1 text-[11px] font-medium tracking-[2.5px] uppercase font-sans mx-auto">
               {badge}
             </span>
           )}
-          <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-left">
+          <h2 className="text-[clamp(28px,2.9vw,46px)] leading-[1.14] font-light tracking-[-0.018em] uppercase text-[#111111] mb-4 max-phone:mb-3 text-center font-sans">
             {title}
           </h2>
           {description && (
-            <p className="max-w-[720px] text-fluid font-light leading-[1.5] text-[#5d5d59] text-left">
+            <p className="max-w-[760px] text-[14.5px] sm:text-[15.5px] font-light leading-[1.68] text-[#5d5d59] text-center mx-auto max-sm:text-[13.5px] max-sm:leading-[1.5]">
               {description}
             </p>
           )}

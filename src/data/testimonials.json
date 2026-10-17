@@ -1,22 +1,48 @@
 [
   {
-    "type": "user",
-    "quote": "In Kerala's heavy monsoon climate, conventional plywood in kitchen carcases and vanity counters always carries risk. Switching to Defenseply PVC Foam Boards has given our architectural studio complete peace of mind. Excellent dimensional stability, razor-sharp edge finishes, and dependable moisture performance.",
-    "name": "Ar. Faisal Rahman",
-    "role": "Principal Architect, Studio Archiform",
-    "avatarFallback": "FR",
-    "avatarSrc": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
-  },
-  {
     "type": "quote",
-    "quote": "We have specified Defenseply WPC Door Frames and 3-Layer Boards across multiple apartment towers in Calicut. The batch-to-batch density uniformity is outstanding, screw holding is rock solid, and our carpenters praise how cleanly the material routes without splintering."
+    "quote": "We have specified Defenseply WPC Door Frames and Calibrated Boards across multiple commercial and residential developments across Kerala. The batch-to-batch density uniformity is outstanding, screw holding is rock solid, and site carpenters praise how cleanly the material routes without splintering."
   },
   {
     "type": "user",
-    "quote": "The surface smoothness on Defenseply PVC Colour Boards eliminates the entire painting cycle for our modular cabinetry projects. It accepts PU coats, acrylic laminates, and CNC lattice work effortlessly. An indispensable material for high-end interior designers.",
-    "name": "Sreeja Menon",
-    "role": "Lead Interior Designer, Atelier Living Spaces",
-    "avatarFallback": "SM",
-    "avatarSrc": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
+    "quote": "For waterfront villas and backwater resorts around Ernakulam, moisture in modular joinery used to be our biggest headache. We shifted all kitchen carcass and bathroom vanities to Defenseply 18mm PVC foam boards two years ago. Even through the heaviest South-West monsoons, zero swelling, zero fungus, and hinges hold tight without loosening.",
+    "name": "Ar. Tony Mathew",
+    "role": "Principal Architect, Design Collective, Kochi",
+    "avatarFallback": "TM"
+  },
+  {
+    "type": "user",
+    "quote": "We run CNC routing machines daily for jali partitions and decorative panels. Conventional boards leave rough edges that need hours of manual putty work. Defenseply high-density WPC cuts sharp and clean like solid teak, with crisp core density and zero chipping on 45-degree bevel cuts.",
+    "name": "Mujeeb Rahman K.",
+    "role": "Managing Partner, Malabar Modular Interiors, Calicut",
+    "avatarFallback": "MR"
+  },
+  {
+    "type": "user",
+    "quote": "Termite infestation in door frames is a very common complaint across central Kerala. We tested Defenseply calibrated WPC frames across a 48-villa township project in Thrissur. Direct cement grouting had zero moisture absorption, paint adhesion was flawless, and carpenter installation was 30% faster.",
+    "name": "Er. Suresh Babu",
+    "role": "Chief Project Engineer, Skyline Builders & Developers, Thrissur",
+    "avatarFallback": "SB"
+  },
+  {
+    "type": "user",
+    "quote": "In modular kitchen base units under granite counters, normal ply rots within 3 to 4 seasons because of pipe leaks and dampness. Defenseply 100% waterproof boards eliminate that risk entirely. The pre-calibrated surface accepts PU coatings and PVC edge-banding with zero primer bubbling.",
+    "name": "Lekshmi Pradeep",
+    "role": "Senior Interior Architect, Studio Vismaya, Trivandrum",
+    "avatarFallback": "LP"
+  },
+  {
+    "type": "user",
+    "quote": "We have sourced multiple truckloads directly from Defenseply's KINFRA plant for institutional and hospital interior fitouts in North Malabar. Consistency in thickness across every sheet is unmatched, screw-holding strength is solid, and their lead-free certification gives clients immense trust.",
+    "name": "K. P. Jayarajan",
+    "role": "Commercial Contractor & Fabricator, Kannur",
+    "avatarFallback": "KJ"
+  },
+  {
+    "type": "user",
+    "quote": "In Kottayam's humid rubber plantation belt, ground floor wardrobes frequently develop fungus on standard ply. Switching to Defenseply cellular composite sheets solved dampness callbacks for our studio once and for all. It gives the exact structural feel of wood with lifetime rot immunity.",
+    "name": "Ar. Vineeth Chacko",
+    "role": "Lead Architect, Habitat Formations, Kottayam",
+    "avatarFallback": "VC"
   }
 ]

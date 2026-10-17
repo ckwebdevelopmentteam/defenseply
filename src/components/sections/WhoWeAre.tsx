@@ -2,192 +2,293 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
-interface WhoWeAreMetric {
-  value: string;
-  label: string;
-}
-
-const metrics: WhoWeAreMetric[] = [
-  {
-    value: "WPC & PVC",
-    label: "core materials",
-  },
-  {
-    value: "Kuttippuram, Kerala",
-    label: "manufacturing base",
-  },
-  {
-    value: "AP Group",
-    label: "strategic backing",
-  },
-];
+import { SpinningText } from "@/components/ui/spinning-text-02";
 
 export function WhoWeAre() {
   return (
     <section
       id="who-we-are"
       data-section="who-we-are"
-      aria-label="Who We Are - DEFENSEPLY INTERNATIONAL LLP"
-      className="relative w-full bg-[#F5F3EC] border-b border-[#E0DBD0] overflow-hidden"
+      aria-label="DEFENSEPLY International LLP — Backed by AP Group"
+      className="relative w-full overflow-hidden bg-white"
     >
-      {/* Container with standard homepage margins */}
-      <div className="mx-auto w-full px-[38px] max-md:px-5 max-phone:px-5 py-12 sm:py-16 lg:py-20">
-        {/* Main 3-Column Layout: Left Narrative | Center Factory Image | Right 3-Card Stack */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.28fr_1.18fr_0.64fr] gap-3.5 xl:gap-4 items-stretch">
-          {/* Left Column: Narrative, Metrics, CTA & Commitment */}
-          <div className="flex flex-col justify-between pr-0 lg:pr-2 xl:pr-4">
+      {/* Top 3-Column Layout */}
+      <div className="mx-auto w-full px-[38px] max-md:px-5 max-phone:px-5 pt-20 sm:pt-28 lg:pt-32 pb-24 sm:pb-32 lg:pb-36">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.18fr_1.15fr_1.08fr] gap-8 xl:gap-14 items-stretch">
+          {/* Column 1: Narrative & CTA Button */}
+          <div className="flex flex-col justify-between pr-0 lg:pr-4 h-auto lg:h-full">
             <div>
-              {/* Eyebrow / Tag */}
-              <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <span className="text-[11px] sm:text-[12px] font-semibold tracking-[0.25em] uppercase text-[#6B655B]">
-                  WHO WE ARE
+              {/* Eyebrow */}
+              <div className="flex items-center gap-3 mb-4 sm:mb-5">
+                <span className="text-[11px] sm:text-[11.5px] font-semibold tracking-[0.22em] uppercase text-[#6E685E]">
+                 ABOUT US 
                 </span>
-                <span className="h-[1px] w-12 sm:w-16 bg-[#8A8376]/50" />
+                <span className="h-[1px] w-10 sm:w-14 bg-[#8A8376]/50" />
               </div>
 
               {/* Large Architectural Headline */}
-              <h2 className="text-[clamp(32px,3.3vw,56px)] leading-[1.08] font-normal tracking-[-0.015em] uppercase mb-6 sm:mb-7 select-none">
+              <h2 className="text-[clamp(32px,3.2vw,50px)] leading-[1.08] font-normal tracking-[-0.015em] uppercase mb-5 sm:mb-6 select-none">
                 <span className="block text-[#161513]">BUILDING</span>
                 <span className="block text-[#161513]">A BETTER</span>
                 <span className="block text-[#9E7B5A]">TOMORROW</span>
               </h2>
 
               {/* Narrative Paragraphs */}
-              <div className="space-y-4 text-[14.5px] sm:text-[15px] xl:text-[15.5px] leading-[1.68] text-[#3D3A34] max-w-2xl font-normal">
+              <div className="space-y-3.5 text-[14px] sm:text-[14.5px] leading-[1.7] text-[#59554D] max-w-xl font-normal mb-8">
                 <p>
-                  DEFENSEPLY INTERNATIONAL LLP is an advanced composite
-                  manufacturing enterprise backed by the AP Group, representing
-                  a strategic expansion into high-performance architectural
-                  materials.
+                  <strong className="text-[#161513] font-medium">DEFENSEPLY INTERNATIONAL LLP</strong> is a next-generation
+                  manufacturing venture backed by the <strong className="text-[#161513] font-medium">AP Group</strong>,
+                  representing a strategic expansion into advanced composite building materials.
                 </p>
-                <p className="text-[#59554D]">
-                  We specialise in Wood Polymer Composite (WPC) and cellular
-                  Polyvinyl Chloride (PVC) foam boards, doors, and precision
-                  profiles—engineered to deliver dependable structural stability
-                  and natural wood aesthetics with high resistance to
-                  moisture, termites, and seasonal warping.
+                <p>
+                  We specialise in Wood Polymer Composite (WPC) and Polyvinyl
+                  Chloride (PVC) foam boards, doors, and architectural profiles — engineered to
+                  deliver the timeless warmth of natural timber while eliminating traditional flaws such as water damage, termite degradation, and warping.
                 </p>
               </div>
             </div>
 
-            {/* Metrics Row (3 items) */}
-            <div className="pt-6 sm:pt-8 my-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 py-4 sm:py-5 border-y border-[#D6D0C3] mb-6 sm:mb-7">
-                {metrics.map((metric, idx) => (
-                  <div
-                    key={metric.label}
-                    className={`flex flex-col justify-center ${
-                      idx < metrics.length - 1
-                        ? "sm:border-r sm:border-[#D6D0C3] sm:pr-4 sm:mr-4"
-                        : ""
-                    }`}
-                  >
-                    <span className="text-[19px] sm:text-[21px] xl:text-[23px] font-normal tracking-tight text-[#161513] leading-none">
-                      {metric.value}
-                    </span>
-                    <span className="text-[11.5px] sm:text-[12px] text-[#6E685E] mt-1.5 font-light tracking-normal leading-tight">
-                      {metric.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            {/* Action Buttons aligned to bottom baseline */}
+            <div className="min-h-[48px] sm:min-h-[56px] h-auto flex flex-wrap items-center gap-3 sm:gap-3.5 shrink-0 mt-4 sm:mt-6 mb-6 lg:mb-0">
+              {/* Primary Green Button: Discover DEFENSEPLY */}
+              <Link
+                href="/products"
+                className="group inline-flex items-center gap-2.5 sm:gap-3 rounded-[3px] bg-[#1c3f21] px-5 sm:px-6 py-3 sm:py-3.5 text-[12px] sm:text-[12.5px] font-medium tracking-[0.06em] uppercase text-white shadow-sm transition-all duration-300 hover:bg-[#15321a] hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
+              >
+                <span>Discover DEFENSEPLY</span>
+                <span className="inline-flex items-center transition-transform duration-300 group-hover:translate-x-1.5 text-sm">
+                  →
+                </span>
+              </Link>
 
-              {/* Discover Button */}
-              <div className="mb-6 sm:mb-8">
-                <Link
-                  href="/about"
-                  className="group inline-flex items-center gap-4 rounded-[4px] bg-[#16331D] hover:bg-[#1e4527] text-white px-6 py-3 sm:px-7 sm:py-3.5 text-[12.5px] font-medium tracking-[0.08em] uppercase transition-all duration-300 shadow-[0_2px_8px_rgba(22,51,29,0.18)] hover:shadow-[0_4px_16px_rgba(22,51,29,0.28)] hover:-translate-y-0.5"
-                >
-                  <span>DISCOVER DEFENSEPLY</span>
-                  <span className="inline-flex items-center transition-transform duration-300 group-hover:translate-x-1.5 text-sm">
-                    →
-                  </span>
-                </Link>
-              </div>
-
-              {/* Commitment Row */}
-              <div className="pt-4 sm:pt-5 border-t border-[#D9D3C7]/60 flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-6">
-                <div className="flex flex-col gap-1 shrink-0">
-                  <span className="h-[1px] w-8 bg-[#8A8376]/70" />
-                  <span className="text-[10.5px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase text-[#2B2925]">
-                    OUR COMMITMENT
-                  </span>
-                </div>
-                <p className="text-[12.5px] sm:text-[13px] text-[#635E54] font-normal leading-relaxed">
-                  Sustainable materials. Stronger spaces. A better tomorrow.
-                </p>
-              </div>
+              {/* Secondary White/Black Button: More About Us */}
+              <Link
+                href="/about"
+                className="group inline-flex items-center gap-2.5 sm:gap-3 rounded-[3px] border border-black bg-white px-5 sm:px-6 py-3 sm:py-3.5 text-[12px] sm:text-[12.5px] font-medium tracking-[0.06em] uppercase text-black shadow-xs transition-all duration-300 hover:bg-black hover:text-white hover:-translate-y-0.5 active:translate-y-0"
+              >
+                <span>More About Us</span>
+                <span className="inline-flex items-center transition-transform duration-300 group-hover:translate-x-1.5 text-sm">
+                  →
+                </span>
+              </Link>
             </div>
           </div>
 
-          {/* Center Column: Defenseply Factory Facility Image */}
-          <div className="flex w-full min-h-[360px] sm:min-h-[440px] lg:min-h-[480px]">
-            <div className="relative w-full h-full overflow-hidden rounded-[4px] bg-[#E2DED5] group">
+          {/* Column 2: Tall Vertical AP Group Manufacturing Facility Image */}
+          <div className="flex flex-col w-full h-full">
+            <div className="relative w-full h-[520px] sm:h-[620px] lg:h-full lg:flex-1 overflow-hidden rounded-[2px] bg-[#E8E4DC] shadow-sm group">
               <Image
-                src="/811bae52-f843-43a1-9dab-0a2b815dda3a.png"
-                alt="DEFENSEPLY Modern WPC & PVC Manufacturing Facility and Factory"
+                src="/assets/about/apgroupimage1.png"
+                alt="AP Group — Building a Stronger Tomorrow Industrial Manufacturing Ecosystem"
                 fill
-                sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 priority
               />
             </div>
           </div>
 
-          {/* Right Column: 3 Stacked Visual Cards matching design */}
-          <div className="flex flex-col gap-2.5 sm:gap-3 justify-between w-full h-full min-h-[440px] sm:min-h-[460px] lg:min-h-[480px]">
-            {/* Card 1: Engineered For Real Spaces */}
-            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden rounded-[4px] bg-[#242220] group">
+          {/* Column 3: Quality of Work & Certified Standards */}
+          <div className="flex flex-col justify-between w-full h-full">
+            {/* Top Visual: Engineering & Manufacturing Quality Card */}
+            <div className="relative w-full h-[220px] sm:h-[250px] lg:h-[270px] overflow-hidden rounded-[2px] bg-[#E8E4DC] shadow-sm group shrink-0">
               <Image
-                src="/assets/who-we-are/card-engineered-clean-hd.webp"
-                alt="DEFENSEPLY Engineered Composite Planks and Materials"
+                src="/assets/who-we-are/ap-group-engineers.jpg"
+                alt="Defenseply Engineering Quality Control and Testing"
                 fill
-                sizes="(max-width: 1024px) 100vw, 24vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 32vw"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
               />
-              {/* Soft Gradient for text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
-              <div className="absolute left-3.5 sm:left-4 bottom-3 sm:bottom-3.5 z-10">
-                <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-white leading-tight [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
-                  ENGINEERED
-                  <br />
-                  FOR REAL SPACES
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute left-4 sm:left-5 bottom-4 z-10">
+                <span className="inline-block px-2.5 py-0.5 rounded-[2px] bg-white/20 backdrop-blur-md text-[9.5px] font-semibold tracking-[0.16em] uppercase text-white mb-1.5">
+                  QUALITY OF WORK
+                </span>
+                <p className="text-[12.5px] sm:text-[13.5px] font-normal text-white/95 leading-tight">
+                  State-of-the-Art Testing & Batch Consistency
                 </p>
-                <span className="block mt-1.5 h-[1px] w-6 bg-white/90" />
               </div>
             </div>
 
-            {/* Card 2: Performance Meets Design */}
-            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden rounded-[4px] bg-[#242220] group">
-              <Image
-                src="/assets/who-we-are/card-performance-clean.webp"
-                alt="DEFENSEPLY Performance Meets Design - Modern Architectural Wood Paneling"
-                fill
-                sizes="(max-width: 1024px) 100vw, 24vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              />
-              {/* Soft Gradient for text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
-              <div className="absolute left-3.5 sm:left-4 bottom-3 sm:bottom-3.5 z-10">
-                <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-white leading-tight [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
-                  PERFORMANCE
-                  <br />
-                  MEETS DESIGN
+            {/* Middle: Certified Operational Benchmarks & Standards Description */}
+            <div className="bg-[#FAF8F5] border border-[#E8E3DA] p-5 sm:p-5.5 rounded-[2px] flex flex-col justify-between flex-1 my-5 sm:my-6">
+              <div>
+                {/* Header */}
+                <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E8E3DA]">
+                  <p className="text-[10px] sm:text-[10.5px] font-semibold tracking-[0.2em] uppercase text-[#6B655B]">
+                    GLOBAL OPERATIONAL BENCHMARKS
+                  </p>
+                  <span className="text-[10px] sm:text-[10.5px] font-medium tracking-[0.1em] text-[#9E7B5A] uppercase">
+                    ISO CERTIFIED
+                  </span>
+                </div>
+
+                {/* Editorial Typography List — Pure text, beautifully described, no boxes */}
+                <div className="space-y-3.5 mb-4">
+                  {/* ISO 9001 */}
+                  <div>
+                    <div className="flex items-baseline justify-between gap-2 mb-1">
+                      <span className="text-[12.5px] sm:text-[13px] font-semibold tracking-[0.03em] text-[#161513]">
+                        ISO 9001:2015
+                      </span>
+                      <span className="text-[10.5px] font-medium tracking-[0.06em] uppercase text-[#9E7B5A]">
+                        Quality Management
+                      </span>
+                    </div>
+                    <p className="text-[11.5px] sm:text-[12px] text-[#635E54] leading-[1.6]">
+                      Rigorous multi-stage batch inspection ensuring structural density, uniform thickness, and strict dimensional tolerances.
+                    </p>
+                  </div>
+
+                  <div className="h-[1px] w-full bg-[#E8E3DA]" />
+
+                  {/* ISO 14001 */}
+                  <div>
+                    <div className="flex items-baseline justify-between gap-2 mb-1">
+                      <span className="text-[12.5px] sm:text-[13px] font-semibold tracking-[0.03em] text-[#161513]">
+                        ISO 14001:2015
+                      </span>
+                      <span className="text-[10.5px] font-medium tracking-[0.06em] uppercase text-[#9E7B5A]">
+                        Environmental Management
+                      </span>
+                    </div>
+                    <p className="text-[11.5px] sm:text-[12px] text-[#635E54] leading-[1.6]">
+                      100% recyclable, lead-free formulations manufactured with zero harmful emissions and eco-conscious resource cycles.
+                    </p>
+                  </div>
+
+                  <div className="h-[1px] w-full bg-[#E8E3DA]" />
+
+                  {/* ISO 45001 */}
+                  <div>
+                    <div className="flex items-baseline justify-between gap-2 mb-1">
+                      <span className="text-[12.5px] sm:text-[13px] font-semibold tracking-[0.03em] text-[#161513]">
+                        ISO 45001:2018
+                      </span>
+                      <span className="text-[10.5px] font-medium tracking-[0.06em] uppercase text-[#9E7B5A]">
+                        Health & Safety
+                      </span>
+                    </div>
+                    <p className="text-[11.5px] sm:text-[12px] text-[#635E54] leading-[1.6]">
+                      Internationally certified workplace protocols safeguarding workforce well-being across automated extrusion lines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Context Description */}
+              <div className="pt-3 border-t border-[#E8E3DA]">
+                <p className="text-[11.5px] sm:text-[12px] text-[#6E685E] font-normal leading-[1.65]">
+                  Engineered with non-toxic, lead-free composite formulations and energy-efficient extrusion processes strictly aligned with international compliance benchmarks.
                 </p>
-                <span className="block mt-1.5 h-[1px] w-6 bg-white/90" />
               </div>
             </div>
 
-            {/* Card 3: Modern Quote Card with Plant and Typography */}
-            <div className="relative w-full flex-1 min-h-[135px] sm:min-h-[145px] overflow-hidden rounded-[4px] bg-[#EDEAE3] group">
-              <Image
-                src="/assets/who-we-are/card-quote-modern-2x.webp"
-                alt="Innovative materials for modern living. — DEFENSEPLY"
-                fill
-                sizes="(max-width: 1024px) 100vw, 24vw"
-                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+            {/* Bottom Tagline with Horizontal Line aligned to bottom baseline */}
+            <div className="h-12 sm:h-14 flex items-center shrink-0">
+              <div className="flex items-center gap-3 w-full">
+                <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.16em] uppercase text-[#6B655B] whitespace-nowrap">
+                  PRECISION POLYMER FORMULATION
+                </span>
+                <span className="h-[1px] flex-1 min-w-[30px] bg-[#8A8376]/50" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Horizontal Divider with Subtle, Narrow Center Dip matching Reference Image 2 */}
+      <div className="relative w-full bg-white select-none">
+        {/* Understated Circular Brand Badge centered on the baseline, extending into upper section */}
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 z-10">
+          <div className="size-[120px] sm:size-[128px] rounded-full flex items-center justify-center relative group cursor-pointer">
+            <SpinningText
+              text="• DEFENSEPLY • BUILT FOR THE WAY WE BUILD • "
+              radius={40}
+              fontSize={11.5}
+              speed={22}
+              direction="normal"
+              className="text-[#8C7356] size-full font-semibold"
+            >
+              <div className="flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src="/assets/logo/logodpspinner.png"
+                  alt="Defenseply Brown Monogram Logo"
+                  width={52}
+                  height={74}
+                  className="h-8 sm:h-9 w-auto object-contain select-none"
+                  priority
+                />
+              </div>
+            </SpinningText>
+          </div>
+        </div>
+
+        {/* Mostly straight horizontal edge with smooth, rounded downward curve and generous clearance around spinner */}
+        <div className="relative w-full flex items-start">
+          <div className="flex-1 h-[86px] bg-[#F5F2EB] border-t border-[#E5E0D6]" />
+          <div className="shrink-0 w-[260px] h-[86px]">
+            <svg
+              width="260"
+              height="86"
+              viewBox="0 0 260 86"
+              fill="none"
+              className="block w-full h-full"
+            >
+              {/* Soft warm cream fill under the shallow curve */}
+              <path
+                d="M 0,0 C 45,0 74,82 130,82 C 186,82 215,0 260,0 L 260,86 L 0,86 Z"
+                fill="#F5F2EB"
               />
+              {/* Subtle 1px boundary stroke matching horizontal line */}
+              <path
+                d="M 0,0 C 45,0 74,82 130,82 C 186,82 215,0 260,0"
+                stroke="#E5E0D6"
+                strokeWidth="1"
+                fill="none"
+              />
+            </svg>
+          </div>
+          <div className="flex-1 h-[86px] bg-[#F5F2EB] border-t border-[#E5E0D6]" />
+        </div>
+      </div>
+
+      {/* Centered Serif Corporate Achievement Section on Cream Background */}
+      <div className="relative w-full bg-[#F5F2EB] pt-5 pb-20 sm:pb-28 text-center px-6">
+        <div className="max-w-4xl mx-auto">
+          {/* Eyebrow Accent */}
+          <div className="flex items-center justify-center gap-3 mb-5 sm:mb-6">
+            <span className="h-[1px] w-8 sm:w-14 bg-[#8C7356]/40" />
+            <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.22em] uppercase text-[#7A6B58]">
+              CORPORATE MILESTONES &amp; INDUSTRIAL ACHIEVEMENTS
+            </span>
+            <span className="h-[1px] w-8 sm:w-14 bg-[#8C7356]/40" />
+          </div>
+
+          {/* 4-Line Achievement Content extracted from Architecture Brief & AP Group Heritage */}
+          <div className="space-y-2.5 sm:space-y-3.5 font-serif select-none">
+            {/* Line 1: Corporate Backing & Industry Legacy */}
+            <h3 className="text-[clamp(21px,2.6vw,36px)] font-normal text-[#24211D] leading-[1.24] tracking-[-0.01em]">
+              Decades Of Industrial Manufacturing Heritage Backed By AP Group
+            </h3>
+
+            {/* Line 2: Advanced Manufacturing Facility */}
+            <p className="text-[clamp(17px,2.1vw,28px)] font-normal text-[#4A443C] leading-[1.3] tracking-[-0.005em]">
+              State-Of-The-Art 45,000 Sq. Ft. Precision Extrusion Plant At KINFRA
+            </p>
+
+            {/* Line 3: Material Science Innovation */}
+            <p className="text-[clamp(17px,2.1vw,28px)] font-normal text-[#4A443C] leading-[1.3] tracking-[-0.005em]">
+              Pioneering 100% Water, Fire &amp; Termite Proof Advanced Composites
+            </p>
+
+            {/* Line 4: Certified Global Compliance */}
+            <div className="flex items-center justify-center gap-3 sm:gap-5 pt-1.5 sm:pt-2">
+              <span className="h-[1px] w-8 sm:w-16 bg-[#7A7367]/40" />
+              <p className="text-[clamp(14.5px,1.8vw,23px)] font-normal tracking-[0.04em] uppercase text-[#8C7356]">
+                Engineered To International ISO 9001 · 14001 · 45001 Standards
+              </p>
+              <span className="h-[1px] w-8 sm:w-16 bg-[#7A7367]/40" />
             </div>
           </div>
         </div>

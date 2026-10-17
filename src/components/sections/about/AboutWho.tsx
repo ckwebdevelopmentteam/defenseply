@@ -2,7 +2,7 @@ const facts = [
   {
     value: "45,000 sq. ft.",
     label: "Manufacturing Facility",
-    image: "/assets/About_Us.jpg",
+    image: "/assets/about/apgroupimage1.png",
     alt: "45,000 sq. ft. manufacturing facility",
   },
   {
@@ -20,7 +20,7 @@ const facts = [
   {
     value: "AP Group",
     label: "Strategic Backing",
-    image: "/assets/kes-group.jpg",
+    image: "/assets/who-we-are/ap-group-building.jpg",
     alt: "AP Group strategic industrial backing",
   },
 ];
@@ -69,7 +69,7 @@ export function AboutWho() {
               <strong className="font-medium text-[#1a1a1a]">
                 Polyvinyl Chloride (PVC)
               </strong>{" "}
-              form boards, doors, and frames — engineered to deliver the
+              foam boards, doors, and frames — engineered to deliver the
               timeless warmth and aesthetic appeal of natural wood, while
               entirely eliminating traditional structural flaws such as water
               damage, termite degradation, and warping.

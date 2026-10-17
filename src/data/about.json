@@ -1,63 +1,63 @@
 {
-  "headline": "Manufacturing Infrastructure\nAdvanced extrusion facility at\nKINFRA Industrial Park, Kerala",
-  "description": "Operating within the government-supported KINFRA Industrial Park in Kuttippuram, Kerala, Defenseply's manufacturing plant is equipped with dedicated industrial power and automated extrusion lines. Supported by the AP Group, the facility focuses on the calibrated production of Wood Polymer Composite (WPC) and cellular PVC boards, doors, and profiles engineered for moisture resistance and consistent dimensional stability.",
+  "headline": "Corporate Leadership & Strategic Backing\nGuided by veteran industry expertise\nBacked by AP Group & NGH Group",
+  "description": "Defenseply is guided by experienced industry leaders committed to quality, trust, and innovation. With decades of manufacturing heritage from AP Group and NGH Group, our leadership team ensures every product delivers lasting durability and dependable performance.",
   "features": [
     {
       "icon": "shield",
-      "label": "Moisture & Termite Resistant"
+      "label": "Experienced Leadership"
     },
     {
       "icon": "clock",
-      "label": "Calibrated Extrusion Profiles"
+      "label": "40+ Years of Industry Trust"
     },
     {
       "icon": "sparkles",
-      "label": "Lead-Free Formulation"
+      "label": "AP Group & NGH Group Backing"
     }
   ],
   "action": {
-    "label": "Contact Us",
-    "href": "/contact-us"
+    "label": "Learn More About Us",
+    "href": "/about"
   },
   "hero": {
-    "image": "/assets/about/about-hero-facility.webp",
-    "alt": "DEFENSEPLY Advanced WPC & PVC Manufacturing Facility in Kuttippuram, Kerala",
-    "title": "Manufacturing Facility"
+    "image": "/assets/about/board-of-directors.jpg",
+    "alt": "DEFENSEPLY Board of Directors and Executive Leadership",
+    "title": "Board of Directors"
   },
   "gallery": [
     {
       "position": "left",
-      "image": "/assets/applications/wardrobe/defenseply-full-height-wardrobe.webp",
-      "alt": "DefensePly Full-Height WPC Wardrobe Systems"
+      "image": "/assets/who-we-are/ap-group-building.jpg",
+      "alt": "AP Group Industrial Infrastructure"
     },
     {
       "position": "center",
-      "image": "/assets/applications/kitchen/brochure-modular-kitchen-cabinets.webp",
-      "alt": "Sustainable composite modular kitchen cabinetry"
+      "image": "/assets/about/ngh-group-industrial.jpg",
+      "alt": "NGH Group Global Trade & Manufacturing Infrastructure"
     },
     {
       "position": "right",
-      "image": "/assets/applications/creative/brochure-creative-cnc-cutting.webp",
-      "alt": "Architectural CNC cut decorative composite panels"
+      "image": "/assets/who-we-are/ap-group-engineers.jpg",
+      "alt": "AP Group and NGH Group Strategic Engineering Excellence"
     }
   ],
-  "galleryDescription": "Providing architects, contractors, and interior specialists with dependable composite materials, consistent supply, and direct manufacturing support.",
+  "galleryDescription": "Proudly backed by AP Group and NGH Group — two trusted industrial powerhouses with over 40 years of manufacturing excellence, bringing unmatched stability and reliability to Defenseply.",
   "statistics": [
     {
-      "value": "KINFRA",
-      "label": "Industrial Park base"
+      "value": "AP Group",
+      "label": "Strategic Backer"
     },
     {
-      "value": "NH 66",
-      "label": "logistics corridor"
+      "value": "NGH Group",
+      "label": "Industry Advisor"
     },
     {
-      "value": "Lead-Free",
-      "label": "calcium-zinc formulation"
+      "value": "40+ Yrs",
+      "label": "Combined Heritage"
     },
     {
-      "value": "WPC & PVC",
-      "label": "core composite materials"
+      "value": "100%",
+      "label": "Quality Guaranteed"
     }
   ]
 }

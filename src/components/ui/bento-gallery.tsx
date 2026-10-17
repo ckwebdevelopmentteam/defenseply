@@ -9,8 +9,9 @@ import {
   type Variants,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { X } from "lucide-react";
+import { X, ArrowRight } from "lucide-react";
 import { Arrow } from "@/components/ui/Carousel";
+import Link from "next/link";
 
 // Defines the structure for each image item in the gallery
 export type ImageItem = {
@@ -106,7 +107,13 @@ const ImageModal = ({
 // Main gallery component
 export const InteractiveImageBentoGallery: React.FC<
   InteractiveImageBentoGalleryProps
-> = ({ imageItems, title, description, viewAllHref, viewAllText }) => {
+> = ({
+  imageItems,
+  title,
+  description,
+  viewAllHref = "/gallery",
+  viewAllText = "View All",
+}) => {
   const [selectedItem, setSelectedItem] = useState<ImageItem | null>(null);
   const [dragConstraint, setDragConstraint] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -158,33 +165,35 @@ export const InteractiveImageBentoGallery: React.FC<
 
   return (
     <div className="relative w-full" aria-label={title}>
-      {/* Start-aligned Heading with Description & parallel right-corner Arrows */}
-      <div className="relative mb-6 max-phone:mb-5">
-        <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-left">
-          {title}
-        </h2>
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-          <div className="max-w-[840px] text-fluid font-light leading-[1.6] text-muted-foreground text-left max-sm:text-[13.5px] max-sm:leading-[1.35] max-phone:text-[13px] max-phone:leading-[1.35]">
-            {description}
-          </div>
+      {/* Centered Heading with Description matching Testimonial styling */}
+      <div className="relative mb-8 max-phone:mb-6">
+        <div className="flex flex-col items-center text-center">
+          <h2 className="text-display font-semibold uppercase antialiased tracking-tight text-ink mb-3 max-phone:mb-2 text-center">
+            {title}
+          </h2>
+          {description && (
+            <div className="max-w-[720px] text-fluid font-light leading-[1.5] text-[#5d5d59] text-center mx-auto max-sm:text-[13.5px] max-sm:leading-[1.35] max-phone:text-[13px] max-phone:leading-[1.35] max-phone:max-w-[340px]">
+              {description}
+            </div>
+          )}
+        </div>
 
-          {/* Right Corner: Arrows parallel to the 2-line description */}
-          <div className="flex shrink-0 items-center gap-2 self-end md:self-end text-[#1a1a1a] pb-0.5">
-            <Arrow
-              direction="left"
-              aria-label="Previous gallery projects"
-              className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
-              onClick={() => scrollBy(520)}
-              disabled={!canScrollLeft}
-            />
-            <Arrow
-              direction="right"
-              aria-label="Next gallery projects"
-              className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
-              onClick={() => scrollBy(-520)}
-              disabled={!canScrollRight}
-            />
-          </div>
+        {/* Right Corner: Navigation Arrows */}
+        <div className="mt-4 flex justify-end md:absolute md:bottom-0 md:right-0 items-center gap-2 text-[#1a1a1a] pb-0.5">
+          <Arrow
+            direction="left"
+            aria-label="Previous gallery projects"
+            className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
+            onClick={() => scrollBy(520)}
+            disabled={!canScrollLeft}
+          />
+          <Arrow
+            direction="right"
+            aria-label="Next gallery projects"
+            className="size-[33px] transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-25 cursor-pointer"
+            onClick={() => scrollBy(-520)}
+            disabled={!canScrollRight}
+          />
         </div>
       </div>
 
@@ -258,6 +267,19 @@ export const InteractiveImageBentoGallery: React.FC<
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Centered View All Gallery CTA Button */}
+      {viewAllHref && (
+        <div className="mt-8 sm:mt-10 flex justify-center w-full">
+          <Link
+            href={viewAllHref}
+            className="group inline-flex items-center justify-center gap-2.5 rounded-[4px] bg-[#1c3f21] px-8 py-3.5 sm:px-9 sm:py-3.5 text-[12.5px] sm:text-[13px] font-medium tracking-[0.08em] uppercase text-white shadow-[0_2px_8px_rgba(28,63,33,0.18)] transition-all duration-300 hover:bg-[#15321a] hover:shadow-[0_4px_16px_rgba(28,63,33,0.28)] hover:-translate-y-0.5 active:translate-y-0"
+          >
+            <span>{viewAllText}</span>
+            <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </div>
+      )}
 
       <AnimatePresence>
         {selectedItem && (

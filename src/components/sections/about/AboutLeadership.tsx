@@ -15,7 +15,7 @@ const leaders = [
     name: "Mr. Imthihas Rahman",
     title: "Designated Partner",
     description:
-      "Plywood manufacturing and distribution expert with over 20 years of experience via the National Group, driving national trade network expansion and market positioning.",
+      "Plywood manufacturing and distribution expert with over 20 years of experience via the National Group (NGH Group), driving national trade network expansion and market positioning.",
   },
   {
     name: "Mr. P.K. Yashir",
@@ -37,7 +37,7 @@ export function AboutLeadership() {
           Leadership & Management
         </p>
         <h2 className="mb-14 max-w-[600px] text-[clamp(28px,2.5vw,44px)] leading-[1.14] font-light uppercase text-[#1a1a1a] max-[768px]:mb-10">
-          The Team Behind DefensePly
+          The Team Behind DEFENSEPLY
         </h2>
 
         <div className="grid grid-cols-4 gap-px bg-black/8 border border-black/8 overflow-hidden rounded-[4px] max-[1024px]:grid-cols-2 max-[520px]:grid-cols-1">

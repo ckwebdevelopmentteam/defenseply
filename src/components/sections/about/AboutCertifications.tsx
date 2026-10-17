@@ -1,10 +1,10 @@
 const certifications = [
+  "ISO 9001:2015",
   "ISO 14001:2015",
   "ISO 45001:2018",
-  "ISO 9001:2015",
-  "BIFMA",
+  "Lead-Free Certified",
   "Green Pro Certified",
-  "CE",
+  "CE Compliance",
 ];
 
 export function AboutCertifications() {

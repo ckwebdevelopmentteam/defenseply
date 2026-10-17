@@ -120,13 +120,31 @@ export function About({ data = content }: { data?: typeof content }) {
               loading="lazy"
               className="absolute inset-0 size-full object-cover transition-transform duration-650 ease-[cubic-bezier(.16,1,.3,1)] group-hover/image:scale-[1.06]"
             />
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#0000008c_0%,#00000026_40%,#00000073_100%)]" />
-            <h3 className="absolute top-8 left-8 z-[2] text-[26px] leading-[1.2] font-normal tracking-[-.01em] text-white [text-shadow:0_2px_10px_#0000004d]">
-              {data.hero.title}
-            </h3>
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#00000099_0%,#00000033_45%,#0000008c_100%)]" />
+            <div className="absolute top-7 left-7 z-[2] flex flex-col items-start gap-1">
+              <span className="inline-block px-2.5 py-0.5 rounded-[2px] bg-white/20 backdrop-blur-md text-[9.5px] font-semibold tracking-[0.18em] uppercase text-white">
+                EXECUTIVE LEADERSHIP
+              </span>
+              <h3 className="text-[26px] leading-[1.2] font-normal tracking-[-.01em] text-white [text-shadow:0_2px_10px_#0000004d]">
+                {data.hero.title}
+              </h3>
+            </div>
+            <div className="absolute bottom-6 left-7 right-7 z-[2]">
+              <p className="text-[12px] text-white/80 font-sans leading-relaxed">
+                Guiding Quality · Trusted Leadership · 40+ Years of Manufacturing Excellence
+              </p>
+            </div>
           </div>
         </AboutCard>
         <AboutCard className="group/gallery justify-between px-8 pt-9 pb-8 max-desktop:col-span-2 max-desktop:flex-row max-desktop:items-center max-desktop:gap-9 max-[768px]:col-span-1 max-[768px]:flex-col max-[768px]:items-stretch">
+          <div className="flex items-center justify-between w-full mb-3">
+            <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#6B655B]">
+              STRATEGIC ADVISORS
+            </span>
+            <span className="text-[10.5px] font-medium tracking-[0.08em] text-[#1c3f21] uppercase">
+              AP GROUP &amp; NGH GROUP
+            </span>
+          </div>
           <div
             className="relative mb-6 flex h-[200px] w-full items-center justify-center max-desktop:mb-0 max-desktop:w-[280px] max-desktop:shrink-0 max-[768px]:mb-6 max-[768px]:w-full"
             aria-hidden="true"

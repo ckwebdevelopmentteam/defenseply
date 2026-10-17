@@ -51,8 +51,8 @@ export function AboutStory() {
           {/* Left: Architectural Media Feature with Integrated Metadata */}
           <div className="group relative flex min-h-[380px] sm:min-h-[440px] lg:min-h-[500px] w-full flex-col justify-between overflow-hidden rounded-[4px] border border-black/10 bg-[#181818]">
             <img
-              src="/assets/york-paramedic-station.jpg"
-              alt="DefensePly 2-acre industrial facility infrastructure and national highway connectivity"
+              src="/assets/about/apgroupimage1.png"
+              alt="DEFENSEPLY 2-acre industrial manufacturing facility at KINFRA Park, Kuttippuram"
               loading="lazy"
               className="absolute inset-0 size-full object-cover object-center grayscale-[12%] contrast-[0.98] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
             />
@@ -95,7 +95,7 @@ export function AboutStory() {
             <div className="space-y-6">
               {/* Lead Paragraph */}
               <p className="text-[17px] sm:text-[18px] leading-[1.65] font-normal text-[#242423]">
-                <strong className="font-medium text-[#1a1a1a]">DefensePly</strong> brings together decades of industrial manufacturing, architectural design, and supply chain leadership — united by a shared commitment to replacing conventional timber with advanced, eco-responsible composite solutions.
+                <strong className="font-medium text-[#1a1a1a]">DEFENSEPLY</strong> brings together decades of industrial manufacturing, architectural design, and supply chain leadership — united by a shared commitment to replacing conventional timber with advanced, eco-responsible composite solutions.
               </p>
 
               {/* Physical Infrastructure & Nationwide Logistics */}

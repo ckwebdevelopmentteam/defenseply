@@ -83,13 +83,18 @@ export function InspirationGallery() {
       <InteractiveImageBentoGallery
         imageItems={bentoGalleryItems}
         title="INSPIRATION GALLERIES"
+        viewAllHref="/gallery"
+        viewAllText="View All"
         description={
           <>
             <span className="md:block">
-              A curated architectural showcase demonstrating precision joinery, moisture-impervious cabinetry,
+              A curated architectural showcase demonstrating precision joinery,{" "}
             </span>
             <span className="md:block">
-              and durable interior installations engineered with Defenseply cellular composite boards.
+              moisture-impervious cabinetry, and durable interior installations{" "}
+            </span>
+            <span className="md:block">
+              engineered with Defenseply cellular composite boards.
             </span>
           </>
         }
