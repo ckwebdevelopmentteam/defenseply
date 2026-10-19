@@ -3,10 +3,8 @@ import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { About } from "@/components/sections/About";
 import { Products } from "@/components/sections/Products";
 import { InnovationTechnology } from "@/components/sections/InnovationTechnology";
-import { InspirationGallery } from "@/components/sections/InspirationGallery";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { FAQ } from "@/components/sections/FAQ";
 import { FloatingActions } from "@/components/ui/FloatingActions";
 
 export default function Home() {

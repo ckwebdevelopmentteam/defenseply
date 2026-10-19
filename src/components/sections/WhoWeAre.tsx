@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SpinningText } from "@/components/ui/spinning-text-02";
+import { IsoCertificationCard } from "@/components/ui/IsoCertificationCard";
 
 export function WhoWeAre() {
   return (
@@ -13,7 +14,7 @@ export function WhoWeAre() {
       className="relative w-full overflow-hidden bg-white"
     >
       {/* Top 3-Column Layout */}
-      <div className="mx-auto w-full px-[38px] max-md:px-5 max-phone:px-5 pt-20 sm:pt-28 lg:pt-32 pb-24 sm:pb-32 lg:pb-36">
+      <div className="mx-auto w-full px-[38px] max-md:px-5 max-phone:px-5 pt-12 sm:pt-16 lg:pt-20 pb-28 sm:pb-36 lg:pb-40">
         <div className="grid grid-cols-1 lg:grid-cols-[1.18fr_1.15fr_1.08fr] gap-8 xl:gap-14 items-stretch">
           {/* Column 1: Narrative & CTA Button */}
           <div className="flex flex-col justify-between pr-0 lg:pr-4 h-auto lg:h-full">
@@ -34,16 +35,19 @@ export function WhoWeAre() {
               </h2>
 
               {/* Narrative Paragraphs */}
-              <div className="space-y-3.5 text-[14px] sm:text-[14.5px] leading-[1.7] text-[#59554D] max-w-xl font-normal mb-8">
+              <div className="space-y-4 text-[15px] sm:text-[15.5px] lg:text-[16px] leading-[1.72] text-[#555047] max-w-xl font-normal mb-6">
                 <p>
                   <strong className="text-[#161513] font-medium">DEFENSEPLY INTERNATIONAL LLP</strong> is a next-generation
-                  manufacturing venture backed by the <strong className="text-[#161513] font-medium">AP Group</strong>,
-                  representing a strategic expansion into advanced composite building materials.
+                  manufacturing venture backed by the industrial legacy of the <strong className="text-[#161513] font-medium">AP Group</strong>,
+                  representing a strategic expansion into advanced composite building materials and architectural polymers.
                 </p>
                 <p>
-                  We specialise in Wood Polymer Composite (WPC) and Polyvinyl
-                  Chloride (PVC) foam boards, doors, and architectural profiles — engineered to
-                  deliver the timeless warmth of natural timber while eliminating traditional flaws such as water damage, termite degradation, and warping.
+                  We specialise in high-density Wood Polymer Composite (WPC) and Polyvinyl
+                  Chloride (PVC) cellular foam boards, solid doors, and precision-moulded framing profiles — engineered to
+                  deliver the organic warmth and texture of natural timber while permanently eliminating moisture absorption, termite degradation, and seasonal warping.
+                </p>
+                <p>
+                  Operating from our modern 45,000 sq. ft. facility at KINFRA Industrial Park in Kuttippuram, Kerala, our multi-line extrusion infrastructure pairs automated engineering with lead-free, 100% recyclable formulations to deliver calibrated dimensional stability across demanding residential, commercial, and healthcare environments.
                 </p>
               </div>
             </div>
@@ -76,7 +80,7 @@ export function WhoWeAre() {
 
           {/* Column 2: Tall Vertical AP Group Manufacturing Facility Image */}
           <div className="flex flex-col w-full h-full">
-            <div className="relative w-full h-[520px] sm:h-[620px] lg:h-full lg:flex-1 overflow-hidden rounded-[2px] bg-[#E8E4DC] shadow-sm group">
+            <div className="relative w-full h-[420px] sm:h-[500px] lg:h-full lg:flex-1 overflow-hidden rounded-[2px] bg-[#E8E4DC] shadow-sm group">
               <Image
                 src="/assets/about/apgroupimage1.png"
                 alt="AP Group — Building a Stronger Tomorrow Industrial Manufacturing Ecosystem"
@@ -91,7 +95,7 @@ export function WhoWeAre() {
           {/* Column 3: Quality of Work & Certified Standards */}
           <div className="flex flex-col justify-between w-full h-full">
             {/* Top Visual: Engineering & Manufacturing Quality Card */}
-            <div className="relative w-full h-[220px] sm:h-[250px] lg:h-[270px] overflow-hidden rounded-[2px] bg-[#E8E4DC] shadow-sm group shrink-0">
+            <div className="relative w-full h-[170px] sm:h-[190px] lg:h-[200px] overflow-hidden rounded-[2px] bg-[#E8E4DC] shadow-sm group shrink-0">
               <Image
                 src="/assets/who-we-are/ap-group-engineers.jpg"
                 alt="Defenseply Engineering Quality Control and Testing"
@@ -111,88 +115,7 @@ export function WhoWeAre() {
             </div>
 
             {/* Middle: Certified Operational Benchmarks & Standards Description */}
-            <div className="bg-[#FAF8F5] border border-[#E8E3DA] p-5 sm:p-5.5 rounded-[2px] flex flex-col justify-between flex-1 my-5 sm:my-6">
-              <div>
-                {/* Header */}
-                <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E8E3DA]">
-                  <p className="text-[10px] sm:text-[10.5px] font-semibold tracking-[0.2em] uppercase text-[#6B655B]">
-                    GLOBAL OPERATIONAL BENCHMARKS
-                  </p>
-                  <span className="text-[10px] sm:text-[10.5px] font-medium tracking-[0.1em] text-[#9E7B5A] uppercase">
-                    ISO CERTIFIED
-                  </span>
-                </div>
-
-                {/* Editorial Typography List — Pure text, beautifully described, no boxes */}
-                <div className="space-y-3.5 mb-4">
-                  {/* ISO 9001 */}
-                  <div>
-                    <div className="flex items-baseline justify-between gap-2 mb-1">
-                      <span className="text-[12.5px] sm:text-[13px] font-semibold tracking-[0.03em] text-[#161513]">
-                        ISO 9001:2015
-                      </span>
-                      <span className="text-[10.5px] font-medium tracking-[0.06em] uppercase text-[#9E7B5A]">
-                        Quality Management
-                      </span>
-                    </div>
-                    <p className="text-[11.5px] sm:text-[12px] text-[#635E54] leading-[1.6]">
-                      Rigorous multi-stage batch inspection ensuring structural density, uniform thickness, and strict dimensional tolerances.
-                    </p>
-                  </div>
-
-                  <div className="h-[1px] w-full bg-[#E8E3DA]" />
-
-                  {/* ISO 14001 */}
-                  <div>
-                    <div className="flex items-baseline justify-between gap-2 mb-1">
-                      <span className="text-[12.5px] sm:text-[13px] font-semibold tracking-[0.03em] text-[#161513]">
-                        ISO 14001:2015
-                      </span>
-                      <span className="text-[10.5px] font-medium tracking-[0.06em] uppercase text-[#9E7B5A]">
-                        Environmental Management
-                      </span>
-                    </div>
-                    <p className="text-[11.5px] sm:text-[12px] text-[#635E54] leading-[1.6]">
-                      100% recyclable, lead-free formulations manufactured with zero harmful emissions and eco-conscious resource cycles.
-                    </p>
-                  </div>
-
-                  <div className="h-[1px] w-full bg-[#E8E3DA]" />
-
-                  {/* ISO 45001 */}
-                  <div>
-                    <div className="flex items-baseline justify-between gap-2 mb-1">
-                      <span className="text-[12.5px] sm:text-[13px] font-semibold tracking-[0.03em] text-[#161513]">
-                        ISO 45001:2018
-                      </span>
-                      <span className="text-[10.5px] font-medium tracking-[0.06em] uppercase text-[#9E7B5A]">
-                        Health & Safety
-                      </span>
-                    </div>
-                    <p className="text-[11.5px] sm:text-[12px] text-[#635E54] leading-[1.6]">
-                      Internationally certified workplace protocols safeguarding workforce well-being across automated extrusion lines.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom Context Description */}
-              <div className="pt-3 border-t border-[#E8E3DA]">
-                <p className="text-[11.5px] sm:text-[12px] text-[#6E685E] font-normal leading-[1.65]">
-                  Engineered with non-toxic, lead-free composite formulations and energy-efficient extrusion processes strictly aligned with international compliance benchmarks.
-                </p>
-              </div>
-            </div>
-
-            {/* Bottom Tagline with Horizontal Line aligned to bottom baseline */}
-            <div className="h-12 sm:h-14 flex items-center shrink-0">
-              <div className="flex items-center gap-3 w-full">
-                <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.16em] uppercase text-[#6B655B] whitespace-nowrap">
-                  PRECISION POLYMER FORMULATION
-                </span>
-                <span className="h-[1px] flex-1 min-w-[30px] bg-[#8A8376]/50" />
-              </div>
-            </div>
+            <IsoCertificationCard className="mt-4 sm:mt-5 flex-1" />
           </div>
         </div>
       </div>
@@ -254,7 +177,7 @@ export function WhoWeAre() {
       </div>
 
       {/* Centered Serif Corporate Achievement Section on Cream Background */}
-      <div className="relative w-full bg-[#F5F2EB] pt-5 pb-20 sm:pb-28 text-center px-6">
+      <div className="relative w-full bg-[#F5F2EB] pt-5 pb-14 sm:pb-16 max-phone:pb-10 text-center px-6">
         <div className="max-w-4xl mx-auto">
           {/* Eyebrow Accent */}
           <div className="flex items-center justify-center gap-3 mb-5 sm:mb-6">

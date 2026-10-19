@@ -79,7 +79,7 @@ const bentoGalleryItems: ImageItem[] = [
 
 export function InspirationGallery() {
   return (
-    <section id="gallery" data-section="gallery" className="relative w-full mb-20 max-md:mb-16 max-phone:mb-12" aria-label="Inspiration Galleries">
+    <section id="gallery" data-section="gallery" className="relative w-full mb-30 max-md:mb-16 max-phone:mb-12" aria-label="Inspiration Galleries">
       <InteractiveImageBentoGallery
         imageItems={bentoGalleryItems}
         title="INSPIRATION GALLERIES"

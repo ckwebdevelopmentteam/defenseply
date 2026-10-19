@@ -178,7 +178,7 @@ export function Footer() {
                 </svg>
               </a>
 
-              <a
+              <Link
                 href="/"
                 aria-label="Website"
                 className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
@@ -191,7 +191,7 @@ export function Footer() {
                   <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                   <path d="M2 12h20" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             <div className="w-full border-t border-white/10 mb-3.5" />

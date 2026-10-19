@@ -32,7 +32,7 @@ export function InnovationTechnology() {
     <section
       id="quality-testing"
       data-section="quality-testing"
-      className="relative w-full bg-white py-16 sm:py-20 mb-20 max-md:py-12 max-md:mb-16 max-phone:py-10 max-phone:mb-12 border-t border-black/8"
+      className="relative w-full bg-white mb-30 max-md:mb-16 max-phone:mb-12"
       aria-label="Built for Strength. Tested for Life."
     >
       {/* Top Row: Aligned directly with the 5-column grid below (Paragraph starts from 2nd card) */}

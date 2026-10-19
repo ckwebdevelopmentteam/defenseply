@@ -8,6 +8,10 @@ export type CarouselHandle = {
   page: number;
   pages: number;
 };
+
+const smoothEasing = (t: number) =>
+  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
 /** Shared responsive, touch/draggable carousel with the original 16px gutters. */
 export function Carousel({
   children,
@@ -19,6 +23,9 @@ export function Carousel({
   controls,
   wrapSlider,
   resetKey,
+  autoScroll = false,
+  autoScrollInterval = 3000,
+  pauseOnHover = true,
 }: {
   children: ReactNode;
   /** Recreate the slider track when replacing a category, preserving control focus. */
@@ -30,9 +37,14 @@ export function Carousel({
   spacing?: number;
   controls?: (handle: CarouselHandle) => ReactNode;
   wrapSlider?: (slider: ReactNode, handle: CarouselHandle) => ReactNode;
+  autoScroll?: boolean;
+  autoScrollInterval?: number;
+  pauseOnHover?: boolean;
 }) {
   const count = Children.count(children);
   const [position, setPosition] = useState({ index: 0, perView: desktop });
+  const [isPaused, setIsPaused] = useState(false);
+
   const [ref, instance] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     mode: "snap",
@@ -43,6 +55,16 @@ export function Carousel({
       },
       "(max-width: 1024px)": { slides: { perView: tablet, spacing } },
       "(max-width: 600px)": { slides: { perView: mobile, spacing: 8 } },
+    },
+    defaultAnimation: {
+      duration: autoScroll ? 1000 : 500,
+      easing: smoothEasing,
+    },
+    dragStarted() {
+      setIsPaused(true);
+    },
+    dragEnded() {
+      setIsPaused(false);
     },
     created(s) {
       const v = s.options.slides;
@@ -72,9 +94,11 @@ export function Carousel({
       setPosition((p) => ({ ...p, index: s.track.details?.rel ?? 0 }));
     },
   });
+
   useEffect(() => {
     instance.current?.update();
   }, [count, instance]);
+
   const step = Math.max(1, Math.floor(position.perView));
   const pages = Math.max(1, Math.ceil(count / step));
   const maxIdx =
@@ -85,12 +109,39 @@ export function Carousel({
       ? pages
       : Math.min(pages, Math.floor(position.index / step) + 1);
 
-  const goToPage = (p: number) => {
+  const goToPage = (
+    p: number,
+    anim?: { duration?: number; easing?: (t: number) => number }
+  ) => {
     if (!instance.current) return;
     const targetPage = Math.max(1, Math.min(pages, p));
     const targetIndex = targetPage === pages ? maxIdx : (targetPage - 1) * step;
-    instance.current.moveToIdx(targetIndex);
+    instance.current.moveToIdx(
+      targetIndex,
+      true,
+      anim ?? { duration: 1000, easing: smoothEasing }
+    );
   };
+
+  // Auto-scroll smoothly every `autoScrollInterval` (3 seconds)
+  useEffect(() => {
+    if (!autoScroll || isPaused) return;
+
+    const timer = setTimeout(() => {
+      if (typeof document !== "undefined" && document.hidden) return;
+
+      const nextPage = page >= pages ? 1 : page + 1;
+      const isRewind = nextPage === 1 && page > 1;
+
+      goToPage(nextPage, {
+        duration: isRewind ? 1200 : 1000,
+        easing: smoothEasing,
+      });
+    }, autoScrollInterval);
+
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoScroll, autoScrollInterval, isPaused, page, pages, maxIdx, step]);
 
   const slider = (
     <div
@@ -102,20 +153,45 @@ export function Carousel({
       {children}
     </div>
   );
+
   const handle: CarouselHandle = {
     page,
     pages,
-    previous: () => goToPage(page - 1),
-    next: () => goToPage(page + 1),
+    previous: () => goToPage(page - 1, { duration: 900, easing: smoothEasing }),
+    next: () => goToPage(page + 1, { duration: 900, easing: smoothEasing }),
   };
 
+  if (!autoScroll) {
+    return (
+      <>
+        {controls?.(handle)}
+        {wrapSlider ? wrapSlider(slider, handle) : slider}
+      </>
+    );
+  }
+
   return (
-    <>
+    <div
+      className="relative w-full"
+      onMouseEnter={() => {
+        if (pauseOnHover) setIsPaused(true);
+      }}
+      onMouseLeave={() => {
+        if (pauseOnHover) setIsPaused(false);
+      }}
+      onTouchStart={() => {
+        if (pauseOnHover) setIsPaused(true);
+      }}
+      onTouchEnd={() => {
+        if (pauseOnHover) setIsPaused(false);
+      }}
+    >
       {controls?.(handle)}
       {wrapSlider ? wrapSlider(slider, handle) : slider}
-    </>
+    </div>
   );
 }
+
 export function Arrow({
   direction = "right",
   className = "",
@@ -142,6 +218,7 @@ export function Arrow({
     </button>
   );
 }
+
 export function Progress({
   handle,
   id,

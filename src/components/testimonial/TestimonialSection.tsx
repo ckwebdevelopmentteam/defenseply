@@ -162,7 +162,7 @@ const TestimonialSection = React.forwardRef<
     <section
       ref={ref}
       className={cn(
-        "relative w-full bg-white mb-20 max-md:mb-16 max-phone:mb-12 pb-16 sm:pb-20",
+        "relative w-full bg-white mb-30 max-md:mb-16 max-phone:mb-12",
         className,
       )}
       {...props}

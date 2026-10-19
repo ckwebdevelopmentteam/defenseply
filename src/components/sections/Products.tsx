@@ -26,7 +26,7 @@ export function Products({
     <section
       id="products"
       data-section="products"
-      className="page-bleed relative mb-20 overflow-hidden border-y border-black/8 bg-[#f5f3ee] px-[38px] pt-12 pb-14 max-phone:mb-12 max-phone:px-5 max-phone:pt-8 max-phone:pb-10 max-md:mb-12 max-md:px-5"
+      className="page-bleed relative mb-30 max-md:mb-16 max-phone:mb-12 overflow-hidden border-y border-black/8 bg-[#f5f3ee] px-[38px] pt-12 pb-14 max-phone:px-5 max-phone:pt-8 max-phone:pb-10 max-md:px-5"
       aria-label="Our Products"
     >
       {/* Background Texture Image Layer */}
@@ -64,6 +64,9 @@ export function Products({
         desktop={3}
         tablet={2}
         mobile={1.15}
+        autoScroll={true}
+        autoScrollInterval={3000}
+        pauseOnHover={true}
         controls={(handle) => (
           <div className="relative z-10 mb-6 flex items-center justify-between border-t border-b border-black/10 py-3.5 max-phone:py-2.5">
             {/* Left: Counter & Sleek Track Line */}
@@ -80,7 +83,7 @@ export function Products({
               {/* Progress Line */}
               <div className="relative h-[2px] w-full max-w-[480px] flex-1 overflow-hidden rounded-full bg-[#dcd8d1] max-phone:max-w-none">
                 <div
-                  className="h-full bg-[#1c3f21] transition-all duration-300 ease-out"
+                  className="h-full bg-[#1c3f21] transition-all duration-1000 ease-out"
                   style={{ width: `${(handle.page / handle.pages) * 100}%` }}
                 />
               </div>
